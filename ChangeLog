@@ -1,5 +1,25 @@
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* ABOUT-NLS: Add missing file to fix the build.
+
+	* src/aboutdialog.cc: Translate all user-visible strings except
+	for those instances where positional parameter substitution is
+	required for proper results.  I'll deal with those ones later.
+	* src/controller.cc: ditto
+	* src/filebuffer.cc: ditto
+	* src/filetree.cc: ditto
+	* src/main.cc: ditto
+	* src/mainwindow.cc: ditto
+	* src/pcreshell.cc: ditto
+	* src/prefdialog.cc: ditto
+	* src/statusline.cc: ditto.
+
+	* src/translation.h (N_): #define to gettext_noop(s) rather than
+	simply (s).  This doesn't actually make a difference but I think
+	the intent is clearer that way.
+
+2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	Add support for message translation via gettext.
 
 	* po: New directory, containing all the gettext stuff.

@@ -254,10 +254,10 @@ StatusLine::StatusLine()
   progressbar_ = new ProgressBar();
   pack_start(*manage(progressbar_), PACK_SHRINK);
 
-  file_counter_ = new CounterBox("File:");
+  file_counter_ = new CounterBox(_("Statusbar|File:"));
   pack_start(*manage(file_counter_), PACK_SHRINK);
 
-  match_counter_ = new CounterBox("Match:");
+  match_counter_ = new CounterBox(_("Statusbar|Match:"));
   pack_start(*manage(match_counter_), PACK_SHRINK);
 
   statusbar_ = new Statusbar();
@@ -268,7 +268,7 @@ StatusLine::StatusLine()
 
   progressbar_->set_pulse_step(0.025);
 
-  stop_button_->get_accessible()->set_description("Cancels the running search");
+  stop_button_->get_accessible()->set_description(_("Cancels the running search"));
 
   show_all_children();
 }

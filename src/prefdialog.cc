@@ -21,6 +21,7 @@
 #include "prefdialog.h"
 #include "globalstrings.h"
 #include "stringutils.h"
+#include "translation.h"
 
 #include <glib.h>
 #include <gconfmm.h>
@@ -219,7 +220,7 @@ void ColorSelectionButton::on_clicked()
   Gtk::ColorSelectionDialog dialog;
 
   dialog.set_modal(true);
-  dialog.set_title("Color Selection");
+  dialog.set_title(_("Color Selection"));
 
   if (Gtk::Window *const toplevel = dynamic_cast<Gtk::Window*>(get_toplevel()))
     dialog.set_transient_for(*toplevel);
@@ -300,7 +301,7 @@ bool ColorSelectionButton::ColorLabel::on_expose_event(GdkEventExpose* event)
 
 PrefDialog::PrefDialog(Gtk::Window& parent)
 :
-  Gtk::Dialog             ("Preferences", parent),
+  Gtk::Dialog             (_("Preferences"), parent),
   button_textview_font_   (0),
   button_match_color_     (0),
   button_current_color_   (0),
@@ -318,13 +319,13 @@ PrefDialog::PrefDialog(Gtk::Window& parent)
   box.pack_start(*manage(notebook));
 
   {
-    std::auto_ptr<Widget> label (new ImageLabel(Stock::PREFERENCES, "_Look'n'feel"));
+    std::auto_ptr<Widget> label (new ImageLabel(Stock::PREFERENCES, _("Preferences|_Look'n'feel")));
     Widget *const page = create_page_look();
 
     notebook->append_page(*manage(page), *manage(label.release()));
   }
   {
-    std::auto_ptr<Widget> label (new ImageLabel(Stock::PROPERTIES, "_File access"));
+    std::auto_ptr<Widget> label (new ImageLabel(Stock::PROPERTIES, _("Preferences|_File access")));
     Widget *const page = create_page_file();
 
     notebook->append_page(*manage(page), *manage(label.release()));
@@ -387,13 +388,13 @@ Gtk::Widget* PrefDialog::create_page_look()
   page->set_col_spacings(12);
 
   {
-    Label *const label_textview_font = new Label("_Text view font:", 0.0, 0.5, true);
+    Label *const label_textview_font = new Label(_("Preferences|_Text view font:"), 0.0, 0.5, true);
     page->attach(*manage(label_textview_font), 0, 1, 0, 1, FILL);
 
-    Label *const label_match_color = new Label("_Match color:", 0.0, 0.5, true);
+    Label *const label_match_color = new Label(_("Preferences|_Match color:"), 0.0, 0.5, true);
     page->attach(*manage(label_match_color), 0, 1, 1, 2, FILL);
 
-    Label *const label_current_color = new Label("C_urrent match color:", 0.0, 0.5, true);
+    Label *const label_current_color = new Label(_("Preferences|C_urrent match color:"), 0.0, 0.5, true);
     page->attach(*manage(label_current_color), 0, 1, 2, 3, FILL);
 
     button_textview_font_ = new FontSelectionButton();
@@ -412,7 +413,7 @@ Gtk::Widget* PrefDialog::create_page_look()
   {
     using Gtk::Menu_Helpers::MenuElem;
 
-    Label *const label_toolbar_style = new Label("Tool_bar style:", 0.0, 0.5, true);
+    Label *const label_toolbar_style = new Label(_("Preferences|Tool_bar style:"), 0.0, 0.5, true);
     page->attach(*manage(label_toolbar_style), 0, 1, 3, 4, FILL);
 
     option_toolbar_style_ = new OptionMenu();
@@ -424,10 +425,10 @@ Gtk::Widget* PrefDialog::create_page_look()
     option_toolbar_style_->set_menu(*manage(menu));
     Menu::MenuList& items = menu->items();
 
-    items.push_back(MenuElem("Icons only"));
-    items.push_back(MenuElem("Text only"));
-    items.push_back(MenuElem("Icons and text"));
-    items.push_back(MenuElem("Both horizontal"));
+    items.push_back(MenuElem(_("Preferences|Icons only")));
+    items.push_back(MenuElem(_("Preferences|Text only")));
+    items.push_back(MenuElem(_("Preferences|Icons and text")));
+    items.push_back(MenuElem(_("Preferences|Both horizontal")));
   }
 
   return page.release();
@@ -440,8 +441,8 @@ Gtk::Widget* PrefDialog::create_page_file()
   std::auto_ptr<Box> page (new VBox(false, 12));
   page->set_border_width(10);
 
-  Label *const label_info = new Label("regexxer attempts to read a file in the following "
-                                      "encodings before giving up:", 0.0, 0.5);
+  Label *const label_info = new Label(_("regexxer attempts to read a file in the following "
+                                        "encodings before giving up:"), 0.0, 0.5);
   page->pack_start(*manage(label_info), PACK_EXPAND_PADDING);
   label_info->set_line_wrap(true);
 
@@ -449,20 +450,20 @@ Gtk::Widget* PrefDialog::create_page_file()
   page->pack_start(*manage(table), PACK_EXPAND_PADDING);
   table->set_col_spacings(3);
 
-  table->attach(*manage(new Label("1.", 1.0, 0.5)), 0, 1, 0, 1, FILL, FILL);
-  table->attach(*manage(new Label("2.", 1.0, 0.5)), 0, 1, 1, 2, FILL, FILL);
-  table->attach(*manage(new Label("3.", 1.0, 0.5)), 0, 1, 2, 3, FILL, FILL);
+  table->attach(*manage(new Label(_("Preferences|1."), 1.0, 0.5)), 0, 1, 0, 1, FILL, FILL);
+  table->attach(*manage(new Label(_("Preferences|2."), 1.0, 0.5)), 0, 1, 1, 2, FILL, FILL);
+  table->attach(*manage(new Label(_("Preferences|3."), 1.0, 0.5)), 0, 1, 2, 3, FILL, FILL);
 
   Label *const label_utf8 = new Label("UTF-8", 0.0, 0.5);
   table->attach(*manage(label_utf8), 1, 2, 0, 1, FILL, FILL);
 
-  Label *const label_locale = new Label("The encoding specified by the current locale", 0.0, 0.5);
+  Label *const label_locale = new Label(_("The encoding specified by the current locale"), 0.0, 0.5);
   table->attach(*manage(label_locale), 1, 2, 1, 2, FILL, FILL);
 
   Box *const box_fallback = new HBox(false, 6 /* HIG */);
   table->attach(*manage(box_fallback), 1, 2, 2, 3, EXPAND|FILL, FILL);
 
-  Label *const label_fallback = new Label("Fallback _encoding:", 0.0, 0.5, true);
+  Label *const label_fallback = new Label(_("Fallback _encoding:"), 0.0, 0.5, true);
   box_fallback->pack_start(*manage(label_fallback), PACK_SHRINK);
 
   entry_fallback_ = new Entry();
@@ -477,7 +478,7 @@ Gtk::Widget* PrefDialog::create_page_file()
     size_group->add_widget(*box_fallback);
   }
 
-  button_direction_ = new CheckButton("_Ignore the text direction of the locale", true);
+  button_direction_ = new CheckButton(_("_Ignore the text direction of the locale"), true);
   page->pack_start(*manage(button_direction_), PACK_EXPAND_PADDING);
 
   return page.release();
@@ -600,6 +601,7 @@ void PrefDialog::on_entry_fallback_activate()
   }
   else
   {
+    // TODO: Translation
     Glib::ustring message = "\302\273";
     message += fallback_encoding;
     message += "\302\253 is not a valid encoding.";

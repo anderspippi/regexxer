@@ -27,6 +27,7 @@
 #include "prefdialog.h"
 #include "statusline.h"
 #include "stringutils.h"
+#include "translation.h"
 
 #include <glib.h>
 #include <gconfmm.h>
@@ -301,11 +302,11 @@ Gtk::Widget* MainWindow::create_left_pane()
   vbox->pack_start(*manage(table), PACK_SHRINK);
   table->set_spacings(6); // HIG
 
-  Button *const button_folder = new ImageLabelButton(Stock::OPEN, "Fol_der:", true);
+  Button *const button_folder = new ImageLabelButton(Stock::OPEN, _("LeftPane|Fol_der:"), true);
   table->attach(*manage(button_folder), 0, 1, 0, 1, FILL, AttachOptions(0));
   button_folder->signal_clicked().connect(SigC::slot(*this, &MainWindow::on_select_folder));
 
-  Label *const label_pattern = new Label("Pattern:", 0.0, 0.5);
+  Label *const label_pattern = new Label(_("LeftPane|Pattern:"), 0.0, 0.5);
   table->attach(*manage(label_pattern), 0, 1, 1, 2, FILL, AttachOptions(0));
 
   entry_folder_ = new Entry();
@@ -325,10 +326,10 @@ Gtk::Widget* MainWindow::create_left_pane()
   Box *const hbox = new HBox(false, 6 /* HIG */);
   table->attach(*manage(hbox), 0, 2, 2, 3, EXPAND|FILL, AttachOptions(0));
 
-  button_recursive_ = new CheckButton("recursive");
+  button_recursive_ = new CheckButton(_("LeftPane|recursive"));
   hbox->pack_start(*manage(button_recursive_), PACK_SHRINK);
 
-  button_hidden_ = new CheckButton("hidden");
+  button_hidden_ = new CheckButton(_("LeftPane|hidden"));
   hbox->pack_start(*manage(button_hidden_), PACK_SHRINK);
 
   Button *const button_find_files = new Button(Stock::FIND);
@@ -349,13 +350,13 @@ Gtk::Widget* MainWindow::create_left_pane()
 
   entry_folder_->get_accessible()->set_name("Folder");
 
-  tooltips_.set_tip(*entry_folder_,     "The directory to be searched");
-  tooltips_.set_tip(*entry_pattern_,    "A filename pattern as used by the shell. "
-                                        "Character classes [ab] and csh style "
-                                        "brace expressions {a,b} are supported.");
-  tooltips_.set_tip(*button_recursive_, "Recurse into subdirectories");
-  tooltips_.set_tip(*button_hidden_,    "Also find hidden files");
-  tooltips_.set_tip(*button_find_files, "Find all files that match the filename pattern");
+  tooltips_.set_tip(*entry_folder_,     _("The directory to be searched"));
+  tooltips_.set_tip(*entry_pattern_,    _("A filename pattern as used by the shell. "
+                                          "Character classes [ab] and csh style "
+                                          "brace expressions {a,b} are supported."));
+  tooltips_.set_tip(*button_recursive_, _("Recurse into subdirectories"));
+  tooltips_.set_tip(*button_hidden_,    _("Also find hidden files"));
+  tooltips_.set_tip(*button_find_files, _("Find all files that match the filename pattern"));
 
   return vbox.release();
 }
@@ -371,12 +372,12 @@ Gtk::Widget* MainWindow::create_right_pane()
   vbox->pack_start(*manage(table), PACK_SHRINK);
   table->set_spacings(6); // HIG
 
-  Label *const label_search = new Label("Search:",  0.0, 0.5);
+  Label *const label_search = new Label(_("RightPane|Search:"), 0.0, 0.5);
   table->attach(*manage(label_search), 0, 1, 0, 1, FILL, AttachOptions(0));
   table->attach(*manage(entry_regex_ = new Entry()),  1, 2, 0, 1, EXPAND|FILL, AttachOptions(0));
   label_search->set_mnemonic_widget(*entry_regex_);
 
-  Label *const label_replace = new Label("Replace:",  0.0, 0.5);
+  Label *const label_replace = new Label(_("RightPane|Replace:"), 0.0, 0.5);
   table->attach(*manage(label_replace), 0, 1, 1, 2, FILL, AttachOptions(0));
   table->attach(*manage(entry_substitution_ = new Entry()),  1, 2, 1, 2, EXPAND|FILL, AttachOptions(0));
   label_replace->set_mnemonic_widget(*entry_substitution_);
@@ -417,17 +418,17 @@ Gtk::Widget* MainWindow::create_right_pane()
   entry_preview_->set_editable(false);
   entry_preview_->unset_flags(CAN_FOCUS);
 
-  entry_preview_->get_accessible()->set_name("Preview");
+  entry_preview_->get_accessible()->set_name(_("RightPane|Preview"));
 
-  tooltips_.set_tip(*entry_regex_,        "A regular expression in Perl syntax");
-  tooltips_.set_tip(*entry_substitution_, "The new string to substitute. As in Perl, you can "
-                                          "refer to parts of the match using $1, $2, etc. "
-                                          "or even $+, $&, $` and $'. The operators "
-                                          "\\l, \\u, \\L, \\U and \\E are supported as well.");
-  tooltips_.set_tip(*button_multiple_,    "Find all possible matches in a line");
-  tooltips_.set_tip(*button_caseless_,    "Do case insensitive matching");
-  tooltips_.set_tip(*button_find_matches, "Find all matches of the regular expression");
-  tooltips_.set_tip(*entry_preview_,      "Preview of the substitution");
+  tooltips_.set_tip(*entry_regex_,        _("A regular expression in Perl syntax"));
+  tooltips_.set_tip(*entry_substitution_, _("The new string to substitute. As in Perl, you can "
+                                            "refer to parts of the match using $1, $2, etc. "
+                                            "or even $+, $&, $` and $'. The operators "
+                                            "\\l, \\u, \\L, \\U and \\E are supported as well."));
+  tooltips_.set_tip(*button_multiple_,    _("Find all possible matches in a line"));
+  tooltips_.set_tip(*button_caseless_,    _("Do case insensitive matching"));
+  tooltips_.set_tip(*button_find_matches, _("Find all matches of the regular expression"));
+  tooltips_.set_tip(*entry_preview_,      _("Preview of the substitution"));
 
   return vbox.release();
 }
@@ -443,7 +444,7 @@ bool MainWindow::confirm_quit_request()
   if (filetree_->get_modified_count() == 0)
     return true;
 
-  const Glib::ustring message = "Some files haven't been saved yet.\nQuit anyway?";
+  const Glib::ustring message = _("Some files haven't been saved yet.\nQuit anyway?");
   Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_WARNING, Gtk::BUTTONS_NONE, true);
 
   dialog.add_button(Gtk::Stock::CANCEL, Gtk::RESPONSE_CANCEL);
@@ -456,7 +457,7 @@ void MainWindow::on_select_folder()
 {
   using namespace Glib;
 
-  Gtk::FileSelection filesel ("Select a folder");
+  Gtk::FileSelection filesel (_("Select a folder"));
 
   filesel.set_modal(true);
   filesel.set_transient_for(*this);
@@ -495,7 +496,7 @@ void MainWindow::on_find_files()
 {
   if (filetree_->get_modified_count() > 0)
   {
-    const Glib::ustring message = "Some files haven't been saved yet.\nContinue anyway?";
+    const Glib::ustring message = _("Some files haven't been saved yet.\nContinue anyway?");
     Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_WARNING, Gtk::BUTTONS_OK_CANCEL, true);
 
     if (dialog.run() != Gtk::RESPONSE_OK)
@@ -522,13 +523,13 @@ void MainWindow::on_find_files()
   }
   catch (const Pcre::Error& error)
   {
-    const Glib::ustring message = "The file search pattern is invalid.";
+    const Glib::ustring message = _("The file search pattern is invalid.");
     Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
     dialog.run();
   }
   catch (const FileTree::Error& error)
   {
-    const Glib::ustring message = "The following errors occurred during search:";
+    const Glib::ustring message = _("The following errors occurred during search:");
     FileErrorDialog dialog (*this, message, Gtk::MESSAGE_WARNING, error);
     dialog.run();
   }
@@ -551,6 +552,7 @@ void MainWindow::on_exec_search()
   }
   catch (const Pcre::Error& error)
   {
+    // TODO: Translation
     Glib::ustring message = "Error in regular expression";
     const int offset = error.offset();
 
@@ -783,7 +785,7 @@ void MainWindow::on_save_all()
   }
   catch (const FileTree::Error& error)
   {
-    const Glib::ustring message = "The following errors occurred during save:";
+    const Glib::ustring message = _("The following errors occurred during save:");
     FileErrorDialog dialog (*this, message, Gtk::MESSAGE_ERROR, error);
     dialog.run();
   }

@@ -20,6 +20,7 @@
 
 #include "aboutdialog.h"
 #include "globalstrings.h"
+#include "translation.h"
 
 #include <atkmm.h>
 #include <glibmm/markup.h>
@@ -114,7 +115,7 @@ namespace Regexxer
 
 AboutDialog::AboutDialog(Gtk::Window& parent)
 :
-  Gtk::Dialog("About regexxer", parent, false, true)
+  Gtk::Dialog(_("About regexxer"), parent, false, true)
 {
   using namespace Gtk;
 
@@ -143,10 +144,10 @@ AboutDialog::AboutDialog(Gtk::Window& parent)
     label_title->set_markup("<span size=\"xx-large\" weight=\"heavy\">" PACKAGE_STRING "</span>");
 
     const Glib::RefPtr<Atk::Object> image_accessible = image->get_accessible();
-    image_accessible->set_name("regexxer icon");
+    image_accessible->set_name(_("regexxer icon"));
 
     Glib::RefPtr<Atk::Image>::cast_dynamic(image_accessible)
-        ->set_image_description("The application icon of regexxer");
+        ->set_image_description(_("The application icon of regexxer"));
   }
   {
     Box *const box_text = new VBox(false, 10);
@@ -155,10 +156,10 @@ AboutDialog::AboutDialog(Gtk::Window& parent)
     Widget *const label_url = new SelectableLabel(regexxer_project_url);
     box_text->pack_start(*manage(label_url), PACK_EXPAND_PADDING, 5);
 
-    Widget *const box_author = new ContributorBox("written by", regexxer_author_mail);
+    Widget *const box_author = new ContributorBox(_("written by"), regexxer_author_mail);
     box_text->pack_start(*manage(box_author), PACK_EXPAND_PADDING);
 
-    Widget *const box_debian = new ContributorBox("Debian package by", regexxer_debian_mail);
+    Widget *const box_debian = new ContributorBox(_("Debian package by"), regexxer_debian_mail);
     box_text->pack_start(*manage(box_debian), PACK_EXPAND_PADDING);
   }
 

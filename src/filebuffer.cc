@@ -24,6 +24,7 @@
 #include "miscutils.h"
 #include "pcreshell.h"
 #include "stringutils.h"
+#include "translation.h"
 
 #include <glib.h>
 #include <gconfmm.h>
@@ -199,8 +200,8 @@ FileBuffer::create_with_error_message(const Glib::RefPtr<Gdk::Pixbuf>& pixbuf,
   const Glib::RefPtr<RegexxerTags> tagtable = RegexxerTags::instance();
   iterator pend = buffer->end();
 
-  // "\302\240" == no-break space
-  const Glib::ustring title = "\302\240Can't\302\240read\302\240file:";
+  // Translators: Please replace space by U+00A0 NO-BREAK SPACE.
+  const Glib::ustring title = _(" Can't read file:");
 
   pend = buffer->insert_pixbuf(pend, pixbuf);
   pend = buffer->insert_with_tag(pend, title, tagtable->error_title);

@@ -19,6 +19,7 @@
  */
 
 #include "pcreshell.h"
+#include "translation.h"
 
 #include <glib.h>
 #include <glibmm.h>
@@ -54,7 +55,7 @@ void check_for_single_byte_escape(const Glib::ustring& regex)
     // of backslashes.  If this holds true, let's stage a right little tantrum.
     if ((index - rewind) % 2 == 0)
     {
-      throw Pcre::Error("Using the \\C escape sequence to match a single byte is not supported.",
+      throw Pcre::Error(_("Using the \\C escape sequence to match a single byte is not supported."),
                         byte_to_char_offset(regex.begin(), index + 1));
     }
     index += 2;
@@ -145,7 +146,7 @@ int Pattern::match(const Glib::ustring& subject, int offset, MatchOptions option
   // Of all possible error conditions pcre_exec() might return, hitting
   // the match limit is the only one that could be triggered by user input.
   if (rc == PCRE_ERROR_MATCHLIMIT)
-    throw Error("Reached the recursion and backtracking limit of the regular expression engine.");
+    throw Error(_("Reached the recursion and backtracking limit of the regular expression engine."));
 
   g_return_val_if_reached(rc);
 }

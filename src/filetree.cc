@@ -23,6 +23,7 @@
 #include "globalstrings.h"
 #include "pcreshell.h"
 #include "stringutils.h"
+#include "translation.h"
 
 #include <gconfmm.h>
 #include <gtkmm/stock.h>
@@ -59,7 +60,7 @@ FileTree::FileTree()
       SigC::slot(*this, &FileTree::on_treestore_sort_column_changed));
 
   {
-    Column *const column = new Column("File");
+    Column *const column = new Column(_("FileTree|File"));
     append_column(*manage(column));
 
     CellRendererPixbuf *const cell_icon = new CellRendererPixbuf();
@@ -78,7 +79,7 @@ FileTree::FileTree()
   }
 
   {
-    Column *const column = new Column("#");
+    Column *const column = new Column(_("FileTree|#"));
     append_column(*manage(column));
 
     CellRendererText *const cell_matchcount = new CellRendererText();
@@ -579,6 +580,7 @@ bool FileTree::save_file_at_iter(const Gtk::TreeModel::iterator& iter,
       if (!*error_list)
         error_list->reset(new MessageList());
 
+      // TODO: Translation
       Glib::ustring message = "Failed to save file \302\273";
       message += Util::filename_to_utf8_fallback(fileinfo->fullname);
       message += "\302\253: ";
@@ -1074,6 +1076,7 @@ void FileTree::load_file_with_fallback(const Gtk::TreeModel::iterator& iter,
   {
     g_assert(fileinfo->load_failed);
 
+    // TODO: Translation
     Glib::ustring message = "\302\273";
     message += Util::filename_to_utf8_fallback(Glib::path_get_basename(fileinfo->fullname));
     message += "\302\253 seems to be a binary file.";

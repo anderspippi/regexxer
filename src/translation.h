@@ -28,7 +28,7 @@
 #endif
 
 #define _(s) ::Util::sgettext(s)
-#define N_(s) (s)
+#define N_(s) gettext_noop(s)
 
 namespace Util
 {

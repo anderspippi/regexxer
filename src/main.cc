@@ -21,6 +21,7 @@
 #include "globalstrings.h"
 #include "mainwindow.h"
 #include "miscutils.h"
+#include "translation.h"
 
 #include <glib.h>
 #include <glibmm.h>
@@ -80,14 +81,15 @@ const StockIconData stock_icon_save_all[] =
 
 const StockItemData regexxer_stock_items[] =
 {
-  { "regexxer-info",     stock_icon_info,     G_N_ELEMENTS(stock_icon_info),     "_About"    },
-  { "regexxer-save-all", stock_icon_save_all, G_N_ELEMENTS(stock_icon_save_all), "Save _all" }
+  { "regexxer-info",     stock_icon_info,     G_N_ELEMENTS(stock_icon_info),     N_("_About")    },
+  { "regexxer-save-all", stock_icon_save_all, G_N_ELEMENTS(stock_icon_save_all), N_("Save _all") }
 };
 
 
 void register_stock_items()
 {
   const Glib::RefPtr<Gtk::IconFactory> factory = Gtk::IconFactory::create();
+  const Glib::ustring domain = PACKAGE_TARNAME;
 
   for (unsigned int item = 0; item < G_N_ELEMENTS(regexxer_stock_items); ++item)
   {
@@ -111,7 +113,7 @@ void register_stock_items()
     const Gtk::StockID stock_id (stock.id);
 
     factory->add(stock_id, icon_set);
-    Gtk::Stock::add(Gtk::StockItem(stock_id, stock.label));
+    Gtk::Stock::add(Gtk::StockItem(stock_id, stock.label, Gdk::ModifierType(0), 0, domain));
   }
 
   factory->add_default();
