@@ -181,8 +181,9 @@ int main(int argc, char** argv)
     register_stock_items();
     set_default_window_icon();
 
+#if REGEXXER_ENABLE_GCONFMM_VALUE_HACK
     Util::check_for_broken_gconfmm_value_changed();
-
+#endif
     Regexxer::MainWindow window;
 
     initialize_configuration();

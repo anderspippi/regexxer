@@ -1,5 +1,14 @@
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* src/miscutils.cc: Compile the runtime check for that gconfmm
+	bug only if REGEXXER_ENABLE_GCONFMM_VALUE_HACK is defined, as it
+	currently always is.
+
+	* src/main.cc (main): Test for REGEXXER_ENABLE_GCONFMM_VALUE_HACK
+	around the call to Util::check_for_broken_gconfmm_value_changed().
+
+2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* src/translation.{cc,h} (initialize_gettext): New utility
 	function to take care of setting up the text domain.
 

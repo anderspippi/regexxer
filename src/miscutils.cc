@@ -25,6 +25,9 @@
 #include <gconf/gconf-value.h>
 #include <gconfmm.h>
 
+#include <config.h>
+
+#if REGEXXER_ENABLE_GCONFMM_VALUE_HACK
 
 namespace
 {
@@ -60,4 +63,6 @@ bool Util::has_broken_gconfmm_value_changed()
 {
   return broken_value_changed;
 }
+
+#endif /* REGEXXER_ENABLE_GCONFMM_VALUE_HACK */
 
