@@ -39,6 +39,12 @@
 		    <widget class="GtkMenu" id="menuitem_file_menu">
 
 		      <child>
+			<widget class="GtkTearoffMenuItem" id="menuitem_file_tearoff">
+			  <property name="visible">True</property>
+			</widget>
+		      </child>
+
+		      <child>
 			<widget class="GtkImageMenuItem" id="menuitem_save">
 			  <property name="visible">True</property>
 			  <property name="label">gtk-save</property>
@@ -110,6 +116,12 @@
 
 		  <child>
 		    <widget class="GtkMenu" id="menuitem_match_menu">
+
+		      <child>
+			<widget class="GtkTearoffMenuItem" id="menuitem_match_tearoff">
+			  <property name="visible">True</property>
+			</widget>
+		      </child>
 
 		      <child>
 			<widget class="GtkImageMenuItem" id="menuitem_prev_file">
@@ -250,6 +262,12 @@
 
 		  <child>
 		    <widget class="GtkMenu" id="menuitem_help_menu">
+
+		      <child>
+			<widget class="GtkTearoffMenuItem" id="menuitem_help_tearoff">
+			  <property name="visible">True</property>
+			</widget>
+		      </child>
 
 		      <child>
 			<widget class="GtkImageMenuItem" id="menuitem_about">
