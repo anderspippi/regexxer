@@ -159,7 +159,7 @@ msgstr "_Ordner:"
 
 #: src/mainwindow.cc:309
 msgid "LeftPane|Pattern:"
-msgstr "Muster:"
+msgstr "Suchmuster:"
 
 #: src/mainwindow.cc:329
 msgid "LeftPane|recursive"
