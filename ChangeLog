@@ -1,3 +1,16 @@
+2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
+
+	* ui: New directory for glade XML files.
+	* ui/.cvsignore: New file.
+	* ui/Makefile.am: New file.
+	* ui/prefdialog.glade: New file defining the UI of the preferences
+	dialog.
+
+	* configure.ac (PKG_CHECK_MODULES): Check for libglademm-2.0.
+	(AC_CONFIG_FILES): Add ui/Makefile.
+
+	* Makefile.am (SUBDIRS): Add ui.
+
 0.7:
 
 2004-05-08  Daniel Elstner  <daniel.elstner@gmx.net>

@@ -32,7 +32,7 @@ AC_PROG_CXX()
 
 AM_GNU_GETTEXT([external])
 
-PKG_CHECK_MODULES([PKG], [gtkmm-2.0 >= 2.2.8 gconfmm-2.0 >= 2.0.0])
+PKG_CHECK_MODULES([PKG], [gtkmm-2.0 >= 2.2.8 libglademm-2.0 >= 2.0.0 gconfmm-2.0 >= 2.0.0])
 AC_SUBST([PKG_CFLAGS])
 AC_SUBST([PKG_LIBS])
 
@@ -72,6 +72,7 @@ namespace Util { bool has_broken_gconfmm_value_changed(); }
 AC_CONFIG_FILES([
   Makefile
   pixmaps/Makefile
+  ui/Makefile
   src/Makefile
   po/Makefile.in
 ])
