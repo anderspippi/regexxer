@@ -18,7 +18,7 @@
 ## Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 
-AC_INIT([regexxer], [0.7], [daniel.elstner@gmx.net], [regexxer])
+AC_INIT([regexxer], [0.8], [daniel.elstner@gmx.net], [regexxer])
 AC_PREREQ([2.53])
 
 AC_REVISION([$Revision$])
