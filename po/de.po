@@ -19,7 +19,7 @@ msgstr ""
 
 #: src/aboutdialog.cc:118
 msgid "About regexxer"
-msgstr "Über regexxer"
+msgstr "Info zu regexxer"
 
 #: src/aboutdialog.cc:147
 msgid "regexxer icon"
@@ -147,7 +147,7 @@ msgstr "„%1” scheint eine binäre Datei zu sein."
 
 #: src/main.cc:80
 msgid "_About"
-msgstr "_Über"
+msgstr "_Info"
 
 #: src/main.cc:81
 msgid "Save _all"
