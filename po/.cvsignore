@@ -6,4 +6,5 @@ en@boldquot.po
 *.gmo
 *.insert-header
 regexxer.pot
+remove-potcdate.sed
 stamp-po

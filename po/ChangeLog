@@ -1,5 +1,11 @@
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* remove-potcdate.sed: Remove file from CVS, as it was added by
+	mistake.  Apparently make clean deletes it -- I have know idea why
+	gettextize installed this file.
+
+2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* de.po: Translate the newly added compose() format strings.
 	* en.po: ditto.
 
