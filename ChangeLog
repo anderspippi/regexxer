@@ -1,5 +1,19 @@
 2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* src/globalstrings.h (glade_aboutdialog_filename): New string.
+
+	* src/aboutdialog.{cc,h}: Use libglademm to load the dialog UI
+	at runtime, and replace class AboutDialog by a single create()
+	function in namespace Regexxer::AboutDialog.  Remove the old
+	UI creation code.
+
+	* src/mainwindow.{cc,h} (MainWindow::about_dialog_): Change type
+	to std::auto_ptr<Gtk::Dialog> since AboutDialog no longer exists.
+	Replace all references to AboutDialog in the implementation too.
+	(MainWindow::on_about): Make use of the new AboutDialog::create().
+
+2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* ui/aboutdialog.glade: New file defining the UI of the about
 	dialog.
 	* ui/Makefile.am (dist_glade_DATA): Add aboutdialog.glade.

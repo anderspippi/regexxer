@@ -35,6 +35,7 @@ namespace Gtk
 {
 class Button;
 class CheckButton;
+class Dialog;
 class Entry;
 class HandleBox;
 class TextBuffer;
@@ -47,7 +48,6 @@ namespace Gnome { namespace Conf { class Value; } }
 namespace Regexxer
 {
 
-class AboutDialog;
 class FileTree;
 class PrefDialog;
 class StatusLine;
@@ -96,7 +96,7 @@ private:
 
   std::list<SigC::Connection> buffer_connections_;
 
-  std::auto_ptr<AboutDialog>  about_dialog_;
+  std::auto_ptr<Gtk::Dialog>  about_dialog_;
   std::auto_ptr<PrefDialog>   pref_dialog_;
 
   Gtk::Widget* create_main_vbox();

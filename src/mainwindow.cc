@@ -229,7 +229,7 @@ void MainWindow::on_hide()
 
   {
     // Play safe and transfer ownership, and let the dtor do the delete.
-    const std::auto_ptr<AboutDialog> temp (about_dialog_);
+    const std::auto_ptr<Gtk::Dialog> temp (about_dialog_);
   }
   {
     const std::auto_ptr<PrefDialog> temp (pref_dialog_);
@@ -919,7 +919,7 @@ void MainWindow::on_about()
   }
   else
   {
-    std::auto_ptr<AboutDialog> dialog (new AboutDialog(*this));
+    std::auto_ptr<Gtk::Dialog> dialog (AboutDialog::create(*this));
 
     dialog->signal_hide().connect(SigC::slot(*this, &MainWindow::on_about_dialog_hide));
     dialog->show();
@@ -931,7 +931,7 @@ void MainWindow::on_about()
 void MainWindow::on_about_dialog_hide()
 {
   // Play safe and transfer ownership, and let the dtor do the delete.
-  const std::auto_ptr<AboutDialog> temp (about_dialog_);
+  const std::auto_ptr<Gtk::Dialog> temp (about_dialog_);
 }
 
 void MainWindow::on_preferences()

@@ -44,6 +44,7 @@ const char *const application_icon_filename     = REGEXXER_DATADIR G_DIR_SEPARAT
                                                   "pixmaps" G_DIR_SEPARATOR_S "regexxer.png";
 
 const char *const glade_prefdialog_filename     = REGEXXER_PKGDATADIR G_DIR_SEPARATOR_S "prefdialog.glade";
+const char *const glade_aboutdialog_filename    = REGEXXER_PKGDATADIR G_DIR_SEPARATOR_S "aboutdialog.glade";
 
 } // namespace Regexxer
 
