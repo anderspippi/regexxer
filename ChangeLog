@@ -1,5 +1,11 @@
 2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* src/prefdialog.cc (regexxer_create_font_selection_button):
+	Add missing parameters to the function signature.
+	(regexxer_create_color_selection_button): ditto.
+
+2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* src/Makefile.am (global_defines): Define REGEXXER_PKGDATADIR.
 
 	* src/globalstrings.h (glade_prefdialog_filename): New string.

@@ -137,7 +137,7 @@ void FontSelectionButton::on_clicked()
 }
 
 extern "C"
-GtkWidget* regexxer_create_font_selection_button(int, int)
+GtkWidget* regexxer_create_font_selection_button(char*, char*, char*, int, int)
 {
   try
   {
@@ -291,7 +291,7 @@ bool ColorSelectionButton::ColorLabel::on_expose_event(GdkEventExpose* event)
 }
 
 extern "C"
-GtkWidget* regexxer_create_color_selection_button(int, int)
+GtkWidget* regexxer_create_color_selection_button(char*, char*, char*, int, int)
 {
   try
   {
