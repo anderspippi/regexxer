@@ -218,7 +218,7 @@ Gtk::MenuBar* Controller::create_menubar()
 
   {
     Menu *const menu = new Menu();
-    menubar_items.push_back(MenuElem(_("Menu|_File"), *manage(menu)));
+    menubar_items.push_back(MenuElem(_("_File"), *manage(menu)));
     MenuList& items = menu->items();
 
     items.push_back(TearoffMenuElem());
@@ -241,28 +241,28 @@ Gtk::MenuBar* Controller::create_menubar()
 
   {
     Menu *const menu = new Menu();
-    menubar_items.push_back(MenuElem(_("Menu|_Match"), *manage(menu)));
+    menubar_items.push_back(MenuElem(_("_Match"), *manage(menu)));
     MenuList& items = menu->items();
 
     items.push_back(TearoffMenuElem());
 
-    add_menu_image(items, Stock::GOTO_FIRST, _("Menu|Match|_Previous file"),
+    add_menu_image(items, Stock::GOTO_FIRST, _("_Previous file"),
                                              AccelKey("<control>p"), prev_file);
     add_menu_stock(items, Stock::GO_BACK,    AccelKey("<control>b"), prev_match);
     add_menu_stock(items, Stock::GO_FORWARD, AccelKey("<control>n"), next_match);
-    add_menu_image(items, Stock::GOTO_LAST,  _("Menu|Match|_Next file"),
+    add_menu_image(items, Stock::GOTO_LAST,  _("_Next file"),
                                              AccelKey("<control>e"), next_file);
     items.push_back(SeparatorElem());
 
-    add_menu_image(items, Stock::CONVERT, _("Menu|Match|Replace _current"),
+    add_menu_image(items, Stock::CONVERT, _("Replace _current"),
                                           AccelKey("<control>r"), replace);
-    add_menu_image(items, Stock::CONVERT, _("Menu|Match|Replace in _this file"), replace_file);
-    add_menu_image(items, Stock::CONVERT, _("Menu|Match|Replace in _all files"), replace_all);
+    add_menu_image(items, Stock::CONVERT, _("Replace in _this file"), replace_file);
+    add_menu_image(items, Stock::CONVERT, _("Replace in _all files"), replace_all);
   }
 
   {
     Menu *const menu = new Menu();
-    menubar_items.push_back(MenuElem(_("Menu|_Help"), *manage(menu)));
+    menubar_items.push_back(MenuElem(_("_Help"), *manage(menu)));
     MenuList& items = menu->items();
 
     items.push_back(TearoffMenuElem());
@@ -309,25 +309,25 @@ Gtk::Widget* Controller::create_action_area()
   Box *const box_move = new HBox(true, 6 /* HIG */);
   action_area->pack_end(*manage(box_move), PACK_SHRINK);
 
-  Button *const button_prev_file = new ImageButton(Stock::GOTO_FIRST, _("Action|File backward"));
+  Button *const button_prev_file = new ImageButton(Stock::GOTO_FIRST, _("File backward"));
   box_move->pack_start(*manage(button_prev_file));
 
-  Button *const button_prev = new ImageButton(Stock::GO_BACK, _("Action|Backward"));
+  Button *const button_prev = new ImageButton(Stock::GO_BACK, _("Backward"));
   box_move->pack_start(*manage(button_prev));
 
-  Button *const button_next = new ImageButton(Stock::GO_FORWARD, _("Action|Forward"));
+  Button *const button_next = new ImageButton(Stock::GO_FORWARD, _("Forward"));
   box_move->pack_start(*manage(button_next));
 
-  Button *const button_next_file = new ImageButton(Stock::GOTO_LAST, _("Action|File forward"));
+  Button *const button_next_file = new ImageButton(Stock::GOTO_LAST, _("File forward"));
   box_move->pack_start(*manage(button_next_file));
 
-  Button *const button_replace = new ImageLabelButton(Stock::CONVERT, _("Action|_Replace"), true);
+  Button *const button_replace = new ImageLabelButton(Stock::CONVERT, _("_Replace"), true);
   box_replace->pack_start(*manage(button_replace));
 
-  Button *const button_replace_file = new ImageLabelButton(Stock::CONVERT, _("Action|_This file"), true);
+  Button *const button_replace_file = new ImageLabelButton(Stock::CONVERT, _("_This file"), true);
   box_replace->pack_start(*manage(button_replace_file));
 
-  Button *const button_replace_all = new ImageLabelButton(Stock::CONVERT, _("Action|_All files"), true);
+  Button *const button_replace_all = new ImageLabelButton(Stock::CONVERT, _("_All files"), true);
   box_replace->pack_start(*manage(button_replace_all));
 
   button_prev_file   ->get_accessible()->set_description(_("Go to the previous matching file"));

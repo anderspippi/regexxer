@@ -1,5 +1,20 @@
 0.7:
 
+2004-05-08  Daniel Elstner  <daniel.elstner@gmx.net>
+
+	* src/translation.{cc,h} (sgettext): Ditch the sgettext() approach,
+	because it's not likely to be supported by libglade when regexxer
+	starts using that at some point.  Until now there are no ambiguous
+	messages in regexxer, and we can switch back when the need arises.
+
+	* src/controller.cc: Remove the disambiguing "...|" prefix from all
+	translatable messages.
+	* src/filebuffer.cc: ditto
+	* src/filetree.cc: ditto
+	* src/mainwindow.cc: ditto
+	* src/prefdialog.cc: ditto
+	* src/statusline.cc: ditto.
+
 2004-05-07  Daniel Elstner  <daniel.elstner@gmx.net>
 
 	* src/main.cc (stock_icon_info): Rename to 'stock_icon_about',

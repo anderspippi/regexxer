@@ -247,17 +247,17 @@ StatusLine::StatusLine()
                    "}\n"
                    "widget \"*.regexxer-stop-button\" style \"regexxer-stop-button-style\"\n");
 
-  stop_button_ = new Button(_("Statusbar|Stop"));
+  stop_button_ = new Button(_("Stop"));
   pack_start(*manage(stop_button_), PACK_SHRINK);
   stop_button_->set_name("regexxer-stop-button");
 
   progressbar_ = new ProgressBar();
   pack_start(*manage(progressbar_), PACK_SHRINK);
 
-  file_counter_ = new CounterBox(_("Statusbar|File:"));
+  file_counter_ = new CounterBox(_("File:"));
   pack_start(*manage(file_counter_), PACK_SHRINK);
 
-  match_counter_ = new CounterBox(_("Statusbar|Match:"));
+  match_counter_ = new CounterBox(_("Match:"));
   pack_start(*manage(match_counter_), PACK_SHRINK);
 
   statusbar_ = new Statusbar();

@@ -302,11 +302,11 @@ Gtk::Widget* MainWindow::create_left_pane()
   vbox->pack_start(*manage(table), PACK_SHRINK);
   table->set_spacings(6); // HIG
 
-  Button *const button_folder = new ImageLabelButton(Stock::OPEN, _("LeftPane|Fol_der:"), true);
+  Button *const button_folder = new ImageLabelButton(Stock::OPEN, _("Fol_der:"), true);
   table->attach(*manage(button_folder), 0, 1, 0, 1, FILL, AttachOptions(0));
   button_folder->signal_clicked().connect(SigC::slot(*this, &MainWindow::on_select_folder));
 
-  Label *const label_pattern = new Label(_("LeftPane|Pattern:"), 0.0, 0.5);
+  Label *const label_pattern = new Label(_("Pattern:"), 0.0, 0.5);
   table->attach(*manage(label_pattern), 0, 1, 1, 2, FILL, AttachOptions(0));
 
   entry_folder_ = new Entry();
@@ -326,10 +326,10 @@ Gtk::Widget* MainWindow::create_left_pane()
   Box *const hbox = new HBox(false, 6 /* HIG */);
   table->attach(*manage(hbox), 0, 2, 2, 3, EXPAND|FILL, AttachOptions(0));
 
-  button_recursive_ = new CheckButton(_("LeftPane|recursive"));
+  button_recursive_ = new CheckButton(_("recursive"));
   hbox->pack_start(*manage(button_recursive_), PACK_SHRINK);
 
-  button_hidden_ = new CheckButton(_("LeftPane|hidden"));
+  button_hidden_ = new CheckButton(_("hidden"));
   hbox->pack_start(*manage(button_hidden_), PACK_SHRINK);
 
   Button *const button_find_files = new Button(Stock::FIND);
@@ -372,12 +372,12 @@ Gtk::Widget* MainWindow::create_right_pane()
   vbox->pack_start(*manage(table), PACK_SHRINK);
   table->set_spacings(6); // HIG
 
-  Label *const label_search = new Label(_("RightPane|Search:"), 0.0, 0.5);
+  Label *const label_search = new Label(_("Search:"), 0.0, 0.5);
   table->attach(*manage(label_search), 0, 1, 0, 1, FILL, AttachOptions(0));
   table->attach(*manage(entry_regex_ = new Entry()),  1, 2, 0, 1, EXPAND|FILL, AttachOptions(0));
   label_search->set_mnemonic_widget(*entry_regex_);
 
-  Label *const label_replace = new Label(_("RightPane|Replace:"), 0.0, 0.5);
+  Label *const label_replace = new Label(_("Replace:"), 0.0, 0.5);
   table->attach(*manage(label_replace), 0, 1, 1, 2, FILL, AttachOptions(0));
   table->attach(*manage(entry_substitution_ = new Entry()),  1, 2, 1, 2, EXPAND|FILL, AttachOptions(0));
   label_replace->set_mnemonic_widget(*entry_substitution_);
@@ -418,7 +418,7 @@ Gtk::Widget* MainWindow::create_right_pane()
   entry_preview_->set_editable(false);
   entry_preview_->unset_flags(CAN_FOCUS);
 
-  entry_preview_->get_accessible()->set_name(_("RightPane|Preview"));
+  entry_preview_->get_accessible()->set_name(_("Preview"));
 
   tooltips_.set_tip(*entry_regex_,        _("A regular expression in Perl syntax"));
   tooltips_.set_tip(*entry_substitution_, _("The new string to substitute. As in Perl, you can "

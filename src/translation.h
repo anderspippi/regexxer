@@ -28,14 +28,14 @@
 # define gettext_noop(s) (s)
 #endif
 
-#define _(s) ::Util::sgettext(s)
+#define _(s) ::Util::translate(s)
 #define N_(s) gettext_noop(s)
 
 namespace Util
 {
 
 void initialize_gettext(const char* domain, const char* localedir);
-const char* sgettext(const char* msgid) G_GNUC_CONST;
+const char* translate(const char* msgid) G_GNUC_CONST;
 
 Glib::ustring compose(const Glib::ustring& format, const Glib::ustring& arg1);
 Glib::ustring compose(const Glib::ustring& format, const Glib::ustring& arg1,

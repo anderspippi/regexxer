@@ -82,24 +82,13 @@ void Util::initialize_gettext(const char*, const char*)
 {}
 #endif /* ENABLE_NLS */
 
-/*
- * This is just like the sgettext() in the GNU gettext manual.
- */
-const char* Util::sgettext(const char* msgid)
+const char* Util::translate(const char* msgid)
 {
 #if ENABLE_NLS
-  const char* result = gettext(msgid);
-
-  if (result == msgid)
+  return gettext(msgid);
 #else
-  const char* result = msgid;
+  return msgid;
 #endif
-  {
-    if (const char *const delimiter = std::strrchr(result, '|'))
-      result = delimiter + 1;
-  }
-
-  return result;
 }
 
 Glib::ustring Util::compose(const Glib::ustring& format, const Glib::ustring& arg1)

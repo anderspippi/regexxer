@@ -319,13 +319,13 @@ PrefDialog::PrefDialog(Gtk::Window& parent)
   box.pack_start(*manage(notebook));
 
   {
-    std::auto_ptr<Widget> label (new ImageLabel(Stock::PREFERENCES, _("Preferences|_Look'n'feel")));
+    std::auto_ptr<Widget> label (new ImageLabel(Stock::PREFERENCES, _("_Look'n'feel")));
     Widget *const page = create_page_look();
 
     notebook->append_page(*manage(page), *manage(label.release()));
   }
   {
-    std::auto_ptr<Widget> label (new ImageLabel(Stock::PROPERTIES, _("Preferences|_File access")));
+    std::auto_ptr<Widget> label (new ImageLabel(Stock::PROPERTIES, _("_File access")));
     Widget *const page = create_page_file();
 
     notebook->append_page(*manage(page), *manage(label.release()));
@@ -388,13 +388,13 @@ Gtk::Widget* PrefDialog::create_page_look()
   page->set_col_spacings(12);
 
   {
-    Label *const label_textview_font = new Label(_("Preferences|_Text view font:"), 0.0, 0.5, true);
+    Label *const label_textview_font = new Label(_("_Text view font:"), 0.0, 0.5, true);
     page->attach(*manage(label_textview_font), 0, 1, 0, 1, FILL);
 
-    Label *const label_match_color = new Label(_("Preferences|_Match color:"), 0.0, 0.5, true);
+    Label *const label_match_color = new Label(_("_Match color:"), 0.0, 0.5, true);
     page->attach(*manage(label_match_color), 0, 1, 1, 2, FILL);
 
-    Label *const label_current_color = new Label(_("Preferences|C_urrent match color:"), 0.0, 0.5, true);
+    Label *const label_current_color = new Label(_("C_urrent match color:"), 0.0, 0.5, true);
     page->attach(*manage(label_current_color), 0, 1, 2, 3, FILL);
 
     button_textview_font_ = new FontSelectionButton();
@@ -413,7 +413,7 @@ Gtk::Widget* PrefDialog::create_page_look()
   {
     using Gtk::Menu_Helpers::MenuElem;
 
-    Label *const label_toolbar_style = new Label(_("Preferences|Tool_bar style:"), 0.0, 0.5, true);
+    Label *const label_toolbar_style = new Label(_("Tool_bar style:"), 0.0, 0.5, true);
     page->attach(*manage(label_toolbar_style), 0, 1, 3, 4, FILL);
 
     option_toolbar_style_ = new OptionMenu();
@@ -425,10 +425,10 @@ Gtk::Widget* PrefDialog::create_page_look()
     option_toolbar_style_->set_menu(*manage(menu));
     Menu::MenuList& items = menu->items();
 
-    items.push_back(MenuElem(_("Preferences|Icons only")));
-    items.push_back(MenuElem(_("Preferences|Text only")));
-    items.push_back(MenuElem(_("Preferences|Icons and text")));
-    items.push_back(MenuElem(_("Preferences|Both horizontal")));
+    items.push_back(MenuElem(_("Icons only")));
+    items.push_back(MenuElem(_("Text only")));
+    items.push_back(MenuElem(_("Icons and text")));
+    items.push_back(MenuElem(_("Both horizontal")));
   }
 
   return page.release();
@@ -450,9 +450,9 @@ Gtk::Widget* PrefDialog::create_page_file()
   page->pack_start(*manage(table), PACK_EXPAND_PADDING);
   table->set_col_spacings(3);
 
-  table->attach(*manage(new Label(_("Preferences|1."), 1.0, 0.5)), 0, 1, 0, 1, FILL, FILL);
-  table->attach(*manage(new Label(_("Preferences|2."), 1.0, 0.5)), 0, 1, 1, 2, FILL, FILL);
-  table->attach(*manage(new Label(_("Preferences|3."), 1.0, 0.5)), 0, 1, 2, 3, FILL, FILL);
+  table->attach(*manage(new Label(_("1."), 1.0, 0.5)), 0, 1, 0, 1, FILL, FILL);
+  table->attach(*manage(new Label(_("2."), 1.0, 0.5)), 0, 1, 1, 2, FILL, FILL);
+  table->attach(*manage(new Label(_("3."), 1.0, 0.5)), 0, 1, 2, 3, FILL, FILL);
 
   Label *const label_utf8 = new Label("UTF-8", 0.0, 0.5);
   table->attach(*manage(label_utf8), 1, 2, 0, 1, FILL, FILL);

@@ -60,7 +60,7 @@ FileTree::FileTree()
       SigC::slot(*this, &FileTree::on_treestore_sort_column_changed));
 
   {
-    Column *const column = new Column(_("FileTree|File"));
+    Column *const column = new Column(_("File"));
     append_column(*manage(column));
 
     CellRendererPixbuf *const cell_icon = new CellRendererPixbuf();
@@ -79,7 +79,7 @@ FileTree::FileTree()
   }
 
   {
-    Column *const column = new Column(_("FileTree|#"));
+    Column *const column = new Column(_("#"));
     append_column(*manage(column));
 
     CellRendererText *const cell_matchcount = new CellRendererText();
