@@ -18,5 +18,5 @@
 ## Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 gladedir        = $(pkgdatadir)
-dist_glade_DATA = aboutdialog.glade prefdialog.glade
+dist_glade_DATA = aboutdialog.glade mainwindow.glade prefdialog.glade
 

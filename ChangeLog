@@ -1,5 +1,10 @@
 2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* ui/mainwindow.glade: New file defining the main window's UI.
+	* ui/Makefile.am (dist_glade_DATA): Add mainwindow.glade.
+
+2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* src/globalstrings.h (glade_aboutdialog_filename): New string.
 
 	* src/aboutdialog.{cc,h}: Use libglademm to load the dialog UI
