@@ -1,6 +1,6 @@
 /* $Id$
  *
- * Copyright (c) 2002  Daniel Elstner  <daniel.elstner@gmx.net>
+ * Copyright (c) 2004  Daniel Elstner  <daniel.elstner@gmx.net>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License VERSION 2 as
@@ -26,35 +26,14 @@
 #include <glib.h>
 #include <gconfmm.h>
 #include <gtkmm.h>
+#include <libglademm.h>
 #include <list>
-#include <memory>
 
 #include <config.h>
 
 
 namespace
 {
-
-class ImageLabel : public Gtk::HBox
-{
-public:
-  ImageLabel(const Gtk::StockID& stock_id, const Glib::ustring& label);
-  virtual ~ImageLabel();
-};
-
-ImageLabel::ImageLabel(const Gtk::StockID& stock_id, const Glib::ustring& label)
-:
-  Gtk::HBox(false, 2)
-{
-  pack_start(*Gtk::manage(new Gtk::Image(stock_id, Gtk::ICON_SIZE_MENU)), Gtk::PACK_SHRINK);
-  pack_start(*Gtk::manage(new Gtk::Label(label, true)), Gtk::PACK_SHRINK);
-
-  show_all_children();
-}
-
-ImageLabel::~ImageLabel()
-{}
-
 
 const Gtk::ToolbarStyle toolbar_style_values[] =
 {
@@ -154,6 +133,21 @@ void FontSelectionButton::on_clicked()
   {
     set_selected_font(dialog.get_font_name());
     signal_font_selected(); // emit
+  }
+}
+
+extern "C"
+GtkWidget* regexxer_create_font_selection_button(int, int)
+{
+  try
+  {
+    Gtk::Widget *const widget = new FontSelectionButton();
+    widget->show_all();
+    return Gtk::manage(widget)->gobj();
+  }
+  catch (...)
+  {
+    g_return_val_if_reached(0);
   }
 }
 
@@ -296,12 +290,27 @@ bool ColorSelectionButton::ColorLabel::on_expose_event(GdkEventExpose* event)
   return false;
 }
 
+extern "C"
+GtkWidget* regexxer_create_color_selection_button(int, int)
+{
+  try
+  {
+    Gtk::Widget *const widget = new ColorSelectionButton();
+    widget->show_all();
+    return Gtk::manage(widget)->gobj();
+  }
+  catch (...)
+  {
+    g_return_val_if_reached(0);
+  }
+}
+
 
 /**** Regexxer::PrefDialog *************************************************/
 
 PrefDialog::PrefDialog(Gtk::Window& parent)
 :
-  Gtk::Dialog             (_("Preferences"), parent),
+  dialog_                 (),
   button_textview_font_   (0),
   button_match_color_     (0),
   button_current_color_   (0),
@@ -310,28 +319,46 @@ PrefDialog::PrefDialog(Gtk::Window& parent)
   button_direction_       (0),
   entry_fallback_changed_ (false)
 {
-  using namespace Gtk;
-
-  add_button(Stock::CLOSE, RESPONSE_CLOSE);
-
-  Box& box = *get_vbox();
-  Notebook *const notebook = new Notebook();
-  box.pack_start(*manage(notebook));
-
-  {
-    std::auto_ptr<Widget> label (new ImageLabel(Stock::PREFERENCES, _("_Look'n'feel")));
-    Widget *const page = create_page_look();
-
-    notebook->append_page(*manage(page), *manage(label.release()));
-  }
-  {
-    std::auto_ptr<Widget> label (new ImageLabel(Stock::PROPERTIES, _("_File access")));
-    Widget *const page = create_page_file();
-
-    notebook->append_page(*manage(page), *manage(label.release()));
-  }
+  load_xml();
+  dialog_->set_transient_for(parent);
 
   initialize_configuration();
+  connect_signals();
+}
+
+PrefDialog::~PrefDialog()
+{}
+
+void PrefDialog::load_xml()
+{
+  using namespace Gtk;
+  using Gnome::Glade::Xml;
+
+  const Glib::RefPtr<Xml> xml = Xml::create(glade_prefdialog_filename);
+
+  Dialog* prefdialog = 0;
+  dialog_.reset(xml->get_widget("prefdialog", prefdialog));
+
+  xml->get_widget("button_textview_font", button_textview_font_);
+  xml->get_widget("button_match_color",   button_match_color_);
+  xml->get_widget("button_current_color", button_current_color_);
+  xml->get_widget("option_toolbar_style", option_toolbar_style_);
+  xml->get_widget("entry_fallback",       entry_fallback_);
+  xml->get_widget("button_direction",     button_direction_);
+
+  {
+    const Glib::RefPtr<SizeGroup> size_group = SizeGroup::create(SIZE_GROUP_VERTICAL);
+
+    size_group->add_widget(*xml->get_widget("label_utf8"));
+    size_group->add_widget(*xml->get_widget("label_locale"));
+    size_group->add_widget(*xml->get_widget("box_fallback"));
+  }
+}
+
+void PrefDialog::connect_signals()
+{
+  dialog_->signal_response().connect(
+      SigC::slot(*this, &PrefDialog::on_response));
 
   button_textview_font_->signal_font_selected.connect(
       SigC::slot(*this, &PrefDialog::on_textview_font_selected));
@@ -353,15 +380,7 @@ PrefDialog::PrefDialog(Gtk::Window& parent)
 
   conn_direction_ = button_direction_->signal_toggled().connect(
       SigC::slot(*this, &PrefDialog::on_button_direction_toggled));
-
-  notebook->show_all();
-  notebook->grab_focus();
-
-  set_default_response(RESPONSE_CLOSE);
 }
-
-PrefDialog::~PrefDialog()
-{}
 
 void PrefDialog::on_response(int)
 {
@@ -374,114 +393,7 @@ void PrefDialog::on_response(int)
     catch (const Gnome::Conf::Error&)
     {}
   }
-  hide();
-}
-
-Gtk::Widget* PrefDialog::create_page_look()
-{
-  using namespace Gtk;
-
-  std::auto_ptr<Table> page (new Table(4, 2, false));
-
-  page->set_border_width(10);
-  page->set_row_spacings(12);
-  page->set_col_spacings(12);
-
-  {
-    Label *const label_textview_font = new Label(_("_Text view font:"), 0.0, 0.5, true);
-    page->attach(*manage(label_textview_font), 0, 1, 0, 1, FILL);
-
-    Label *const label_match_color = new Label(_("_Match color:"), 0.0, 0.5, true);
-    page->attach(*manage(label_match_color), 0, 1, 1, 2, FILL);
-
-    Label *const label_current_color = new Label(_("C_urrent match color:"), 0.0, 0.5, true);
-    page->attach(*manage(label_current_color), 0, 1, 2, 3, FILL);
-
-    button_textview_font_ = new FontSelectionButton();
-    page->attach(*manage(button_textview_font_), 1, 2, 0, 1, EXPAND|FILL, AttachOptions(0));
-
-    button_match_color_ = new ColorSelectionButton();
-    page->attach(*manage(button_match_color_), 1, 2, 1, 2, EXPAND|FILL, AttachOptions(0));
-
-    button_current_color_ = new ColorSelectionButton();
-    page->attach(*manage(button_current_color_), 1, 2, 2, 3, EXPAND|FILL, AttachOptions(0));
-
-    label_textview_font->set_mnemonic_widget(*button_textview_font_);
-    label_match_color  ->set_mnemonic_widget(*button_match_color_);
-    label_current_color->set_mnemonic_widget(*button_current_color_);
-  }
-  {
-    using Gtk::Menu_Helpers::MenuElem;
-
-    Label *const label_toolbar_style = new Label(_("Tool_bar style:"), 0.0, 0.5, true);
-    page->attach(*manage(label_toolbar_style), 0, 1, 3, 4, FILL);
-
-    option_toolbar_style_ = new OptionMenu();
-    page->attach(*manage(option_toolbar_style_), 1, 2, 3, 4, EXPAND|FILL, AttachOptions(0));
-
-    label_toolbar_style->set_mnemonic_widget(*option_toolbar_style_);
-
-    Menu *const menu = new Menu();
-    option_toolbar_style_->set_menu(*manage(menu));
-    Menu::MenuList& items = menu->items();
-
-    items.push_back(MenuElem(_("Icons only")));
-    items.push_back(MenuElem(_("Text only")));
-    items.push_back(MenuElem(_("Icons and text")));
-    items.push_back(MenuElem(_("Both horizontal")));
-  }
-
-  return page.release();
-}
-
-Gtk::Widget* PrefDialog::create_page_file()
-{
-  using namespace Gtk;
-
-  std::auto_ptr<Box> page (new VBox(false, 12));
-  page->set_border_width(10);
-
-  Label *const label_info = new Label(_("regexxer attempts to read a file in the following "
-                                        "encodings before giving up:"), 0.0, 0.5);
-  page->pack_start(*manage(label_info), PACK_EXPAND_PADDING);
-  label_info->set_line_wrap(true);
-
-  Table *const table = new Table(3, 2, false);
-  page->pack_start(*manage(table), PACK_EXPAND_PADDING);
-  table->set_col_spacings(3);
-
-  table->attach(*manage(new Label(_("1."), 1.0, 0.5)), 0, 1, 0, 1, FILL, FILL);
-  table->attach(*manage(new Label(_("2."), 1.0, 0.5)), 0, 1, 1, 2, FILL, FILL);
-  table->attach(*manage(new Label(_("3."), 1.0, 0.5)), 0, 1, 2, 3, FILL, FILL);
-
-  Label *const label_utf8 = new Label("UTF-8", 0.0, 0.5);
-  table->attach(*manage(label_utf8), 1, 2, 0, 1, FILL, FILL);
-
-  Label *const label_locale = new Label(_("The encoding specified by the current locale"), 0.0, 0.5);
-  table->attach(*manage(label_locale), 1, 2, 1, 2, FILL, FILL);
-
-  Box *const box_fallback = new HBox(false, 6 /* HIG */);
-  table->attach(*manage(box_fallback), 1, 2, 2, 3, EXPAND|FILL, FILL);
-
-  Label *const label_fallback = new Label(_("Fallback _encoding:"), 0.0, 0.5, true);
-  box_fallback->pack_start(*manage(label_fallback), PACK_SHRINK);
-
-  entry_fallback_ = new Entry();
-  box_fallback->pack_start(*manage(entry_fallback_), PACK_EXPAND_WIDGET);
-
-  label_fallback->set_mnemonic_widget(*entry_fallback_);
-  {
-    const Glib::RefPtr<SizeGroup> size_group = SizeGroup::create(SIZE_GROUP_VERTICAL);
-
-    size_group->add_widget(*label_utf8);
-    size_group->add_widget(*label_locale);
-    size_group->add_widget(*box_fallback);
-  }
-
-  button_direction_ = new CheckButton(_("_Ignore the text direction of the locale"), true);
-  page->pack_start(*manage(button_direction_), PACK_EXPAND_PADDING);
-
-  return page.release();
+  dialog_->hide();
 }
 
 void PrefDialog::on_conf_value_changed_hack(const Glib::ustring& key,
@@ -603,9 +515,9 @@ void PrefDialog::on_entry_fallback_activate()
   {
     const Glib::ustring message = Util::compose(_("`%1' is not a valid encoding."),
                                                 fallback_encoding);
-    Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
+    Gtk::MessageDialog error_dialog (*dialog_, message, Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
 
-    dialog.run();
+    error_dialog.run();
   }
 }
 

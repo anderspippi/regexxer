@@ -43,6 +43,8 @@ const char *const conf_key_override_direction   = REGEXXER_GCONF_DIRECTORY "/ove
 const char *const application_icon_filename     = REGEXXER_DATADIR G_DIR_SEPARATOR_S
                                                   "pixmaps" G_DIR_SEPARATOR_S "regexxer.png";
 
+const char *const glade_prefdialog_filename     = REGEXXER_PKGDATADIR G_DIR_SEPARATOR_S "prefdialog.glade";
+
 } // namespace Regexxer
 
 #endif /* REGEXXER_GLOBALSTRINGS_H_INCLUDED */

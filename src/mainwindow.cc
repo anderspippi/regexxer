@@ -938,14 +938,14 @@ void MainWindow::on_preferences()
 {
   if (pref_dialog_.get())
   {
-    pref_dialog_->present();
+    pref_dialog_->get_dialog()->present();
   }
   else
   {
     std::auto_ptr<PrefDialog> dialog (new PrefDialog(*this));
 
-    dialog->signal_hide().connect(SigC::slot(*this, &MainWindow::on_pref_dialog_hide));
-    dialog->show();
+    dialog->get_dialog()->signal_hide().connect(SigC::slot(*this, &MainWindow::on_pref_dialog_hide));
+    dialog->get_dialog()->show();
 
     pref_dialog_ = dialog;
   }

@@ -1,5 +1,18 @@
 2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* src/Makefile.am (global_defines): Define REGEXXER_PKGDATADIR.
+
+	* src/globalstrings.h (glade_prefdialog_filename): New string.
+
+	* src/prefdialog.{cc,h}: Use libglademm to load the dialog UI
+	at runtime, and make the actual dialog widget a data member of
+	class PrefDialog.  Remove the old UI creation code.
+
+	* src/mainwindow.cc (MainWindow::on_preferences): Use the new
+	PrefDialog::get_dialog() accessor to get the actual widget.
+
+2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* ui: New directory for glade XML files.
 	* ui/.cvsignore: New file.
 	* ui/Makefile.am: New file.

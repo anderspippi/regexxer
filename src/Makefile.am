@@ -63,8 +63,9 @@ regexxer_SOURCES =		\
 
 global_defines = \
 -DREGEXXER_DATADIR=\""$(datadir)"\" \
--DREGEXXER_GCONF_DIRECTORY=\""$(REGEXXER_GCONF_DIRECTORY)"\" \
--DREGEXXER_LOCALEDIR=\""$(datadir)/locale"\"
+-DREGEXXER_PKGDATADIR=\""$(pkgdatadir)"\" \
+-DREGEXXER_LOCALEDIR=\""$(datadir)/locale"\" \
+-DREGEXXER_GCONF_DIRECTORY=\""$(REGEXXER_GCONF_DIRECTORY)"\"
 
 AM_CPPFLAGS    = -I$(top_builddir) -I$(top_srcdir) $(global_defines) $(PKG_CFLAGS) $(PCRE_CFLAGS)
 regexxer_LDADD = $(LIBINTL) $(PKG_LIBS) $(PCRE_LIBS)

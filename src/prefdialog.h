@@ -23,14 +23,18 @@
 
 #include "signalutils.h"
 
-#include <gdkmm/color.h>
-#include <gtkmm/dialog.h>
+#include <sigc++/sigc++.h>
+#include <glibmm/ustring.h>
+#include <memory>
 
 namespace Gtk
 {
 class CheckButton;
+class Dialog;
 class Entry;
 class OptionMenu;
+class Widget;
+class Window;
 }
 
 namespace Gnome { namespace Conf { class Value; } }
@@ -42,28 +46,30 @@ namespace Regexxer
 class ColorSelectionButton;
 class FontSelectionButton;
 
-class PrefDialog : public Gtk::Dialog
+class PrefDialog : public SigC::Object
 {
 public:
   explicit PrefDialog(Gtk::Window& parent);
   virtual ~PrefDialog();
 
-protected:
-  virtual void on_response(int response_id);
+  Gtk::Dialog* get_dialog() { return dialog_.get(); }
 
 private:
-  FontSelectionButton*  button_textview_font_;
-  ColorSelectionButton* button_match_color_;
-  ColorSelectionButton* button_current_color_;
-  Gtk::OptionMenu*      option_toolbar_style_;
-  Gtk::Entry*           entry_fallback_;
-  Gtk::CheckButton*     button_direction_;
-  Util::AutoConnection  conn_toolbar_style_;
-  Util::AutoConnection  conn_direction_;
-  bool                  entry_fallback_changed_;
+  std::auto_ptr<Gtk::Dialog>  dialog_;
+  FontSelectionButton*        button_textview_font_;
+  ColorSelectionButton*       button_match_color_;
+  ColorSelectionButton*       button_current_color_;
+  Gtk::OptionMenu*            option_toolbar_style_;
+  Gtk::Entry*                 entry_fallback_;
+  Gtk::CheckButton*           button_direction_;
+  Util::AutoConnection        conn_toolbar_style_;
+  Util::AutoConnection        conn_direction_;
+  bool                        entry_fallback_changed_;
 
-  Gtk::Widget* create_page_look();
-  Gtk::Widget* create_page_file();
+  void load_xml();
+  void connect_signals();
+
+  void on_response(int response_id);
 
   void on_conf_value_changed_hack(const Glib::ustring& key, const Gnome::Conf::Value& value);
   void on_conf_value_changed(const Glib::ustring& key, const Gnome::Conf::Value& value);
