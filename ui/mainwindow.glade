@@ -458,7 +458,7 @@
 				<widget class="GtkHBox" id="hbox_button_folder">
 				  <property name="visible">True</property>
 				  <property name="homogeneous">False</property>
-				  <property name="spacing">3</property>
+				  <property name="spacing">2</property>
 
 				  <child>
 				    <widget class="GtkImage" id="image_button_folder">
@@ -681,9 +681,63 @@
 			      <property name="visible">True</property>
 			      <property name="tooltip" translatable="yes">Find all files that match the filename pattern</property>
 			      <property name="can_focus">True</property>
-			      <property name="label">gtk-find</property>
-			      <property name="use_stock">True</property>
 			      <property name="relief">GTK_RELIEF_NORMAL</property>
+
+			      <child>
+				<widget class="GtkAlignment" id="alignment_button_find_files">
+				  <property name="visible">True</property>
+				  <property name="xalign">0.5</property>
+				  <property name="yalign">0.5</property>
+				  <property name="xscale">0</property>
+				  <property name="yscale">0</property>
+
+				  <child>
+				    <widget class="GtkHBox" id="hbox_button_find_files">
+				      <property name="visible">True</property>
+				      <property name="homogeneous">False</property>
+				      <property name="spacing">2</property>
+
+				      <child>
+					<widget class="GtkImage" id="image_button_find_files">
+					  <property name="visible">True</property>
+					  <property name="stock">gtk-find</property>
+					  <property name="icon_size">4</property>
+					  <property name="xalign">0.5</property>
+					  <property name="yalign">0.5</property>
+					  <property name="xpad">0</property>
+					  <property name="ypad">0</property>
+					</widget>
+					<packing>
+					  <property name="padding">0</property>
+					  <property name="expand">False</property>
+					  <property name="fill">False</property>
+					</packing>
+				      </child>
+
+				      <child>
+					<widget class="GtkLabel" id="label_button_find_files">
+					  <property name="visible">True</property>
+					  <property name="label" translatable="yes">Find fi_les</property>
+					  <property name="use_underline">True</property>
+					  <property name="use_markup">False</property>
+					  <property name="justify">GTK_JUSTIFY_LEFT</property>
+					  <property name="wrap">False</property>
+					  <property name="selectable">False</property>
+					  <property name="xalign">0.5</property>
+					  <property name="yalign">0.5</property>
+					  <property name="xpad">0</property>
+					  <property name="ypad">0</property>
+					</widget>
+					<packing>
+					  <property name="padding">0</property>
+					  <property name="expand">False</property>
+					  <property name="fill">False</property>
+					</packing>
+				      </child>
+				    </widget>
+				  </child>
+				</widget>
+			      </child>
 			    </widget>
 			    <packing>
 			      <property name="padding">0</property>
@@ -1063,7 +1117,7 @@
 			    <widget class="GtkHBox" id="hbox_button_replace">
 			      <property name="visible">True</property>
 			      <property name="homogeneous">False</property>
-			      <property name="spacing">3</property>
+			      <property name="spacing">2</property>
 
 			      <child>
 				<widget class="GtkImage" id="image_button_replace">
@@ -1135,7 +1189,7 @@
 			    <widget class="GtkHBox" id="hbox_button_replace_file">
 			      <property name="visible">True</property>
 			      <property name="homogeneous">False</property>
-			      <property name="spacing">3</property>
+			      <property name="spacing">2</property>
 
 			      <child>
 				<widget class="GtkImage" id="image_button_replace_file">
@@ -1207,7 +1261,7 @@
 			    <widget class="GtkHBox" id="hbox_button_replace_all">
 			      <property name="visible">True</property>
 			      <property name="homogeneous">False</property>
-			      <property name="spacing">3</property>
+			      <property name="spacing">2</property>
 
 			      <child>
 				<widget class="GtkImage" id="image_button_replace_all">
