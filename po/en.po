@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer 0.7\n"
 "Report-Msgid-Bugs-To: daniel.elstner@gmx.net\n"
-"POT-Creation-Date: 2004-05-10 12:38+0200\n"
+"POT-Creation-Date: 2004-05-10 21:50+0200\n"
 "PO-Revision-Date: 2004-05-05 15:35+0200\n"
 "Last-Translator: Daniel Elstner <daniel.elstner@gmx.net>\n"
 "Language-Team: English <en@translate.freefriends.org>\n"
@@ -15,94 +15,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: src/controller.cc:221
-msgid "_File"
-msgstr "_File"
-
-#: src/controller.cc:244
-msgid "_Match"
-msgstr "_Match"
-
-#: src/controller.cc:249
-msgid "_Previous file"
-msgstr "_Previous file"
-
-#: src/controller.cc:253
-msgid "_Next file"
-msgstr "_Next file"
-
-#: src/controller.cc:257
-msgid "Replace _current"
-msgstr "Replace _current"
-
-#: src/controller.cc:259
-msgid "Replace in _this file"
-msgstr "Replace in _this file"
-
-#: src/controller.cc:260
-msgid "Replace in _all files"
-msgstr "Replace in _all files"
-
-#: src/controller.cc:265
-msgid "_Help"
-msgstr "_Help"
-
-#: src/controller.cc:312
-msgid "File backward"
-msgstr "File backward"
-
-#: src/controller.cc:315
-msgid "Backward"
-msgstr "Backward"
-
-#: src/controller.cc:318
-msgid "Forward"
-msgstr "Forward"
-
-#: src/controller.cc:321
-msgid "File forward"
-msgstr "File forward"
-
-#: src/controller.cc:324
-msgid "_Replace"
-msgstr "_Replace"
-
-#: src/controller.cc:327
-msgid "_This file"
-msgstr "_This file"
-
-#: src/controller.cc:330
-msgid "_All files"
-msgstr "_All files"
-
-#: src/controller.cc:333
-msgid "Go to the previous matching file"
-msgstr "Go to the previous matching file"
-
-#: src/controller.cc:334
-msgid "Go to previous match"
-msgstr "Go to previous match"
-
-#: src/controller.cc:335
-msgid "Go to next match"
-msgstr "Go to next match"
-
-#: src/controller.cc:336
-msgid "Go to the next matching file"
-msgstr "Go to the next matching file"
-
-#: src/controller.cc:337
-msgid "Replace current match"
-msgstr "Replace current match"
-
-#: src/controller.cc:338
-msgid "Replace all matches in the current file"
-msgstr "Replace all matches in the current file"
-
-#: src/controller.cc:339
-msgid "Replace all matches in all files"
-msgstr "Replace all matches in all files"
 
 #. TRANSLATORS: Please replace space by U+00A0 NO-BREAK SPACE.
 #: src/filebuffer.cc:205
@@ -125,97 +37,15 @@ msgstr "Failed to save file “%1”: %2"
 msgid "`%1' seems to be a binary file."
 msgstr "“%1” seems to be a binary file."
 
-#: src/main.cc:80
+#: src/main.cc:81
 msgid "_About"
 msgstr "_About"
 
-#: src/main.cc:81
+#: src/main.cc:82
 msgid "Save _all"
 msgstr "Save _all"
 
-#: src/mainwindow.cc:305
-msgid "Fol_der:"
-msgstr "Fol_der:"
-
-#: src/mainwindow.cc:309
-msgid "Pattern:"
-msgstr "Pattern:"
-
-#: src/mainwindow.cc:329
-msgid "recursive"
-msgstr "recursive"
-
-#: src/mainwindow.cc:332
-msgid "hidden"
-msgstr "hidden"
-
-#: src/mainwindow.cc:353
-msgid "The directory to be searched"
-msgstr "The directory to be searched"
-
-#: src/mainwindow.cc:354
-msgid ""
-"A filename pattern as used by the shell. Character classes [ab] and csh "
-"style brace expressions {a,b} are supported."
-msgstr ""
-"A filename pattern as used by the shell. Character classes [ab] and csh "
-"style brace expressions {a,b} are supported."
-
-#: src/mainwindow.cc:357
-msgid "Recurse into subdirectories"
-msgstr "Recurse into subdirectories"
-
-#: src/mainwindow.cc:358
-msgid "Also find hidden files"
-msgstr "Also find hidden files"
-
-#: src/mainwindow.cc:359
-msgid "Find all files that match the filename pattern"
-msgstr "Find all files that match the filename pattern"
-
-#: src/mainwindow.cc:375
-msgid "Search:"
-msgstr "Search:"
-
-#: src/mainwindow.cc:380
-msgid "Replace:"
-msgstr "Replace:"
-
-#: src/mainwindow.cc:421
-msgid "Preview"
-msgstr "Preview"
-
-#: src/mainwindow.cc:423
-msgid "A regular expression in Perl syntax"
-msgstr "A regular expression in Perl syntax"
-
-#: src/mainwindow.cc:424
-msgid ""
-"The new string to substitute. As in Perl, you can refer to parts of the "
-"match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, \\u, "
-"\\L, \\U and \\E are supported as well."
-msgstr ""
-"The new string to substitute. As in Perl, you can refer to parts of the "
-"match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, \\u, "
-"\\L, \\U and \\E are supported as well."
-
-#: src/mainwindow.cc:428
-msgid "Find all possible matches in a line"
-msgstr "Find all possible matches in a line"
-
-#: src/mainwindow.cc:429
-msgid "Do case insensitive matching"
-msgstr "Do case insensitive matching"
-
-#: src/mainwindow.cc:430
-msgid "Find all matches of the regular expression"
-msgstr "Find all matches of the regular expression"
-
-#: src/mainwindow.cc:431
-msgid "Preview of the substitution"
-msgstr "Preview of the substitution"
-
-#: src/mainwindow.cc:447
+#: src/mainwindow.cc:291
 msgid ""
 "Some files haven't been saved yet.\n"
 "Quit anyway?"
@@ -223,11 +53,11 @@ msgstr ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
 
-#: src/mainwindow.cc:460
+#: src/mainwindow.cc:304
 msgid "Select a folder"
 msgstr "Select a folder"
 
-#: src/mainwindow.cc:499
+#: src/mainwindow.cc:343
 msgid ""
 "Some files haven't been saved yet.\n"
 "Continue anyway?"
@@ -235,15 +65,15 @@ msgstr ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
 
-#: src/mainwindow.cc:526
+#: src/mainwindow.cc:370
 msgid "The file search pattern is invalid."
 msgstr "The file search pattern is invalid."
 
-#: src/mainwindow.cc:532
+#: src/mainwindow.cc:376
 msgid "The following errors occurred during search:"
 msgstr "The following errors occurred during search:"
 
-#: src/mainwindow.cc:557
+#: src/mainwindow.cc:401
 msgid ""
 "Error in regular expression at `%1' (index %2):\n"
 "%3"
@@ -251,7 +81,7 @@ msgstr ""
 "Error in regular expression at “%1” (index %2):\n"
 "%3"
 
-#: src/mainwindow.cc:559
+#: src/mainwindow.cc:403
 msgid ""
 "Error in regular expression:\n"
 "%1"
@@ -259,7 +89,7 @@ msgstr ""
 "Error in regular expression:\n"
 "%1"
 
-#: src/mainwindow.cc:778
+#: src/mainwindow.cc:622
 msgid "The following errors occurred during save:"
 msgstr "The following errors occurred during save:"
 
@@ -318,6 +148,181 @@ msgstr "written by"
 #: ui/aboutdialog.glade:205
 msgid "Debian package by"
 msgstr "Debian package by"
+
+#: ui/mainwindow.glade:35
+msgid "_File"
+msgstr "_File"
+
+#: ui/mainwindow.glade:108
+msgid "_Match"
+msgstr "_Match"
+
+#: ui/mainwindow.glade:117
+msgid "_Previous file"
+msgstr "_Previous file"
+
+#: ui/mainwindow.glade:156
+msgid "_Next file"
+msgstr "_Next file"
+
+#: ui/mainwindow.glade:183
+msgid "Replace _current"
+msgstr "Replace _current"
+
+#: ui/mainwindow.glade:204
+msgid "Replace in _this file"
+msgstr "Replace in _this file"
+
+#: ui/mainwindow.glade:224
+msgid "Replace in _all files"
+msgstr "Replace in _all files"
+
+#: ui/mainwindow.glade:248
+msgid "_Help"
+msgstr "_Help"
+
+#: ui/mainwindow.glade:382
+msgid "Pattern:"
+msgstr "Pattern:"
+
+#: ui/mainwindow.glade:406
+msgid "The directory to be searched"
+msgstr "The directory to be searched"
+
+#: ui/mainwindow.glade:413 ui/mainwindow.glade:516 ui/mainwindow.glade:811
+#: ui/mainwindow.glade:833 ui/mainwindow.glade:979 ui/prefdialog.glade:503
+msgid "*"
+msgstr "*"
+
+#: ui/mainwindow.glade:465
+msgid "Fol_der:"
+msgstr "Fol_der:"
+
+#: ui/mainwindow.glade:509
+msgid ""
+"A filename pattern as used by the shell. Character classes [ab] and csh "
+"style brace expressions {a,b} are supported."
+msgstr ""
+"A filename pattern as used by the shell. Character classes [ab] and csh "
+"style brace expressions {a,b} are supported."
+
+#: ui/mainwindow.glade:626
+msgid "Recurse into subdirectories"
+msgstr "Recurse into subdirectories"
+
+#: ui/mainwindow.glade:628
+msgid "recursive"
+msgstr "recursive"
+
+#: ui/mainwindow.glade:645
+msgid "Also find hidden files"
+msgstr "Also find hidden files"
+
+#: ui/mainwindow.glade:647
+msgid "hidden"
+msgstr "hidden"
+
+#: ui/mainwindow.glade:664
+msgid "Find all files that match the filename pattern"
+msgstr "Find all files that match the filename pattern"
+
+#: ui/mainwindow.glade:754
+msgid "Search:"
+msgstr "Search:"
+
+#: ui/mainwindow.glade:779
+msgid "Replace:"
+msgstr "Replace:"
+
+#: ui/mainwindow.glade:804
+msgid "A regular expression in Perl syntax"
+msgstr "A regular expression in Perl syntax"
+
+#: ui/mainwindow.glade:826
+msgid ""
+"The new string to substitute. As in Perl, you can refer to parts of the "
+"match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, \\u, "
+"\\L, \\U and \\E are supported as well."
+msgstr ""
+"The new string to substitute. As in Perl, you can refer to parts of the "
+"match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, \\u, "
+"\\L, \\U and \\E are supported as well."
+
+#: ui/mainwindow.glade:854
+msgid "Find all possible matches in a line"
+msgstr "Find all possible matches in a line"
+
+#: ui/mainwindow.glade:872
+msgid "Do case insensitive matching"
+msgstr "Do case insensitive matching"
+
+#: ui/mainwindow.glade:900
+msgid "Find all matches of the regular expression"
+msgstr "Find all matches of the regular expression"
+
+#: ui/mainwindow.glade:973
+msgid "Preview of the substitution"
+msgstr "Preview of the substitution"
+
+#: ui/mainwindow.glade:982
+msgid "Preview"
+msgstr "Preview"
+
+#: ui/mainwindow.glade:1033
+msgid "Replace current match"
+msgstr "Replace current match"
+
+#: ui/mainwindow.glade:1070
+msgid "_Replace"
+msgstr "_Replace"
+
+#: ui/mainwindow.glade:1105
+msgid "Replace all matches in the current file"
+msgstr "Replace all matches in the current file"
+
+#: ui/mainwindow.glade:1142
+msgid "_This file"
+msgstr "_This file"
+
+#: ui/mainwindow.glade:1177
+msgid "Replace all matches in all files"
+msgstr "Replace all matches in all files"
+
+#: ui/mainwindow.glade:1214
+msgid "_All files"
+msgstr "_All files"
+
+#: ui/mainwindow.glade:1263
+msgid "File backward"
+msgstr "File backward"
+
+#: ui/mainwindow.glade:1264
+msgid "Go to the previous matching file"
+msgstr "Go to the previous matching file"
+
+#: ui/mainwindow.glade:1292
+msgid "Backward"
+msgstr "Backward"
+
+#: ui/mainwindow.glade:1293
+msgid "Go to previous match"
+msgstr "Go to previous match"
+
+#: ui/mainwindow.glade:1321
+msgid "Forward"
+msgstr "Forward"
+
+#: ui/mainwindow.glade:1322
+msgid "Go to next match"
+msgstr "Go to next match"
+
+#: ui/mainwindow.glade:1350
+msgid "File forward"
+msgstr "File forward"
+
+#: ui/mainwindow.glade:1351
+msgid "Go to the next matching file"
+msgstr "Go to the next matching file"
 
 #: ui/prefdialog.glade:8
 msgid "Preferences"
@@ -384,10 +389,6 @@ msgstr "UTF-8"
 #: ui/prefdialog.glade:475
 msgid "Fallback _encoding:"
 msgstr "Fallback _encoding:"
-
-#: ui/prefdialog.glade:503
-msgid "*"
-msgstr "*"
 
 #: ui/prefdialog.glade:526
 msgid "The encoding specified by the current locale"

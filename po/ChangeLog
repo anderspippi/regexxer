@@ -1,5 +1,11 @@
 2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* POTFILES.in: Add ui/mainwindow.glade, remove src/controller.cc.
+	* de.po: Update.
+	* en.po: Update.
+
+2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* POTFILES.in: Add ui/aboutdialog.glade, remove src/aboutdialog.cc.
 	* de.po: Update.
 	* en.po: Update.
