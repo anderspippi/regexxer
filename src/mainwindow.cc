@@ -552,21 +552,11 @@ void MainWindow::on_exec_search()
   }
   catch (const Pcre::Error& error)
   {
-    // TODO: Translation
-    Glib::ustring message = "Error in regular expression";
     const int offset = error.offset();
-
-    if (offset >= 0 && unsigned(offset) < regex.length())
-    {
-      message += " at \302\273";
-      message += regex[offset];
-      message += "\302\253 (index ";
-      message += Util::int_to_string(offset + 1);
-      message += ')';
-    }
-
-    message += ":\n";
-    message += error.what();
+    const Glib::ustring message = (offset >= 0 && unsigned(offset) < regex.length())
+      ? Util::compose(_("Error in regular expression at `%1' (index %2):\n%3"),
+                      regex.substr(offset, 1), Util::int_to_string(offset + 1), error.what())
+      : Util::compose(_("Error in regular expression:\n%1"), error.what());
 
     Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
     dialog.run();

@@ -24,7 +24,53 @@
 #endif
 
 #include "translation.h"
+#include "miscutils.h"
+
+#include <glibmm.h>
+#include <vector>
 #include <cstring>
+
+
+namespace
+{
+
+Glib::ustring compose_impl(const Glib::ustring& format, const std::vector<Glib::ustring>& args)
+{
+  using namespace Glib;
+
+  ustring result;
+  const ustring::const_iterator pend = format.end();
+
+  for (ustring::const_iterator p = format.begin(); p != pend; ++p)
+  {
+    gunichar uc = *p;
+
+    if (uc == '%' && Util::next(p) != pend)
+    {
+      uc = *++p;
+
+      if (Unicode::isdigit(uc))
+      {
+        const int index = Unicode::digit_value(uc) - 1;
+
+        if (index >= 0 && unsigned(index) < args.size())
+        {
+          result += args[index];
+          continue;
+        }
+      }
+
+      if (uc != '%')
+        result += '%';
+    }
+
+    result += uc;
+  }
+
+  return result;
+}
+
+} // anonymous namespace
 
 
 #if ENABLE_NLS
@@ -57,5 +103,32 @@ const char* Util::sgettext(const char* msgid)
   }
 
   return result;
+}
+
+Glib::ustring Util::compose(const Glib::ustring& format, const Glib::ustring& arg1)
+{
+  std::vector<Glib::ustring> args;
+  args.push_back(arg1);
+  return compose_impl(format, args);
+}
+
+Glib::ustring Util::compose(const Glib::ustring& format, const Glib::ustring& arg1,
+                                                         const Glib::ustring& arg2)
+{
+  std::vector<Glib::ustring> args;
+  args.push_back(arg1);
+  args.push_back(arg2);
+  return compose_impl(format, args);
+}
+
+Glib::ustring Util::compose(const Glib::ustring& format, const Glib::ustring& arg1,
+                                                         const Glib::ustring& arg2,
+                                                         const Glib::ustring& arg3)
+{
+  std::vector<Glib::ustring> args;
+  args.push_back(arg1);
+  args.push_back(arg2);
+  args.push_back(arg3);
+  return compose_impl(format, args);
 }
 

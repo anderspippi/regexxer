@@ -601,11 +601,8 @@ void PrefDialog::on_entry_fallback_activate()
   }
   else
   {
-    // TODO: Translation
-    Glib::ustring message = "\302\273";
-    message += fallback_encoding;
-    message += "\302\253 is not a valid encoding.";
-
+    const Glib::ustring message = Util::compose(_("`%1' is not a valid encoding."),
+                                                fallback_encoding);
     Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
 
     dialog.run();

@@ -580,12 +580,9 @@ bool FileTree::save_file_at_iter(const Gtk::TreeModel::iterator& iter,
       if (!*error_list)
         error_list->reset(new MessageList());
 
-      // TODO: Translation
-      Glib::ustring message = "Failed to save file \302\273";
-      message += Util::filename_to_utf8_fallback(fileinfo->fullname);
-      message += "\302\253: ";
-      message += error.what();
-
+      const Glib::ustring message = Util::compose(_("Failed to save file `%1': %2"),
+                                                  Util::filename_to_utf8_fallback(fileinfo->fullname),
+                                                  error.what());
       (*error_list)->push_back(message);
     }
 
@@ -1076,10 +1073,8 @@ void FileTree::load_file_with_fallback(const Gtk::TreeModel::iterator& iter,
   {
     g_assert(fileinfo->load_failed);
 
-    // TODO: Translation
-    Glib::ustring message = "\302\273";
-    message += Util::filename_to_utf8_fallback(Glib::path_get_basename(fileinfo->fullname));
-    message += "\302\253 seems to be a binary file.";
+    const Glib::ustring message = Util::compose(_("`%1' seems to be a binary file."),
+        Util::filename_to_utf8_fallback(Glib::path_get_basename(fileinfo->fullname)));
 
     fileinfo->buffer = FileBuffer::create_with_error_message(
         render_icon(Gtk::Stock::DIALOG_ERROR, Gtk::ICON_SIZE_DIALOG), message);

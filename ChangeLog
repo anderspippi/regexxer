@@ -1,5 +1,20 @@
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* src/translation.{cc,h} (compose): Add a set of overloaded utility
+	functions to be used to compose a text message from a format string
+	and up to three string arguments.  This allows the translator to
+	arrange the arguments as required by the language.
+
+	* src/filetree.cc (FileTree::save_file_at_iter): Make use of
+	Util::compose() instead of separately piecing strings together.
+	Also, translate the format string via gettext().
+	(load_file_with_fallback): ditto
+	* src/mainwindow.cc (MainWindow::on_exec_search): ditto
+	* src/prefdialog.cc (PrefDialog::on_entry_fallback_activate):
+	ditto.
+
+2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* src/miscutils.cc: Compile the runtime check for that gconfmm
 	bug only if REGEXXER_ENABLE_GCONFMM_VALUE_HACK is defined, as it
 	currently always is.

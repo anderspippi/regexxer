@@ -22,6 +22,7 @@
 #define REGEXXER_TRANSLATION_H_INCLUDED
 
 #include <glib/gmacros.h>
+#include <glibmm/ustring.h>
 
 #ifndef gettext_noop
 # define gettext_noop(s) (s)
@@ -36,7 +37,14 @@ namespace Util
 void initialize_gettext(const char* domain, const char* localedir);
 const char* sgettext(const char* msgid) G_GNUC_CONST;
 
-} // namespace
+Glib::ustring compose(const Glib::ustring& format, const Glib::ustring& arg1);
+Glib::ustring compose(const Glib::ustring& format, const Glib::ustring& arg1,
+                                                   const Glib::ustring& arg2);
+Glib::ustring compose(const Glib::ustring& format, const Glib::ustring& arg1,
+                                                   const Glib::ustring& arg2,
+                                                   const Glib::ustring& arg3);
+
+} // namespace Util
 
 #endif /* REGEXXER_TRANSLATION_H_INCLUDED */
 
