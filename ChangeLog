@@ -2,6 +2,13 @@
 
 	[ merge from HEAD ]
 
+	* src/filetree.cc (FileTree::replace_all_matches): Substitute
+	Gtk::TreeIter with Gtk::TreeModel::iterator for consistency.
+
+2004-05-21  Daniel Elstner  <daniel.elstner@gmx.net>
+
+	[ merge from HEAD ]
+
 	* src/filetree.cc: Replace a couple of explicit TreePath(iter)
 	conversions by simple assignments.
 	(FileTree::replace_all_matches): Make sure path_match_first_
