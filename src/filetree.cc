@@ -25,8 +25,9 @@
 #include "stringutils.h"
 
 #include <gtkmm/stock.h>
-#include <libgnomevfsmm.h> //For discovering the list of files.
-//#include <iostream> //Just for debug stuff. murrayc
+#if 0
+#include <libgnomevfsmm.h> /* for discovering the list of files */
+#endif
 
 #include <config.h>
 
@@ -344,6 +345,7 @@ bool FileTree::select_func(const Glib::RefPtr<Gtk::TreeModel>& model, const Gtk:
   return get_fileinfo_from_iter(model->get_iter(path));
 }
 
+#if 0
 void FileTree::find_recursively(const std::string& dirname, FindData& find_data)
 {
   using namespace Glib;
@@ -413,6 +415,51 @@ void FileTree::find_recursively(const std::string& dirname, FindData& find_data)
 
   find_increment_file_count(find_data, file_count);
 }
+#else
+void FileTree::find_recursively(const std::string& dirname, FindData& find_data)
+{
+  using namespace Glib;
+
+  int file_count = 0;
+  Dir dir (dirname);
+
+  for (Dir::iterator pos = dir.begin(); pos != dir.end(); ++pos)
+  {
+    if (signal_pulse()) // emit
+      break;
+
+    const std::string basename = *pos;
+
+    if (!find_data.hidden && *basename.begin() == '.')
+      continue;
+
+    const std::string fullname = build_filename(dirname, basename);
+
+    try
+    {
+      if (find_check_file(basename, fullname, find_data)) // file added?
+        ++file_count;
+    }
+    catch (const Glib::FileError& error)
+    {
+      // Collect errors but don't interrupt the search.
+      find_data.error_list->push_back(error.what());
+    }
+    catch (const Glib::ConvertError& error) // unlikely due to use of our own fallback conversion
+    {
+      // Don't use Glib::locale_to_utf8() because we already
+      // tried that in Util::filename_to_utf8_fallback().
+      //
+      const Glib::ustring name = Util::convert_to_ascii(fullname);
+      const Glib::ustring what = error.what();
+
+      g_warning("Eeeek, can't convert filename `%s' to UTF-8: %s", name.c_str(), what.c_str());
+    }
+  }
+
+  find_increment_file_count(find_data, file_count);
+}
+#endif
 
 bool FileTree::find_check_file(const std::string& basename, const std::string& fullname,
                                FindData& find_data)

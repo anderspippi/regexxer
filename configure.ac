@@ -1,6 +1,6 @@
 ## $Id$
 ##
-## Copyright (c) 2002  Daniel Elstner  <daniel.elstner@gmx.net>
+## Copyright (c) 2004  Daniel Elstner  <daniel.elstner@gmx.net>
 ##
 ## This program is free software; you can redistribute it and/or modify
 ## it under the terms of the GNU General Public License VERSION 2 as
@@ -30,33 +30,41 @@ AM_INIT_AUTOMAKE([1.7 gnu no-define nostdinc check-news])
 AC_PROG_CC()
 AC_PROG_CXX()
 
-AC_CHECK_HEADERS([sys/types.h sys/stat.h])
-AC_CHECK_FUNCS([umask])
-AC_CHECK_TYPES([mode_t])
-
-PKG_CHECK_MODULES([GTKMM], [gtkmm-2.0 >= 2.2.8 gconfmm-2.0 >= 2.0.0 gnome-vfsmm-2.0 >= 1.3.5])
-AC_SUBST([GTKMM_CFLAGS])
-AC_SUBST([GTKMM_LIBS])
-
-gdk_pixbuf_exec_prefix=`${PKG_CONFIG:-"pkg-config"} --variable=exec_prefix gdk-pixbuf-2.0 2>&5`
-prog_search_path=${gdk_pixbuf_exec_prefix:+"$gdk_pixbuf_exec_prefix/bin$PATH_SEPARATOR"}$PATH
-
-AC_PATH_PROG([GDK_PIXBUF_CSOURCE], [gdk-pixbuf-csource], [not found], [$prog_search_path])
-
-if test "x$GDK_PIXBUF_CSOURCE" = "xnot found"; then
-{
-AC_MSG_ERROR([[
-*** Ooops, couldn't find gdk-pixbuf-csource.  Actually this should
-*** never happen at this point, which means your system is really broken.
-]])
-}
-fi
+PKG_CHECK_MODULES([PKG], [gtkmm-2.0 >= 2.2.8 gconfmm-2.0 >= 2.0.0])
+AC_SUBST([PKG_CFLAGS])
+AC_SUBST([PKG_LIBS])
 
 PCRE_CHECK_VERSION([3.9])
 PCRE_CHECK_UTF8()
 
+REGEXXER_PKG_PATH_PROG([GDK_PIXBUF_CSOURCE], [gdk-pixbuf-2.0], [gdk-pixbuf-csource])
+REGEXXER_PKG_PATH_PROG([GCONFTOOL], [gconf-2.0], [gconftool-2])
+
+AM_GCONF_SOURCE_2()
+AC_SUBST([REGEXXER_GCONF_DIRECTORY], ['/apps/regexxer'])
+
 REGEXXER_CXX_HAS_STD_LOCALE()
 REGEXXER_ARG_ENABLE_WARNINGS()
+
+## Note:  It is possible to check for this bug programatically, but since
+## gconfmm is a shared library the test would have to be done at runtime.
+## We're talking about Open Source, though, thus it's much better to just
+## fix gconfmm and to depend on the fixed release.
+AC_DEFINE([REGEXXER_ENABLE_GCONFMM_VALUE_HACK], [1], [Define to 1 if this nasty hack is necessary.])
+AH_BOTTOM(
+[
+#if REGEXXER_ENABLE_GCONFMM_VALUE_HACK
+/*
+ * Hardcore HACK:  Perform the copy which is missing in gconfmm
+ * five minutes after twelve.
+ */
+# define REGEXXER_GCONFMM_VALUE_HACK(value)				\
+    new(const_cast<Gnome::Conf::Value*>(&value))			\
+        Gnome::Conf::Value(const_cast<GConfValue*>(value.gobj()), true)
+#else
+# define REGEXXER_GCONFMM_VALUE_HACK(value) (void)0
+#endif
+])
 
 AC_CONFIG_FILES([
   Makefile

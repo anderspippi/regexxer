@@ -17,7 +17,6 @@
 ## along with this program; if not, write to the Free Software
 ## Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
-
 bin_PROGRAMS = regexxer
 
 regexxer_SOURCES =		\
@@ -61,10 +60,10 @@ regexxer_SOURCES =		\
 	undostack.cc		\
 	undostack.h
 
-DEFS = @DEFS@ \
--DREGEXXER_DATADIR=\""$(datadir)"\"
+global_defines = \
+-DREGEXXER_DATADIR=\""$(datadir)"\" \
+-DREGEXXER_GCONF_DIRECTORY=\""$(REGEXXER_GCONF_DIRECTORY)"\"
 
-
-regexxer_CPPFLAGS = -I$(top_builddir) -I$(top_srcdir) $(PCRE_CFLAGS) $(GTKMM_CFLAGS)
-regexxer_LDADD    = $(PCRE_LIBS) $(GTKMM_LIBS)
+AM_CPPFLAGS    = -I$(top_builddir) -I$(top_srcdir) $(global_defines) $(PKG_CFLAGS) $(PCRE_CFLAGS)
+regexxer_LDADD = $(PKG_LIBS) $(PCRE_LIBS)
 

@@ -25,9 +25,10 @@
 
 #include <glib.h>
 #include <glibmm.h>
+#if 0
 #include <libgnomevfsmm.h>
+#endif
 #include <cstring>
-#include <iostream> //For std::cerr.
 
 
 namespace
@@ -37,6 +38,7 @@ using Regexxer::FileBuffer;
 
 enum { BUFSIZE = 4096 };
 
+#if 0
 Glib::RefPtr<FileBuffer> load_try_encoding(const std::string& filename, const std::string& encoding)
 {
   //open the input file for read access:
@@ -113,6 +115,65 @@ Glib::RefPtr<FileBuffer> load_try_encoding(const std::string& filename, const st
     return Glib::RefPtr<FileBuffer>();
   }
 }
+#else
+
+Glib::RefPtr<FileBuffer> load_iochannel(const Glib::RefPtr<Glib::IOChannel>& input)
+{
+  const Glib::RefPtr<FileBuffer> text_buffer = FileBuffer::create();
+  FileBuffer::iterator text_end = text_buffer->end();
+
+  const Util::ScopedArray<char> inbuf (new char[BUFSIZE]);
+  gsize bytes_read = 0;
+
+  while (input->read(inbuf.get(), BUFSIZE, bytes_read) == Glib::IO_STATUS_NORMAL)
+  {
+    if (std::memchr(inbuf.get(), '\0', bytes_read)) // binary file?
+      return Glib::RefPtr<FileBuffer>();
+
+    text_end = text_buffer->insert(text_end, inbuf.get(), inbuf.get() + bytes_read);
+  }
+
+  g_assert(bytes_read == 0);
+
+  return text_buffer;
+}
+
+void save_iochannel(const Glib::RefPtr<Glib::IOChannel>& output, const Glib::RefPtr<FileBuffer>& buffer)
+{
+  FileBuffer::iterator start = buffer->begin();
+  FileBuffer::iterator stop  = start;
+
+  for (; start; start = stop)
+  {
+    stop.forward_chars(BUFSIZE); // inaccurate, but doesn't matter
+    const Glib::ustring chunk = buffer->get_text(start, stop);
+
+    gsize bytes_written = 0;
+    const Glib::IOStatus status = output->write(chunk.data(), chunk.bytes(), bytes_written);
+
+    g_assert(status == Glib::IO_STATUS_NORMAL);
+    g_assert(bytes_written == chunk.bytes());
+  }
+}
+
+Glib::RefPtr<FileBuffer> load_try_encoding(const std::string& filename, const std::string& encoding)
+{
+  const Glib::RefPtr<Glib::IOChannel> channel = Glib::IOChannel::create_from_file(filename, "r");
+
+  channel->set_buffer_size(BUFSIZE);
+
+  try
+  {
+    channel->set_encoding(encoding);
+    return load_iochannel(channel);
+  }
+  catch (const Glib::ConvertError&)
+  {}
+
+  return Glib::RefPtr<FileBuffer>();
+}
+
+#endif
 
 } // anonymous namespace
 
@@ -180,6 +241,7 @@ void load_file(const FileInfoPtr& fileinfo, const std::string& fallback_encoding
   }
 }
 
+#if 0
 void save_file(const FileInfoPtr& fileinfo)
 {
   //open the input file for write access:
@@ -213,6 +275,22 @@ void save_file(const FileInfoPtr& fileinfo)
   
   fileinfo->buffer->set_modified(false);
 }
+#else
+void save_file(const FileInfoPtr& fileinfo)
+{
+  const Glib::RefPtr<Glib::IOChannel> channel =
+      Glib::IOChannel::create_from_file(fileinfo->fullname, "w");
+
+  channel->set_buffer_size(BUFSIZE);
+
+  channel->set_encoding(fileinfo->encoding);
+  save_iochannel(channel, fileinfo->buffer);
+
+  channel->close(); // might throw
+
+  fileinfo->buffer->set_modified(false);
+}
+#endif
 
 } // namespace Regexxer
 

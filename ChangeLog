@@ -1,3 +1,56 @@
+2004-05-04  Daniel Elstner  <daniel.elstner@gmx.net>
+
+	* README: Incorporate the changes already made by Murray in HEAD.
+
+	* macros/cxx.m4: Make use of the new AS_IF() macro, and also
+	improve the portability of the shell code a bit.
+
+	* macros/pcre.m4: Ditto.
+
+	* macros/misc.m4: New file, introducing a REGEXXER_PKG_PATH_PROG
+	macro which can be used to look for executables that might live
+	in subdirectories indicated by pkg-config output.
+
+	* autogen.sh: Some minor shell coding-style improvements.
+
+	* configure.ac: Invoke the new REGEXXER_PKG_PATH_PROG macro in
+	order to look for gdk-pixbuf-csource.  Use the new macro to look
+	for gconftool-2 as well.
+	(AC_CHECK_HEADERS): Remove the tests for sys/types.h, sys/stat.h,
+	umask() and mode_t since they're no longer necessary.
+	(PKG_CHECK_MODULES): Substitute the GTKMM prefix by PKG (I don't
+	like MM_DEPS as introduced by Murray in HEAD.)  Also, get rid of
+	the libgnomevfsmm dependency.
+	(REGEXXER_ENABLE_GCONFMM_VALUE_HACK): New preprocessor macro to
+	be inserted into config.h.  This isn't actually used yet, I'll
+	get to that later.
+
+	* regexxer.schemas: New file.
+
+	* Makefile.am: Add rules taking care of the installation of the
+	GConf schema file.
+	(dist_schema_DATA): Add regexxer.schemas to the distribution.
+	(dist_noinst_DATA): Ditto for macros/misc.m4.
+	(DISTCHECK_CONFIGURE_FLAGS): Include --disable-schemas-install.
+
+	* src/Makefile.am: Reflect the substitution of GTKMM by PKG made
+	in configure.ac.
+	(AM_CPPFLAGS): Use this variable in place of regexxer_CPPFLAGS,
+	because executable-specific CFLAGS is not something regexxer ever
+	intended to use.
+
+	* src/main.cc: Get rid of the libgnomevfsmm dependency.  For one
+	thing, the code using it didn't actually work with remote URIs.
+	For another, as of now there's no stable release of this library
+	in sight, no to mention a widely distributed release.
+
+	* src/fileio.cc (load_try_encoding): Comment-out the gnomevfs code
+	and replace it with the original Glib::IOChannel code instead.
+	(save_file): ditto.
+
+	* src/filetree.cc (find_recursively): Comment-out and replace with
+	the previous non-gnomevfs code.
+
 0.6.0:
 
 2003-12-07  Murray Cumming  <murrayc@usa.net>
