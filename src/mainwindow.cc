@@ -20,8 +20,8 @@
 
 #include "mainwindow.h"
 #include "aboutdialog.h"
-#include "configdata.h"
 #include "filetree.h"
+#include "globalstrings.h"
 #include "imagebutton.h"
 #include "pcreshell.h"
 #include "prefdialog.h"
@@ -29,6 +29,7 @@
 #include "stringutils.h"
 
 #include <glib.h>
+#include <gconfmm.h>
 #include <gtkmm.h>
 #include <algorithm>
 #include <functional>
@@ -80,16 +81,13 @@ FileErrorDialog::FileErrorDialog(Gtk::Window& parent, const Glib::ustring& messa
   typedef std::list<Glib::ustring> ErrorList;
   const ErrorList& error_list = error.get_error_list();
 
-  for(ErrorList::const_iterator perr = error_list.begin(); perr != error_list.end(); ++perr)
-  {
-    buffer_end = buffer->insert(buffer_end, *perr);
-    buffer_end = buffer->insert(buffer_end, "\n");
-  }
+  for (ErrorList::const_iterator perr = error_list.begin(); perr != error_list.end(); ++perr)
+    buffer_end = buffer->insert(buffer_end, *perr + '\n');
 
   Box& box = *get_vbox();
   Frame *const frame = new Frame();
   box.pack_start(*manage(frame), PACK_EXPAND_WIDGET);
-  frame->set_border_width(6); //HIG spacing
+  frame->set_border_width(6); // HIG spacing
   frame->set_shadow_type(SHADOW_IN);
 
   ScrolledWindow *const scrollwin = new ScrolledWindow();
@@ -181,7 +179,9 @@ MainWindow::MainWindow()
   controller_.replace_all .connect(slot(*this, &MainWindow::on_replace_all));
 
   show_all_children();
-  load_configuration();
+
+  Gnome::Conf::Client::get_default_client()
+      ->signal_value_changed().connect(slot(*this, &MainWindow::on_conf_value_changed));
 
   entry_folder_->set_text(Util::shorten_pathname(
       Util::filename_to_utf8_fallback(Glib::get_current_dir())));
@@ -194,7 +194,7 @@ MainWindow::MainWindow()
       slot(*this, &MainWindow::on_filetree_switch_buffer));
 
   filetree_->signal_bound_state_changed.connect(
-      slot(*this, &MainWindow::on_filetree_bound_state_changed));
+      slot(*this, &MainWindow::on_bound_state_changed));
 
   filetree_->signal_file_count_changed.connect(
       slot(*this, &MainWindow::on_filetree_file_count_changed));
@@ -221,20 +221,17 @@ void MainWindow::on_hide()
 {
   on_busy_action_cancel();
 
-  // Kill the dialogs if they're mapped right now.  This isn't really necessary
-  // since they'd be deleted in the destructor anyway.  But if we have to do a
-  // lot of cleanup the dialogs would stay open for that time, which doesn't
-  // look neat.
+  // Kill the dialogs if they're mapped right now.  This isn't strictly
+  // necessary since they'd be deleted in the destructor anyway.  But if we
+  // have to do a lot of cleanup the dialogs would stay open for that time,
+  // which doesn't look neat.
 
   {
     // Play safe and transfer ownership, and let the dtor do the delete.
     const std::auto_ptr<AboutDialog> temp (about_dialog_);
   }
-
-  if(pref_dialog_.get())
   {
     const std::auto_ptr<PrefDialog> temp (pref_dialog_);
-    temp->hide(); // trigger our signal_hide() handler to save the configuration
   }
 
   Gtk::Window::on_hide();
@@ -275,7 +272,9 @@ Gtk::Widget* MainWindow::create_main_vbox()
   Box *const vbox_interior = new VBox();
 
   vbox_main->pack_start(*manage(vbox_interior), PACK_EXPAND_WIDGET);
-  vbox_interior->set_border_width(6); //HIG spacing. This plus the window border width makes 12, or plus the other border makes 12 between widgets.
+  // HIG spacing.  This plus the window border width makes 12,
+  // or plus the other border makes 12 between widgets.
+  vbox_interior->set_border_width(6);
 
   statusline_ = new StatusLine();
   vbox_main->pack_start(*manage(statusline_), PACK_SHRINK);
@@ -296,12 +295,11 @@ Gtk::Widget* MainWindow::create_left_pane()
   using namespace Gtk;
 
   std::auto_ptr<Box> vbox (new VBox(false, 3));
-  vbox->set_border_width(6); //HIG spacing.
+  vbox->set_border_width(6); // HIG spacing
 
   Table *const table = new Table(3, 2, false);
   vbox->pack_start(*manage(table), PACK_SHRINK);
-  table->set_border_width(0);
-  table->set_spacings(6); //HIG
+  table->set_spacings(6); // HIG
 
   Button *const button_folder = new ImageLabelButton(Stock::OPEN, "Fol_der:", true);
   table->attach(*manage(button_folder), 0, 1, 0, 1, FILL, AttachOptions(0));
@@ -367,12 +365,11 @@ Gtk::Widget* MainWindow::create_right_pane()
   using namespace Gtk;
 
   std::auto_ptr<Box> vbox (new VBox(false, 3));
-  vbox->set_border_width(6); //HIG spacing
+  vbox->set_border_width(6); // HIG spacing
 
   Table *const table = new Table(2, 3, false);
   vbox->pack_start(*manage(table), PACK_SHRINK);
-  table->set_border_width(0);
-  table->set_spacings(6); //HIG
+  table->set_spacings(6); // HIG
 
   Label *const label_search = new Label("Search:",  0.0, 0.5);
   table->attach(*manage(label_search), 0, 1, 0, 1, FILL, AttachOptions(0));
@@ -390,8 +387,9 @@ Gtk::Widget* MainWindow::create_right_pane()
 
   Box *const hbox_options = new HBox(false, 6 /* HIG */);
   table->attach(*manage(hbox_options), 2, 3, 0, 1, FILL, AttachOptions(0));
-  hbox_options->pack_start(*manage(button_multiple_ = new CheckButton("/g")), PACK_SHRINK);
-  hbox_options->pack_start(*manage(button_caseless_ = new CheckButton("/i")), PACK_SHRINK);
+  // Prefix with U+202D LEFT-TO-RIGHT OVERRIDE so we won't end up with "g/" instead.
+  hbox_options->pack_start(*manage(button_multiple_ = new CheckButton("\342\200\255/g")), PACK_SHRINK);
+  hbox_options->pack_start(*manage(button_caseless_ = new CheckButton("\342\200\255/i")), PACK_SHRINK);
 
   Button *const button_find_matches = new Button(Stock::FIND);
   table->attach(*manage(button_find_matches), 2, 3, 1, 2, FILL, AttachOptions(0));
@@ -436,13 +434,13 @@ Gtk::Widget* MainWindow::create_right_pane()
 
 void MainWindow::on_quit()
 {
-  if(confirm_quit_request())
+  if (confirm_quit_request())
     hide();
 }
 
 bool MainWindow::confirm_quit_request()
 {
-  if(filetree_->get_modified_count() == 0)
+  if (filetree_->get_modified_count() == 0)
     return true;
 
   const Glib::ustring message = "Some files haven't been saved yet.\nQuit anyway?";
@@ -465,62 +463,70 @@ void MainWindow::on_select_folder()
   filesel.hide_fileop_buttons();
   filesel.set_has_separator(false);
   filesel.get_file_list()->get_parent()->hide();
-  filesel.set_default_size(350, -1);
+  filesel.set_default_size(400, -1);
 
   {
     std::string filename = filename_from_utf8(Util::expand_pathname(entry_folder_->get_text()));
 
-    if(!filename.empty() && *filename.rbegin() != G_DIR_SEPARATOR)
+    if (!filename.empty() && *filename.rbegin() != G_DIR_SEPARATOR)
       filename += G_DIR_SEPARATOR;
 
     filesel.set_filename(filename);
   }
 
-  if(filesel.run() == Gtk::RESPONSE_OK)
+  if (filesel.run() == Gtk::RESPONSE_OK)
   {
-    const ustring filename = filename_to_utf8(filesel.get_filename());
+    std::string filename = filesel.get_filename();
 
-    entry_folder_->set_text(Util::shorten_pathname(path_get_dirname(filename)));
+    if (!filename.empty() && *filename.rbegin() != G_DIR_SEPARATOR)
+    {
+      // The new GTK+ file selector doesn't append '/' to directories anymore.
+      if (file_test(filename, FILE_TEST_IS_DIR))
+        filename += G_DIR_SEPARATOR;
+      else
+        entry_pattern_->set_text(filename_to_utf8(path_get_basename(filename)));
+    }
 
-    if(!filename.empty() && *filename.rbegin() != G_DIR_SEPARATOR)
-      entry_pattern_->set_text(path_get_basename(filename));
+    entry_folder_->set_text(Util::shorten_pathname(filename_to_utf8(path_get_dirname(filename))));
   }
 }
 
 void MainWindow::on_find_files()
 {
-  if(filetree_->get_modified_count() > 0)
+  if (filetree_->get_modified_count() > 0)
   {
     const Glib::ustring message = "Some files haven't been saved yet.\nContinue anyway?";
     Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_WARNING, Gtk::BUTTONS_OK_CANCEL, true);
 
-    if(dialog.run() != Gtk::RESPONSE_OK)
+    if (dialog.run() != Gtk::RESPONSE_OK)
       return;
   }
 
+  undo_stack_clear();
+
   std::string folder = Glib::filename_from_utf8(Util::expand_pathname(entry_folder_->get_text()));
 
-  if(folder.empty())
+  if (folder.empty())
     folder = Glib::get_current_dir();
 
   BusyAction busy (*this);
 
   try
   {
-    Pcre::Pattern pattern (Util::shell_pattern_to_regex(entry_pattern_->get_text()));
+    Pcre::Pattern pattern (Util::shell_pattern_to_regex(entry_pattern_->get_text()), Pcre::DOTALL);
 
     filetree_->find_files(
         folder, pattern,
         button_recursive_->get_active(),
         button_hidden_->get_active());
   }
-  catch(const Pcre::Error& error)
+  catch (const Pcre::Error& error)
   {
     const Glib::ustring message = "The file search pattern is invalid.";
     Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
     dialog.run();
   }
-  catch(const FileTree::Error& error)
+  catch (const FileTree::Error& error)
   {
     const Glib::ustring message = "The following errors occurred during search:";
     FileErrorDialog dialog (*this, message, Gtk::MESSAGE_WARNING, error);
@@ -543,18 +549,18 @@ void MainWindow::on_exec_search()
     Pcre::Pattern pattern (regex, (caseless) ? Pcre::CASELESS : Pcre::CompileOptions(0));
     filetree_->find_matches(pattern, multiple);
   }
-  catch(const Pcre::Error& error)
+  catch (const Pcre::Error& error)
   {
     Glib::ustring message = "Error in regular expression";
     const int offset = error.offset();
 
-    if(offset >= 0 && unsigned(offset) < regex.length())
+    if (offset >= 0 && unsigned(offset) < regex.length())
     {
       message += " at \302\273";
       message += regex[offset];
       message += "\302\253 (index ";
       message += Util::int_to_string(offset + 1);
-      message += ")";
+      message += ')';
     }
 
     message += ":\n";
@@ -563,7 +569,7 @@ void MainWindow::on_exec_search()
     Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
     dialog.run();
 
-    if(offset >= 0 && offset < entry_regex_->get_text_length())
+    if (offset >= 0 && offset < entry_regex_->get_text_length())
     {
       entry_regex_->grab_focus();
       entry_regex_->select_region(offset, offset + 1);
@@ -572,13 +578,13 @@ void MainWindow::on_exec_search()
     return;
   }
 
-  if(const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
+  if (const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
   {
     statusline_->set_match_count(buffer->get_original_match_count());
     statusline_->set_match_index(buffer->get_match_index());
   }
 
-  if(filetree_->get_match_count() > 0)
+  if (filetree_->get_match_count() > 0)
   {
     // Scrolling has to be post-poned after the redraw, otherwise we might
     // not end up where we want to.  So do that by installing an idle handler.
@@ -601,10 +607,10 @@ void MainWindow::on_filetree_switch_buffer(FileInfoPtr fileinfo, int file_index)
 {
   const FileBufferPtr old_buffer = FileBufferPtr::cast_static(textview_->get_buffer());
 
-  if(fileinfo && fileinfo->buffer == old_buffer)
+  if (fileinfo && fileinfo->buffer == old_buffer)
     return;
 
-  if(old_buffer)
+  if (old_buffer)
   {
     std::for_each(buffer_connections_.begin(), buffer_connections_.end(),
                   std::mem_fun_ref(&SigC::Connection::disconnect));
@@ -613,7 +619,7 @@ void MainWindow::on_filetree_switch_buffer(FileInfoPtr fileinfo, int file_index)
     old_buffer->forget_current_match();
   }
 
-  if(fileinfo)
+  if (fileinfo)
   {
     const FileBufferPtr buffer = fileinfo->buffer;
     g_return_if_fail(buffer);
@@ -622,16 +628,13 @@ void MainWindow::on_filetree_switch_buffer(FileInfoPtr fileinfo, int file_index)
     textview_->set_editable(!fileinfo->load_failed);
     textview_->set_cursor_visible(!fileinfo->load_failed);
 
-    if(!fileinfo->load_failed)
+    if (!fileinfo->load_failed)
     {
-      buffer_connections_.push_back(buffer->signal_match_count_changed.
-          connect(SigC::slot(*this, &MainWindow::on_buffer_match_count_changed)));
-
       buffer_connections_.push_back(buffer->signal_modified_changed().
           connect(SigC::slot(*this, &MainWindow::on_buffer_modified_changed)));
 
       buffer_connections_.push_back(buffer->signal_bound_state_changed.
-          connect(SigC::slot(*this, &MainWindow::on_buffer_bound_state_changed)));
+          connect(SigC::slot(*this, &MainWindow::on_bound_state_changed)));
 
       buffer_connections_.push_back(buffer->signal_preview_line_changed.
           connect(SigC::slot(*this, &MainWindow::update_preview)));
@@ -639,9 +642,8 @@ void MainWindow::on_filetree_switch_buffer(FileInfoPtr fileinfo, int file_index)
 
     set_title_filename(Util::filename_to_utf8_fallback(fileinfo->fullname));
 
-    on_buffer_match_count_changed(buffer->get_match_count());
-    on_buffer_modified_changed();
-    on_buffer_bound_state_changed(buffer->get_bound_state());
+    controller_.replace_file.set_enabled(buffer->get_match_count() > 0);
+    controller_.save_file.set_enabled(buffer->get_modified());
 
     statusline_->set_match_count(buffer->get_original_match_count());
     statusline_->set_match_index(buffer->get_match_index());
@@ -655,9 +657,8 @@ void MainWindow::on_filetree_switch_buffer(FileInfoPtr fileinfo, int file_index)
 
     set_title_filename();
 
-    on_buffer_match_count_changed(0);
-    on_buffer_modified_changed();
-    on_buffer_bound_state_changed(BOUND_FIRST | BOUND_LAST);
+    controller_.replace_file.set_enabled(false);
+    controller_.save_file.set_enabled(false);
 
     statusline_->set_match_count(0);
     statusline_->set_match_index(0);
@@ -668,14 +669,14 @@ void MainWindow::on_filetree_switch_buffer(FileInfoPtr fileinfo, int file_index)
   update_preview();
 }
 
-void MainWindow::on_filetree_bound_state_changed()
+void MainWindow::on_bound_state_changed()
 {
   BoundState bound = filetree_->get_bound_state();
 
   controller_.prev_file.set_enabled((bound & BOUND_FIRST) == 0);
   controller_.next_file.set_enabled((bound & BOUND_LAST)  == 0);
 
-  if(const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
+  if (const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
     bound &= buffer->get_bound_state();
 
   controller_.prev_match.set_enabled((bound & BOUND_FIRST) == 0);
@@ -693,6 +694,9 @@ void MainWindow::on_filetree_file_count_changed()
 void MainWindow::on_filetree_match_count_changed()
 {
   controller_.replace_all.set_enabled(filetree_->get_match_count() > 0);
+
+  if (const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
+    controller_.replace_file.set_enabled(buffer->get_match_count() > 0);
 }
 
 void MainWindow::on_filetree_modified_count_changed()
@@ -700,22 +704,9 @@ void MainWindow::on_filetree_modified_count_changed()
   controller_.save_all.set_enabled(filetree_->get_modified_count() > 0);
 }
 
-void MainWindow::on_buffer_match_count_changed(int match_count)
-{
-  controller_.replace_file.set_enabled(match_count > 0);
-}
-
 void MainWindow::on_buffer_modified_changed()
 {
   controller_.save_file.set_enabled(textview_->get_buffer()->get_modified());
-}
-
-void MainWindow::on_buffer_bound_state_changed(BoundState bound)
-{
-  bound &= filetree_->get_bound_state();
-
-  controller_.prev_match.set_enabled((bound & BOUND_FIRST) == 0);
-  controller_.next_match.set_enabled((bound & BOUND_LAST)  == 0);
 }
 
 void MainWindow::on_go_next_file(bool move_forward)
@@ -726,17 +717,17 @@ void MainWindow::on_go_next_file(bool move_forward)
 
 void MainWindow::on_go_next(bool move_forward)
 {
-  if(const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
+  if (const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
   {
-    if(const Glib::RefPtr<Gtk::TextMark> mark = buffer->get_next_match(move_forward))
+    if (const Glib::RefPtr<Gtk::TextMark> mark = buffer->get_next_match(move_forward))
     {
-      textview_->scroll_to_mark(mark, 0.2);
+      textview_->scroll_to_mark(mark, 0.125);
       statusline_->set_match_index(buffer->get_match_index());
       return;
     }
   }
 
-  if(filetree_->select_next_file(move_forward))
+  if (filetree_->select_next_file(move_forward))
   {
     on_go_next(move_forward); // recursive call
   }
@@ -744,7 +735,7 @@ void MainWindow::on_go_next(bool move_forward)
 
 void MainWindow::on_replace()
 {
-  if(const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
+  if (const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
   {
     buffer->replace_current_match(entry_substitution_->get_text());
     on_go_next(true);
@@ -753,7 +744,7 @@ void MainWindow::on_replace()
 
 void MainWindow::on_replace_file()
 {
-  if(const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
+  if (const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
   {
     buffer->replace_all_matches(entry_substitution_->get_text());
     statusline_->set_match_index(0);
@@ -774,7 +765,7 @@ void MainWindow::on_save_file()
   {
     filetree_->save_current_file();
   }
-  catch(const FileTree::Error& error)
+  catch (const FileTree::Error& error)
   {
     const std::list<Glib::ustring>& error_list = error.get_error_list();
     g_assert(error_list.size() == 1);
@@ -790,7 +781,7 @@ void MainWindow::on_save_all()
   {
     filetree_->save_all_files();
   }
-  catch(const FileTree::Error& error)
+  catch (const FileTree::Error& error)
   {
     const Glib::ustring message = "The following errors occurred during save:";
     FileErrorDialog dialog (*this, message, Gtk::MESSAGE_ERROR, error);
@@ -806,8 +797,16 @@ void MainWindow::on_undo_stack_push(UndoActionPtr action)
 
 void MainWindow::on_undo()
 {
-  undo_stack_->undo_step();
+  BusyAction busy (*this);
+
+  undo_stack_->undo_step(SigC::slot(*this, &MainWindow::on_busy_action_pulse));
   controller_.undo.set_enabled(!undo_stack_->empty());
+}
+
+void MainWindow::undo_stack_clear()
+{
+  controller_.undo.set_enabled(false);
+  undo_stack_.reset(new UndoStack());
 }
 
 void MainWindow::on_entry_pattern_changed()
@@ -817,7 +816,7 @@ void MainWindow::on_entry_pattern_changed()
 
 void MainWindow::update_preview()
 {
-  if(const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
+  if (const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
   {
     Glib::ustring preview;
     const int pos = buffer->get_line_preview(entry_substitution_->get_text(), preview);
@@ -844,11 +843,9 @@ void MainWindow::update_preview()
 
     entry_preview_->set_position(0);
 
-    if(pos > 0)
+    if (pos > 0)
     {
-      using SigC::slot;
-      using SigC::bind;
-      using SigC::bind_return;
+      using namespace SigC;
 
       Glib::signal_idle().connect(
           bind_return(bind(slot(*entry_preview_, &Gtk::Editable::set_position), pos), false),
@@ -861,12 +858,12 @@ void MainWindow::set_title_filename(const Glib::ustring& filename)
 {
   Glib::ustring title;
 
-  if(!filename.empty())
+  if (!filename.empty())
   {
     title  = Glib::path_get_basename(filename);
     title += " (";
     title += Util::shorten_pathname(Glib::path_get_dirname(filename));
-    title += ") - ";
+    title += ") \342\200\223 "; // U+2013 EN DASH
   }
 
   title += PACKAGE_NAME;
@@ -903,14 +900,14 @@ bool MainWindow::on_busy_action_pulse()
 {
   g_return_val_if_fail(busy_action_running_, true);
 
-  if(!busy_action_cancel_ && (++busy_action_iteration_ % BUSY_GUI_UPDATE_INTERVAL) == 0)
+  if (!busy_action_cancel_ && (++busy_action_iteration_ % BUSY_GUI_UPDATE_INTERVAL) == 0)
   {
     statusline_->pulse();
 
-    const Glib::RefPtr<Glib::MainContext> context (Glib::MainContext::get_default());
+    const Glib::RefPtr<Glib::MainContext> context = Glib::MainContext::get_default();
 
     do {}
-    while(context->iteration(false) && !busy_action_cancel_);
+    while (context->iteration(false) && !busy_action_cancel_);
   }
 
   return busy_action_cancel_;
@@ -918,13 +915,13 @@ bool MainWindow::on_busy_action_pulse()
 
 void MainWindow::on_busy_action_cancel()
 {
-  if(busy_action_running_)
+  if (busy_action_running_)
     busy_action_cancel_ = true;
 }
 
 void MainWindow::on_info()
 {
-  if(about_dialog_.get())
+  if (about_dialog_.get())
   {
     about_dialog_->present();
   }
@@ -947,34 +944,13 @@ void MainWindow::on_about_dialog_hide()
 
 void MainWindow::on_preferences()
 {
-  if(pref_dialog_.get())
+  if (pref_dialog_.get())
   {
     pref_dialog_->present();
   }
   else
   {
     std::auto_ptr<PrefDialog> dialog (new PrefDialog(*this));
-
-    dialog->set_pref_textview_font    (textview_->get_pango_context()->get_font_description());
-    dialog->set_pref_match_color      (FileBuffer::get_match_color());
-    dialog->set_pref_current_color    (FileBuffer::get_current_color());
-    dialog->set_pref_toolbar_style    (toolbar_->get_toolbar_style());
-    dialog->set_pref_fallback_encoding(filetree_->get_fallback_encoding());
-
-    dialog->signal_pref_textview_font_changed.connect(
-        SigC::slot(*textview_, &Gtk::Widget::modify_font));
-
-    dialog->signal_pref_textview_font_changed.connect(
-        SigC::slot(*entry_preview_, &Gtk::Widget::modify_font));
-
-    dialog->signal_pref_match_color_changed  .connect(&FileBuffer::set_match_color);
-    dialog->signal_pref_current_color_changed.connect(&FileBuffer::set_current_color);
-
-    dialog->signal_pref_toolbar_style_changed.connect(
-        SigC::slot(*toolbar_, &Gtk::Toolbar::set_toolbar_style));
-
-    dialog->signal_pref_fallback_encoding_changed.connect(
-        SigC::slot(*filetree_, &FileTree::set_fallback_encoding));
 
     dialog->signal_hide().connect(SigC::slot(*this, &MainWindow::on_pref_dialog_hide));
     dialog->show();
@@ -987,38 +963,41 @@ void MainWindow::on_pref_dialog_hide()
 {
   // Play safe and transfer ownership, and let the dtor do the delete.
   const std::auto_ptr<PrefDialog> temp (pref_dialog_);
-
-  save_configuration();
 }
 
-void MainWindow::load_configuration()
+void MainWindow::on_conf_value_changed(const Glib::ustring& key, const Gnome::Conf::Value& value)
 {
-  ConfigData config;
+  using namespace Gtk;
 
-  config.load();
+  REGEXXER_GCONFMM_VALUE_HACK(value);
 
-  const Pango::FontDescription font (config.textview_font);
-  textview_     ->modify_font(font);
-  entry_preview_->modify_font(font);
-
-  FileBuffer::set_match_color(config.match_color);
-  FileBuffer::set_current_color(config.current_color);
-
-  toolbar_->set_toolbar_style(config.toolbar_style);
-  filetree_->set_fallback_encoding(config.fallback_encoding);
-}
-
-void MainWindow::save_configuration()
-{
-  ConfigData config;
-
-  config.textview_font     = textview_->get_pango_context()->get_font_description().to_string();
-  config.match_color       = FileBuffer::get_match_color();
-  config.current_color     = FileBuffer::get_current_color();
-  config.toolbar_style     = toolbar_->get_toolbar_style();
-  config.fallback_encoding = filetree_->get_fallback_encoding();
-
-  config.save();
+  if (value.get_type() == Gnome::Conf::VALUE_STRING)
+  {
+    if (key.raw() == conf_key_textview_font)
+    {
+      const Pango::FontDescription font (value.get_string());
+      textview_     ->modify_font(font);
+      entry_preview_->modify_font(font);
+    }
+    else if (key.raw() == conf_key_toolbar_style)
+    {
+      toolbar_->set_toolbar_style(Util::enum_from_nick<ToolbarStyle>(value.get_string()));
+    }
+  }
+  else if (value.get_type() == Gnome::Conf::VALUE_BOOL)
+  {
+    if (key.raw() == conf_key_override_direction)
+    {
+      const TextDirection direction = (value.get_bool()) ? TEXT_DIR_LTR : TEXT_DIR_NONE;
+      entry_folder_      ->set_direction(direction);
+      entry_pattern_     ->set_direction(direction);
+      entry_regex_       ->set_direction(direction);
+      entry_substitution_->set_direction(direction);
+      filetree_          ->set_direction(direction);
+      textview_          ->set_direction(direction);
+      entry_preview_     ->set_direction(direction);
+    }
+  }
 }
 
 } // namespace Regexxer

@@ -19,9 +19,10 @@
  */
 
 #include "aboutdialog.h"
+#include "globalstrings.h"
 
-#include <glib.h>
 #include <atkmm.h>
+#include <glibmm/markup.h>
 #include <gtkmm/alignment.h>
 #include <gtkmm/box.h>
 #include <gtkmm/image.h>
@@ -34,12 +35,13 @@
 namespace
 {
 
-const char regexxer_icon_filename[] = REGEXXER_DATADIR G_DIR_SEPARATOR_S
-                                      "pixmaps" G_DIR_SEPARATOR_S "regexxer.png";
-
-const char regexxer_project_url[]   = "http://regexxer.sourceforge.net/";
-const char regexxer_author_mail[]   = "Daniel Elstner <daniel.elstner@gmx.net>";
-const char regexxer_debian_mail[]   = "Ross Burton <ross@burtonini.com>";
+/*
+ * Prefix with U+202D LEFT-TO-RIGHT OVERRIDE so we won't end up with
+ * '/' and '>' moved to the start of the line in an RTL environment.
+ */
+const char *const regexxer_project_url = "\342\200\255http://regexxer.sourceforge.net/";
+const char *const regexxer_author_mail = "\342\200\255Daniel Elstner <daniel.elstner@gmx.net>";
+const char *const regexxer_debian_mail = "\342\200\255Ross Burton <ross@burtonini.com>";
 
 
 class SelectableLabel : public Gtk::Label
@@ -64,7 +66,7 @@ SelectableLabel::~SelectableLabel()
 
 bool SelectableLabel::on_focus(Gtk::DirectionType)
 {
-  if(can_focus() && !is_focus())
+  if (can_focus() && !is_focus())
   {
     grab_focus();
     return true;
@@ -89,7 +91,7 @@ ContributorBox::ContributorBox(const Glib::ustring& what, const Glib::ustring& w
 
   Label *const label_what = new Label();
   pack_start(*manage(label_what), PACK_SHRINK);
-  label_what->set_markup("<span size=\"small\">" + what + "</span>");
+  label_what->set_markup("<span size=\"small\">" + Glib::Markup::escape_text(what) + "</span>");
 
   Label *const label_who = new SelectableLabel(who);
   pack_start(*manage(label_who), PACK_SHRINK);
@@ -131,7 +133,7 @@ AboutDialog::AboutDialog(Gtk::Window& parent)
     Box *const box_title = new HBox(false, 10);
     box->pack_start(*manage(box_title), PACK_EXPAND_PADDING);
 
-    Image *const image = new Image(regexxer_icon_filename);
+    Image *const image = new Image(application_icon_filename);
     box_title->pack_start(*manage(image), PACK_EXPAND_WIDGET);
     image->set_alignment(1.0, 0.5);
 

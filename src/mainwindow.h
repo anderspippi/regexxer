@@ -41,6 +41,8 @@ class TextBuffer;
 class TextView;
 }
 
+namespace Gnome { namespace Conf { class Value; } }
+
 
 namespace Regexxer
 {
@@ -113,11 +115,9 @@ private:
   void on_filetree_file_count_changed();
   void on_filetree_match_count_changed();
   void on_filetree_modified_count_changed();
-  void on_filetree_bound_state_changed();
 
-  void on_buffer_match_count_changed(int match_count);
+  void on_bound_state_changed();
   void on_buffer_modified_changed();
-  void on_buffer_bound_state_changed(BoundState bound);
 
   void on_go_next_file(bool move_forward);
   void on_go_next(bool move_forward);
@@ -130,6 +130,7 @@ private:
 
   void on_undo_stack_push(UndoActionPtr action);
   void on_undo();
+  void undo_stack_clear();
 
   void on_entry_pattern_changed();
   void update_preview();
@@ -146,8 +147,7 @@ private:
   void on_preferences();
   void on_pref_dialog_hide();
 
-  void load_configuration();
-  void save_configuration();
+  void on_conf_value_changed(const Glib::ustring& key, const Gnome::Conf::Value& value);
 
   // Work-around for silly, stupid, and annoying gcc 2.95.x.
   friend class MainWindow::BusyAction;

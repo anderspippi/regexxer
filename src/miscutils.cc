@@ -19,14 +19,4 @@
  */
 
 #include "miscutils.h"
-#include <gtk/gtk.h>
-
-
-bool Util::gtk_version_at_least(unsigned int minor, unsigned int micro)
-{
-  g_assert(gtk_major_version == GTK_MAJOR_VERSION);
-
-  return ((gtk_minor_version > minor) ||
-          (gtk_minor_version == minor && gtk_micro_version >= micro));
-}
 

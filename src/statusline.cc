@@ -23,6 +23,7 @@
 #include <gdk/gdkkeysyms.h>
 #include <gtkmm.h>
 #include <sstream>
+#include <stdexcept>
 
 #include <config.h>
 
@@ -42,20 +43,20 @@ public:
   explicit CounterBox(const Glib::ustring& label);
   virtual ~CounterBox();
 
-  void set_index(unsigned int index);
-  void set_count(unsigned int count);
+  void set_index(int index);
+  void set_count(int count);
 
 private:
   enum { MIN_RANGE = 100 };
 
   Gtk::Label*         label_index_;
   Gtk::Label*         label_count_;
-  unsigned int        digits_range_;
-  unsigned int        widest_digit_;
-  unsigned int        second_widest_digit_;
+  int                 digits_range_;
+  int                 widest_digit_;
+  int                 second_widest_digit_;
   std::ostringstream  stringstream_;
 
-  Glib::ustring number_to_string(unsigned int number);
+  Glib::ustring number_to_string(int number);
 
   void recalculate_label_width();
   void on_label_style_changed(const Glib::RefPtr<Gtk::Style>& previous_style);
@@ -94,7 +95,14 @@ CounterBox::CounterBox(const Glib::ustring& label)
       SigC::slot(*this, &CounterBox::on_label_style_changed));
 
 #if REGEXXER_HAVE_STD_LOCALE
-  stringstream_.imbue(std::locale(""));
+  try // don't abort if the user-specified locale doesn't exist
+  {
+    stringstream_.imbue(std::locale(""));
+  }
+  catch (const std::runtime_error& error)
+  {
+    g_warning("%s", error.what());
+  }
 #endif
 
   set_index(0);
@@ -106,7 +114,7 @@ CounterBox::CounterBox(const Glib::ustring& label)
 CounterBox::~CounterBox()
 {}
 
-void CounterBox::set_index(unsigned int index)
+void CounterBox::set_index(int index)
 {
   label_index_->set_text(number_to_string(index));
 
@@ -115,17 +123,17 @@ void CounterBox::set_index(unsigned int index)
   check_resize();
 }
 
-void CounterBox::set_count(unsigned int count)
+void CounterBox::set_count(int count)
 {
-  unsigned int range = digits_range_;
+  int range = digits_range_;
 
-  while(range <= count)
+  while (range <= count)
     range *= 10;
 
-  while(range > MIN_RANGE && range / 10 > count)
+  while (range > MIN_RANGE && range / 10 > count)
     range /= 10;
 
-  if(range != digits_range_)
+  if (range != digits_range_)
   {
     digits_range_ = range;
     recalculate_label_width();
@@ -134,23 +142,24 @@ void CounterBox::set_count(unsigned int count)
   label_count_->set_text(number_to_string(count));
 }
 
-Glib::ustring CounterBox::number_to_string(unsigned int number)
+Glib::ustring CounterBox::number_to_string(int number)
 {
   stringstream_.str(std::string());
   stringstream_ << number;
   return Glib::locale_to_utf8(stringstream_.str());
 }
 
-/* This tricky piece of code calculates the optimal label width for any
+/*
+ * This tricky piece of code calculates the optimal label width for any
  * number < digits_range_.  It does assume the decimal system is used,
  * but it relies neither on the string representation of the digits nor
  * on the font of the label.
  */
 void CounterBox::recalculate_label_width()
 {
-  unsigned int widest_number = 0;
+  int widest_number = 0;
 
-  if(widest_digit_ != 0)
+  if (widest_digit_ != 0)
   {
     // E.g. range 1000 becomes 222 if '2' is the widest digit of the font.
     widest_number = ((digits_range_ - 1) / 9) * widest_digit_;
@@ -175,7 +184,8 @@ void CounterBox::recalculate_label_width()
   label_count_->set_size_request(width + 2 * xpad, -1);
 }
 
-/* The code relies on both labels having the same style.
+/*
+ * The code relies on both labels having the same style.
  * I think that's a quite safe assumption to make ;)
  */
 void CounterBox::on_label_style_changed(const Glib::RefPtr<Gtk::Style>&)
@@ -191,17 +201,17 @@ void CounterBox::on_label_style_changed(const Glib::RefPtr<Gtk::Style>&)
   int width  = 0;
   int height = 0;
 
-  for(unsigned int digit = 0; digit <= 9; ++digit)
+  for (int digit = 0; digit <= 9; ++digit)
   {
     layout->set_text(number_to_string(digit));
     layout->get_pixel_size(width, height);
 
-    if(width > max_width)
+    if (width > max_width)
     {
       max_width = width;
       widest_digit_ = digit;
     }
-    else if(width > second_max_width)
+    else if (width > second_max_width)
     {
       second_max_width = width;
       second_widest_digit_ = digit;
@@ -226,7 +236,7 @@ StatusLine::StatusLine()
   using namespace Gtk;
 
   // The statusbar looks ugly if the stop button gets its default size,
-  // so reduce the button's size request to a reasonable amount.
+  // so let's reduce the button's size request to a reasonable amount.
 
   RC::parse_string("style \"regexxer-stop-button-style\"\n"
                    "{\n"
@@ -289,7 +299,7 @@ void StatusLine::set_file_encoding(const std::string& file_encoding)
 {
   statusbar_->pop();
 
-  const Glib::ustring encoding (file_encoding);
+  const Glib::ustring encoding = file_encoding;
   g_return_if_fail(encoding.is_ascii());
 
   statusbar_->push(encoding);
@@ -313,7 +323,7 @@ void StatusLine::pulse_stop()
 
 void StatusLine::on_hierarchy_changed(Gtk::Widget* previous_toplevel)
 {
-  if(Gtk::Window *const window = dynamic_cast<Gtk::Window*>(previous_toplevel))
+  if (Gtk::Window *const window = dynamic_cast<Gtk::Window*>(previous_toplevel))
   {
     stop_button_->remove_accelerator(
         window->get_accel_group(), GDK_Escape, Gdk::ModifierType(0));
@@ -321,7 +331,7 @@ void StatusLine::on_hierarchy_changed(Gtk::Widget* previous_toplevel)
 
   Gtk::HBox::on_hierarchy_changed(previous_toplevel);
 
-  if(Gtk::Window *const window = dynamic_cast<Gtk::Window*>(get_toplevel()))
+  if (Gtk::Window *const window = dynamic_cast<Gtk::Window*>(get_toplevel()))
   {
     stop_button_->add_accelerator(
         "activate", window->get_accel_group(),

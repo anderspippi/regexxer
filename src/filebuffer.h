@@ -27,10 +27,14 @@
 
 #include <gtkmm/textbuffer.h>
 #include <set>
+#include <stack>
 
 
 namespace Regexxer
 {
+
+class FileBufferActionRemoveMatch;
+
 
 class FileBuffer : public Gtk::TextBuffer
 {
@@ -40,11 +44,6 @@ public:
       const Glib::RefPtr<Gdk::Pixbuf>& pixbuf, const Glib::ustring& message);
 
   static void pango_context_changed(const Glib::RefPtr<Pango::Context>& context);
-
-  static void set_match_color(const Gdk::Color& color);
-  static void set_current_color(const Gdk::Color& color);
-  static Gdk::Color get_match_color();
-  static Gdk::Color get_current_color();
 
   virtual ~FileBuffer();
 
@@ -71,9 +70,11 @@ public:
   void increment_stamp();
   void decrement_stamp();
   void undo_remove_match(const MatchDataPtr& match, int offset);
+  void undo_add_weak(FileBufferActionRemoveMatch* ptr);
+  void undo_remove_weak(FileBufferActionRemoveMatch* ptr);
 
-  SigC::Signal1<void,int>           signal_match_count_changed;
-  SigC::Signal1<void,BoundState>    signal_bound_state_changed;
+  SigC::Signal0<void>               signal_match_count_changed;
+  SigC::Signal0<void>               signal_bound_state_changed;
   Util::QueuedSignal                signal_preview_line_changed;
   SigC::Signal0<bool>               signal_pulse;
   SigC::Signal1<void,UndoActionPtr> signal_undo_stack_push;
@@ -83,7 +84,9 @@ protected:
 
   virtual void on_insert(const iterator& pos, const Glib::ustring& text, int bytes);
   virtual void on_erase(const iterator& rbegin, const iterator& rend);
-  virtual void on_mark_deleted(const Glib::RefPtr<TextBuffer::Mark>& mark);
+  virtual void on_mark_deleted(const Glib::RefPtr<Mark>& mark);
+  virtual void on_apply_tag(const Glib::RefPtr<Tag>& tag,
+                            const iterator& range_begin, const iterator& range_end);
   virtual void on_modified_changed();
   virtual void on_begin_user_action();
   virtual void on_end_user_action();
@@ -92,20 +95,22 @@ private:
   class ScopedLock;
   class ScopedUserAction;
 
-  typedef std::set<MatchDataPtr,MatchDataLess> MatchSet;
+  typedef std::set<MatchDataPtr,MatchDataLess>      MatchSet;
+  typedef std::stack<FileBufferActionRemoveMatch*>  WeakUndoStack;
 
   MatchSet            match_set_;
+  MatchSet::iterator  current_match_;
+  UndoStackPtr        user_action_stack_;
+  WeakUndoStack       weak_undo_stack_;
   int                 match_count_;
   int                 original_match_count_;
-  MatchSet::iterator  current_match_;
-  bool                match_removed_;
-  BoundState          bound_state_;
-  bool                locked_;
-  UndoStackPtr        user_action_stack_;
   unsigned long       stamp_modified_;
   unsigned long       stamp_saved_;
+  BoundState          cached_bound_state_;
+  bool                match_removed_;
+  bool                locked_;
 
-  void replace_match(MatchSet::iterator pos, const Glib::ustring& substitution);
+  void replace_match(MatchSet::const_iterator pos, const Glib::ustring& substitution);
   void remove_match_at_iter(const iterator& start);
 
   void remove_tag_current();
@@ -115,6 +120,7 @@ private:
   static void find_line_bounds(iterator& line_begin, iterator& line_end);
 
   void update_bound_state();
+  void notify_weak_undos();
 
   // Work-around for silly, stupid, and annoying gcc 2.95.x.
   friend class FileBuffer::ScopedLock;

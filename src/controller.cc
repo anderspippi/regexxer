@@ -72,7 +72,7 @@ void add_tool_stock(Gtk::Toolbar::ToolList& tools, const Gtk::StockID& stock_id,
   control.add_widget(*tools.back().get_widget());
 }
 
-void add_widget_button(Regexxer::ControlItem& control, Gtk::Button& button)
+void add_widget_button(Gtk::Button& button, Regexxer::ControlItem& control)
 {
   button.signal_clicked().connect(control.slot());
   control.add_widget(button);
@@ -97,7 +97,7 @@ ControlItem::~ControlItem()
 
 void ControlItem::activate()
 {
-  if(enabled_ && group_enabled_)
+  if (enabled_ && group_enabled_)
     signal_activate_(); // emit
 }
 
@@ -119,22 +119,22 @@ void ControlItem::add_widget(Gtk::Widget& widget)
 
 void ControlItem::set_enabled(bool enable)
 {
-  if(enable != enabled_)
+  if (enable != enabled_)
   {
     enabled_ = enable;
 
-    if(group_enabled_)
+    if (group_enabled_)
       signal_set_sensitive_(enabled_); // emit
   }
 }
 
 void ControlItem::set_group_enabled(bool enable)
 {
-  if(enable != group_enabled_)
+  if (enable != group_enabled_)
   {
     group_enabled_ = enable;
 
-    if(enabled_)
+    if (enabled_)
       signal_set_sensitive_(group_enabled_); // emit
   }
 }
@@ -163,7 +163,7 @@ void ControlGroup::add(ControlItem& control)
 
 void ControlGroup::set_enabled(bool enable)
 {
-  if(enable != enabled_)
+  if (enable != enabled_)
   {
     enabled_ = enable;
     signal_set_enabled_(enabled_); // emit
@@ -335,13 +335,13 @@ Gtk::Widget* Controller::create_action_area()
   button_replace_file->get_accessible()->set_description("Replace all matches in the current file");
   button_replace_all ->get_accessible()->set_description("Replace all matches in all files");
 
-  add_widget_button(next_file,    *button_next_file);
-  add_widget_button(prev_file,    *button_prev_file);
-  add_widget_button(next_match,   *button_next);
-  add_widget_button(prev_match,   *button_prev);
-  add_widget_button(replace,      *button_replace);
-  add_widget_button(replace_file, *button_replace_file);
-  add_widget_button(replace_all,  *button_replace_all);
+  add_widget_button(*button_next_file,    next_file);
+  add_widget_button(*button_prev_file,    prev_file);
+  add_widget_button(*button_next,         next_match);
+  add_widget_button(*button_prev,         prev_match);
+  add_widget_button(*button_replace,      replace);
+  add_widget_button(*button_replace_file, replace_file);
+  add_widget_button(*button_replace_all,  replace_all);
 
   return action_area.release();
 }

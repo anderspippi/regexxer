@@ -48,7 +48,7 @@ Glib::RefPtr<FileBuffer> load_try_encoding(const std::string& filename, const st
   {
     read_handle.open(filename, Gnome::Vfs::OPEN_READ);
   }
-  catch(const Gnome::Vfs::exception& ex)
+  catch (const Gnome::Vfs::exception& ex)
   {
     //TODO: Give the user some meaningful information?
     return Glib::RefPtr<FileBuffer>();
@@ -67,16 +67,16 @@ Glib::RefPtr<FileBuffer> load_try_encoding(const std::string& filename, const st
     const Util::ScopedArray<char> inbuf (new char[BUFSIZE]);
     
     bool bContinue = true;
-    while(bContinue)
+    while (bContinue)
     {
       Gnome::Vfs::FileSize bytes_read = read_handle.read(inbuf.get(), BUFSIZE);
     
-      if(bytes_read == 0)
+      if (bytes_read == 0)
         bContinue = false; //stop because we reached the end.
       else
       {
         //Check that it's not a binary file:
-        if(std::memchr(inbuf.get(), '\0', bytes_read))
+        if (std::memchr(inbuf.get(), '\0', bytes_read))
           return Glib::RefPtr<FileBuffer>();
 
         //Add the text to the string:
@@ -84,7 +84,7 @@ Glib::RefPtr<FileBuffer> load_try_encoding(const std::string& filename, const st
       }
     }
   }
-  catch(const Gnome::Vfs::exception& ex)
+  catch (const Gnome::Vfs::exception& ex)
   {
     std::cerr << "Gnome::Vfs::Handle::read() failed: " << ex.what() << std::endl;
     //TODO: Give the user some meaningful information?
@@ -109,7 +109,7 @@ Glib::RefPtr<FileBuffer> load_try_encoding(const std::string& filename, const st
 
     return text_buffer;
   }
-  catch(const Glib::ConvertError& ex)
+  catch (const Glib::ConvertError& ex)
   {
     //The conversion failed - we probably guessed the encoding wrongly.
     return Glib::RefPtr<FileBuffer>();
@@ -220,18 +220,18 @@ void load_file(const FileInfoPtr& fileinfo, const std::string& fallback_encoding
   std::string encoding = "UTF-8";
   Glib::RefPtr<FileBuffer> buffer = load_try_encoding(fileinfo->fullname, encoding);
 
-  if(!buffer && !Glib::get_charset(encoding)) // locale charset is _not_ UTF-8
+  if (!buffer && !Glib::get_charset(encoding)) // locale charset is _not_ UTF-8
   {
     buffer = load_try_encoding(fileinfo->fullname, encoding);
   }
 
-  if(!buffer && !Util::encodings_equal(encoding, fallback_encoding))
+  if (!buffer && !Util::encodings_equal(encoding, fallback_encoding))
   {
     encoding = fallback_encoding;
     buffer = load_try_encoding(fileinfo->fullname, encoding);
   }
 
-  if(buffer)
+  if (buffer)
   {
     buffer->set_modified(false);
 
@@ -251,7 +251,7 @@ void save_file(const FileInfoPtr& fileinfo)
   {
     write_handle.open(fileinfo->fullname, Gnome::Vfs::OPEN_WRITE);
   }
-  catch(const Gnome::Vfs::exception& ex)
+  catch (const Gnome::Vfs::exception& ex)
   {
     std::cerr << "Gnome::Vfs::Handle::open() failed: " << ex.what() << std::endl;
     //TODO: Give the user some meaningful information?
@@ -266,7 +266,7 @@ void save_file(const FileInfoPtr& fileinfo)
     /* GnomeVFSFileSize bytes_written = */
     write_handle.write(chunk.c_str(), chunk.bytes());
   }
-  catch(const Gnome::Vfs::exception& ex)
+  catch (const Gnome::Vfs::exception& ex)
   {
     std::cerr << "Gnome::Vfs::Handle::write() failed: " << ex.what() << std::endl;
     //TODO: Give the user some meaningful information?

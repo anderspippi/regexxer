@@ -21,15 +21,19 @@
 #ifndef REGEXXER_PREFDIALOG_H_INCLUDED
 #define REGEXXER_PREFDIALOG_H_INCLUDED
 
+#include "signalutils.h"
+
 #include <gdkmm/color.h>
 #include <gtkmm/dialog.h>
-#include <gtkmm/toolbar.h>
 
 namespace Gtk
 {
+class CheckButton;
 class Entry;
 class OptionMenu;
 }
+
+namespace Gnome { namespace Conf { class Value; } }
 
 
 namespace Regexxer
@@ -44,18 +48,6 @@ public:
   explicit PrefDialog(Gtk::Window& parent);
   virtual ~PrefDialog();
 
-  void set_pref_textview_font(const Pango::FontDescription& textview_font);
-  void set_pref_match_color(const Gdk::Color& match_color);
-  void set_pref_current_color(const Gdk::Color& current_color);
-  void set_pref_toolbar_style(Gtk::ToolbarStyle toolbar_style);
-  void set_pref_fallback_encoding(const std::string& fallback_encoding);
-
-  SigC::Signal1<void,const Pango::FontDescription&> signal_pref_textview_font_changed;
-  SigC::Signal1<void,const Gdk::Color&>             signal_pref_match_color_changed;
-  SigC::Signal1<void,const Gdk::Color&>             signal_pref_current_color_changed;
-  SigC::Signal1<void,Gtk::ToolbarStyle>             signal_pref_toolbar_style_changed;
-  SigC::Signal1<void,const std::string&>            signal_pref_fallback_encoding_changed;
-
 protected:
   virtual void on_response(int response_id);
 
@@ -65,15 +57,25 @@ private:
   ColorSelectionButton* button_current_color_;
   Gtk::OptionMenu*      option_toolbar_style_;
   Gtk::Entry*           entry_fallback_;
+  Gtk::CheckButton*     button_direction_;
+  Util::AutoConnection  conn_toolbar_style_;
+  Util::AutoConnection  conn_direction_;
+  bool                  entry_fallback_changed_;
 
   Gtk::Widget* create_page_look();
   Gtk::Widget* create_page_file();
+
+  void on_conf_value_changed_hack(const Glib::ustring& key, const Gnome::Conf::Value& value);
+  void on_conf_value_changed(const Glib::ustring& key, const Gnome::Conf::Value& value);
+  void initialize_configuration();
 
   void on_textview_font_selected();
   void on_match_color_selected();
   void on_current_color_selected();
   void on_option_toolbar_style_changed();
+  void on_entry_fallback_changed();
   void on_entry_fallback_activate();
+  void on_button_direction_toggled();
 };
 
 } // namespace Regexxer
