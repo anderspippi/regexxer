@@ -398,7 +398,7 @@ void MainWindow::on_exec_search()
   {
     const int offset = error.offset();
     const Glib::ustring message = (offset >= 0 && unsigned(offset) < regex.length())
-      ? Util::compose(_("Error in regular expression at `%1' (index %2):\n%3"),
+      ? Util::compose(_("Error in regular expression at \"%1\" (index %2):\n%3"),
                       regex.substr(offset, 1), Util::int_to_string(offset + 1), error.what())
       : Util::compose(_("Error in regular expression:\n%1"), error.what());
 

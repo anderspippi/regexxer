@@ -1,5 +1,13 @@
 2004-05-14  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* src/filetree.cc: Replace instances of `...' in message strings
+	with "...".  Since the translator is supposed to use double-quotes
+	it would be confusing to use single quotes in the original string.
+	* src/mainwindow.cc: ditto
+	* src/prefdialog.cc: ditto.
+
+2004-05-14  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* ui/mainwindow.glade (button_find_files): Use a custom image and
 	label instead of a stock item as button content, so that it can be
 	more clearly distinguished from button_find_matches.
