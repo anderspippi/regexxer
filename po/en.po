@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer 0.7\n"
 "Report-Msgid-Bugs-To: daniel.elstner@gmx.net\n"
-"POT-Creation-Date: 2004-05-14 03:21+0200\n"
+"POT-Creation-Date: 2004-05-14 03:56+0200\n"
 "PO-Revision-Date: 2004-05-05 15:35+0200\n"
 "Last-Translator: Daniel Elstner <daniel.elstner@gmx.net>\n"
 "Language-Team: English <en@translate.freefriends.org>\n"
@@ -30,11 +30,11 @@ msgid "#"
 msgstr "#"
 
 #: src/filetree.cc:508
-msgid "Failed to save file `%1': %2"
+msgid "Failed to save file \"%1\": %2"
 msgstr "Failed to save file “%1”: %2"
 
 #: src/filetree.cc:1001
-msgid "`%1' seems to be a binary file."
+msgid "\"%1\" seems to be a binary file."
 msgstr "“%1” seems to be a binary file."
 
 #: src/main.cc:81
@@ -75,7 +75,7 @@ msgstr "The following errors occurred during search:"
 
 #: src/mainwindow.cc:401
 msgid ""
-"Error in regular expression at `%1' (index %2):\n"
+"Error in regular expression at \"%1\" (index %2):\n"
 "%3"
 msgstr ""
 "Error in regular expression at “%1” (index %2):\n"
@@ -110,7 +110,7 @@ msgid "Color Selection"
 msgstr "Color Selection"
 
 #: src/prefdialog.cc:514
-msgid "`%1' is not a valid encoding."
+msgid "\"%1\" is not a valid encoding."
 msgstr "“%1” is not a valid encoding."
 
 #: src/statusline.cc:250
