@@ -1,5 +1,11 @@
 2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* ui/aboutdialog.glade: New file defining the UI of the about
+	dialog.
+	* ui/Makefile.am (dist_glade_DATA): Add aboutdialog.glade.
+
+2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* src/prefdialog.cc (PrefDialog::load_xml): Remove superfluous
 	sub-block.
 
