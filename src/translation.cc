@@ -27,6 +27,18 @@
 #include <cstring>
 
 
+#if ENABLE_NLS
+void Util::initialize_gettext(const char* domain, const char* localedir)
+{
+  bindtextdomain(domain, localedir);
+  bind_textdomain_codeset(domain, "UTF-8");
+  textdomain(domain);
+}
+#else
+void Util::initialize_gettext(const char*, const char*)
+{}
+#endif /* ENABLE_NLS */
+
 /*
  * This is just like the sgettext() in the GNU gettext manual.
  */

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer 0.7\n"
 "Report-Msgid-Bugs-To: daniel.elstner@gmx.net\n"
-"POT-Creation-Date: 2004-05-05 16:48+0200\n"
+"POT-Creation-Date: 2004-05-05 18:10+0200\n"
 "PO-Revision-Date: 2004-05-05 11:34+0200\n"
 "Last-Translator: Daniel Elstner <daniel.elstner@gmx.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -137,11 +137,11 @@ msgstr "Datei"
 msgid "FileTree|#"
 msgstr "#"
 
-#: src/main.cc:84
+#: src/main.cc:80
 msgid "_About"
 msgstr "_Über"
 
-#: src/main.cc:85
+#: src/main.cc:81
 msgid "Save _all"
 msgstr "_Alle speichern"
 

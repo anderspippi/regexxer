@@ -1,5 +1,12 @@
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* src/translation.{cc,h} (initialize_gettext): New utility
+	function to take care of setting up the text domain.
+
+	* src/main.cc (main): Use initialize_gettext().
+
+2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* ABOUT-NLS: Add missing file to fix the build.
 
 	* src/aboutdialog.cc: Translate all user-visible strings except

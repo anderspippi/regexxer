@@ -33,6 +33,7 @@
 namespace Util
 {
 
+void initialize_gettext(const char* domain, const char* localedir);
 const char* sgettext(const char* msgid) G_GNUC_CONST;
 
 } // namespace
