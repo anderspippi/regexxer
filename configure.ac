@@ -30,6 +30,8 @@ AM_INIT_AUTOMAKE([1.7 gnu no-define nostdinc check-news])
 AC_PROG_CC()
 AC_PROG_CXX()
 
+AM_GNU_GETTEXT([external])
+
 PKG_CHECK_MODULES([PKG], [gtkmm-2.0 >= 2.2.8 gconfmm-2.0 >= 2.0.0])
 AC_SUBST([PKG_CFLAGS])
 AC_SUBST([PKG_LIBS])
@@ -71,6 +73,7 @@ AC_CONFIG_FILES([
   Makefile
   pixmaps/Makefile
   src/Makefile
+  po/Makefile.in
 ])
 
 AC_OUTPUT()

@@ -86,12 +86,12 @@ then
   exit 1
 fi
 
-rm -f config.guess config.sub depcomp install-sh missing mkinstalldirs
+rm -f config.guess config.sub depcomp install-sh missing
 rm -f config.cache acconfig.h
 rm -rf autom4te.cache
 
-WARNINGS=all
-export WARNINGS
+#WARNINGS=all
+#export WARNINGS
 
 set_option=':'
 test -n "${BASH_VERSION+set}" && set_option='set'

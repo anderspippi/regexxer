@@ -56,13 +56,16 @@ regexxer_SOURCES =		\
 	statusline.h		\
 	stringutils.cc		\
 	stringutils.h		\
+	translation.cc		\
+	translation.h		\
 	undostack.cc		\
 	undostack.h
 
 global_defines = \
 -DREGEXXER_DATADIR=\""$(datadir)"\" \
--DREGEXXER_GCONF_DIRECTORY=\""$(REGEXXER_GCONF_DIRECTORY)"\"
+-DREGEXXER_GCONF_DIRECTORY=\""$(REGEXXER_GCONF_DIRECTORY)"\" \
+-DREGEXXER_LOCALEDIR=\""$(datadir)/locale"\"
 
 AM_CPPFLAGS    = -I$(top_builddir) -I$(top_srcdir) $(global_defines) $(PKG_CFLAGS) $(PCRE_CFLAGS)
-regexxer_LDADD = $(PKG_LIBS) $(PCRE_LIBS)
+regexxer_LDADD = $(LIBINTL) $(PKG_LIBS) $(PCRE_LIBS)
 

@@ -1,5 +1,31 @@
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	Add support for message translation via gettext.
+
+	* po: New directory, containing all the gettext stuff.
+	* config.rpath: New file added by gettextize.
+	* mkinstalldirs: ditto.
+
+	* Makefile.am (dist_noinst_SCRIPTS): Add config.rpath.
+
+	* autogen.sh: Don't remove mkinstalldirs because it's not
+	installed by automake --add-missing, and gettext uses it.
+	(WARNINGS): Comment-out in order to reduce the flood of warnings
+	triggered by all the old m4 code in system macros.
+
+	* configure.ac: Invoke AM_GNU_GETTEXT().
+	(AC_CONFIG_FILES): Add po/Makefile.in.
+
+	* NEWS: Update.
+
+	* src/translation.{cc,h}: New files implementing gettext() support.
+	* src/statusline.cc: Translate the label of the "Stop" button.
+	* src/main.cc (main): Add code to initialize the text domain.
+
+	* src/Makefile.am (regexxer_SOURCES): Add translation.{cc,h}.
+
+2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* src/miscutils.{cc,h} (check_for_broken_gconfmm_value_changed):
 	Implement a truly evil run-time check for that gconfmm bug.
 	Although this one is already fixed in CVS, there's no release out

@@ -21,9 +21,9 @@
 ACLOCAL_AMFLAGS = -I $(top_srcdir)/macros
 DISTCHECK_CONFIGURE_FLAGS = --disable-schemas-install --enable-warnings=hardcore
 
-SUBDIRS = pixmaps src
+SUBDIRS = pixmaps src po
 
-dist_noinst_SCRIPTS = autogen.sh
+dist_noinst_SCRIPTS = autogen.sh config.rpath
 dist_noinst_DATA    = macros/cxx.m4 macros/misc.m4 macros/pcre.m4
 
 desktopdir          = $(datadir)/applications

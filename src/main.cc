@@ -37,6 +37,10 @@
 
 #include <config.h>
 
+#ifdef ENABLE_NLS
+# include <libintl.h>
+#endif
+
 
 namespace
 {
@@ -172,6 +176,12 @@ int main(int argc, char** argv)
   {
     Gnome::Conf::init();
     Gtk::Main main_instance (&argc, &argv);
+
+#if ENABLE_NLS
+    bindtextdomain(PACKAGE_TARNAME, REGEXXER_LOCALEDIR);
+    bind_textdomain_codeset(PACKAGE_TARNAME, "UTF-8");
+    textdomain(PACKAGE_TARNAME);
+#endif
 
     Glib::set_application_name(PACKAGE_NAME);
     register_stock_items();

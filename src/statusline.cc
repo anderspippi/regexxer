@@ -19,6 +19,7 @@
  */
 
 #include "statusline.h"
+#include "translation.h"
 
 #include <gdk/gdkkeysyms.h>
 #include <gtkmm.h>
@@ -246,7 +247,7 @@ StatusLine::StatusLine()
                    "}\n"
                    "widget \"*.regexxer-stop-button\" style \"regexxer-stop-button-style\"\n");
 
-  stop_button_ = new Button("Stop");
+  stop_button_ = new Button(_("Statusbar|Stop"));
   pack_start(*manage(stop_button_), PACK_SHRINK);
   stop_button_->set_name("regexxer-stop-button");
 
