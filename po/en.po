@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer 0.7\n"
 "Report-Msgid-Bugs-To: daniel.elstner@gmx.net\n"
-"POT-Creation-Date: 2004-05-10 21:50+0200\n"
+"POT-Creation-Date: 2004-05-12 21:36+0200\n"
 "PO-Revision-Date: 2004-05-05 15:35+0200\n"
 "Last-Translator: Daniel Elstner <daniel.elstner@gmx.net>\n"
 "Language-Team: English <en@translate.freefriends.org>\n"
@@ -21,19 +21,19 @@ msgstr ""
 msgid "Can't read file:"
 msgstr "Can’t read file:"
 
-#: src/filetree.cc:63
+#: src/filetree.cc:60
 msgid "File"
 msgstr "File"
 
-#: src/filetree.cc:82
+#: src/filetree.cc:79
 msgid "#"
 msgstr "#"
 
-#: src/filetree.cc:583
+#: src/filetree.cc:508
 msgid "Failed to save file `%1': %2"
 msgstr "Failed to save file “%1”: %2"
 
-#: src/filetree.cc:1076
+#: src/filetree.cc:1001
 msgid "`%1' seems to be a binary file."
 msgstr "“%1” seems to be a binary file."
 
