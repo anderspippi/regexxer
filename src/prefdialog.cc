@@ -346,13 +346,11 @@ void PrefDialog::load_xml()
   xml->get_widget("entry_fallback",       entry_fallback_);
   xml->get_widget("button_direction",     button_direction_);
 
-  {
-    const Glib::RefPtr<SizeGroup> size_group = SizeGroup::create(SIZE_GROUP_VERTICAL);
+  const Glib::RefPtr<SizeGroup> size_group = SizeGroup::create(SIZE_GROUP_VERTICAL);
 
-    size_group->add_widget(*xml->get_widget("label_utf8"));
-    size_group->add_widget(*xml->get_widget("label_locale"));
-    size_group->add_widget(*xml->get_widget("box_fallback"));
-  }
+  size_group->add_widget(*xml->get_widget("label_utf8"));
+  size_group->add_widget(*xml->get_widget("label_locale"));
+  size_group->add_widget(*xml->get_widget("box_fallback"));
 }
 
 void PrefDialog::connect_signals()
