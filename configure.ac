@@ -36,7 +36,7 @@ PKG_CHECK_MODULES([PKG], [gtkmm-2.0 >= 2.2.8 libglademm-2.0 >= 2.0.0 gconfmm-2.0
 AC_SUBST([PKG_CFLAGS])
 AC_SUBST([PKG_LIBS])
 
-PCRE_CHECK_VERSION([3.9])
+PCRE_CHECK_VERSION([4.0])
 PCRE_CHECK_UTF8()
 
 REGEXXER_PKG_PATH_PROG([GDK_PIXBUF_CSOURCE], [gdk-pixbuf-2.0], [gdk-pixbuf-csource])
