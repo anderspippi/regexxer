@@ -2,6 +2,11 @@
 
 2004-05-08  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* AUTHORS: Add Murray Cumming.
+	* NEWS: Update.
+
+2004-05-08  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* src/translation.{cc,h} (sgettext): Ditch the sgettext() approach,
 	because it's not likely to be supported by libglade when regexxer
 	starts using that at some point.  Until now there are no ambiguous

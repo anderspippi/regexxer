@@ -1,6 +1,10 @@
-regexxer 0.7 (2004-05-05)
+regexxer 0.7 (2004-05-08)
 
-	* use gettext for message translation
+	* gnome-vfs dependency dropped
+	* support for translation
+	* several undo feature bugfixes
+	* live synchronization with GConf
+	* other minor fixes
 
 regexxer 0.6 (2003-12-07)
 
