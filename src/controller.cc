@@ -182,7 +182,7 @@ Controller::Controller()
   undo          (false),
   preferences   (true),
   quit          (true),
-  info          (true),
+  about         (true),
   find_files    (false),
   find_matches  (false),
   next_file     (false),
@@ -267,7 +267,7 @@ Gtk::MenuBar* Controller::create_menubar()
 
     items.push_back(TearoffMenuElem());
 
-    add_menu_stock(items, StockID("regexxer-info"), info);
+    add_menu_stock(items, StockID("regexxer-about"), about);
   }
 
   return menubar.release();

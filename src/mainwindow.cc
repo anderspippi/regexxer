@@ -168,7 +168,7 @@ MainWindow::MainWindow()
   controller_.undo        .connect(slot(*this, &MainWindow::on_undo));
   controller_.preferences .connect(slot(*this, &MainWindow::on_preferences));
   controller_.quit        .connect(slot(*this, &MainWindow::on_quit));
-  controller_.info        .connect(slot(*this, &MainWindow::on_info));
+  controller_.about       .connect(slot(*this, &MainWindow::on_about));
   controller_.find_files  .connect(slot(*this, &MainWindow::on_find_files));
   controller_.find_matches.connect(slot(*this, &MainWindow::on_exec_search));
   controller_.next_file   .connect(bind(slot(*this, &MainWindow::on_go_next_file), true));
@@ -911,7 +911,7 @@ void MainWindow::on_busy_action_cancel()
     busy_action_cancel_ = true;
 }
 
-void MainWindow::on_info()
+void MainWindow::on_about()
 {
   if (about_dialog_.get())
   {

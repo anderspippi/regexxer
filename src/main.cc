@@ -64,7 +64,7 @@ struct StockItemData
 };
 
 
-const StockIconData stock_icon_info[] =
+const StockIconData stock_icon_about[] =
 {
   { stock_menu_about, sizeof(stock_menu_about), Gtk::ICON_SIZE_MENU }
 };
@@ -77,7 +77,7 @@ const StockIconData stock_icon_save_all[] =
 
 const StockItemData regexxer_stock_items[] =
 {
-  { "regexxer-info",     stock_icon_info,     G_N_ELEMENTS(stock_icon_info),     N_("_About")    },
+  { "regexxer-about",    stock_icon_about,    G_N_ELEMENTS(stock_icon_about),    N_("_About")    },
   { "regexxer-save-all", stock_icon_save_all, G_N_ELEMENTS(stock_icon_save_all), N_("Save _all") }
 };
 

@@ -1,3 +1,14 @@
+2004-05-07  Daniel Elstner  <daniel.elstner@gmx.net>
+
+	* src/main.cc (stock_icon_info): Rename to 'stock_icon_about',
+	as it should have been called in the first place.  Apparently
+	I misinterpreted a change in the German GNOME translation as
+	project-wide switch to a new name for "About".  Now I realize
+	why Murray changed that string a while ago...
+
+	* src/controller.{cc,h} (Controller::info): Rename to 'about'.
+	* src/mainwindow.{cc,h} (MainWindow::on_info): Rename to 'on_about'.
+
 2004-05-06  Daniel Elstner  <daniel.elstner@gmx.net>
 
 	* src/translation.cc (compose_impl): Simplify the loop in order to

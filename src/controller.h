@@ -96,7 +96,7 @@ public:
   ControlItem   undo;
   ControlItem   preferences;
   ControlItem   quit;
-  ControlItem   info;
+  ControlItem   about;
 
   ControlItem   find_files;
   ControlItem   find_matches;
