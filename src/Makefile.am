@@ -37,8 +37,6 @@ regexxer_SOURCES =		\
 	filetreeprivate.cc	\
 	filetreeprivate.h	\
 	globalstrings.h		\
-	imagebutton.cc		\
-	imagebutton.h		\
 	main.cc			\
 	mainwindow.cc		\
 	mainwindow.h		\
