@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer 0.7\n"
 "Report-Msgid-Bugs-To: daniel.elstner@gmx.net\n"
-"POT-Creation-Date: 2004-05-05 20:37+0200\n"
+"POT-Creation-Date: 2004-05-08 22:38+0200\n"
 "PO-Revision-Date: 2004-05-05 11:34+0200\n"
 "Last-Translator: Daniel Elstner <daniel.elstner@gmx.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -38,63 +38,63 @@ msgid "Debian package by"
 msgstr "Debian-Paket von"
 
 #: src/controller.cc:221
-msgid "Menu|_File"
+msgid "_File"
 msgstr "_Datei"
 
 #: src/controller.cc:244
-msgid "Menu|_Match"
+msgid "_Match"
 msgstr "_Treffer"
 
 #: src/controller.cc:249
-msgid "Menu|Match|_Previous file"
+msgid "_Previous file"
 msgstr "_Vorherige Datei"
 
 #: src/controller.cc:253
-msgid "Menu|Match|_Next file"
+msgid "_Next file"
 msgstr "_Nächste Datei"
 
 #: src/controller.cc:257
-msgid "Menu|Match|Replace _current"
+msgid "Replace _current"
 msgstr "_Ersetze Auswahl"
 
 #: src/controller.cc:259
-msgid "Menu|Match|Replace in _this file"
+msgid "Replace in _this file"
 msgstr "Ersetze in _dieser Datei"
 
 #: src/controller.cc:260
-msgid "Menu|Match|Replace in _all files"
+msgid "Replace in _all files"
 msgstr "Ersetze in _allen Dateien"
 
 #: src/controller.cc:265
-msgid "Menu|_Help"
+msgid "_Help"
 msgstr "_Hilfe"
 
 #: src/controller.cc:312
-msgid "Action|File backward"
+msgid "File backward"
 msgstr "Eine Datei zurück"
 
 #: src/controller.cc:315
-msgid "Action|Backward"
+msgid "Backward"
 msgstr "Zurück"
 
 #: src/controller.cc:318
-msgid "Action|Forward"
+msgid "Forward"
 msgstr "Vorwärts"
 
 #: src/controller.cc:321
-msgid "Action|File forward"
+msgid "File forward"
 msgstr "Eine Datei vorwärts"
 
 #: src/controller.cc:324
-msgid "Action|_Replace"
+msgid "_Replace"
 msgstr "_Ersetzen"
 
 #: src/controller.cc:327
-msgid "Action|_This file"
+msgid "_This file"
 msgstr "D_iese Datei"
 
 #: src/controller.cc:330
-msgid "Action|_All files"
+msgid "_All files"
 msgstr "_Alle Dateien"
 
 #: src/controller.cc:333
@@ -125,16 +125,17 @@ msgstr "Ersetze alle Treffer in der gewählten Datei"
 msgid "Replace all matches in all files"
 msgstr "Ersetze alle Treffer in allen Dateien"
 
-#: src/filebuffer.cc:204
-msgid " Can't read file:"
-msgstr " Datei nicht lesbar:"
+#. TRANSLATORS: Please replace space by U+00A0 NO-BREAK SPACE.
+#: src/filebuffer.cc:205
+msgid "Can't read file:"
+msgstr "Datei nicht lesbar:"
 
 #: src/filetree.cc:63
-msgid "FileTree|File"
+msgid "File"
 msgstr "Datei"
 
 #: src/filetree.cc:82
-msgid "FileTree|#"
+msgid "#"
 msgstr "#"
 
 #: src/filetree.cc:583
@@ -143,7 +144,7 @@ msgstr "Fehler beim Speichern der Datei „%1”: %2"
 
 #: src/filetree.cc:1076
 msgid "`%1' seems to be a binary file."
-msgstr "„%1” scheint eine binäre Datei zu sein."
+msgstr "„%1” scheint eine Binärdatei zu sein."
 
 #: src/main.cc:80
 msgid "_About"
@@ -154,19 +155,19 @@ msgid "Save _all"
 msgstr "_Alle speichern"
 
 #: src/mainwindow.cc:305
-msgid "LeftPane|Fol_der:"
+msgid "Fol_der:"
 msgstr "_Ordner:"
 
 #: src/mainwindow.cc:309
-msgid "LeftPane|Pattern:"
+msgid "Pattern:"
 msgstr "Suchmuster:"
 
 #: src/mainwindow.cc:329
-msgid "LeftPane|recursive"
+msgid "recursive"
 msgstr "rekursiv"
 
 #: src/mainwindow.cc:332
-msgid "LeftPane|hidden"
+msgid "hidden"
 msgstr "versteckt"
 
 #: src/mainwindow.cc:353
@@ -195,15 +196,15 @@ msgid "Find all files that match the filename pattern"
 msgstr "Finde alle Dateien auf die das Dateinamen-Suchmuster passt"
 
 #: src/mainwindow.cc:375
-msgid "RightPane|Search:"
+msgid "Search:"
 msgstr "Suchen:"
 
 #: src/mainwindow.cc:380
-msgid "RightPane|Replace:"
+msgid "Replace:"
 msgstr "Ersetzen:"
 
 #: src/mainwindow.cc:421
-msgid "RightPane|Preview"
+msgid "Preview"
 msgstr "Vorschau"
 
 #: src/mainwindow.cc:423
@@ -307,43 +308,43 @@ msgid "Preferences"
 msgstr "Einstellungen"
 
 #: src/prefdialog.cc:322
-msgid "Preferences|_Look'n'feel"
+msgid "_Look'n'feel"
 msgstr "_Oberfläche"
 
 #: src/prefdialog.cc:328
-msgid "Preferences|_File access"
+msgid "_File access"
 msgstr "_Dateizugriff"
 
 #: src/prefdialog.cc:391
-msgid "Preferences|_Text view font:"
+msgid "_Text view font:"
 msgstr "_Schriftart für Text:"
 
 #: src/prefdialog.cc:394
-msgid "Preferences|_Match color:"
+msgid "_Match color:"
 msgstr "_Farbe eines Treffers:"
 
 #: src/prefdialog.cc:397
-msgid "Preferences|C_urrent match color:"
+msgid "C_urrent match color:"
 msgstr "Farbe des _gewählten Treffers:"
 
 #: src/prefdialog.cc:416
-msgid "Preferences|Tool_bar style:"
+msgid "Tool_bar style:"
 msgstr "Stil der _Werkzeugleiste:"
 
 #: src/prefdialog.cc:428
-msgid "Preferences|Icons only"
+msgid "Icons only"
 msgstr "Nur Icons"
 
 #: src/prefdialog.cc:429
-msgid "Preferences|Text only"
+msgid "Text only"
 msgstr "Nur Text"
 
 #: src/prefdialog.cc:430
-msgid "Preferences|Icons and text"
+msgid "Icons and text"
 msgstr "Icons und Text"
 
 #: src/prefdialog.cc:431
-msgid "Preferences|Both horizontal"
+msgid "Both horizontal"
 msgstr "Beides horizontal"
 
 #: src/prefdialog.cc:444
@@ -354,15 +355,15 @@ msgstr ""
 "ein Fehlschlag angezeigt wird:"
 
 #: src/prefdialog.cc:453
-msgid "Preferences|1."
+msgid "1."
 msgstr "1."
 
 #: src/prefdialog.cc:454
-msgid "Preferences|2."
+msgid "2."
 msgstr "2."
 
 #: src/prefdialog.cc:455
-msgid "Preferences|3."
+msgid "3."
 msgstr "3."
 
 #: src/prefdialog.cc:460
@@ -382,15 +383,15 @@ msgid "`%1' is not a valid encoding."
 msgstr "„%1” ist kein gültiger Zeichensatz."
 
 #: src/statusline.cc:250
-msgid "Statusbar|Stop"
+msgid "Stop"
 msgstr "Stopp"
 
 #: src/statusline.cc:257
-msgid "Statusbar|File:"
+msgid "File:"
 msgstr "Datei:"
 
 #: src/statusline.cc:260
-msgid "Statusbar|Match:"
+msgid "Match:"
 msgstr "Treffer:"
 
 #: src/statusline.cc:271
