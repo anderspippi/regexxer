@@ -266,7 +266,6 @@ int FileBuffer::find_matches(Pcre::Pattern& pattern, bool multiple)
 {
   ScopedLock lock (*this);
 
-  const Glib::RefPtr<Glib::MainContext> main_context = Glib::MainContext::get_default();
   const Glib::RefPtr<RegexxerTags> tagtable = RegexxerTags::instance();
 
   notify_weak_undos();
