@@ -1,5 +1,9 @@
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* configure.ac (AC_INIT): Bump version number to 0.7.
+
+2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* src/*.{cc,h}: Apply a minor change of my coding style.  From
 	now on, I put a space between a keyword and the following opening
 	parenthesis.  That is, after for, while, if, switch and catch, with
