@@ -1,5 +1,11 @@
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* src/translation.cc (compose_impl): Apparently there's no need
+	to use Glib::Unicode::isdigit() since digit_value() is defined to
+	return -1 for non-digits anyway.
+
+2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* src/translation.{cc,h} (compose): Add a set of overloaded utility
 	functions to be used to compose a text message from a format string
 	and up to three string arguments.  This allows the translator to

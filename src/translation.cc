@@ -36,7 +36,7 @@ namespace
 
 Glib::ustring compose_impl(const Glib::ustring& format, const std::vector<Glib::ustring>& args)
 {
-  using namespace Glib;
+  using Glib::ustring;
 
   ustring result;
   const ustring::const_iterator pend = format.end();
@@ -48,16 +48,12 @@ Glib::ustring compose_impl(const Glib::ustring& format, const std::vector<Glib::
     if (uc == '%' && Util::next(p) != pend)
     {
       uc = *++p;
+      const int index = Glib::Unicode::digit_value(uc) - 1;
 
-      if (Unicode::isdigit(uc))
+      if (index >= 0 && unsigned(index) < args.size())
       {
-        const int index = Unicode::digit_value(uc) - 1;
-
-        if (index >= 0 && unsigned(index) < args.size())
-        {
-          result += args[index];
-          continue;
-        }
+        result += args[index];
+        continue;
       }
 
       if (uc != '%')
