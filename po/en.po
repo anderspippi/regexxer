@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer 0.7\n"
 "Report-Msgid-Bugs-To: daniel.elstner@gmx.net\n"
-"POT-Creation-Date: 2004-05-12 21:36+0200\n"
+"POT-Creation-Date: 2004-05-14 03:21+0200\n"
 "PO-Revision-Date: 2004-05-05 15:35+0200\n"
 "Last-Translator: Daniel Elstner <daniel.elstner@gmx.net>\n"
 "Language-Team: English <en@translate.freefriends.org>\n"
@@ -153,52 +153,52 @@ msgstr "Debian package by"
 msgid "_File"
 msgstr "_File"
 
-#: ui/mainwindow.glade:108
+#: ui/mainwindow.glade:114
 msgid "_Match"
 msgstr "_Match"
 
-#: ui/mainwindow.glade:117
+#: ui/mainwindow.glade:129
 msgid "_Previous file"
 msgstr "_Previous file"
 
-#: ui/mainwindow.glade:156
+#: ui/mainwindow.glade:168
 msgid "_Next file"
 msgstr "_Next file"
 
-#: ui/mainwindow.glade:183
+#: ui/mainwindow.glade:195
 msgid "Replace _current"
 msgstr "Replace _current"
 
-#: ui/mainwindow.glade:204
+#: ui/mainwindow.glade:216
 msgid "Replace in _this file"
 msgstr "Replace in _this file"
 
-#: ui/mainwindow.glade:224
+#: ui/mainwindow.glade:236
 msgid "Replace in _all files"
 msgstr "Replace in _all files"
 
-#: ui/mainwindow.glade:248
+#: ui/mainwindow.glade:260
 msgid "_Help"
 msgstr "_Help"
 
-#: ui/mainwindow.glade:382
+#: ui/mainwindow.glade:400
 msgid "Pattern:"
 msgstr "Pattern:"
 
-#: ui/mainwindow.glade:406
+#: ui/mainwindow.glade:424
 msgid "The directory to be searched"
 msgstr "The directory to be searched"
 
-#: ui/mainwindow.glade:413 ui/mainwindow.glade:516 ui/mainwindow.glade:811
-#: ui/mainwindow.glade:833 ui/mainwindow.glade:979 ui/prefdialog.glade:503
+#: ui/mainwindow.glade:431 ui/mainwindow.glade:534 ui/mainwindow.glade:883
+#: ui/mainwindow.glade:905 ui/mainwindow.glade:1051 ui/prefdialog.glade:503
 msgid "*"
 msgstr "*"
 
-#: ui/mainwindow.glade:465
+#: ui/mainwindow.glade:483
 msgid "Fol_der:"
 msgstr "Fol_der:"
 
-#: ui/mainwindow.glade:509
+#: ui/mainwindow.glade:527
 msgid ""
 "A filename pattern as used by the shell. Character classes [ab] and csh "
 "style brace expressions {a,b} are supported."
@@ -206,39 +206,43 @@ msgstr ""
 "A filename pattern as used by the shell. Character classes [ab] and csh "
 "style brace expressions {a,b} are supported."
 
-#: ui/mainwindow.glade:626
+#: ui/mainwindow.glade:644
 msgid "Recurse into subdirectories"
 msgstr "Recurse into subdirectories"
 
-#: ui/mainwindow.glade:628
+#: ui/mainwindow.glade:646
 msgid "recursive"
 msgstr "recursive"
 
-#: ui/mainwindow.glade:645
+#: ui/mainwindow.glade:663
 msgid "Also find hidden files"
 msgstr "Also find hidden files"
 
-#: ui/mainwindow.glade:647
+#: ui/mainwindow.glade:665
 msgid "hidden"
 msgstr "hidden"
 
-#: ui/mainwindow.glade:664
+#: ui/mainwindow.glade:682
 msgid "Find all files that match the filename pattern"
 msgstr "Find all files that match the filename pattern"
 
-#: ui/mainwindow.glade:754
+#: ui/mainwindow.glade:720
+msgid "Find fi_les"
+msgstr "Find fi_les"
+
+#: ui/mainwindow.glade:826
 msgid "Search:"
 msgstr "Search:"
 
-#: ui/mainwindow.glade:779
+#: ui/mainwindow.glade:851
 msgid "Replace:"
 msgstr "Replace:"
 
-#: ui/mainwindow.glade:804
+#: ui/mainwindow.glade:876
 msgid "A regular expression in Perl syntax"
 msgstr "A regular expression in Perl syntax"
 
-#: ui/mainwindow.glade:826
+#: ui/mainwindow.glade:898
 msgid ""
 "The new string to substitute. As in Perl, you can refer to parts of the "
 "match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, \\u, "
@@ -248,79 +252,79 @@ msgstr ""
 "match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, \\u, "
 "\\L, \\U and \\E are supported as well."
 
-#: ui/mainwindow.glade:854
+#: ui/mainwindow.glade:926
 msgid "Find all possible matches in a line"
 msgstr "Find all possible matches in a line"
 
-#: ui/mainwindow.glade:872
+#: ui/mainwindow.glade:944
 msgid "Do case insensitive matching"
 msgstr "Do case insensitive matching"
 
-#: ui/mainwindow.glade:900
+#: ui/mainwindow.glade:972
 msgid "Find all matches of the regular expression"
 msgstr "Find all matches of the regular expression"
 
-#: ui/mainwindow.glade:973
+#: ui/mainwindow.glade:1045
 msgid "Preview of the substitution"
 msgstr "Preview of the substitution"
 
-#: ui/mainwindow.glade:982
+#: ui/mainwindow.glade:1054
 msgid "Preview"
 msgstr "Preview"
 
-#: ui/mainwindow.glade:1033
+#: ui/mainwindow.glade:1105
 msgid "Replace current match"
 msgstr "Replace current match"
 
-#: ui/mainwindow.glade:1070
+#: ui/mainwindow.glade:1142
 msgid "_Replace"
 msgstr "_Replace"
 
-#: ui/mainwindow.glade:1105
+#: ui/mainwindow.glade:1177
 msgid "Replace all matches in the current file"
 msgstr "Replace all matches in the current file"
 
-#: ui/mainwindow.glade:1142
+#: ui/mainwindow.glade:1214
 msgid "_This file"
 msgstr "_This file"
 
-#: ui/mainwindow.glade:1177
+#: ui/mainwindow.glade:1249
 msgid "Replace all matches in all files"
 msgstr "Replace all matches in all files"
 
-#: ui/mainwindow.glade:1214
+#: ui/mainwindow.glade:1286
 msgid "_All files"
 msgstr "_All files"
 
-#: ui/mainwindow.glade:1263
+#: ui/mainwindow.glade:1335
 msgid "File backward"
 msgstr "File backward"
 
-#: ui/mainwindow.glade:1264
+#: ui/mainwindow.glade:1336
 msgid "Go to the previous matching file"
 msgstr "Go to the previous matching file"
 
-#: ui/mainwindow.glade:1292
+#: ui/mainwindow.glade:1364
 msgid "Backward"
 msgstr "Backward"
 
-#: ui/mainwindow.glade:1293
+#: ui/mainwindow.glade:1365
 msgid "Go to previous match"
 msgstr "Go to previous match"
 
-#: ui/mainwindow.glade:1321
+#: ui/mainwindow.glade:1393
 msgid "Forward"
 msgstr "Forward"
 
-#: ui/mainwindow.glade:1322
+#: ui/mainwindow.glade:1394
 msgid "Go to next match"
 msgstr "Go to next match"
 
-#: ui/mainwindow.glade:1350
+#: ui/mainwindow.glade:1422
 msgid "File forward"
 msgstr "File forward"
 
-#: ui/mainwindow.glade:1351
+#: ui/mainwindow.glade:1423
 msgid "Go to the next matching file"
 msgstr "Go to the next matching file"
 
