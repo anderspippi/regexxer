@@ -1,3 +1,8 @@
+2004-05-06  Daniel Elstner  <daniel.elstner@gmx.net>
+
+	* src/translation.cc (compose_impl): Simplify the loop in order to
+	avoid the need for look-ahead via Util::next().
+
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
 
 	* src/translation.cc (compose_impl): Apparently there's no need

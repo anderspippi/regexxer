@@ -24,7 +24,6 @@
 #endif
 
 #include "translation.h"
-#include "miscutils.h"
 
 #include <glibmm.h>
 #include <vector>
@@ -39,15 +38,17 @@ Glib::ustring compose_impl(const Glib::ustring& format, const std::vector<Glib::
   using Glib::ustring;
 
   ustring result;
+
+  ustring::const_iterator       p    = format.begin();
   const ustring::const_iterator pend = format.end();
 
-  for (ustring::const_iterator p = format.begin(); p != pend; ++p)
+  while (p != pend)
   {
-    gunichar uc = *p;
+    gunichar uc = *p++;
 
-    if (uc == '%' && Util::next(p) != pend)
+    if (uc == '%' && p != pend)
     {
-      uc = *++p;
+      uc = *p++;
       const int index = Glib::Unicode::digit_value(uc) - 1;
 
       if (index >= 0 && unsigned(index) < args.size())
