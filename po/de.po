@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer 0.7\n"
 "Report-Msgid-Bugs-To: daniel.elstner@gmx.net\n"
-"POT-Creation-Date: 2004-05-05 18:10+0200\n"
+"POT-Creation-Date: 2004-05-05 20:37+0200\n"
 "PO-Revision-Date: 2004-05-05 11:34+0200\n"
 "Last-Translator: Daniel Elstner <daniel.elstner@gmx.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -137,6 +137,14 @@ msgstr "Datei"
 msgid "FileTree|#"
 msgstr "#"
 
+#: src/filetree.cc:583
+msgid "Failed to save file `%1': %2"
+msgstr "Fehler beim Speichern der Datei „%1”: %2"
+
+#: src/filetree.cc:1076
+msgid "`%1' seems to be a binary file."
+msgstr "„%1” scheint eine binäre Datei zu sein."
+
 #: src/main.cc:80
 msgid "_About"
 msgstr "_Über"
@@ -256,7 +264,23 @@ msgstr "Das Dateinamen-Suchmuster ist ungültig."
 msgid "The following errors occurred during search:"
 msgstr "Die folgenden Fehler sind beim Suchen aufgetreten:"
 
-#: src/mainwindow.cc:788
+#: src/mainwindow.cc:557
+msgid ""
+"Error in regular expression at `%1' (index %2):\n"
+"%3"
+msgstr ""
+"Fehler in regulärem Ausdruck bei „%1” (Index %2):\n"
+"%3"
+
+#: src/mainwindow.cc:559
+msgid ""
+"Error in regular expression:\n"
+"%1"
+msgstr ""
+"Fehler in regulärem Ausdruck:\n"
+"%1"
+
+#: src/mainwindow.cc:778
 msgid "The following errors occurred during save:"
 msgstr "Die folgenden Fehler sind beim Speichern aufgetreten:"
 
@@ -352,6 +376,10 @@ msgstr "_Rückfall-Zeichensatz:"
 #: src/prefdialog.cc:481
 msgid "_Ignore the text direction of the locale"
 msgstr "_Ignoriere die Textausrichtung der Sprachumgebung"
+
+#: src/prefdialog.cc:604
+msgid "`%1' is not a valid encoding."
+msgstr "„%1” ist kein gültiger Zeichensatz."
 
 #: src/statusline.cc:250
 msgid "Statusbar|Stop"
