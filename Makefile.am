@@ -18,12 +18,12 @@
 ## Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
 
-ACLOCAL_AMFLAGS = -I $(top_srcdir)/macros
+ACLOCAL_AMFLAGS = -I macros
 DISTCHECK_CONFIGURE_FLAGS = --disable-schemas-install --enable-warnings=hardcore
 
 SUBDIRS = pixmaps ui src po
 
-dist_noinst_SCRIPTS = autogen.sh config.rpath
+dist_noinst_SCRIPTS = autogen.sh
 dist_noinst_DATA    = macros/cxx.m4 macros/misc.m4 macros/pcre.m4
 
 desktopdir          = $(datadir)/applications

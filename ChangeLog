@@ -1,3 +1,41 @@
+2004-05-21  Daniel Elstner  <daniel.elstner@gmx.net>
+
+	[ merge from HEAD ]
+
+	* src/filetree.cc: Replace a couple of explicit TreePath(iter)
+	conversions by simple assignments.
+	(FileTree::replace_all_matches): Make sure path_match_first_
+	points to the first file that still has matches after a replace
+	operation was interrupted.
+	(FileTree::replace_matches_at_iter): Remove the assertion that
+	FileBuffer::get_match_count() must return 0 after returning from
+	FileBuffer::replace_all_matches(), because the operation might
+	have been interrupted.
+
+2004-05-21  Daniel Elstner  <daniel.elstner@gmx.net>
+
+	[ merge from HEAD ]
+
+	* ui/mainwindow.glade (button_folder): Set "has_focus" to True
+	so that the focus won't go to the toolbar initially.
+	(entry_preview): Set "can_focus" to False.
+
+2004-05-21  Daniel Elstner  <daniel.elstner@gmx.net>
+
+	[ merge from HEAD ]
+
+	* Makefile.am (ACLOCAL_AMFLAGS): No need to explicitely specify
+	$(top_srcdir)/ in the directory name because the aclocal rule
+	changes to that directory anyway.  This also avoids confusing
+	recent releases of gettextize.
+
+2004-05-21  Daniel Elstner  <daniel.elstner@gmx.net>
+
+	[ merge from HEAD ]
+
+	* Makefile.am (dist_noinst_SCRIPTS): Remove config.rpath because
+	automake distributes this file automatically.
+
 2004-05-17  Daniel Elstner  <daniel.elstner@gmx.net>
 
 	* configure.ac (AC_INIT): Bump version to 0.8.
