@@ -1,5 +1,13 @@
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* src/filebuffer.cc (FileBuffer::replace_match): Invoke on_insert()
+	directly in case of empty-by-empty replace in order to avoid this
+	nasty special-case where a FileBufferActionRemoveMatch object in
+	the stack is not followed by either an insert or an erase action.
+	This finally fixes the last one of undo system bugs known to me.
+
+2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* configure.ac (AC_INIT): Bump version number to 0.7.
 
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
