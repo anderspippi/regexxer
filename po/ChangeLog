@@ -1,5 +1,10 @@
 2004-05-07  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* en.po: Replace U+0027 APOSTROPHE with U+2019, which is
+	the preferred code point for apostrophe.
+
+2004-05-07  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* de.po: Fix translation of "About" menu item.
 
 2004-05-06  Daniel Elstner  <daniel.elstner@gmx.net>

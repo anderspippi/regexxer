@@ -126,7 +126,7 @@ msgstr "Replace all matches in all files"
 
 #: src/filebuffer.cc:204
 msgid " Can't read file:"
-msgstr " Can't read file:"
+msgstr " Can’t read file:"
 
 #: src/filetree.cc:63
 msgid "FileTree|File"
@@ -239,7 +239,7 @@ msgid ""
 "Some files haven't been saved yet.\n"
 "Quit anyway?"
 msgstr ""
-"Some files haven't been saved yet.\n"
+"Some files haven’t been saved yet.\n"
 "Quit anyway?"
 
 #: src/mainwindow.cc:460
@@ -251,7 +251,7 @@ msgid ""
 "Some files haven't been saved yet.\n"
 "Continue anyway?"
 msgstr ""
-"Some files haven't been saved yet.\n"
+"Some files haven’t been saved yet.\n"
 "Continue anyway?"
 
 #: src/mainwindow.cc:526
@@ -304,7 +304,7 @@ msgstr "Preferences"
 
 #: src/prefdialog.cc:322
 msgid "Preferences|_Look'n'feel"
-msgstr "_Look'n'feel"
+msgstr "_Look’n’feel"
 
 #: src/prefdialog.cc:328
 msgid "Preferences|_File access"
