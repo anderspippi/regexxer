@@ -1,5 +1,11 @@
 2004-05-12  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* src/fileio.cc: Remove the libgnome-vfsmm code already enclosed
+	by #if 0 ... #endif.  It's all in the CVS history anyway.
+	* src/filetree.cc: ditto.
+
+2004-05-12  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* src/imagebutton.{cc,h}: Remove files as they're no longer used.
 	* src/Makefile.am (regexxer_SOURCES): Remove imagebutton.{cc,h}.
 
