@@ -222,7 +222,7 @@ msgstr "Ignoriere Groß-/Kleinschreibung beim Suchen"
 
 #: src/mainwindow.cc:430
 msgid "Find all matches of the regular expression"
-msgstr "Find alle Treffer für den regulären Ausdruck"
+msgstr "Finde alle Treffer für den regulären Ausdruck"
 
 #: src/mainwindow.cc:431
 msgid "Preview of the substitution"
