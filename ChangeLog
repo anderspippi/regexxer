@@ -1,5 +1,26 @@
 2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* src/globalstrings.h (glade_mainwindow_filename): New string.
+
+	* src/mainwindow.{cc,h}: Use libglademm to load the UI at runtime,
+	and make the actual Gtk::Window a member of class MainWindow.
+	Remove the old UI creation code.
+
+	* src/controller.{cc,h} (Controller::load_xml): The menu bar,
+	toolbar and action area is now contained in mainwindow.glade,
+	and thus this new method wholly replaces the old code which
+	generated those widgets.
+	(ControlItem::add_widgets): New helper method intented to help
+	reducing the code size.
+
+	* src/filetree.cc (regexxer_create_file_tree): New function.
+	* src/statusline.cc (regexxer_create_status_line): New function.
+
+	* src/main.cc (main): Access the Gtk::Window by using the new
+	accessor method Regexxer::MainWindow::get_window().
+
+2004-05-10  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* ui/mainwindow.glade: New file defining the main window's UI.
 	* ui/Makefile.am (dist_glade_DATA): Add mainwindow.glade.
 

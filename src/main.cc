@@ -32,6 +32,7 @@
 #include <gtkmm/main.h>
 #include <gtkmm/stock.h>
 #include <gtkmm/stockitem.h>
+#include <gtkmm/window.h>
 
 #include <exception>
 #include <list>
@@ -187,7 +188,7 @@ int main(int argc, char** argv)
     Regexxer::MainWindow window;
 
     initialize_configuration();
-    Gtk::Main::run(window);
+    Gtk::Main::run(*window.get_window());
   }
   catch (const Glib::Error& error)
   {

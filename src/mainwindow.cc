@@ -1,6 +1,6 @@
 /* $Id$
  *
- * Copyright (c) 2002  Daniel Elstner  <daniel.elstner@gmx.net>
+ * Copyright (c) 2004  Daniel Elstner  <daniel.elstner@gmx.net>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License VERSION 2 as
@@ -22,7 +22,6 @@
 #include "aboutdialog.h"
 #include "filetree.h"
 #include "globalstrings.h"
-#include "imagebutton.h"
 #include "pcreshell.h"
 #include "prefdialog.h"
 #include "statusline.h"
@@ -32,6 +31,7 @@
 #include <glib.h>
 #include <gconfmm.h>
 #include <gtkmm.h>
+#include <libglademm.h>
 #include <algorithm>
 #include <functional>
 
@@ -40,21 +40,6 @@
 
 namespace
 {
-
-const char *const builtin_filename_patterns[] =
-{
-  "*.[ch]",                                   // C
-  "*.{c,cc,cpp,cxx,c++,C,h,hh,hpp,hxx,h++}",  // C/C++
-  "*.{ccg,hg}",                               // gtkmmproc
-  "*.idl",                                    // CORBA/COM
-  "*.{java,jsp}",                             // Java/JSP
-  "*.{pl,pm,cgi}",                            // Perl
-  "*.py",                                     // Python
-  "*.php3",                                   // PHP
-  "*.{html,htm,shtml,js,wml}",                // HTML
-  "*.{xml,xsl,css,dtd,xsd}",                  // XML/XSLT
-  0
-};
 
 enum { BUSY_GUI_UPDATE_INTERVAL = 16 };
 
@@ -155,13 +140,70 @@ MainWindow::MainWindow()
   busy_action_iteration_  (0),
   undo_stack_             (new UndoStack())
 {
+  load_xml();
+
+  textview_->set_buffer(FileBuffer::create());
+  set_title_filename();
+
+  entry_folder_->set_text(Util::shorten_pathname(
+      Util::filename_to_utf8_fallback(Glib::get_current_dir())));
+
+  connect_signals();
+
+  entry_pattern_->set_text("*");
+}
+
+MainWindow::~MainWindow()
+{}
+
+/**** Regexxer::MainWindow -- private **************************************/
+
+void MainWindow::load_xml()
+{
+  using Gnome::Glade::Xml;
+
+  const Glib::RefPtr<Xml> xml = Xml::create(glade_mainwindow_filename);
+
+  Gtk::Window* mainwindow = 0;
+  window_.reset(xml->get_widget("mainwindow", mainwindow));
+
+  xml->get_widget("toolbar",             toolbar_);
+  xml->get_widget("entry_folder",        entry_folder_);
+  xml->get_widget("combo_pattern-entry", entry_pattern_);
+  xml->get_widget("button_recursive",    button_recursive_);
+  xml->get_widget("button_hidden",       button_hidden_);
+  xml->get_widget("entry_regex",         entry_regex_);
+  xml->get_widget("entry_substitution",  entry_substitution_);
+  xml->get_widget("button_multiple",     button_multiple_);
+  xml->get_widget("button_caseless",     button_caseless_);
+  xml->get_widget("filetree",            filetree_);
+  xml->get_widget("textview",            textview_);
+  xml->get_widget("entry_preview",       entry_preview_);
+  xml->get_widget("statusline",          statusline_);
+
+  Gtk::Button* button_folder = 0;
+  xml->get_widget("button_folder", button_folder);
+  button_folder->signal_clicked().connect(SigC::slot(*this, &MainWindow::on_select_folder));
+
+  controller_.load_xml(xml);
+}
+
+void MainWindow::connect_signals()
+{
   using SigC::bind;
   using SigC::slot;
 
-  set_title_filename();
-  set_default_size(640, 450);
+  window_->signal_hide         ().connect(slot(*this, &MainWindow::on_hide));
+  window_->signal_style_changed().connect(slot(*this, &MainWindow::on_style_changed));
+  window_->signal_delete_event ().connect(slot(*this, &MainWindow::on_delete_event));
 
-  add(*Gtk::manage(create_main_vbox()));
+  entry_folder_ ->signal_activate().connect(controller_.find_files.slot());
+  entry_pattern_->signal_activate().connect(controller_.find_files.slot());
+  entry_pattern_->signal_changed ().connect(slot(*this, &MainWindow::on_entry_pattern_changed));
+
+  entry_regex_       ->signal_activate().connect(controller_.find_matches.slot());
+  entry_substitution_->signal_activate().connect(controller_.find_matches.slot());
+  entry_substitution_->signal_changed ().connect(slot(*this, &MainWindow::update_preview));
 
   controller_.save_file   .connect(slot(*this, &MainWindow::on_save_file));
   controller_.save_all    .connect(slot(*this, &MainWindow::on_save_all));
@@ -179,17 +221,11 @@ MainWindow::MainWindow()
   controller_.replace_file.connect(slot(*this, &MainWindow::on_replace_file));
   controller_.replace_all .connect(slot(*this, &MainWindow::on_replace_all));
 
-  show_all_children();
-
   Gnome::Conf::Client::get_default_client()
       ->signal_value_changed().connect(slot(*this, &MainWindow::on_conf_value_changed));
 
-  entry_folder_->set_text(Util::shorten_pathname(
-      Util::filename_to_utf8_fallback(Glib::get_current_dir())));
-  entry_pattern_->set_text("*");
-  button_recursive_->set_active(true);
-
-  statusline_->signal_cancel_clicked.connect(slot(*this, &MainWindow::on_busy_action_cancel));
+  statusline_->signal_cancel_clicked.connect(
+      slot(*this, &MainWindow::on_busy_action_cancel));
 
   filetree_->signal_switch_buffer.connect(
       slot(*this, &MainWindow::on_filetree_switch_buffer));
@@ -213,11 +249,6 @@ MainWindow::MainWindow()
       slot(*this, &MainWindow::on_undo_stack_push));
 }
 
-MainWindow::~MainWindow()
-{}
-
-/**** Regexxer::MainWindow -- protected ************************************/
-
 void MainWindow::on_hide()
 {
   on_busy_action_cancel();
@@ -234,15 +265,11 @@ void MainWindow::on_hide()
   {
     const std::auto_ptr<PrefDialog> temp (pref_dialog_);
   }
-
-  Gtk::Window::on_hide();
 }
 
-void MainWindow::on_style_changed(const Glib::RefPtr<Gtk::Style>& previous_style)
+void MainWindow::on_style_changed(const Glib::RefPtr<Gtk::Style>&)
 {
-  Gtk::Window::on_style_changed(previous_style);
-
-  FileBuffer::pango_context_changed(get_pango_context());
+  FileBuffer::pango_context_changed(window_->get_pango_context());
 }
 
 bool MainWindow::on_delete_event(GdkEventAny*)
@@ -250,193 +277,10 @@ bool MainWindow::on_delete_event(GdkEventAny*)
   return !confirm_quit_request();
 }
 
-/**** Regexxer::MainWindow -- private **************************************/
-
-Gtk::Widget* MainWindow::create_main_vbox()
-{
-  using namespace Gtk;
-
-  std::auto_ptr<Box> vbox_main (new VBox());
-
-  HandleBox *const menubar_handle = new HandleBox();
-  vbox_main->pack_start(*manage(menubar_handle), PACK_SHRINK);
-
-  MenuBar *const menubar = controller_.create_menubar();
-  menubar_handle->add(*manage(menubar));
-
-  HandleBox *const toolbar_handle = new HandleBox();
-  vbox_main->pack_start(*manage(toolbar_handle), PACK_SHRINK);
-
-  toolbar_ = controller_.create_toolbar();
-  toolbar_handle->add(*manage(toolbar_));
-
-  Box *const vbox_interior = new VBox();
-
-  vbox_main->pack_start(*manage(vbox_interior), PACK_EXPAND_WIDGET);
-  // HIG spacing.  This plus the window border width makes 12,
-  // or plus the other border makes 12 between widgets.
-  vbox_interior->set_border_width(6);
-
-  statusline_ = new StatusLine();
-  vbox_main->pack_start(*manage(statusline_), PACK_SHRINK);
-
-  Paned *const paned = new HPaned();
-  vbox_interior->pack_start(*manage(paned), PACK_EXPAND_WIDGET);
-
-  paned->pack1(*manage(create_left_pane()),  EXPAND);
-  paned->pack2(*manage(create_right_pane()), EXPAND);
-
-  vbox_interior->pack_start(*manage(controller_.create_action_area()), PACK_SHRINK);
-
-  return vbox_main.release();
-}
-
-Gtk::Widget* MainWindow::create_left_pane()
-{
-  using namespace Gtk;
-
-  std::auto_ptr<Box> vbox (new VBox(false, 3));
-  vbox->set_border_width(6); // HIG spacing
-
-  Table *const table = new Table(3, 2, false);
-  vbox->pack_start(*manage(table), PACK_SHRINK);
-  table->set_spacings(6); // HIG
-
-  Button *const button_folder = new ImageLabelButton(Stock::OPEN, _("Fol_der:"), true);
-  table->attach(*manage(button_folder), 0, 1, 0, 1, FILL, AttachOptions(0));
-  button_folder->signal_clicked().connect(SigC::slot(*this, &MainWindow::on_select_folder));
-
-  Label *const label_pattern = new Label(_("Pattern:"), 0.0, 0.5);
-  table->attach(*manage(label_pattern), 0, 1, 1, 2, FILL, AttachOptions(0));
-
-  entry_folder_ = new Entry();
-  table->attach(*manage(entry_folder_), 1, 2, 0, 1, EXPAND|FILL, AttachOptions(0));
-
-  Combo *const combo_pattern = new Combo();
-  table->attach(*manage(combo_pattern), 1, 2, 1, 2, EXPAND|FILL, AttachOptions(0));
-  combo_pattern->set_popdown_strings(builtin_filename_patterns);
-
-  entry_pattern_ = combo_pattern->get_entry();
-  label_pattern->set_mnemonic_widget(*entry_pattern_);
-
-  entry_folder_ ->signal_activate().connect(controller_.find_files.slot());
-  entry_pattern_->signal_activate().connect(controller_.find_files.slot());
-  entry_pattern_->signal_changed ().connect(SigC::slot(*this, &MainWindow::on_entry_pattern_changed));
-
-  Box *const hbox = new HBox(false, 6 /* HIG */);
-  table->attach(*manage(hbox), 0, 2, 2, 3, EXPAND|FILL, AttachOptions(0));
-
-  button_recursive_ = new CheckButton(_("recursive"));
-  hbox->pack_start(*manage(button_recursive_), PACK_SHRINK);
-
-  button_hidden_ = new CheckButton(_("hidden"));
-  hbox->pack_start(*manage(button_hidden_), PACK_SHRINK);
-
-  Button *const button_find_files = new Button(Stock::FIND);
-  hbox->pack_end(*manage(button_find_files), PACK_SHRINK);
-
-  button_find_files->signal_clicked().connect(controller_.find_files.slot());
-  controller_.find_files.add_widget(*button_find_files);
-
-  Frame *const frame = new Frame();
-  vbox->pack_start(*manage(frame), PACK_EXPAND_WIDGET);
-
-  ScrolledWindow *const scrollwin = new ScrolledWindow();
-  frame->add(*manage(scrollwin));
-
-  filetree_ = new FileTree();
-  scrollwin->add(*manage(filetree_));
-  scrollwin->set_policy(POLICY_AUTOMATIC, POLICY_ALWAYS);
-
-  entry_folder_->get_accessible()->set_name("Folder");
-
-  tooltips_.set_tip(*entry_folder_,     _("The directory to be searched"));
-  tooltips_.set_tip(*entry_pattern_,    _("A filename pattern as used by the shell. "
-                                          "Character classes [ab] and csh style "
-                                          "brace expressions {a,b} are supported."));
-  tooltips_.set_tip(*button_recursive_, _("Recurse into subdirectories"));
-  tooltips_.set_tip(*button_hidden_,    _("Also find hidden files"));
-  tooltips_.set_tip(*button_find_files, _("Find all files that match the filename pattern"));
-
-  return vbox.release();
-}
-
-Gtk::Widget* MainWindow::create_right_pane()
-{
-  using namespace Gtk;
-
-  std::auto_ptr<Box> vbox (new VBox(false, 3));
-  vbox->set_border_width(6); // HIG spacing
-
-  Table *const table = new Table(2, 3, false);
-  vbox->pack_start(*manage(table), PACK_SHRINK);
-  table->set_spacings(6); // HIG
-
-  Label *const label_search = new Label(_("Search:"), 0.0, 0.5);
-  table->attach(*manage(label_search), 0, 1, 0, 1, FILL, AttachOptions(0));
-  table->attach(*manage(entry_regex_ = new Entry()),  1, 2, 0, 1, EXPAND|FILL, AttachOptions(0));
-  label_search->set_mnemonic_widget(*entry_regex_);
-
-  Label *const label_replace = new Label(_("Replace:"), 0.0, 0.5);
-  table->attach(*manage(label_replace), 0, 1, 1, 2, FILL, AttachOptions(0));
-  table->attach(*manage(entry_substitution_ = new Entry()),  1, 2, 1, 2, EXPAND|FILL, AttachOptions(0));
-  label_replace->set_mnemonic_widget(*entry_substitution_);
-
-  entry_regex_       ->signal_activate().connect(controller_.find_matches.slot());
-  entry_substitution_->signal_activate().connect(controller_.find_matches.slot());
-  entry_substitution_->signal_changed ().connect(SigC::slot(*this, &MainWindow::update_preview));
-
-  Box *const hbox_options = new HBox(false, 6 /* HIG */);
-  table->attach(*manage(hbox_options), 2, 3, 0, 1, FILL, AttachOptions(0));
-  // Prefix with U+202D LEFT-TO-RIGHT OVERRIDE so we won't end up with "g/" instead.
-  hbox_options->pack_start(*manage(button_multiple_ = new CheckButton("\342\200\255/g")), PACK_SHRINK);
-  hbox_options->pack_start(*manage(button_caseless_ = new CheckButton("\342\200\255/i")), PACK_SHRINK);
-
-  Button *const button_find_matches = new Button(Stock::FIND);
-  table->attach(*manage(button_find_matches), 2, 3, 1, 2, FILL, AttachOptions(0));
-
-  controller_.find_matches.add_widget(*button_find_matches);
-  button_find_matches->signal_clicked().connect(controller_.find_matches.slot());
-
-  Frame *const frame = new Frame();
-  vbox->pack_start(*manage(frame), PACK_EXPAND_WIDGET);
-
-  Box *const vbox_textview = new VBox(false, 3);
-  frame->add(*manage(vbox_textview));
-
-  ScrolledWindow *const scrollwin = new ScrolledWindow();
-  vbox_textview->pack_start(*manage(scrollwin), PACK_EXPAND_WIDGET);
-
-  textview_ = new TextView(FileBuffer::create());
-  scrollwin->add(*manage(textview_));
-  textview_->set_editable(false);
-  textview_->set_cursor_visible(false);
-
-  entry_preview_ = new Entry();
-  vbox_textview->pack_start(*manage(entry_preview_), PACK_SHRINK);
-  entry_preview_->set_has_frame(false);
-  entry_preview_->set_editable(false);
-  entry_preview_->unset_flags(CAN_FOCUS);
-
-  entry_preview_->get_accessible()->set_name(_("Preview"));
-
-  tooltips_.set_tip(*entry_regex_,        _("A regular expression in Perl syntax"));
-  tooltips_.set_tip(*entry_substitution_, _("The new string to substitute. As in Perl, you can "
-                                            "refer to parts of the match using $1, $2, etc. "
-                                            "or even $+, $&, $` and $'. The operators "
-                                            "\\l, \\u, \\L, \\U and \\E are supported as well."));
-  tooltips_.set_tip(*button_multiple_,    _("Find all possible matches in a line"));
-  tooltips_.set_tip(*button_caseless_,    _("Do case insensitive matching"));
-  tooltips_.set_tip(*button_find_matches, _("Find all matches of the regular expression"));
-  tooltips_.set_tip(*entry_preview_,      _("Preview of the substitution"));
-
-  return vbox.release();
-}
-
 void MainWindow::on_quit()
 {
   if (confirm_quit_request())
-    hide();
+    window_->hide();
 }
 
 bool MainWindow::confirm_quit_request()
@@ -445,7 +289,7 @@ bool MainWindow::confirm_quit_request()
     return true;
 
   const Glib::ustring message = _("Some files haven't been saved yet.\nQuit anyway?");
-  Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_WARNING, Gtk::BUTTONS_NONE, true);
+  Gtk::MessageDialog dialog (*window_, message, Gtk::MESSAGE_WARNING, Gtk::BUTTONS_NONE, true);
 
   dialog.add_button(Gtk::Stock::CANCEL, Gtk::RESPONSE_CANCEL);
   dialog.add_button(Gtk::Stock::QUIT,   Gtk::RESPONSE_OK);
@@ -460,7 +304,7 @@ void MainWindow::on_select_folder()
   Gtk::FileSelection filesel (_("Select a folder"));
 
   filesel.set_modal(true);
-  filesel.set_transient_for(*this);
+  filesel.set_transient_for(*window_);
   filesel.hide_fileop_buttons();
   filesel.set_has_separator(false);
   filesel.get_file_list()->get_parent()->hide();
@@ -497,7 +341,7 @@ void MainWindow::on_find_files()
   if (filetree_->get_modified_count() > 0)
   {
     const Glib::ustring message = _("Some files haven't been saved yet.\nContinue anyway?");
-    Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_WARNING, Gtk::BUTTONS_OK_CANCEL, true);
+    Gtk::MessageDialog dialog (*window_, message, Gtk::MESSAGE_WARNING, Gtk::BUTTONS_OK_CANCEL, true);
 
     if (dialog.run() != Gtk::RESPONSE_OK)
       return;
@@ -524,13 +368,13 @@ void MainWindow::on_find_files()
   catch (const Pcre::Error& error)
   {
     const Glib::ustring message = _("The file search pattern is invalid.");
-    Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
+    Gtk::MessageDialog dialog (*window_, message, Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
     dialog.run();
   }
   catch (const FileTree::Error& error)
   {
     const Glib::ustring message = _("The following errors occurred during search:");
-    FileErrorDialog dialog (*this, message, Gtk::MESSAGE_WARNING, error);
+    FileErrorDialog dialog (*window_, message, Gtk::MESSAGE_WARNING, error);
     dialog.run();
   }
 
@@ -558,7 +402,7 @@ void MainWindow::on_exec_search()
                       regex.substr(offset, 1), Util::int_to_string(offset + 1), error.what())
       : Util::compose(_("Error in regular expression:\n%1"), error.what());
 
-    Gtk::MessageDialog dialog (*this, message, Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
+    Gtk::MessageDialog dialog (*window_, message, Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
     dialog.run();
 
     if (offset >= 0 && offset < entry_regex_->get_text_length())
@@ -762,7 +606,7 @@ void MainWindow::on_save_file()
     const std::list<Glib::ustring>& error_list = error.get_error_list();
     g_assert(error_list.size() == 1);
 
-    Gtk::MessageDialog dialog (*this, error_list.front(), Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
+    Gtk::MessageDialog dialog (*window_, error_list.front(), Gtk::MESSAGE_ERROR, Gtk::BUTTONS_OK, true);
     dialog.run();
   }
 }
@@ -776,7 +620,7 @@ void MainWindow::on_save_all()
   catch (const FileTree::Error& error)
   {
     const Glib::ustring message = _("The following errors occurred during save:");
-    FileErrorDialog dialog (*this, message, Gtk::MESSAGE_ERROR, error);
+    FileErrorDialog dialog (*window_, message, Gtk::MESSAGE_ERROR, error);
     dialog.run();
   }
 }
@@ -860,7 +704,7 @@ void MainWindow::set_title_filename(const Glib::ustring& filename)
 
   title += PACKAGE_NAME;
 
-  set_title(title);
+  window_->set_title(title);
 }
 
 void MainWindow::busy_action_enter()
@@ -919,7 +763,7 @@ void MainWindow::on_about()
   }
   else
   {
-    std::auto_ptr<Gtk::Dialog> dialog (AboutDialog::create(*this));
+    std::auto_ptr<Gtk::Dialog> dialog (AboutDialog::create(*window_));
 
     dialog->signal_hide().connect(SigC::slot(*this, &MainWindow::on_about_dialog_hide));
     dialog->show();
@@ -942,7 +786,7 @@ void MainWindow::on_preferences()
   }
   else
   {
-    std::auto_ptr<PrefDialog> dialog (new PrefDialog(*this));
+    std::auto_ptr<PrefDialog> dialog (new PrefDialog(*window_));
 
     dialog->get_dialog()->signal_hide().connect(SigC::slot(*this, &MainWindow::on_pref_dialog_hide));
     dialog->get_dialog()->show();

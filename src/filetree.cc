@@ -1099,5 +1099,20 @@ void FileTree::on_conf_value_changed(const Glib::ustring& key, const Gnome::Conf
   }
 }
 
+extern "C"
+GtkWidget* regexxer_create_file_tree(char*, char*, char*, int, int)
+{
+  try
+  {
+    Gtk::Widget *const widget = new FileTree();
+    widget->show();
+    return Gtk::manage(widget)->gobj();
+  }
+  catch (...)
+  {
+    g_return_val_if_reached(0);
+  }
+}
+
 } // namespace Regexxer
 

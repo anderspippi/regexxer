@@ -25,9 +25,9 @@
 #include "filebuffer.h"
 #include "sharedptr.h"
 
-#include <gtkmm/tooltips.h>
-#include <gtkmm/window.h>
-
+#include <sigc++/sigc++.h>
+#include <glibmm/refptr.h>
+#include <glibmm/ustring.h>
 #include <list>
 #include <memory>
 
@@ -40,6 +40,7 @@ class Entry;
 class HandleBox;
 class TextBuffer;
 class TextView;
+class Window;
 }
 
 namespace Gnome { namespace Conf { class Value; } }
@@ -53,22 +54,19 @@ class PrefDialog;
 class StatusLine;
 struct FileInfo;
 
-class MainWindow : public Gtk::Window
+class MainWindow : public SigC::Object
 {
 public:
   MainWindow();
   virtual ~MainWindow();
 
-protected:
-  virtual void on_hide();
-  virtual void on_style_changed(const Glib::RefPtr<Gtk::Style>& previous_style);
-  virtual bool on_delete_event(GdkEventAny* event);
+  Gtk::Window* get_window() { return window_.get(); }
 
 private:
   class BusyAction;
 
-  Controller        controller_;
-  Gtk::Tooltips     tooltips_;
+  std::auto_ptr<Gtk::Window>  window_;
+  Controller                  controller_;
 
   Gtk::Toolbar*     toolbar_;
 
@@ -99,9 +97,12 @@ private:
   std::auto_ptr<Gtk::Dialog>  about_dialog_;
   std::auto_ptr<PrefDialog>   pref_dialog_;
 
-  Gtk::Widget* create_main_vbox();
-  Gtk::Widget* create_left_pane();
-  Gtk::Widget* create_right_pane();
+  void load_xml();
+  void connect_signals();
+
+  void on_hide();
+  void on_style_changed(const Glib::RefPtr<Gtk::Style>& previous_style);
+  bool on_delete_event(GdkEventAny* event);
 
   void on_quit();
   bool confirm_quit_request();

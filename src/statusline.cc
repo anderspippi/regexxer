@@ -340,5 +340,20 @@ void StatusLine::on_hierarchy_changed(Gtk::Widget* previous_toplevel)
   }
 }
 
+extern "C"
+GtkWidget* regexxer_create_status_line(char*, char*, char*, int, int)
+{
+  try
+  {
+    Gtk::Widget *const widget = new StatusLine();
+    widget->show();
+    return Gtk::manage(widget)->gobj();
+  }
+  catch (...)
+  {
+    g_return_val_if_reached(0);
+  }
+}
+
 } // namespace Regexxer
 
