@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer 0.7\n"
 "Report-Msgid-Bugs-To: daniel.elstner@gmx.net\n"
-"POT-Creation-Date: 2004-05-10 07:22+0200\n"
+"POT-Creation-Date: 2004-05-10 12:38+0200\n"
 "PO-Revision-Date: 2004-05-05 15:35+0200\n"
 "Last-Translator: Daniel Elstner <daniel.elstner@gmx.net>\n"
 "Language-Team: English <en@translate.freefriends.org>\n"
@@ -15,26 +15,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: src/aboutdialog.cc:118
-msgid "About regexxer"
-msgstr "About regexxer"
-
-#: src/aboutdialog.cc:147
-msgid "regexxer icon"
-msgstr "regexxer icon"
-
-#: src/aboutdialog.cc:150
-msgid "The application icon of regexxer"
-msgstr "The application icon of regexxer"
-
-#: src/aboutdialog.cc:159
-msgid "written by"
-msgstr "written by"
-
-#: src/aboutdialog.cc:162
-msgid "Debian package by"
-msgstr "Debian package by"
 
 #: src/controller.cc:221
 msgid "_File"
@@ -299,7 +279,7 @@ msgstr ""
 msgid "Color Selection"
 msgstr "Color Selection"
 
-#: src/prefdialog.cc:516
+#: src/prefdialog.cc:514
 msgid "`%1' is not a valid encoding."
 msgstr "“%1” is not a valid encoding."
 
@@ -318,6 +298,26 @@ msgstr "Match:"
 #: src/statusline.cc:271
 msgid "Cancels the running search"
 msgstr "Cancels the running search"
+
+#: ui/aboutdialog.glade:7
+msgid "About regexxer"
+msgstr "About regexxer"
+
+#: ui/aboutdialog.glade:77
+msgid "regexxer icon"
+msgstr "regexxer icon"
+
+#: ui/aboutdialog.glade:78
+msgid "The application icon of regexxer"
+msgstr "The application icon of regexxer"
+
+#: ui/aboutdialog.glade:148
+msgid "written by"
+msgstr "written by"
+
+#: ui/aboutdialog.glade:205
+msgid "Debian package by"
+msgstr "Debian package by"
 
 #: ui/prefdialog.glade:8
 msgid "Preferences"
