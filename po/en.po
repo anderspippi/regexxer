@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer 0.7\n"
 "Report-Msgid-Bugs-To: daniel.elstner@gmx.net\n"
-"POT-Creation-Date: 2004-05-14 03:56+0200\n"
+"POT-Creation-Date: 2004-05-16 01:19+0200\n"
 "PO-Revision-Date: 2004-05-05 15:35+0200\n"
 "Last-Translator: Daniel Elstner <daniel.elstner@gmx.net>\n"
 "Language-Team: English <en@translate.freefriends.org>\n"
@@ -190,7 +190,7 @@ msgid "The directory to be searched"
 msgstr "The directory to be searched"
 
 #: ui/mainwindow.glade:431 ui/mainwindow.glade:534 ui/mainwindow.glade:883
-#: ui/mainwindow.glade:905 ui/mainwindow.glade:1051 ui/prefdialog.glade:503
+#: ui/mainwindow.glade:905 ui/mainwindow.glade:1051 ui/prefdialog.glade:502
 msgid "*"
 msgstr "*"
 
@@ -328,80 +328,80 @@ msgstr "File forward"
 msgid "Go to the next matching file"
 msgstr "Go to the next matching file"
 
-#: ui/prefdialog.glade:8
+#: ui/prefdialog.glade:7
 msgid "Preferences"
 msgstr "Preferences"
 
-#: ui/prefdialog.glade:80
+#: ui/prefdialog.glade:79
 msgid "Icons only"
 msgstr "Icons only"
 
-#: ui/prefdialog.glade:89
+#: ui/prefdialog.glade:88
 msgid "Text only"
 msgstr "Text only"
 
-#: ui/prefdialog.glade:98
+#: ui/prefdialog.glade:97
 msgid "Icons and text"
 msgstr "Icons and text"
 
-#: ui/prefdialog.glade:107
+#: ui/prefdialog.glade:106
 msgid "Both horizontal"
 msgstr "Both horizontal"
 
-#: ui/prefdialog.glade:127
+#: ui/prefdialog.glade:126
 msgid "_Text view font:"
 msgstr "_Text view font:"
 
-#: ui/prefdialog.glade:152
+#: ui/prefdialog.glade:151
 msgid "_Match color:"
 msgstr "_Match color:"
 
-#: ui/prefdialog.glade:177
+#: ui/prefdialog.glade:176
 msgid "C_urrent match color:"
 msgstr "C_urrent match color:"
 
-#: ui/prefdialog.glade:202
+#: ui/prefdialog.glade:201
 msgid "Tool_bar style:"
 msgstr "Tool_bar style:"
 
-#: ui/prefdialog.glade:310
+#: ui/prefdialog.glade:309
 msgid "_Look'n'feel"
 msgstr "_Look’n’feel"
 
-#: ui/prefdialog.glade:343
+#: ui/prefdialog.glade:342
 msgid ""
 "regexxer attempts to read a file in the following encodings before giving up:"
 msgstr ""
 "regexxer attempts to read a file in the following encodings before giving up:"
 
-#: ui/prefdialog.glade:373
+#: ui/prefdialog.glade:372
 msgid "3."
 msgstr "3."
 
-#: ui/prefdialog.glade:397
+#: ui/prefdialog.glade:396
 msgid "2."
 msgstr "2."
 
-#: ui/prefdialog.glade:421
+#: ui/prefdialog.glade:420
 msgid "1."
 msgstr "1."
 
-#: ui/prefdialog.glade:445
+#: ui/prefdialog.glade:444
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: ui/prefdialog.glade:475
+#: ui/prefdialog.glade:474
 msgid "Fallback _encoding:"
 msgstr "Fallback _encoding:"
 
-#: ui/prefdialog.glade:526
+#: ui/prefdialog.glade:525
 msgid "The encoding specified by the current locale"
 msgstr "The encoding specified by the current locale"
 
-#: ui/prefdialog.glade:558
+#: ui/prefdialog.glade:557
 msgid "_Ignore the text direction of the locale"
 msgstr "_Ignore the text direction of the locale"
 
-#: ui/prefdialog.glade:604
+#: ui/prefdialog.glade:603
 msgid "_File access"
 msgstr "_File access"
