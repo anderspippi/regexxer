@@ -2,6 +2,17 @@
 
 	[ merge from HEAD ]
 
+	* Makefile.am (ACLOCAL_AMFLAGS): Remove because automake-1.7
+	complains about the undefined variable ${ACLOCAL_FLAGS} even
+	though it's a shell substitution.
+
+	* configure.ac: Use AC_SUBST() to set up ACLOCAL_AMFLAGS here
+	instead, so automake-1.7 won't notice.
+
+2004-06-01  Daniel Elstner  <daniel.elstner@gmx.net>
+
+	[ merge from HEAD ]
+
 	* src/filetree.{cc,h} (FileTree::on_treestore_rows_reordered):
 	New signal handler which updates the match boundaries defined by
 	the [path_match_first_, path_match_last_] range.  Previously this
