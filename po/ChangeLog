@@ -1,5 +1,9 @@
 2004-05-08  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* de.po ("regexxer icon"): Fix translation.
+
+2004-05-08  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* *.po: Remove the disambiguing "...|" from all message keys,
 	because sgettext() is no longer used.
 

@@ -23,7 +23,7 @@ msgstr "Info zu regexxer"
 
 #: src/aboutdialog.cc:147
 msgid "regexxer icon"
-msgstr "regexxer icon"
+msgstr "regexxer-Icon"
 
 #: src/aboutdialog.cc:150
 msgid "The application icon of regexxer"
