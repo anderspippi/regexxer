@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer 0.7\n"
 "Report-Msgid-Bugs-To: daniel.elstner@gmx.net\n"
-"POT-Creation-Date: 2004-05-08 22:38+0200\n"
+"POT-Creation-Date: 2004-05-10 07:22+0200\n"
 "PO-Revision-Date: 2004-05-05 15:35+0200\n"
 "Last-Translator: Daniel Elstner <daniel.elstner@gmx.net>\n"
 "Language-Team: English <en@translate.freefriends.org>\n"
@@ -295,85 +295,11 @@ msgstr ""
 "Reached the recursion and backtracking limit of the regular expression "
 "engine."
 
-#: src/prefdialog.cc:223
+#: src/prefdialog.cc:217
 msgid "Color Selection"
 msgstr "Color Selection"
 
-#: src/prefdialog.cc:304
-msgid "Preferences"
-msgstr "Preferences"
-
-#: src/prefdialog.cc:322
-msgid "_Look'n'feel"
-msgstr "_Look’n’feel"
-
-#: src/prefdialog.cc:328
-msgid "_File access"
-msgstr "_File access"
-
-#: src/prefdialog.cc:391
-msgid "_Text view font:"
-msgstr "_Text view font:"
-
-#: src/prefdialog.cc:394
-msgid "_Match color:"
-msgstr "_Match color:"
-
-#: src/prefdialog.cc:397
-msgid "C_urrent match color:"
-msgstr "C_urrent match color:"
-
-#: src/prefdialog.cc:416
-msgid "Tool_bar style:"
-msgstr "Tool_bar style:"
-
-#: src/prefdialog.cc:428
-msgid "Icons only"
-msgstr "Icons only"
-
-#: src/prefdialog.cc:429
-msgid "Text only"
-msgstr "Text only"
-
-#: src/prefdialog.cc:430
-msgid "Icons and text"
-msgstr "Icons and text"
-
-#: src/prefdialog.cc:431
-msgid "Both horizontal"
-msgstr "Both horizontal"
-
-#: src/prefdialog.cc:444
-msgid ""
-"regexxer attempts to read a file in the following encodings before giving up:"
-msgstr ""
-"regexxer attempts to read a file in the following encodings before giving up:"
-
-#: src/prefdialog.cc:453
-msgid "1."
-msgstr "1."
-
-#: src/prefdialog.cc:454
-msgid "2."
-msgstr "2."
-
-#: src/prefdialog.cc:455
-msgid "3."
-msgstr "3."
-
-#: src/prefdialog.cc:460
-msgid "The encoding specified by the current locale"
-msgstr "The encoding specified by the current locale"
-
-#: src/prefdialog.cc:466
-msgid "Fallback _encoding:"
-msgstr "Fallback _encoding:"
-
-#: src/prefdialog.cc:481
-msgid "_Ignore the text direction of the locale"
-msgstr "_Ignore the text direction of the locale"
-
-#: src/prefdialog.cc:604
+#: src/prefdialog.cc:516
 msgid "`%1' is not a valid encoding."
 msgstr "“%1” is not a valid encoding."
 
@@ -392,3 +318,85 @@ msgstr "Match:"
 #: src/statusline.cc:271
 msgid "Cancels the running search"
 msgstr "Cancels the running search"
+
+#: ui/prefdialog.glade:8
+msgid "Preferences"
+msgstr "Preferences"
+
+#: ui/prefdialog.glade:80
+msgid "Icons only"
+msgstr "Icons only"
+
+#: ui/prefdialog.glade:89
+msgid "Text only"
+msgstr "Text only"
+
+#: ui/prefdialog.glade:98
+msgid "Icons and text"
+msgstr "Icons and text"
+
+#: ui/prefdialog.glade:107
+msgid "Both horizontal"
+msgstr "Both horizontal"
+
+#: ui/prefdialog.glade:127
+msgid "_Text view font:"
+msgstr "_Text view font:"
+
+#: ui/prefdialog.glade:152
+msgid "_Match color:"
+msgstr "_Match color:"
+
+#: ui/prefdialog.glade:177
+msgid "C_urrent match color:"
+msgstr "C_urrent match color:"
+
+#: ui/prefdialog.glade:202
+msgid "Tool_bar style:"
+msgstr "Tool_bar style:"
+
+#: ui/prefdialog.glade:310
+msgid "_Look'n'feel"
+msgstr "_Look’n’feel"
+
+#: ui/prefdialog.glade:343
+msgid ""
+"regexxer attempts to read a file in the following encodings before giving up:"
+msgstr ""
+"regexxer attempts to read a file in the following encodings before giving up:"
+
+#: ui/prefdialog.glade:373
+msgid "3."
+msgstr "3."
+
+#: ui/prefdialog.glade:397
+msgid "2."
+msgstr "2."
+
+#: ui/prefdialog.glade:421
+msgid "1."
+msgstr "1."
+
+#: ui/prefdialog.glade:445
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: ui/prefdialog.glade:475
+msgid "Fallback _encoding:"
+msgstr "Fallback _encoding:"
+
+#: ui/prefdialog.glade:503
+msgid "*"
+msgstr "*"
+
+#: ui/prefdialog.glade:526
+msgid "The encoding specified by the current locale"
+msgstr "The encoding specified by the current locale"
+
+#: ui/prefdialog.glade:558
+msgid "_Ignore the text direction of the locale"
+msgstr "_Ignore the text direction of the locale"
+
+#: ui/prefdialog.glade:604
+msgid "_File access"
+msgstr "_File access"
