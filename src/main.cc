@@ -20,6 +20,7 @@
 
 #include "globalstrings.h"
 #include "mainwindow.h"
+#include "miscutils.h"
 
 #include <glib.h>
 #include <glibmm.h>
@@ -175,6 +176,8 @@ int main(int argc, char** argv)
     Glib::set_application_name(PACKAGE_NAME);
     register_stock_items();
     set_default_window_icon();
+
+    Util::check_for_broken_gconfmm_value_changed();
 
     Regexxer::MainWindow window;
 

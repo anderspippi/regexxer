@@ -1,5 +1,20 @@
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* src/miscutils.{cc,h} (check_for_broken_gconfmm_value_changed):
+	Implement a truly evil run-time check for that gconfmm bug.
+	Although this one is already fixed in CVS, there's no release out
+	yet and for now I wouldn't like regexxer to depend on it anyway.
+	(has_broken_gconfmm_value_changed): Provide an accessor function
+	to the global flag indicating whether gconfmm is broken.
+
+	* src/main.cc (main): Call check_for_broken_gconfmm_value_changed().
+
+	* configure.ac (REGEXXER_GCONFMM_VALUE_HACK): Make this macro
+	call has_broken_gconfmm_value_changed() to determine whether the
+	work-around has to be applied.
+
+2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* src/filebuffer.cc (FileBuffer::replace_match): Invoke on_insert()
 	directly in case of empty-by-empty replace in order to avoid this
 	nasty special-case where a FileBufferActionRemoveMatch object in

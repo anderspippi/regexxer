@@ -46,10 +46,8 @@ AC_SUBST([REGEXXER_GCONF_DIRECTORY], ['/apps/regexxer'])
 REGEXXER_CXX_HAS_STD_LOCALE()
 REGEXXER_ARG_ENABLE_WARNINGS()
 
-## Note:  It is possible to check for this bug programatically, but since
-## gconfmm is a shared library the test would have to be done at runtime.
-## We're talking about Open Source, though, thus it's much better to just
-## fix gconfmm and to depend on the fixed release.
+## This is a really, really nasty thing to do, but...
+##
 AC_DEFINE([REGEXXER_ENABLE_GCONFMM_VALUE_HACK], [1], [Define to 1 if this nasty hack is necessary.])
 AH_BOTTOM(
 [
@@ -58,9 +56,12 @@ AH_BOTTOM(
  * Hardcore HACK:  Perform the copy which is missing in gconfmm
  * five minutes after twelve.
  */
-# define REGEXXER_GCONFMM_VALUE_HACK(value)				\
-    new(const_cast<Gnome::Conf::Value*>(&value))			\
-        Gnome::Conf::Value(const_cast<GConfValue*>(value.gobj()), true)
+namespace Util { bool has_broken_gconfmm_value_changed(); }
+
+# define REGEXXER_GCONFMM_VALUE_HACK(value)					\
+    if (Util::has_broken_gconfmm_value_changed())				\
+      new(const_cast<Gnome::Conf::Value*>(&value))				\
+          Gnome::Conf::Value(const_cast<GConfValue*>(value.gobj()), true)
 #else
 # define REGEXXER_GCONFMM_VALUE_HACK(value) (void)0
 #endif
