@@ -218,7 +218,7 @@ msgstr "Finde alle möglichen Treffer innerhalb einer Zeile"
 
 #: src/mainwindow.cc:429
 msgid "Do case insensitive matching"
-msgstr "Ignore Groß-/Kleinschreibung beim Suchen"
+msgstr "Ignoriere Groß-/Kleinschreibung beim Suchen"
 
 #: src/mainwindow.cc:430
 msgid "Find all matches of the regular expression"
