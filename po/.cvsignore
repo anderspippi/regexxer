@@ -1,8 +1,9 @@
 Makefile
 Makefile.in
 POTFILES
+en@quot.po
+en@boldquot.po
 *.gmo
-*.po
 *.insert-header
 regexxer.pot
 stamp-po

@@ -1,5 +1,4 @@
-# German translations for regexxer package
-# German messages for regexxer.
+# English translations for regexxer package.
 # Copyright (C) 2004 Free Software Foundation, Inc.
 # This file is distributed under the same license as the regexxer package.
 # Daniel Elstner <daniel.elstner@gmx.net>, 2004.
@@ -9,9 +8,9 @@ msgstr ""
 "Project-Id-Version: regexxer 0.7\n"
 "Report-Msgid-Bugs-To: daniel.elstner@gmx.net\n"
 "POT-Creation-Date: 2004-05-05 16:48+0200\n"
-"PO-Revision-Date: 2004-05-05 11:34+0200\n"
+"PO-Revision-Date: 2004-05-05 15:35+0200\n"
 "Last-Translator: Daniel Elstner <daniel.elstner@gmx.net>\n"
-"Language-Team: German <de@li.org>\n"
+"Language-Team: English <en@translate.freefriends.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,7 +18,7 @@ msgstr ""
 
 #: src/aboutdialog.cc:118
 msgid "About regexxer"
-msgstr "Über regexxer"
+msgstr "About regexxer"
 
 #: src/aboutdialog.cc:147
 msgid "regexxer icon"
@@ -27,111 +26,111 @@ msgstr "regexxer icon"
 
 #: src/aboutdialog.cc:150
 msgid "The application icon of regexxer"
-msgstr "Das Anwendungsicon von regexxer"
+msgstr "The application icon of regexxer"
 
 #: src/aboutdialog.cc:159
 msgid "written by"
-msgstr "geschrieben von"
+msgstr "written by"
 
 #: src/aboutdialog.cc:162
 msgid "Debian package by"
-msgstr "Debian-Paket von"
+msgstr "Debian package by"
 
 #: src/controller.cc:221
 msgid "Menu|_File"
-msgstr "_Datei"
+msgstr "_File"
 
 #: src/controller.cc:244
 msgid "Menu|_Match"
-msgstr "_Treffer"
+msgstr "_Match"
 
 #: src/controller.cc:249
 msgid "Menu|Match|_Previous file"
-msgstr "_Vorherige Datei"
+msgstr "_Previous file"
 
 #: src/controller.cc:253
 msgid "Menu|Match|_Next file"
-msgstr "_Nächste Datei"
+msgstr "_Next file"
 
 #: src/controller.cc:257
 msgid "Menu|Match|Replace _current"
-msgstr "_Ersetze Auswahl"
+msgstr "Replace _current"
 
 #: src/controller.cc:259
 msgid "Menu|Match|Replace in _this file"
-msgstr "Ersetze in _dieser Datei"
+msgstr "Replace in _this file"
 
 #: src/controller.cc:260
 msgid "Menu|Match|Replace in _all files"
-msgstr "Ersetze in _allen Dateien"
+msgstr "Replace in _all files"
 
 #: src/controller.cc:265
 msgid "Menu|_Help"
-msgstr "_Hilfe"
+msgstr "_Help"
 
 #: src/controller.cc:312
 msgid "Action|File backward"
-msgstr "Eine Datei zurück"
+msgstr "File backward"
 
 #: src/controller.cc:315
 msgid "Action|Backward"
-msgstr "Zurück"
+msgstr "Backward"
 
 #: src/controller.cc:318
 msgid "Action|Forward"
-msgstr "Vorwärts"
+msgstr "Forward"
 
 #: src/controller.cc:321
 msgid "Action|File forward"
-msgstr "Eine Datei vorwärts"
+msgstr "File forward"
 
 #: src/controller.cc:324
 msgid "Action|_Replace"
-msgstr "_Ersetzen"
+msgstr "_Replace"
 
 #: src/controller.cc:327
 msgid "Action|_This file"
-msgstr "D_iese Datei"
+msgstr "_This file"
 
 #: src/controller.cc:330
 msgid "Action|_All files"
-msgstr "_Alle Dateien"
+msgstr "_All files"
 
 #: src/controller.cc:333
 msgid "Go to the previous matching file"
-msgstr "Gehe zur vorherigen Datei mit Treffern"
+msgstr "Go to the previous matching file"
 
 #: src/controller.cc:334
 msgid "Go to previous match"
-msgstr "Gehe zum vorherigen Treffer"
+msgstr "Go to previous match"
 
 #: src/controller.cc:335
 msgid "Go to next match"
-msgstr "Gehe zum nächsten Treffer"
+msgstr "Go to next match"
 
 #: src/controller.cc:336
 msgid "Go to the next matching file"
-msgstr "Gehe zur nächsten Datei mit Treffern"
+msgstr "Go to the next matching file"
 
 #: src/controller.cc:337
 msgid "Replace current match"
-msgstr "Ersetze gewählten Treffer"
+msgstr "Replace current match"
 
 #: src/controller.cc:338
 msgid "Replace all matches in the current file"
-msgstr "Ersetze alle Treffer in der gewählten Datei"
+msgstr "Replace all matches in the current file"
 
 #: src/controller.cc:339
 msgid "Replace all matches in all files"
-msgstr "Ersetze alle Treffer in allen Dateien"
+msgstr "Replace all matches in all files"
 
 #: src/filebuffer.cc:204
 msgid " Can't read file:"
-msgstr " Datei nicht lesbar:"
+msgstr " Can't read file:"
 
 #: src/filetree.cc:63
 msgid "FileTree|File"
-msgstr "Datei"
+msgstr "File"
 
 #: src/filetree.cc:82
 msgid "FileTree|#"
@@ -139,68 +138,67 @@ msgstr "#"
 
 #: src/main.cc:84
 msgid "_About"
-msgstr "_Über"
+msgstr "_About"
 
 #: src/main.cc:85
 msgid "Save _all"
-msgstr "_Alle speichern"
+msgstr "Save _all"
 
 #: src/mainwindow.cc:305
 msgid "LeftPane|Fol_der:"
-msgstr "_Ordner:"
+msgstr "Fol_der:"
 
 #: src/mainwindow.cc:309
 msgid "LeftPane|Pattern:"
-msgstr "Muster:"
+msgstr "Pattern:"
 
 #: src/mainwindow.cc:329
 msgid "LeftPane|recursive"
-msgstr "rekursiv"
+msgstr "recursive"
 
 #: src/mainwindow.cc:332
 msgid "LeftPane|hidden"
-msgstr "versteckt"
+msgstr "hidden"
 
 #: src/mainwindow.cc:353
 msgid "The directory to be searched"
-msgstr "Das zu durchsuchende Verzeichnis"
+msgstr "The directory to be searched"
 
 #: src/mainwindow.cc:354
 msgid ""
 "A filename pattern as used by the shell. Character classes [ab] and csh "
 "style brace expressions {a,b} are supported."
 msgstr ""
-"Ein Dateinamen-Suchmuster wie es in der Kommandozeile benutzt wird. "
-"Zeichenklassen [ab] und Klammerausdrücke im csh-Stil {a,b} werden "
-"unterstützt."
+"A filename pattern as used by the shell. Character classes [ab] and csh "
+"style brace expressions {a,b} are supported."
 
 #: src/mainwindow.cc:357
 msgid "Recurse into subdirectories"
-msgstr "Steige in Unterverzeichnisse hinab"
+msgstr "Recurse into subdirectories"
 
 #: src/mainwindow.cc:358
 msgid "Also find hidden files"
-msgstr "Finde auch versteckte Dateien"
+msgstr "Also find hidden files"
 
 #: src/mainwindow.cc:359
 msgid "Find all files that match the filename pattern"
-msgstr "Finde alle Dateien auf die das Dateinamen-Suchmuster passt"
+msgstr "Find all files that match the filename pattern"
 
 #: src/mainwindow.cc:375
 msgid "RightPane|Search:"
-msgstr "Suchen:"
+msgstr "Search:"
 
 #: src/mainwindow.cc:380
 msgid "RightPane|Replace:"
-msgstr "Ersetzen:"
+msgstr "Replace:"
 
 #: src/mainwindow.cc:421
 msgid "RightPane|Preview"
-msgstr "Vorschau"
+msgstr "Preview"
 
 #: src/mainwindow.cc:423
 msgid "A regular expression in Perl syntax"
-msgstr "Ein regulärer Ausdruck in Perl-Syntax"
+msgstr "A regular expression in Perl syntax"
 
 #: src/mainwindow.cc:424
 msgid ""
@@ -208,126 +206,123 @@ msgid ""
 "match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, \\u, "
 "\\L, \\U and \\E are supported as well."
 msgstr ""
-"Die neu einzusetzende Zeichenkette. Wie in Perl können Teile des Treffers "
-"mit $1, $2, etc. oder sogar $+, $&, $` und $' referenziert werden. Die "
-"Operatoren \\l, \\u, \\L, \\U und \\E werden auch unterstützt."
+"The new string to substitute. As in Perl, you can refer to parts of the "
+"match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, \\u, "
+"\\L, \\U and \\E are supported as well."
 
 #: src/mainwindow.cc:428
 msgid "Find all possible matches in a line"
-msgstr "Finde alle möglichen Treffer innerhalb einer Zeile"
+msgstr "Find all possible matches in a line"
 
 #: src/mainwindow.cc:429
 msgid "Do case insensitive matching"
-msgstr "Ignore Groß-/Kleinschreibung beim Suchen"
+msgstr "Do case insensitive matching"
 
 #: src/mainwindow.cc:430
 msgid "Find all matches of the regular expression"
-msgstr "Find alle Treffer für den regulären Ausdruck"
+msgstr "Find all matches of the regular expression"
 
 #: src/mainwindow.cc:431
 msgid "Preview of the substitution"
-msgstr "Vorschau des ersetzten Texts"
+msgstr "Preview of the substitution"
 
 #: src/mainwindow.cc:447
 msgid ""
 "Some files haven't been saved yet.\n"
 "Quit anyway?"
 msgstr ""
-"Einige Dateien wurden noch nicht gespeichert.\n"
-"Trotzdem beenden?"
+"Some files haven't been saved yet.\n"
+"Quit anyway?"
 
 #: src/mainwindow.cc:460
 msgid "Select a folder"
-msgstr "Verzeichnisauswahl"
+msgstr "Select a folder"
 
 #: src/mainwindow.cc:499
 msgid ""
 "Some files haven't been saved yet.\n"
 "Continue anyway?"
 msgstr ""
-"Einige Dateien wurden noch nicht gespeichert.\n"
-"Trotzdem fortsetzen?"
+"Some files haven't been saved yet.\n"
+"Continue anyway?"
 
 #: src/mainwindow.cc:526
 msgid "The file search pattern is invalid."
-msgstr "Das Dateinamen-Suchmuster ist ungültig."
+msgstr "The file search pattern is invalid."
 
 #: src/mainwindow.cc:532
 msgid "The following errors occurred during search:"
-msgstr "Die folgenden Fehler sind beim Suchen aufgetreten:"
+msgstr "The following errors occurred during search:"
 
 #: src/mainwindow.cc:788
 msgid "The following errors occurred during save:"
-msgstr "Die folgenden Fehler sind beim Speichern aufgetreten:"
+msgstr "The following errors occurred during save:"
 
 #: src/pcreshell.cc:58
 msgid "Using the \\C escape sequence to match a single byte is not supported."
-msgstr ""
-"Das Benutzen der \\C Escape-Sequenz um ein einzelnes Byte zu finden wird "
-"nicht unterstützt."
+msgstr "Using the \\C escape sequence to match a single byte is not supported."
 
 #: src/pcreshell.cc:149
 msgid ""
 "Reached the recursion and backtracking limit of the regular expression "
 "engine."
 msgstr ""
-"Das Rekursions- und Rückreferenz-Limit der Reguläre-Ausdrücke-"
-"Implementierung wurde erreicht."
+"Reached the recursion and backtracking limit of the regular expression "
+"engine."
 
 #: src/prefdialog.cc:223
 msgid "Color Selection"
-msgstr "Farbauswahl"
+msgstr "Color Selection"
 
 #: src/prefdialog.cc:304
 msgid "Preferences"
-msgstr "Einstellungen"
+msgstr "Preferences"
 
 #: src/prefdialog.cc:322
 msgid "Preferences|_Look'n'feel"
-msgstr "_Oberfläche"
+msgstr "_Look'n'feel"
 
 #: src/prefdialog.cc:328
 msgid "Preferences|_File access"
-msgstr "_Dateizugriff"
+msgstr "_File access"
 
 #: src/prefdialog.cc:391
 msgid "Preferences|_Text view font:"
-msgstr "_Schriftart für Text:"
+msgstr "_Text view font:"
 
 #: src/prefdialog.cc:394
 msgid "Preferences|_Match color:"
-msgstr "_Farbe eines Treffers:"
+msgstr "_Match color:"
 
 #: src/prefdialog.cc:397
 msgid "Preferences|C_urrent match color:"
-msgstr "Farbe des _gewählten Treffers:"
+msgstr "C_urrent match color:"
 
 #: src/prefdialog.cc:416
 msgid "Preferences|Tool_bar style:"
-msgstr "Stil der _Werkzeugleiste:"
+msgstr "Tool_bar style:"
 
 #: src/prefdialog.cc:428
 msgid "Preferences|Icons only"
-msgstr "Nur Icons"
+msgstr "Icons only"
 
 #: src/prefdialog.cc:429
 msgid "Preferences|Text only"
-msgstr "Nur Text"
+msgstr "Text only"
 
 #: src/prefdialog.cc:430
 msgid "Preferences|Icons and text"
-msgstr "Icons und Text"
+msgstr "Icons and text"
 
 #: src/prefdialog.cc:431
 msgid "Preferences|Both horizontal"
-msgstr "Beides horizontal"
+msgstr "Both horizontal"
 
 #: src/prefdialog.cc:444
 msgid ""
 "regexxer attempts to read a file in the following encodings before giving up:"
 msgstr ""
-"regexxer versucht eine Datei in den folgenden Zeichensätzen zu lesen bevor "
-"ein Fehlschlag angezeigt wird:"
+"regexxer attempts to read a file in the following encodings before giving up:"
 
 #: src/prefdialog.cc:453
 msgid "Preferences|1."
@@ -343,28 +338,28 @@ msgstr "3."
 
 #: src/prefdialog.cc:460
 msgid "The encoding specified by the current locale"
-msgstr "Der in der Sprachumgebung eingestellte Zeichensatz"
+msgstr "The encoding specified by the current locale"
 
 #: src/prefdialog.cc:466
 msgid "Fallback _encoding:"
-msgstr "Rückfall-Zeichensatz:"
+msgstr "Fallback _encoding:"
 
 #: src/prefdialog.cc:481
 msgid "_Ignore the text direction of the locale"
-msgstr "_Ignoriere die Textausrichtung der Sprachumgebung"
+msgstr "_Ignore the text direction of the locale"
 
 #: src/statusline.cc:250
 msgid "Statusbar|Stop"
-msgstr "Stopp"
+msgstr "Stop"
 
 #: src/statusline.cc:257
 msgid "Statusbar|File:"
-msgstr "Datei:"
+msgstr "File:"
 
 #: src/statusline.cc:260
 msgid "Statusbar|Match:"
-msgstr "Treffer:"
+msgstr "Match:"
 
 #: src/statusline.cc:271
 msgid "Cancels the running search"
-msgstr "Bricht die laufende Suche ab"
+msgstr "Cancels the running search"

@@ -1,3 +1,16 @@
+2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
+
+	* en.po: New translation file for plain English with some special
+	Unicode goodies.
+
+	* de.po: Update.
+
+	* LINGUAS: Add en and remove en@quot, because the auto-generation
+	of the latter doesn't really suit our purpose.  For instance I'd
+	like to seep NO-BREAK SPACE and such in the English UI too.
+
+	* POTFILES.in: Add all of the recently gettextized source files.
+
 2004-05-05  gettextize  <bug-gnu-gettext@gnu.org>
 
 	* Makefile.in.in: New file, from gettext-0.14.1.
