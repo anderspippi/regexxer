@@ -1,5 +1,10 @@
 2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
 
+	* de.po ("Fallback _encoding:"): Ooops, forgot the hotkey in the
+	translated string.
+
+2004-05-05  Daniel Elstner  <daniel.elstner@gmx.net>
+
 	* en.po: New translation file for plain English with some special
 	Unicode goodies.
 

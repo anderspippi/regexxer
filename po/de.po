@@ -347,7 +347,7 @@ msgstr "Der in der Sprachumgebung eingestellte Zeichensatz"
 
 #: src/prefdialog.cc:466
 msgid "Fallback _encoding:"
-msgstr "Rückfall-Zeichensatz:"
+msgstr "_Rückfall-Zeichensatz:"
 
 #: src/prefdialog.cc:481
 msgid "_Ignore the text direction of the locale"
