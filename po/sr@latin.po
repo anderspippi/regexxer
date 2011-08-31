@@ -1,15 +1,15 @@
 # Serbian translation of regexxer
 # Courtesy of Prevod.org team (http://prevod.org/) -- 2004.
 # This file is distributed under the same license as the regexxer package.
-# Maintainer: Данило Шеган <dsegan@gmx.net>, 2004.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011.
+# Maintainer: Danilo Šegan <dsegan@gmx.net>, 2004.
+# Miroslav Nikolić <miroslavnikolic@rocketmail.com>, 2011.
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
 "POT-Creation-Date: 2011-07-31 19:24+0000\n"
 "PO-Revision-Date: 2011-07-30 00:01+0200\n"
-"Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,51 +21,51 @@ msgstr ""
 
 #: ../ui/regexxer.desktop.in.h:1 ../src/mainwindow.cc:1027
 msgid "Search and replace using regular expressions"
-msgstr "Тражите и замените користећи регуларне изразе"
+msgstr "Tražite i zamenite koristeći regularne izraze"
 
 #: ../ui/regexxer.desktop.in.h:2
 msgid "regexxer Search Tool"
-msgstr "Регизрер — алат за претрагу"
+msgstr "Regizrer — alat za pretragu"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:1
 msgid "Auto indentation"
-msgstr "Само-увлачење"
+msgstr "Samo-uvlačenje"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:2
 msgid "Current-match color"
-msgstr "Боја текућег поклапања"
+msgstr "Boja tekućeg poklapanja"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:3
 msgid "Draw spaces"
-msgstr "Исцртавање размака"
+msgstr "Iscrtavanje razmaka"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:4
 msgid "Fallback encoding"
-msgstr "Резервно кодирање"
+msgstr "Rezervno kodiranje"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:5
 msgid "File Patterns"
-msgstr "Обрасци датотека"
+msgstr "Obrasci datoteka"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:6
 msgid "Highlight the current line"
-msgstr "Истицање текућег реда"
+msgstr "Isticanje tekućeg reda"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:7
 msgid "List of last patterns used in the 'Regex' entry."
-msgstr "Списак последњих образаца коришћених у уносу „Региз“."
+msgstr "Spisak poslednjih obrazaca korišćenih u unosu „Regiz“."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:8
 msgid "List of last patterns used in the 'Substitution' entry."
-msgstr "Списак последњих образаца коришћених у уносу „Замена“."
+msgstr "Spisak poslednjih obrazaca korišćenih u unosu „Zamena“."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:9
 msgid "List of pre-defined patterns available in the 'Pattern' entry."
-msgstr "Списак предодређених образаца доступан у уносу „Образац“."
+msgstr "Spisak predodređenih obrazaca dostupan u unosu „Obrazac“."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:10
 msgid "Match color"
-msgstr "Боја за поклапање"
+msgstr "Boja za poklapanje"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:11
 msgid ""
@@ -73,102 +73,102 @@ msgid ""
 "UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" "
 "for a complete list of possible values."
 msgstr ""
-"Назив кодирања знакова за коришћење ако датотека није читљива нити у УТФ-8 "
-"нити у скупу знакова који се користи у текућем локалитету. Пробајте „iconv --"
-"list“ за потпун списак допуштених вредности."
+"Naziv kodiranja znakova za korišćenje ako datoteka nije čitljiva niti u UTF-8 "
+"niti u skupu znakova koji se koristi u tekućem lokalitetu. Probajte „iconv --"
+"list“ za potpun spisak dopuštenih vrednosti."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:12
 msgid "Regex Patterns"
-msgstr "Обрасци регуларног израза"
+msgstr "Obrasci regularnog izraza"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:13
 msgid "Show line numbers"
-msgstr "Приказивање бројева редова"
+msgstr "Prikazivanje brojeva redova"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:14
 msgid "Text view font"
-msgstr "Словни лик за преглед текста"
+msgstr "Slovni lik za pregled teksta"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:15
 msgid "The X coordinate of the window."
-msgstr "Х координата прозора."
+msgstr "H koordinata prozora."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:16
 msgid "The Y coordinate of the window."
-msgstr "Y координата прозора."
+msgstr "Y koordinata prozora."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:17
 msgid ""
 "The background color used to highlight matches of the search expression."
-msgstr "Боја позадине која се користи за истицање поклапања траженог израза."
+msgstr "Boja pozadine koja se koristi za isticanje poklapanja traženog izraza."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:18
 msgid ""
 "The background color used to highlight the currently selected match of the "
 "search expression."
 msgstr ""
-"Боја позадине која се користи за истицање текућег изабраног поклапања "
-"траженог израза."
+"Boja pozadine koja se koristi za isticanje tekućeg izabranog poklapanja "
+"traženog izraza."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:19
 msgid "The font used in the file editor."
-msgstr "Словни лик који се користи у уређивачу датотека."
+msgstr "Slovni lik koji se koristi u uređivaču datoteka."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:20
 msgid "The height of the window."
-msgstr "Висина прозора."
+msgstr "Visina prozora."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:21
 msgid "The width of the window."
-msgstr "Ширина прозора."
+msgstr "Širina prozora."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:22
 msgid "Whether the window is maximized."
-msgstr "Одређује да ли је прозор приказан увећан."
+msgstr "Određuje da li je prozor prikazan uvećan."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:23
 msgid "Whether to enable auto indentation in the text view."
-msgstr "Одређује да ли је укључено само-увлачење у прегледу текста."
+msgstr "Određuje da li je uključeno samo-uvlačenje u pregledu teksta."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:24
 msgid "Whether to highlight the current line of the text view."
-msgstr "Одређује да ли је истакнут текући ред у прегледу текста."
+msgstr "Određuje da li je istaknut tekući red u pregledu teksta."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:25
 msgid "Whether to show the line numbers of the text view."
-msgstr "Одређује да ли су приказани бројеви редова у прегледу текста."
+msgstr "Određuje da li su prikazani brojevi redova u pregledu teksta."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:26
 msgid "Which type of space to draw in the text view."
-msgstr "Одређује која врста размака ће бити исцртана у прегледу текста."
+msgstr "Određuje koja vrsta razmaka će biti iscrtana u pregledu teksta."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:27
 msgid "window height"
-msgstr "висина прозора"
+msgstr "visina prozora"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:28
 msgid "window maximization"
-msgstr "увећање прозора"
+msgstr "uvećanje prozora"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:29
 msgid "window width"
-msgstr "ширина прозора"
+msgstr "širina prozora"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:30
 msgid "window x position"
-msgstr "х-положај прозора"
+msgstr "h-položaj prozora"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:31
 msgid "window y position"
-msgstr "y-положај прозора"
+msgstr "y-položaj prozora"
 
 #: ../src/filebuffer.cc:198
 msgid "Can’t read file:"
-msgstr "Не могу да учитам датотеку:"
+msgstr "Ne mogu da učitam datoteku:"
 
 #: ../src/filetree.cc:60
 msgid "File"
-msgstr "Датотека"
+msgstr "Datoteka"
 
 #: ../src/filetree.cc:79
 msgid "#"
@@ -177,217 +177,217 @@ msgstr "#"
 #: ../src/filetree.cc:508
 #, qt-format
 msgid "Failed to save file “%1”: %2"
-msgstr "Нисам успео да сачувам датотеку „%1“: %2"
+msgstr "Nisam uspeo da sačuvam datoteku „%1“: %2"
 
 #: ../src/filetree.cc:924
 #, qt-format
 msgid "“%1” seems to be a binary file."
-msgstr "Чини се да је „%1“ бинарна датотека."
+msgstr "Čini se da je „%1“ binarna datoteka."
 
 #: ../src/main.cc:78
 msgid "Save _all"
-msgstr "Сачувај с_ве"
+msgstr "Sačuvaj s_ve"
 
 #: ../src/main.cc:135
 msgid "Find files matching PATTERN"
-msgstr "Налази датотеке које одговарају ОБРАСЦУ"
+msgstr "Nalazi datoteke koje odgovaraju OBRASCU"
 
 #: ../src/main.cc:135
 msgid "PATTERN"
-msgstr "ОБРАЗАЦ"
+msgstr "OBRAZAC"
 
 #: ../src/main.cc:137
 msgid "Do not recurse into subdirectories"
-msgstr "Не улази у под-директроијуме"
+msgstr "Ne ulazi u pod-direktroijume"
 
 #: ../src/main.cc:139 ../ui/mainwindow.ui.h:2
 msgid "Also find hidden files"
-msgstr "Налази такође и скривене датотеке"
+msgstr "Nalazi takođe i skrivene datoteke"
 
 #: ../src/main.cc:141
 msgid "Find text matching REGEX"
-msgstr "Налази текст који одговара РЕГИЗУ"
+msgstr "Nalazi tekst koji odgovara REGIZU"
 
 #: ../src/main.cc:141
 msgid "REGEX"
-msgstr "РЕГИЗ"
+msgstr "REGIZ"
 
 #: ../src/main.cc:143
 msgid "Find only the first match in a line"
-msgstr "Налази само прво поклапање у реду"
+msgstr "Nalazi samo prvo poklapanje u redu"
 
 #: ../src/main.cc:145 ../ui/mainwindow.ui.h:4
 msgid "Do case insensitive matching"
-msgstr "Тражи независно од величине слова"
+msgstr "Traži nezavisno od veličine slova"
 
 #: ../src/main.cc:147
 msgid "Replace matches with STRING"
-msgstr "Поклапања замењује НИСКОМ"
+msgstr "Poklapanja zamenjuje NISKOM"
 
 #: ../src/main.cc:147
 msgid "STRING"
-msgstr "НИСКА"
+msgstr "NISKA"
 
 #: ../src/main.cc:149
 msgid "Print match location to standard output"
-msgstr "Исписује положај поклапања на стандардни излаз"
+msgstr "Ispisuje položaj poklapanja na standardni izlaz"
 
 #: ../src/main.cc:151
 msgid "Do not automatically start search"
-msgstr "Не започиње самостално претрагу"
+msgstr "Ne započinje samostalno pretragu"
 
 #: ../src/main.cc:153
 msgid "[FOLDER]"
-msgstr "[ФАСЦИКЛА]"
+msgstr "[FASCIKLA]"
 
 #: ../src/mainwindow.cc:567
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
 msgstr ""
-"Неке датотеке још увек нису сачуване.\n"
-"Да затворим ипак?"
+"Neke datoteke još uvek nisu sačuvane.\n"
+"Da zatvorim ipak?"
 
 #: ../src/mainwindow.cc:581
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
 msgstr ""
-"Неке датотеке још увек нису сачуване.\n"
-"Да наставим ипак?"
+"Neke datoteke još uvek nisu sačuvane.\n"
+"Da nastavim ipak?"
 
 #: ../src/mainwindow.cc:611
 msgid "The file search pattern is invalid."
-msgstr "Образац за тражење датотека је неисправан."
+msgstr "Obrazac za traženje datoteka je neispravan."
 
 #: ../src/mainwindow.cc:617
 msgid "The following errors occurred during search:"
-msgstr "Дошло је до следећих грешака приликом претраге:"
+msgstr "Došlo je do sledećih grešaka prilikom pretrage:"
 
 #: ../src/mainwindow.cc:881
 msgid "The following errors occurred during save:"
-msgstr "Дошло је до следећих грешака приликом чувања:"
+msgstr "Došlo je do sledećih grešaka prilikom čuvanja:"
 
 #: ../src/mainwindow.cc:1032
 msgid "translator-credits"
 msgstr ""
-"Данило Шеган <danilo@gnome.org>\n"
-"Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
+"Danilo Šegan <danilo@gnome.org>\n"
+"Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "\n"
-"Prevod.org — превод на српски језик."
+"Prevod.org — prevod na srpski jezik."
 
 #: ../src/prefdialog.cc:186
 #, qt-format
 msgid "“%1” is not a valid encoding."
-msgstr "„%1“ не представља исправно кодирање."
+msgstr "„%1“ ne predstavlja ispravno kodiranje."
 
 #: ../src/statusline.cc:245
 msgid "Stop"
-msgstr "Заустави"
+msgstr "Zaustavi"
 
 #: ../src/statusline.cc:253
 msgid "File:"
-msgstr "Датотека:"
+msgstr "Datoteka:"
 
 #: ../src/statusline.cc:256
 msgid "Match:"
-msgstr "Поклапање:"
+msgstr "Poklapanje:"
 
 #: ../src/statusline.cc:267
 msgid "Cancels the running search"
-msgstr "Обуставите текућу претрагу"
+msgstr "Obustavite tekuću pretragu"
 
 #: ../ui/mainwindow.ui.h:1
 msgid "A regular expression in Perl syntax"
-msgstr "Регуларни израз у Перл синтакси"
+msgstr "Regularni izraz u Perl sintaksi"
 
 #: ../ui/mainwindow.ui.h:3
 msgid "Backward"
-msgstr "Назад"
+msgstr "Nazad"
 
 #: ../ui/mainwindow.ui.h:5
 msgid "File backward"
-msgstr "Датотека уназад"
+msgstr "Datoteka unazad"
 
 #: ../ui/mainwindow.ui.h:6
 msgid "File forward"
-msgstr "Датотека унапред"
+msgstr "Datoteka unapred"
 
 #: ../ui/mainwindow.ui.h:7
 msgid "Find all files that match the filename pattern"
-msgstr "Нађите све датотеке чији назив одговара обрасцу"
+msgstr "Nađite sve datoteke čiji naziv odgovara obrascu"
 
 #: ../ui/mainwindow.ui.h:8
 msgid "Find all matches of the regular expression"
-msgstr "Нађите сва поклапања са регуларним изразом"
+msgstr "Nađite sva poklapanja sa regularnim izrazom"
 
 #: ../ui/mainwindow.ui.h:9
 msgid "Find all possible matches in a line"
-msgstr "Нађите сва могућа поклапања у реду"
+msgstr "Nađite sva moguća poklapanja u redu"
 
 #: ../ui/mainwindow.ui.h:10
 msgid "Find fi_les"
-msgstr "Нађи да_тотеке"
+msgstr "Nađi da_toteke"
 
 #: ../ui/mainwindow.ui.h:11
 msgid "Fol_der:"
-msgstr "_Директоријум:"
+msgstr "_Direktorijum:"
 
 #: ../ui/mainwindow.ui.h:12
 msgid "Forward"
-msgstr "Напред"
+msgstr "Napred"
 
 #: ../ui/mainwindow.ui.h:13
 msgid "Go to next match"
-msgstr "Идите на следеће поклапање"
+msgstr "Idite na sledeće poklapanje"
 
 #: ../ui/mainwindow.ui.h:14
 msgid "Go to previous match"
-msgstr "Идите на претходно поклапање"
+msgstr "Idite na prethodno poklapanje"
 
 #: ../ui/mainwindow.ui.h:15
 msgid "Go to the next matching file"
-msgstr "Идите на следећу нађену датотеку"
+msgstr "Idite na sledeću nađenu datoteku"
 
 #: ../ui/mainwindow.ui.h:16
 msgid "Go to the previous matching file"
-msgstr "Идите на претходну нађену датотеку"
+msgstr "Idite na prethodnu nađenu datoteku"
 
 #: ../ui/mainwindow.ui.h:17
 msgid "Pattern:"
-msgstr "Образац:"
+msgstr "Obrazac:"
 
 #: ../ui/mainwindow.ui.h:18
 msgid "Preview"
-msgstr "Преглед"
+msgstr "Pregled"
 
 #: ../ui/mainwindow.ui.h:19
 msgid "Preview of the substitution"
-msgstr "Преглед замене"
+msgstr "Pregled zamene"
 
 #: ../ui/mainwindow.ui.h:20
 msgid "Recurse into subdirectories"
-msgstr "Улази у поддиректоријуме"
+msgstr "Ulazi u poddirektorijume"
 
 #: ../ui/mainwindow.ui.h:21
 msgid "Replace all matches in all files"
-msgstr "Замените сва поклапања у свим датотекама"
+msgstr "Zamenite sva poklapanja u svim datotekama"
 
 #: ../ui/mainwindow.ui.h:22
 msgid "Replace all matches in the current file"
-msgstr "Замените сва поклапања у текућој датотеци"
+msgstr "Zamenite sva poklapanja u tekućoj datoteci"
 
 #: ../ui/mainwindow.ui.h:23
 msgid "Replace current match"
-msgstr "Замените текуће поклапање"
+msgstr "Zamenite tekuće poklapanje"
 
 #: ../ui/mainwindow.ui.h:24
 msgid "Replace:"
-msgstr "Замени:"
+msgstr "Zameni:"
 
 #: ../ui/mainwindow.ui.h:25
 msgid "Search:"
-msgstr "Тражи:"
+msgstr "Traži:"
 
 #: ../ui/mainwindow.ui.h:26
 msgid ""
@@ -395,45 +395,45 @@ msgid ""
 "match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
 "\\u, \\L, \\U and \\E are supported as well."
 msgstr ""
-"Овде унесите ниску којом ће бити замењени тражени изрази. Као и у Перлу, "
-"можете заменити делове поклапања користећи: „$1, $2“, итд.; а чак и: „$+, "
-"$&, $` и $'“. Оператори: „\\l, \\u, \\L, \\U и \\E“ су такође подржани."
+"Ovde unesite nisku kojom će biti zamenjeni traženi izrazi. Kao i u Perlu, "
+"možete zameniti delove poklapanja koristeći: „$1, $2“, itd.; a čak i: „$+, "
+"$&, $` i $'“. Operatori: „\\l, \\u, \\L, \\U i \\E“ su takođe podržani."
 
 #: ../ui/mainwindow.ui.h:27
 msgid "_All files"
-msgstr "_Све датотеке"
+msgstr "_Sve datoteke"
 
 #: ../ui/mainwindow.ui.h:28
 msgid "_Edit"
-msgstr "_Уређивање"
+msgstr "_Uređivanje"
 
 #: ../ui/mainwindow.ui.h:29
 msgid "_File"
-msgstr "_Датотека"
+msgstr "_Datoteka"
 
 #: ../ui/mainwindow.ui.h:30
 msgid "_Help"
-msgstr "_Помоћ"
+msgstr "_Pomoć"
 
 #: ../ui/mainwindow.ui.h:31
 msgid "_Match"
-msgstr "По_клапање"
+msgstr "Po_klapanje"
 
 #: ../ui/mainwindow.ui.h:32
 msgid "_Replace"
-msgstr "_Замени"
+msgstr "_Zameni"
 
 #: ../ui/mainwindow.ui.h:33
 msgid "_This file"
-msgstr "_Ова датотека"
+msgstr "_Ova datoteka"
 
 #: ../ui/mainwindow.ui.h:34
 msgid "hidden"
-msgstr "скривене"
+msgstr "skrivene"
 
 #: ../ui/mainwindow.ui.h:35
 msgid "recursive"
-msgstr "рекурзивно"
+msgstr "rekurzivno"
 
 #: ../ui/prefdialog.ui.h:1
 msgid "1."
@@ -449,119 +449,119 @@ msgstr "3."
 
 #: ../ui/prefdialog.ui.h:4
 msgid "Both horizontal"
-msgstr "Оба водоравно"
+msgstr "Oba vodoravno"
 
 #: ../ui/prefdialog.ui.h:5
 msgid "C_urrent match color:"
-msgstr "Боја текућег _поклапања:"
+msgstr "Boja tekućeg _poklapanja:"
 
 #: ../ui/prefdialog.ui.h:6
 msgid "Fallback _encoding:"
-msgstr "_Резервно кодирање:"
+msgstr "_Rezervno kodiranje:"
 
 #: ../ui/prefdialog.ui.h:7
 msgid "Icons and text"
-msgstr "Иконице и текст"
+msgstr "Ikonice i tekst"
 
 #: ../ui/prefdialog.ui.h:8
 msgid "Icons only"
-msgstr "Само иконице"
+msgstr "Samo ikonice"
 
 #: ../ui/prefdialog.ui.h:9
 msgid "Preferences"
-msgstr "Поставке"
+msgstr "Postavke"
 
 #: ../ui/prefdialog.ui.h:10
 msgid "Text only"
-msgstr "Само текст"
+msgstr "Samo tekst"
 
 #: ../ui/prefdialog.ui.h:11
 msgid "The encoding specified by the current locale"
-msgstr "У кодирању из текућег локалитета"
+msgstr "U kodiranju iz tekućeg lokaliteta"
 
 #: ../ui/prefdialog.ui.h:12
 msgid "UTF-8"
-msgstr "У УТФ-8 кодирању"
+msgstr "U UTF-8 kodiranju"
 
 #: ../ui/prefdialog.ui.h:13
 msgid "_File access"
-msgstr "_Приступ датотеци"
+msgstr "_Pristup datoteci"
 
 #: ../ui/prefdialog.ui.h:14
 msgid "_Look&#x2019;n&#x2019;feel"
-msgstr "Изг_лед и осећај"
+msgstr "Izg_led i osećaj"
 
 #: ../ui/prefdialog.ui.h:15
 msgid "_Match color:"
-msgstr "_Боја поклапања:"
+msgstr "_Boja poklapanja:"
 
 #: ../ui/prefdialog.ui.h:16
 msgid "_Text view font:"
-msgstr "Словни лик _текста:"
+msgstr "Slovni lik _teksta:"
 
 #: ../ui/prefdialog.ui.h:17
 msgid ""
 "regexxer attempts to read a file in the following encodings before giving up:"
 msgstr ""
-"Регизрер ће покушати да учита датотеку у следећим кодирањима пре него што "
-"одустане:"
+"Regizrer će pokušati da učita datoteku u sledećim kodiranjima pre nego što "
+"odustane:"
 
 #~ msgid ""
 #~ "The style of the application’s toolbar. Possible values are “icons”, "
 #~ "“text”, “both”, and “both-horiz”."
 #~ msgstr ""
-#~ "Стил траке алатки у програму. Допуштене вредности су „icons“, „text“, "
-#~ "„both“, и „both-horiz“."
+#~ "Stil trake alatki u programu. Dopuštene vrednosti su „icons“, „text“, "
+#~ "„both“, i „both-horiz“."
 
 #~ msgid "Toolbar style"
-#~ msgstr "Стил алатки"
+#~ msgstr "Stil alatki"
 
 #~ msgid ""
 #~ "Using the \\C escape sequence to match a single byte is not supported."
-#~ msgstr "Употреба нарочитог низа \\C за тражење једног бајта није подржана."
+#~ msgstr "Upotreba naročitog niza \\C za traženje jednog bajta nije podržana."
 
 #~ msgid ""
 #~ "Error in regular expression at “%1” (index %2):\n"
 #~ "%3"
 #~ msgstr ""
-#~ "Грешка у регуларном изразу „%1“ (индекс %2):\n"
+#~ "Greška u regularnom izrazu „%1“ (indeks %2):\n"
 #~ "%3"
 
 #~ msgid ""
 #~ "Error in regular expression:\n"
 #~ "%1"
 #~ msgstr ""
-#~ "Грешка у регуларном изразу:\n"
+#~ "Greška u regularnom izrazu:\n"
 #~ "%1"
 
 #~ msgid ""
 #~ "Reached the recursion and backtracking limit of the regular expression "
 #~ "engine."
 #~ msgstr ""
-#~ "Достигнуто је ограничење броја рекурзија и самопозивања библиотеке за "
-#~ "регуларне изразе."
+#~ "Dostignuto je ograničenje broja rekurzija i samopozivanja biblioteke za "
+#~ "regularne izraze."
 
 #~ msgid ""
 #~ "A filename pattern as used by the shell. Character classes [ab] and csh "
 #~ "style brace expressions {a,b} are supported."
 #~ msgstr ""
-#~ "Образац имена датотека се користи у љусци. Класе знакова [аб] и изрази у "
-#~ "витичастим заградама у csh-стилу {а,б} су подржани."
+#~ "Obrazac imena datoteka se koristi u ljusci. Klase znakova [ab] i izrazi u "
+#~ "vitičastim zagradama u csh-stilu {a,b} su podržani."
 
 #~ msgid "Replace _current"
-#~ msgstr "Замени _текући"
+#~ msgstr "Zameni _tekući"
 
 #~ msgid "Replace in _all files"
-#~ msgstr "Замени у _свим датотекама"
+#~ msgstr "Zameni u _svim datotekama"
 
 #~ msgid "Replace in _this file"
-#~ msgstr "Замени у _овој датотеци"
+#~ msgstr "Zameni u _ovoj datoteci"
 
 #~ msgid "_Next file"
-#~ msgstr "С_ледећа датотека"
+#~ msgstr "S_ledeća datoteka"
 
 #~ msgid "_Previous file"
-#~ msgstr "П_ретходна датотека"
+#~ msgstr "P_rethodna datoteka"
 
 #~ msgid ""
 #~ "Icons only\n"
@@ -569,50 +569,50 @@ msgstr ""
 #~ "Icons and text\n"
 #~ "Both horizontal"
 #~ msgstr ""
-#~ "Само иконе\n"
-#~ "Само текст\n"
-#~ "Иконе и текст\n"
-#~ "Оба водоравно"
+#~ "Samo ikone\n"
+#~ "Samo tekst\n"
+#~ "Ikone i tekst\n"
+#~ "Oba vodoravno"
 
 #~ msgid "Tool_bar style:"
-#~ msgstr "Стил _алатки:"
+#~ msgstr "Stil _alatki:"
 
 #~ msgid "_Look’n’feel"
-#~ msgstr "_Изглед и понашање"
+#~ msgstr "_Izgled i ponašanje"
 
 #~ msgid "_About"
-#~ msgstr "_О програму"
+#~ msgstr "_O programu"
 
 #~ msgid "[OPTION]... [FOLDER]"
-#~ msgstr "[ОПЦИЈА]... [ДИРЕКТОРИЈУМ]"
+#~ msgstr "[OPCIJA]... [DIREKTORIJUM]"
 
 #~ msgid "Try “regexxer --help” for more information."
-#~ msgstr "Пробајте „regexxer --help“ за детаље."
+#~ msgstr "Probajte „regexxer --help“ za detalje."
 
 #~ msgid ""
 #~ "The folder name “%1” contains characters not representable in the "
 #~ "encoding of the local file system."
 #~ msgstr ""
-#~ "Име директоријума „%1“ садржи знакове који се не могу представити у "
-#~ "кодирању локалног система датотека."
+#~ "Ime direktorijuma „%1“ sadrži znakove koji se ne mogu predstaviti u "
+#~ "kodiranju lokalnog sistema datoteka."
 
 #~ msgid "Select a folder"
-#~ msgstr "Изаберите директоријум"
+#~ msgstr "Izaberite direktorijum"
 
 #~ msgid "About regexxer"
-#~ msgstr "О регизразу"
+#~ msgstr "O regizrazu"
 
 #~ msgid "The application icon of regexxer"
-#~ msgstr "Икона програма регизраз"
+#~ msgstr "Ikona programa regizraz"
 
 #~ msgid "regexxer icon"
-#~ msgstr "икона регизраза"
+#~ msgstr "ikona regizraza"
 
 #~ msgid "translated by"
-#~ msgstr "превео"
+#~ msgstr "preveo"
 
 #~ msgid "written by"
-#~ msgstr "написао"
+#~ msgstr "napisao"
 
 #~ msgid "The directory to be searched"
-#~ msgstr "Који директоријум претраживати:"
+#~ msgstr "Koji direktorijum pretraživati:"
