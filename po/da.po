@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer master\n"
 "Report-Msgid-Bugs-To: http://regexxer.sourceforge.net/bugs\n"
-"POT-Creation-Date: 2011-04-01 22:39+0200\n"
-"PO-Revision-Date: 2011-03-17 19:48+0100\n"
+"POT-Creation-Date: 2011-09-19 23:15+0200\n"
+"PO-Revision-Date: 2011-09-18 19:48+0100\n"
 "Last-Translator: Joe Hansen <joedalton2@yahoo.dk>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
 "Language: da\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../ui/regexxer.desktop.in.h:1 ../src/mainwindow.cc:1010
+#: ../ui/regexxer.desktop.in.h:1 ../src/mainwindow.cc:1027
 msgid "Search and replace using regular expressions"
 msgstr "Søg og erstat med brug af regulære udtryk"
 
@@ -129,9 +129,8 @@ msgid "Whether the window is maximized."
 msgstr "Hvorvidt vinduet er maksimeret."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:23
-#, fuzzy
 msgid "Whether to enable auto indentation in the text view."
-msgstr "Hvorvidt der skal aktivers automatisk indryk i tekstvisningen."
+msgstr "Hvorvidt der skal aktiveres automatisk indryk i tekstvisningen."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:24
 msgid "Whether to highlight the current line of the text view."
@@ -243,7 +242,7 @@ msgstr "Start ikke automatisk søgning"
 msgid "[FOLDER]"
 msgstr "[MAPPE]"
 
-#: ../src/mainwindow.cc:560
+#: ../src/mainwindow.cc:567
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -251,7 +250,7 @@ msgstr ""
 "Nogle filer er endnu ikke gemt.\n"
 "Afslut alligevel?"
 
-#: ../src/mainwindow.cc:574
+#: ../src/mainwindow.cc:581
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -259,19 +258,19 @@ msgstr ""
 "Nogle filer er endnu ikke gemt.\n"
 "Fortsæt alligevel?"
 
-#: ../src/mainwindow.cc:604
+#: ../src/mainwindow.cc:611
 msgid "The file search pattern is invalid."
 msgstr "Filsøgningsmønsteret er ugyldigt."
 
-#: ../src/mainwindow.cc:610
+#: ../src/mainwindow.cc:617
 msgid "The following errors occurred during search:"
 msgstr "De følgende fejl opstod under søgning:"
 
-#: ../src/mainwindow.cc:864
+#: ../src/mainwindow.cc:881
 msgid "The following errors occurred during save:"
 msgstr "De følgende fejl opstod under gemning:"
 
-#: ../src/mainwindow.cc:1015
+#: ../src/mainwindow.cc:1032
 msgid "translator-credits"
 msgstr ""
 "Joe Hansen, 2010.\n"
