@@ -51,6 +51,7 @@ static const char *const selection_clipboard = "CLIPBOARD";
 static const char *const program_authors[] =
 {
   "Daniel Elstner <daniel.kitta@gmail.com>",
+  "Fabien Parent <parent.f@gmail.com>",
   "Murray Cumming <murrayc@murrayc.com>",
   0
 };
@@ -1025,7 +1026,8 @@ void MainWindow::on_about()
     dialog->set_version(PACKAGE_VERSION);
     dialog->set_logo_icon_name(PACKAGE_TARNAME);
     dialog->set_comments(_("Search and replace using regular expressions"));
-    dialog->set_copyright("Copyright \302\251 2002-2007 Daniel Elstner");
+    dialog->set_copyright("Copyright \302\251 2002-2007 Daniel Elstner\n"
+    					  "Copyright \302\251 2009-2011 Fabien Parent");
     dialog->set_website("http://regexxer.sourceforge.net/");
 
     dialog->set_authors(authors);
