@@ -24,7 +24,7 @@ AC_CONFIG_SRCDIR([ui/regexxer.desktop.in])
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_HEADERS([config.h])
 
-AM_INIT_AUTOMAKE([1.9 -Wall gnu no-define nostdinc check-news dist-bzip2])
+AM_INIT_AUTOMAKE([1.10 -Wall gnu no-define nostdinc check-news dist-xz no-dist-gzip])
 AC_ARG_VAR([ACLOCAL_FLAGS], [aclocal flags, e.g. -I <macro dir>])
 
 AC_PROG_CC
