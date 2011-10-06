@@ -1,4 +1,4 @@
-regexxer 0.10 (2011-??-??)
+regexxer 0.10 (2011-10-06)
 
 	* New maintainer: Fabien Parent
 	* Port to gtkmm-3.0.
@@ -11,9 +11,12 @@ regexxer 0.10 (2011-??-??)
 	* Add (auto)completion of regex and substitution entries.
 	* Remember window position, size, and state.
 	* Move pre-defined file patterns to gsettings
-	* New translations: da, gl, el, nb, oc.
-	* Translations updated: de, es, sl, cs, pt_BR, eu, fr, hu, sv, ta, pt,
-		ca, ne, fi, ja, vi, ar.
+	* Make autogen.sh exit properly if a command failed
+	* Fix the scrolling when working on big files
+	* Create tar.xz instead of tar.bz2
+	* New translations: da, gl, el, nb, oc, ta, sk, ru.
+	* Translations updated: de, es, sl, cs, pt_BR, eu, fr, hu, sv, pt,
+		ca, ne, fi, ja, vi, ar, zh_CN.
 
 regexxer 0.9 (2007-02-18)
 
