@@ -1,0 +1,486 @@
+# Esperanto translation for regexxer.
+# Copyright (C) 2011 Free Software Foundation, Inc.
+# This file is distributed under the same license as the regexxer package.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: regexxer master\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
+"POT-Creation-Date: 2011-10-06 13:16+0000\n"
+"PO-Revision-Date: 2011-11-10 16:28+0100\n"
+"Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
+"Language-Team: Esperanto <gnome-l10n-eo@lists.launchpad.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: ../ui/regexxer.desktop.in.h:1 ../src/mainwindow.cc:1028
+msgid "Search and replace using regular expressions"
+msgstr ""
+
+#: ../ui/regexxer.desktop.in.h:2
+msgid "regexxer Search Tool"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:1
+msgid "Auto indentation"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:2
+msgid "Current-match color"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:3
+msgid "Draw spaces"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:4
+msgid "Fallback encoding"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:5
+msgid "File Patterns"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:6
+msgid "Highlight the current line"
+msgstr "Emfazi la aktualan linion"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:7
+msgid "List of last patterns used in the 'Regex' entry."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:8
+msgid "List of last patterns used in the 'Substitution' entry."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:9
+msgid "List of pre-defined patterns available in the 'Pattern' entry."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:10
+msgid "Match color"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:11
+msgid ""
+"Name of the character encoding to use if a file is not readable in either "
+"UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" "
+"for a complete list of possible values."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:12
+msgid "Regex Patterns"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:13
+msgid "Show line numbers"
+msgstr "Montri liniajn numerojn"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:14
+msgid "Text view font"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:15
+msgid "The X coordinate of the window."
+msgstr "La X-koordinato de la fenestro."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:16
+msgid "The Y coordinate of the window."
+msgstr "La Y-koordinato de la fenestro."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:17
+msgid ""
+"The background color used to highlight matches of the search expression."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:18
+msgid ""
+"The background color used to highlight the currently selected match of the "
+"search expression."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:19
+msgid "The font used in the file editor."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:20
+msgid "The height of the window."
+msgstr "La alto de la fenestro."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:21
+msgid "The width of the window."
+msgstr "La larĝo de la fenestro."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:22
+msgid "Whether the window is maximized."
+msgstr "Ĉu la fenestro estas maksimumigite?"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:23
+msgid "Whether to enable auto indentation in the text view."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:24
+msgid "Whether to highlight the current line of the text view."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:25
+msgid "Whether to show the line numbers of the text view."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:26
+msgid "Which type of space to draw in the text view."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:27
+msgid "window height"
+msgstr "fenestra alto"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:28
+msgid "window maximization"
+msgstr "fenestra maksimumigo"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:29
+msgid "window width"
+msgstr "fenestra larĝo"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:30
+msgid "window x position"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:31
+msgid "window y position"
+msgstr ""
+
+#: ../src/filebuffer.cc:198
+msgid "Can’t read file:"
+msgstr ""
+
+#: ../src/filetree.cc:60
+msgid "File"
+msgstr "Dosiero"
+
+#: ../src/filetree.cc:79
+msgid "#"
+msgstr "#"
+
+#: ../src/filetree.cc:508
+#, qt-format
+msgid "Failed to save file “%1”: %2"
+msgstr ""
+
+#: ../src/filetree.cc:924
+#, qt-format
+msgid "“%1” seems to be a binary file."
+msgstr ""
+
+#: ../src/main.cc:78
+msgid "Save _all"
+msgstr "Konservi ĉi_ujn"
+
+#: ../src/main.cc:135
+msgid "Find files matching PATTERN"
+msgstr ""
+
+#: ../src/main.cc:135
+msgid "PATTERN"
+msgstr "ŜABLONO"
+
+#: ../src/main.cc:137
+msgid "Do not recurse into subdirectories"
+msgstr ""
+
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:2
+msgid "Also find hidden files"
+msgstr "Ankaŭ trovi kaŝitajn dosierojn"
+
+#: ../src/main.cc:141
+msgid "Find text matching REGEX"
+msgstr ""
+
+#: ../src/main.cc:141
+msgid "REGEX"
+msgstr ""
+
+#: ../src/main.cc:143
+msgid "Find only the first match in a line"
+msgstr ""
+
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:4
+msgid "Do case insensitive matching"
+msgstr ""
+
+#: ../src/main.cc:147
+msgid "Replace matches with STRING"
+msgstr ""
+
+#: ../src/main.cc:147
+msgid "STRING"
+msgstr "SIGNOĈENO"
+
+#: ../src/main.cc:149
+msgid "Print match location to standard output"
+msgstr ""
+
+#: ../src/main.cc:151
+msgid "Do not automatically start search"
+msgstr ""
+
+#: ../src/main.cc:153
+msgid "[FOLDER]"
+msgstr "[DOSIERUJO]"
+
+#: ../src/mainwindow.cc:568
+msgid ""
+"Some files haven’t been saved yet.\n"
+"Quit anyway?"
+msgstr ""
+
+#: ../src/mainwindow.cc:582
+msgid ""
+"Some files haven’t been saved yet.\n"
+"Continue anyway?"
+msgstr ""
+
+#: ../src/mainwindow.cc:612
+msgid "The file search pattern is invalid."
+msgstr ""
+
+#: ../src/mainwindow.cc:618
+msgid "The following errors occurred during search:"
+msgstr ""
+
+#: ../src/mainwindow.cc:882
+msgid "The following errors occurred during save:"
+msgstr ""
+
+#: ../src/mainwindow.cc:1034
+msgid "translator-credits"
+msgstr "Kristjan SCHMIDT, 2011."
+
+#: ../src/prefdialog.cc:186
+#, qt-format
+msgid "“%1” is not a valid encoding."
+msgstr ""
+
+#: ../src/statusline.cc:245
+msgid "Stop"
+msgstr "Haltigi"
+
+#: ../src/statusline.cc:253
+msgid "File:"
+msgstr "Dosiero:"
+
+#: ../src/statusline.cc:256
+msgid "Match:"
+msgstr ""
+
+#: ../src/statusline.cc:267
+msgid "Cancels the running search"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:1
+msgid "A regular expression in Perl syntax"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:3
+msgid "Backward"
+msgstr "Reen"
+
+#: ../ui/mainwindow.ui.h:5
+msgid "File backward"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:6
+msgid "File forward"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:7
+msgid "Find all files that match the filename pattern"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:8
+msgid "Find all matches of the regular expression"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:9
+msgid "Find all possible matches in a line"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:10
+msgid "Find fi_les"
+msgstr "Serĉi _dosierojn"
+
+#: ../ui/mainwindow.ui.h:11
+msgid "Fol_der:"
+msgstr "_Dosierujo:"
+
+#: ../ui/mainwindow.ui.h:12
+msgid "Forward"
+msgstr "Antaŭen"
+
+#: ../ui/mainwindow.ui.h:13
+msgid "Go to next match"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:14
+msgid "Go to previous match"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:15
+msgid "Go to the next matching file"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:16
+msgid "Go to the previous matching file"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:17
+msgid "Pattern:"
+msgstr "Modelo:"
+
+#: ../ui/mainwindow.ui.h:18
+msgid "Preview"
+msgstr "Antaŭmontro"
+
+#: ../ui/mainwindow.ui.h:19
+msgid "Preview of the substitution"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:20
+msgid "Recurse into subdirectories"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:21
+msgid "Replace all matches in all files"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:22
+msgid "Replace all matches in the current file"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:23
+msgid "Replace current match"
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:24
+msgid "Replace:"
+msgstr "Anstataŭigi:"
+
+#: ../ui/mainwindow.ui.h:25
+msgid "Search:"
+msgstr "Serĉi:"
+
+#: ../ui/mainwindow.ui.h:26
+msgid ""
+"The new string to substitute. As in Perl, you can refer to parts of the "
+"match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
+"\\u, \\L, \\U and \\E are supported as well."
+msgstr ""
+
+#: ../ui/mainwindow.ui.h:27
+msgid "_All files"
+msgstr "Ĉiuj d_osieroj"
+
+#: ../ui/mainwindow.ui.h:28
+msgid "_Edit"
+msgstr "R_edakti"
+
+#: ../ui/mainwindow.ui.h:29
+msgid "_File"
+msgstr "_Dosiero"
+
+#: ../ui/mainwindow.ui.h:30
+msgid "_Help"
+msgstr "_Helpo"
+
+#: ../ui/mainwindow.ui.h:31
+msgid "_Match"
+msgstr "_Kongrui"
+
+#: ../ui/mainwindow.ui.h:32
+msgid "_Replace"
+msgstr "_Anstataŭigi"
+
+#: ../ui/mainwindow.ui.h:33
+msgid "_This file"
+msgstr "_Tiu dosiero"
+
+#: ../ui/mainwindow.ui.h:34
+msgid "hidden"
+msgstr "kaŝite"
+
+#: ../ui/mainwindow.ui.h:35
+msgid "recursive"
+msgstr ""
+
+#: ../ui/prefdialog.ui.h:1
+msgid "1."
+msgstr "1."
+
+#: ../ui/prefdialog.ui.h:2
+msgid "2."
+msgstr "2."
+
+#: ../ui/prefdialog.ui.h:3
+msgid "3."
+msgstr "3."
+
+#: ../ui/prefdialog.ui.h:4
+msgid "Both horizontal"
+msgstr ""
+
+#: ../ui/prefdialog.ui.h:5
+msgid "C_urrent match color:"
+msgstr ""
+
+#: ../ui/prefdialog.ui.h:6
+msgid "Fallback _encoding:"
+msgstr ""
+
+#: ../ui/prefdialog.ui.h:7
+msgid "Icons and text"
+msgstr "Piktogramoj kaj teksto"
+
+#: ../ui/prefdialog.ui.h:8
+msgid "Icons only"
+msgstr "Nur piktogramoj"
+
+#: ../ui/prefdialog.ui.h:9
+msgid "Preferences"
+msgstr "Agordoj"
+
+#: ../ui/prefdialog.ui.h:10
+msgid "Text only"
+msgstr "Nur teksto"
+
+#: ../ui/prefdialog.ui.h:11
+msgid "The encoding specified by the current locale"
+msgstr ""
+
+#: ../ui/prefdialog.ui.h:12
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: ../ui/prefdialog.ui.h:13
+msgid "_File access"
+msgstr ""
+
+#: ../ui/prefdialog.ui.h:14
+msgid "_Look&#x2019;n&#x2019;feel"
+msgstr ""
+
+#: ../ui/prefdialog.ui.h:15
+msgid "_Match color:"
+msgstr ""
+
+#: ../ui/prefdialog.ui.h:16
+msgid "_Text view font:"
+msgstr ""
+
+#: ../ui/prefdialog.ui.h:17
+msgid ""
+"regexxer attempts to read a file in the following encodings before giving up:"
+msgstr ""
