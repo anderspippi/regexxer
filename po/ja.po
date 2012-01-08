@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer HEAD\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2011-11-10 15:30+0000\n"
-"PO-Revision-Date: 2011-11-22 12:32+0900\n"
+"POT-Creation-Date: 2011-11-22 23:38+0000\n"
+"PO-Revision-Date: 2012-01-01 19:56+0900\n"
 "Last-Translator: Jiro Matsuzawa <jmatsuzawa@src.gnome.org>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
@@ -118,7 +118,7 @@ msgstr ""
 
 #: ../ui/org.regexxer.gschema.xml.in.h:19
 msgid "The font used in the file editor."
-msgstr "ファイル・エディタで使用するフォントです。"
+msgstr "ファイル・エディターで使用するフォントです。"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:20
 msgid "The height of the window."
@@ -204,7 +204,7 @@ msgstr "パターン"
 
 #: ../src/main.cc:137
 msgid "Do not recurse into subdirectories"
-msgstr "サブフォルダの中を再帰的に検索しない"
+msgstr "サブフォルダーの中を再帰的に検索しない"
 
 #: ../src/main.cc:139 ../ui/mainwindow.ui.h:2
 msgid "Also find hidden files"
@@ -336,7 +336,7 @@ msgstr "ファイルの検索(_L)"
 
 #: ../ui/mainwindow.ui.h:11
 msgid "Fol_der:"
-msgstr "フォルダ(_D):"
+msgstr "フォルダー(_D):"
 
 #: ../ui/mainwindow.ui.h:12
 msgid "Forward"
@@ -372,7 +372,7 @@ msgstr "置換した際のプレビューです"
 
 #: ../ui/mainwindow.ui.h:20
 msgid "Recurse into subdirectories"
-msgstr "サブフォルダの中も再帰的に検索します"
+msgstr "サブフォルダーの中も再帰的に検索します"
 
 #: ../ui/mainwindow.ui.h:21
 msgid "Replace all matches in all files"
