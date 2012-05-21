@@ -1,14 +1,14 @@
 # Slovak translation for regexxer.
-# Copyright (C) 2010, 2011 Free Software Foundation, Inc.
+# Copyright (C) 2010, 2011, 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the regexxer package.
-# Peter Mráz <etkinator@gmail.com>, 2010, 2011.
+# Peter Mráz <etkinator@gmail.com>, 2010, 2011, 2012.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2011-03-20 14:25+0000\n"
-"PO-Revision-Date: 2011-04-26 13:41+0200\n"
+"POT-Creation-Date: 2012-03-24 14:16+0000\n"
+"PO-Revision-Date: 2012-05-21 08:18+0200\n"
 "Last-Translator: Peter Mráz <etkinator@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -16,101 +16,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 1 : (n>=2 && n<=4) ? 2 : 0;\n"
 
-#: ../ui/regexxer.desktop.in.h:1 ../src/mainwindow.cc:1010
-msgid "Search and replace using regular expressions"
-msgstr "Vyhľadáva a nahrádza pomocou regulárnych výrazov"
-
-#: ../ui/regexxer.desktop.in.h:2
+#: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "regexxer - vyhľadávací nástroj"
 
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1028
+msgid "Search and replace using regular expressions"
+msgstr "Vyhľadávať a nahrádzať pomocou regulárnych výrazov"
+
+# summary
 #: ../ui/org.regexxer.gschema.xml.in.h:1
-msgid "Auto indentation"
-msgstr ""
-
-#: ../ui/org.regexxer.gschema.xml.in.h:2
-msgid "Current-match color"
-msgstr "Farba aktuálne označeného výskytu"
-
-#: ../ui/org.regexxer.gschema.xml.in.h:3
-msgid "Draw spaces"
-msgstr ""
-
-#: ../ui/org.regexxer.gschema.xml.in.h:4
-msgid "Fallback encoding"
-msgstr "Záložné kódovanie"
-
-#: ../ui/org.regexxer.gschema.xml.in.h:5
-#, fuzzy
-#| msgid "Regex Patterns"
 msgid "File Patterns"
-msgstr "Vzory regulárnych výrazov"
+msgstr "Vzory súborov"
 
-#: ../ui/org.regexxer.gschema.xml.in.h:6
-msgid "Highlight the current line"
-msgstr ""
-
-# * https://sourceforge.net/tracker/?func=detail&aid=2955600&group_id=64876&atid=508980
-#: ../ui/org.regexxer.gschema.xml.in.h:7
-#, fuzzy
-#| msgid "List of last pattern used for the regex entry."
-msgid "List of last patterns used in the 'Regex' entry."
-msgstr "Zoznam naposledy použitých vzorov v poli s regulárnym výrazom."
-
-#: ../ui/org.regexxer.gschema.xml.in.h:8
-#| msgid "List of last pattern used for the substitution entry."
-msgid "List of last patterns used in the 'Substitution' entry."
-msgstr "Zoznam naposledy použitých vzorov v poli 'Nahradiť'."
-
-#: ../ui/org.regexxer.gschema.xml.in.h:9
+# description File Patterns
+#: ../ui/org.regexxer.gschema.xml.in.h:2
 msgid "List of pre-defined patterns available in the 'Pattern' entry."
-msgstr ""
+msgstr "Zoznam preddefinovaných vzorov dostupných v poli „Vzor“."
 
-#: ../ui/org.regexxer.gschema.xml.in.h:10
-msgid "Match color"
-msgstr "Farba výskytu"
-
-#: ../ui/org.regexxer.gschema.xml.in.h:11
-#, fuzzy
-#| msgid ""
-#| "Name of the character encoding to use if a file is not readable in either "
-#| "UTF-8 or the codeset specified by the current locale. Try “iconv --list” "
-#| "for a complete list of possible values."
-msgid ""
-"Name of the character encoding to use if a file is not readable in either "
-"UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" "
-"for a complete list of possible values."
-msgstr ""
-"Názov kódovania znakov, ktoré sa má použiť, ak súbor nie je čitateľný v "
-"kódovaní UTF-8 , ani v kódovaní určenom aktuálnym národným prostredím. "
-"Skúste použiť “iconv --list” aby ste získali úplný zoznam možných hodnôt."
-
-#: ../ui/org.regexxer.gschema.xml.in.h:12
+# summary
+#: ../ui/org.regexxer.gschema.xml.in.h:3
 msgid "Regex Patterns"
 msgstr "Vzory regulárnych výrazov"
 
-#: ../ui/org.regexxer.gschema.xml.in.h:13
-msgid "Show line numbers"
-msgstr ""
+# description Regex Patterns
+#: ../ui/org.regexxer.gschema.xml.in.h:4
+msgid "List of last patterns used in the 'Regex' entry."
+msgstr "Zoznam naposledy použitých vzorov v poli „Regulárny výraz“."
 
-#: ../ui/org.regexxer.gschema.xml.in.h:14
+# description Regex Patterns
+#: ../ui/org.regexxer.gschema.xml.in.h:5
+msgid "List of last patterns used in the 'Substitution' entry."
+msgstr "Zoznam naposledy použitých vzorov v poli „Nahradiť“."
+
+# summary
+#: ../ui/org.regexxer.gschema.xml.in.h:6
 msgid "Text view font"
 msgstr "Písmo zobrazeného textu"
 
-#: ../ui/org.regexxer.gschema.xml.in.h:15
-msgid "The X coordinate of the window."
-msgstr ""
+# description Text view font
+#: ../ui/org.regexxer.gschema.xml.in.h:7
+msgid "The font used in the file editor."
+msgstr "Písmo používané v editore súborov."
 
-#: ../ui/org.regexxer.gschema.xml.in.h:16
-msgid "The Y coordinate of the window."
-msgstr ""
+# summary
+#: ../ui/org.regexxer.gschema.xml.in.h:8
+msgid "Match color"
+msgstr "Farba výskytu"
 
-#: ../ui/org.regexxer.gschema.xml.in.h:17
+# description Match color
+#: ../ui/org.regexxer.gschema.xml.in.h:9
 msgid ""
 "The background color used to highlight matches of the search expression."
 msgstr "Farba pozadia použitá na zvýraznenie výskytov hľadaného výrazu."
 
-#: ../ui/org.regexxer.gschema.xml.in.h:18
+# summary
+#: ../ui/org.regexxer.gschema.xml.in.h:10
+msgid "Current-match color"
+msgstr "Farba aktuálne označeného výskytu"
+
+# descrition Current-match color
+#: ../ui/org.regexxer.gschema.xml.in.h:11
 msgid ""
 "The background color used to highlight the currently selected match of the "
 "search expression."
@@ -118,67 +84,122 @@ msgstr ""
 "Farba pozadia použitá na zvýraznenie práve označeného výskytu hľadaného "
 "výrazu."
 
-#: ../ui/org.regexxer.gschema.xml.in.h:19
-msgid "The font used in the file editor."
-msgstr "Písmo používané v editore súborov."
+# summary
+#: ../ui/org.regexxer.gschema.xml.in.h:12
+msgid "Fallback encoding"
+msgstr "Záložné kódovanie"
 
-#: ../ui/org.regexxer.gschema.xml.in.h:20
-msgid "The height of the window."
+# description Fallback encoding
+#: ../ui/org.regexxer.gschema.xml.in.h:13
+msgid ""
+"Name of the character encoding to use if a file is not readable in either "
+"UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" "
+"for a complete list of possible values."
 msgstr ""
+"Názov kódovania znakov, ktoré sa má použiť, ak súbor nie je čitateľný v "
+"kódovaní UTF-8, ani v kódovaní určenom aktuálnymi miestnymi nastaveniami. "
+"Úplný zoznam možných hodnôt získate, zadaním príkazu „iconv --list“."
 
-#: ../ui/org.regexxer.gschema.xml.in.h:21
+# summary
+#: ../ui/org.regexxer.gschema.xml.in.h:14
+msgid "window width"
+msgstr "šírka okna"
+
+# description window width
+#: ../ui/org.regexxer.gschema.xml.in.h:15
 msgid "The width of the window."
-msgstr ""
+msgstr "Šírka okna."
 
+# summary
+#: ../ui/org.regexxer.gschema.xml.in.h:16
+msgid "window height"
+msgstr "výška okna"
+
+# description window height
+#: ../ui/org.regexxer.gschema.xml.in.h:17
+msgid "The height of the window."
+msgstr "Výška okna."
+
+# summary
+#: ../ui/org.regexxer.gschema.xml.in.h:18
+msgid "window x position"
+msgstr "x-ová súradnica okna"
+
+# description window x position
+#: ../ui/org.regexxer.gschema.xml.in.h:19
+msgid "The X coordinate of the window."
+msgstr "X-ová súradnica okna."
+
+# summary
+#: ../ui/org.regexxer.gschema.xml.in.h:20
+msgid "window y position"
+msgstr "y-ová súradnica okna"
+
+# description window y position
+#: ../ui/org.regexxer.gschema.xml.in.h:21
+msgid "The Y coordinate of the window."
+msgstr "Y-ová súradnica okna."
+
+# summary
 #: ../ui/org.regexxer.gschema.xml.in.h:22
-msgid "Whether the window is maximized."
-msgstr ""
+msgid "window maximization"
+msgstr "maximalizácia okna"
 
+# description window maximization
 #: ../ui/org.regexxer.gschema.xml.in.h:23
-msgid "Whether to enable auto indentation in the text view."
-msgstr ""
+msgid "Whether the window is maximized."
+msgstr "Či je okno maximalizované."
 
+# summary
 #: ../ui/org.regexxer.gschema.xml.in.h:24
-msgid "Whether to highlight the current line of the text view."
-msgstr ""
+msgid "Show line numbers"
+msgstr "Zobraziť čísla riadkov"
 
+# description Show line numbers
 #: ../ui/org.regexxer.gschema.xml.in.h:25
 msgid "Whether to show the line numbers of the text view."
-msgstr ""
+msgstr "Či sa majú zobraziť čísla riadkov pri zobrazenom texte."
 
+# summary
 #: ../ui/org.regexxer.gschema.xml.in.h:26
-msgid "Which type of space to draw in the text view."
-msgstr ""
+msgid "Highlight the current line"
+msgstr "Zvýrazniť aktuálny riadok"
 
+# description Highlight the current line
 #: ../ui/org.regexxer.gschema.xml.in.h:27
-msgid "window height"
-msgstr ""
+msgid "Whether to highlight the current line of the text view."
+msgstr "Či sa má zvýrazniť aktuálny riadok v zobrazenom texte."
 
+# summary
 #: ../ui/org.regexxer.gschema.xml.in.h:28
-msgid "window maximization"
-msgstr ""
+msgid "Auto indentation"
+msgstr "Automatické odsadzovanie"
 
+# description Auto indentation
 #: ../ui/org.regexxer.gschema.xml.in.h:29
-msgid "window width"
-msgstr ""
+msgid "Whether to enable auto indentation in the text view."
+msgstr "Či sa má povoliť automatické odsadenie v zobrazenom texte."
 
+# summary
 #: ../ui/org.regexxer.gschema.xml.in.h:30
-msgid "window x position"
-msgstr ""
+msgid "Draw spaces"
+msgstr "Písanie medzier"
 
+# description Draw spaces
 #: ../ui/org.regexxer.gschema.xml.in.h:31
-msgid "window y position"
-msgstr ""
+msgid "Which type of space to draw in the text view."
+msgstr "Ktorý typ medzier sa má písať v zobrazenom texte."
 
 #: ../src/filebuffer.cc:198
 msgid "Can’t read file:"
 msgstr "Nie je možné čítať súbor:"
 
+# stlpec nad filetree
 #: ../src/filetree.cc:60
 msgid "File"
 msgstr "Súbor"
 
-# PŠ: nebude to príliš rozširovať stĺpec?
+# stlpec nad filetree
 #: ../src/filetree.cc:79
 msgid "#"
 msgstr "Počet"
@@ -193,64 +214,77 @@ msgstr "Nepodarilo sa uložiť súbor „%1“: %2"
 msgid "“%1” seems to be a binary file."
 msgstr "„%1“ vyzerá ako binárny súbor."
 
+# položka ponuky
 #: ../src/main.cc:78
 msgid "Save _all"
 msgstr "Uložiť _všetko"
 
+# popis voľby príkazového riadka
 #: ../src/main.cc:135
 msgid "Find files matching PATTERN"
-msgstr "Nájsť súbory vyhovujúce VZORU"
+msgstr "Nájde súbory vyhovujúce VZORU"
 
+# súčasť popisu voľby príkazového riadka
 #: ../src/main.cc:135
 msgid "PATTERN"
 msgstr "VZOR"
 
-# * http://sourceforge.net/tracker/?func=detail&aid=2954119&group_id=64876&atid=508980
+# popis voľby príkazového riadka
 #: ../src/main.cc:137
 msgid "Do not recurse into subdirectories"
-msgstr "Nevstupovať do podadresárov"
+msgstr "Nebude vstupovať do podadresárov"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:2
+# popis voľby príkazového riadka
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:9
 msgid "Also find hidden files"
-msgstr "Nájsť aj skryté súbory"
+msgstr "Nájde aj skryté súbory"
 
+# popis voľby príkazového riadka
 #: ../src/main.cc:141
 msgid "Find text matching REGEX"
-msgstr "Nájsť text vyhovujúci REGULÁRNEMU VÝRAZU"
+msgstr "Nájde text vyhovujúci REGULÁRNEMU VÝRAZU"
 
+# súčasť popisu voľby príkazového riadka
 #: ../src/main.cc:141
 msgid "REGEX"
 msgstr "REGULÁRNY VÝRAZ"
 
+# popis voľby príkazového riadka
 #: ../src/main.cc:143
 msgid "Find only the first match in a line"
-msgstr "Nájsť iba prvý výskyt v riadku"
+msgstr "Nájde iba prvý výskyt v riadku"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:4
+# popis voľby príkazového riadka
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:16
 msgid "Do case insensitive matching"
-msgstr "Pri hľadaní nerozlišovať veľkosť písmen"
+msgstr "Pri hľadaní nebude rozlišovať veľkosť písmen"
 
+# popis voľby príkazového riadka
 #: ../src/main.cc:147
 msgid "Replace matches with STRING"
-msgstr "Nahradiť výskyty REŤAZCOM"
+msgstr "Nahradí výskyty REŤAZCOM"
 
+# súčasť popisu voľby príkazového riadka
 #: ../src/main.cc:147
 msgid "STRING"
 msgstr "REŤAZEC"
 
+# popis voľby príkazového riadka
 #: ../src/main.cc:149
 msgid "Print match location to standard output"
-msgstr "Vypísať pozíciu výskytu na štandardný výstup"
+msgstr "Vypíše pozíciu výskytu na štandardný výstup"
 
+# popis voľby príkazového riadka
 #: ../src/main.cc:151
 msgid "Do not automatically start search"
-msgstr "Nespúšťať vyhľadávanie automaticky"
+msgstr "Nespustí vyhľadávanie automaticky"
 
+# súčasť popisu voľby príkazového riadka
 #: ../src/main.cc:153
 msgid "[FOLDER]"
 msgstr "[PRIEČINOK]"
 
-#: ../src/mainwindow.cc:560
+#: ../src/mainwindow.cc:568
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -258,7 +292,7 @@ msgstr ""
 "Niektoré súbory ešte neboli uložené.\n"
 "Naozaj chcete skončiť?"
 
-#: ../src/mainwindow.cc:574
+#: ../src/mainwindow.cc:582
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -266,19 +300,19 @@ msgstr ""
 "Niektoré súbory ešte neboli uložené.\n"
 "Naozaj chcete pokračovať?"
 
-#: ../src/mainwindow.cc:604
+#: ../src/mainwindow.cc:612
 msgid "The file search pattern is invalid."
 msgstr "Vzor na vyhľadávanie súborov je neplatný."
 
-#: ../src/mainwindow.cc:610
+#: ../src/mainwindow.cc:618
 msgid "The following errors occurred during search:"
 msgstr "Počas vyhľadávania sa vyskytli nasledujúce chyby:"
 
-#: ../src/mainwindow.cc:864
+#: ../src/mainwindow.cc:882
 msgid "The following errors occurred during save:"
 msgstr "Počas ukladania sa vyskytli nasledujúce chyby:"
 
-#: ../src/mainwindow.cc:1015
+#: ../src/mainwindow.cc:1034
 msgid "translator-credits"
 msgstr "Peter Mráz <etkinator@gmail.com>"
 
@@ -287,288 +321,280 @@ msgstr "Peter Mráz <etkinator@gmail.com>"
 msgid "“%1” is not a valid encoding."
 msgstr "„%1“ nie je platné kódovanie."
 
+# tlačidlo
 #: ../src/statusline.cc:245
 msgid "Stop"
 msgstr "Zastaviť"
 
+# v statusbare (napr 20/291)
 #: ../src/statusline.cc:253
 msgid "File:"
 msgstr "Súbor:"
 
+# v statusbare (napr 4/6)
 #: ../src/statusline.cc:256
 msgid "Match:"
 msgstr "Zhoda:"
 
+# popis tlačidla
 #: ../src/statusline.cc:267
 msgid "Cancels the running search"
 msgstr "Preruší prebiehajúce vyhľadávanie"
 
+# menuitem
 #: ../ui/mainwindow.ui.h:1
-msgid "A regular expression in Perl syntax"
-msgstr ""
+msgid "_File"
+msgstr "_Súbor"
 
+# menuitem
+#: ../ui/mainwindow.ui.h:2
+msgid "_Edit"
+msgstr "_Upraviť"
+
+# menuitem
 #: ../ui/mainwindow.ui.h:3
-msgid "Backward"
-msgstr ""
+msgid "_Match"
+msgstr "_Výskyt"
 
+# menuitem
+#: ../ui/mainwindow.ui.h:4
+msgid "_Help"
+msgstr "_Pomocník"
+
+# label
 #: ../ui/mainwindow.ui.h:5
-msgid "File backward"
-msgstr ""
-
-#: ../ui/mainwindow.ui.h:6
-msgid "File forward"
-msgstr ""
-
-#: ../ui/mainwindow.ui.h:7
-msgid "Find all files that match the filename pattern"
-msgstr ""
-
-#: ../ui/mainwindow.ui.h:8
-#, fuzzy
-#| msgid "Search and replace using regular expressions"
-msgid "Find all matches of the regular expression"
-msgstr "Vyhľadáva a nahrádza pomocou regulárnych výrazov"
-
-#: ../ui/mainwindow.ui.h:9
-#| msgid "Find only the first match in a line"
-msgid "Find all possible matches in a line"
-msgstr "Nájsť všetky možné výskyt v riadku"
-
-#: ../ui/mainwindow.ui.h:10
-msgid "Find fi_les"
-msgstr ""
-
-#: ../ui/mainwindow.ui.h:11
-#, fuzzy
-#| msgid "File:"
-msgid "Fol_der:"
-msgstr "Súbor:"
-
-#: ../ui/mainwindow.ui.h:12
-msgid "Forward"
-msgstr ""
-
-#: ../ui/mainwindow.ui.h:13
-msgid "Go to next match"
-msgstr ""
-
-#: ../ui/mainwindow.ui.h:14
-msgid "Go to previous match"
-msgstr ""
-
-#: ../ui/mainwindow.ui.h:15
-#, fuzzy
-#| msgid "Find only the first match in a line"
-msgid "Go to the next matching file"
-msgstr "Nájsť iba prvý výskyt v riadku"
-
-#: ../ui/mainwindow.ui.h:16
-msgid "Go to the previous matching file"
-msgstr ""
-
-#: ../ui/mainwindow.ui.h:17
-#, fuzzy
-#| msgid "Regex Patterns"
 msgid "Pattern:"
-msgstr "Vzory regulárnych výrazov"
+msgstr "Vzor:"
 
-#: ../ui/mainwindow.ui.h:18
-msgid "Preview"
-msgstr ""
+# checkbutton
+#: ../ui/mainwindow.ui.h:6
+msgid "recursive"
+msgstr "aj podadresáre"
 
-#: ../ui/mainwindow.ui.h:19
-msgid "Preview of the substitution"
-msgstr ""
-
-# * http://sourceforge.net/tracker/?func=detail&aid=2954119&group_id=64876&atid=508980
-#: ../ui/mainwindow.ui.h:20
-#, fuzzy
-#| msgid "Do not recurse into subdirectories"
+# tooltip
+#: ../ui/mainwindow.ui.h:7
 msgid "Recurse into subdirectories"
-msgstr "Nevstupovať do podadresárov"
+msgstr "Vstupovať do podadresárov"
 
-#: ../ui/mainwindow.ui.h:21
-#, fuzzy
-#| msgid "Replace matches with STRING"
-msgid "Replace all matches in all files"
-msgstr "Nahradiť výskyty REŤAZCOM"
+# checkbutton
+#: ../ui/mainwindow.ui.h:8
+msgid "hidden"
+msgstr "aj skryté"
 
-#: ../ui/mainwindow.ui.h:22
-#, fuzzy
-#| msgid "Replace matches with STRING"
-msgid "Replace all matches in the current file"
-msgstr "Nahradiť výskyty REŤAZCOM"
+# tooltip
+#: ../ui/mainwindow.ui.h:10
+msgid "Find all files that match the filename pattern"
+msgstr "Nájde všetky súbory, ktoré zodpovedajú vzoru názvu súboru"
 
-#: ../ui/mainwindow.ui.h:23
-msgid "Replace current match"
-msgstr ""
+# tlačidlo
+#: ../ui/mainwindow.ui.h:11
+msgid "Find fi_les"
+msgstr "Nájsť _súbory"
 
-#: ../ui/mainwindow.ui.h:24
-msgid "Replace:"
-msgstr ""
+# label
+#: ../ui/mainwindow.ui.h:12
+msgid "Fol_der:"
+msgstr "_Priečinok:"
 
-#: ../ui/mainwindow.ui.h:25
-#, fuzzy
-#| msgid "Match:"
+# label
+#: ../ui/mainwindow.ui.h:13
 msgid "Search:"
-msgstr "Zhoda:"
+msgstr "Hľadať:"
 
-#: ../ui/mainwindow.ui.h:26
+# label
+#: ../ui/mainwindow.ui.h:14
+msgid "Replace:"
+msgstr "Nahradiť:"
+
+# tooltip
+#: ../ui/mainwindow.ui.h:15
+msgid "Find all possible matches in a line"
+msgstr "Nájde všetky možné výskyty v riadku"
+
+# tooltip
+#: ../ui/mainwindow.ui.h:17
+msgid "Find all matches of the regular expression"
+msgstr "Nájde všetky výskyty regulárneho výrazu"
+
+# tooltip
+#: ../ui/mainwindow.ui.h:18
+msgid "A regular expression in Perl syntax"
+msgstr "Regulárny výraz so syntaxou jazyka Perl"
+
+# tooltip
+#: ../ui/mainwindow.ui.h:19
 msgid ""
 "The new string to substitute. As in Perl, you can refer to parts of the "
 "match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
 "\\u, \\L, \\U and \\E are supported as well."
 msgstr ""
+"Nový reťazec pre nahradenie. Podobne ako v jazyku Perl sa môžete odkazovať "
+"na jednotlivé časti výskytu pomocou $1, $2, atď. ale aj $+, $&amp;, $` a $'. "
+"Podporované sú aj operátory \\l, \\u, \\L, \\U a \\E."
 
+# tooltip
+#: ../ui/mainwindow.ui.h:20
+msgid "Preview of the substitution"
+msgstr "Náhľad nahradenia"
+
+# Entry
+#: ../ui/mainwindow.ui.h:21
+msgid "Preview"
+msgstr "Náhľad"
+
+# popis tlačidla
+#: ../ui/mainwindow.ui.h:22
+msgid "Replace current match"
+msgstr "Nahradí aktuálny výskyt"
+
+# label na tlačidle
+#: ../ui/mainwindow.ui.h:23
+msgid "_Replace"
+msgstr "_Nahradiť"
+
+# popis tlačidla
+#: ../ui/mainwindow.ui.h:24
+msgid "Replace all matches in the current file"
+msgstr "Nahradí všetky výskyty v aktuálnom súbore"
+
+# label na tlačidle
+#: ../ui/mainwindow.ui.h:25
+msgid "_This file"
+msgstr "_Tento súbor"
+
+# popis tlačidla
+#: ../ui/mainwindow.ui.h:26
+msgid "Replace all matches in all files"
+msgstr "Nahradí výskyty vo všetkých súboroch"
+
+# label na tlačidle
 #: ../ui/mainwindow.ui.h:27
 msgid "_All files"
-msgstr ""
+msgstr "_Všetky súbory"
 
+# tlačidlo
 #: ../ui/mainwindow.ui.h:28
-msgid "_Edit"
-msgstr ""
+msgid "File backward"
+msgstr "Predchádzajúci súbor"
 
+# Popis tlačidla
 #: ../ui/mainwindow.ui.h:29
-#, fuzzy
-#| msgid "File"
-msgid "_File"
-msgstr "Súbor"
+msgid "Go to the previous matching file"
+msgstr "Prejde do predchádzajúceho súboru s výskytom"
 
+# tlačidlo
 #: ../ui/mainwindow.ui.h:30
-msgid "_Help"
-msgstr ""
+msgid "Backward"
+msgstr "Predchádzajúci výskyt"
 
+# Popis tlačidla
 #: ../ui/mainwindow.ui.h:31
-#| msgid "Match:"
-msgid "_Match"
-msgstr "_Zhoda:"
+msgid "Go to previous match"
+msgstr "Prejde na predchádzajúci výskyt"
 
+# tlačidlo
 #: ../ui/mainwindow.ui.h:32
-msgid "_Replace"
-msgstr ""
+msgid "Forward"
+msgstr "Ďalší výskyt"
 
+# Popis tlačidla
 #: ../ui/mainwindow.ui.h:33
-msgid "_This file"
-msgstr ""
+msgid "Go to next match"
+msgstr "Prejde na ďalší výskyt"
 
+# tlačidlo
 #: ../ui/mainwindow.ui.h:34
-msgid "hidden"
-msgstr ""
+msgid "File forward"
+msgstr "Ďalší súbor"
 
+# Popis tlačidla
 #: ../ui/mainwindow.ui.h:35
-msgid "recursive"
-msgstr ""
+msgid "Go to the next matching file"
+msgstr "Prejde do nasledujúceho súboru s výskytom"
 
+# toolbar style
 #: ../ui/prefdialog.ui.h:1
-msgid "1."
-msgstr ""
+msgid "Icons only"
+msgstr "Len ikony"
 
+# toolbar style
 #: ../ui/prefdialog.ui.h:2
-msgid "2."
-msgstr ""
+msgid "Text only"
+msgstr "Len text"
 
+# toolbar style
 #: ../ui/prefdialog.ui.h:3
-msgid "3."
-msgstr ""
+msgid "Icons and text"
+msgstr "Ikony a text"
 
+# toolbar style
 #: ../ui/prefdialog.ui.h:4
 msgid "Both horizontal"
-msgstr ""
+msgstr "Oboje vedľa seba"
 
+# titulok okna
 #: ../ui/prefdialog.ui.h:5
-#, fuzzy
-#| msgid "Current-match color"
-msgid "C_urrent match color:"
-msgstr "Farba aktuálne označeného výskytu"
-
-#: ../ui/prefdialog.ui.h:6
-#, fuzzy
-#| msgid "Fallback encoding"
-msgid "Fallback _encoding:"
-msgstr "Záložné kódovanie"
-
-#: ../ui/prefdialog.ui.h:7
-msgid "Icons and text"
-msgstr ""
-
-#: ../ui/prefdialog.ui.h:8
-msgid "Icons only"
-msgstr ""
-
-#: ../ui/prefdialog.ui.h:9
 msgid "Preferences"
-msgstr ""
+msgstr "Nastavenia"
 
-#: ../ui/prefdialog.ui.h:10
-#, fuzzy
-#| msgid "Text view font"
-msgid "Text only"
-msgstr "Písmo zobrazeného textu"
-
-#: ../ui/prefdialog.ui.h:11
-msgid "The encoding specified by the current locale"
-msgstr ""
-
-#: ../ui/prefdialog.ui.h:12
-msgid "UTF-8"
-msgstr ""
-
-#: ../ui/prefdialog.ui.h:13
-msgid "_File access"
-msgstr ""
-
-#: ../ui/prefdialog.ui.h:14
-msgid "_Look&#x2019;n&#x2019;feel"
-msgstr ""
-
-#: ../ui/prefdialog.ui.h:15
-#, fuzzy
-#| msgid "Match color"
-msgid "_Match color:"
-msgstr "Farba výskytu"
-
-#: ../ui/prefdialog.ui.h:16
-#, fuzzy
-#| msgid "Text view font"
+# label na karte LooknFeel
+#: ../ui/prefdialog.ui.h:6
 msgid "_Text view font:"
-msgstr "Písmo zobrazeného textu"
+msgstr "Písmo zobrazeného _textu:"
 
-#: ../ui/prefdialog.ui.h:17
+# label na karte LooknFeel
+#: ../ui/prefdialog.ui.h:7
+msgid "_Match color:"
+msgstr "Farba _výskytu:"
+
+# label na karte LooknFeel
+#: ../ui/prefdialog.ui.h:8
+msgid "C_urrent match color:"
+msgstr "Farba _aktuálne označeného výskytu:"
+
+# karta v nastaveniach
+#: ../ui/prefdialog.ui.h:9
+msgid "_Look&#x2019;n&#x2019;feel"
+msgstr "_Vzhľad a správanie"
+
+# text na karte File access
+#: ../ui/prefdialog.ui.h:10
 msgid ""
 "regexxer attempts to read a file in the following encodings before giving up:"
 msgstr ""
+"Program regexer sa pokúsi načítať súbor pomocou nasledujúcich kódovaní:"
 
-# * https://sourceforge.net/tracker/?func=detail&aid=2955600&group_id=64876&atid=508980
-# dal som súbor s veľkým S lebo ide o názov poľa
-#~ msgid "List of last pattern used for the file's regex entry."
-#~ msgstr ""
-#~ "Zoznam naposledy použitých vzorov regulárnych výrazov pre pole Súbor."
+# Poradie kódovania
+#: ../ui/prefdialog.ui.h:11
+msgid "3."
+msgstr "3."
 
-# Preklad "escape sequence" -> "únikovej sekvencie" sa mi nepozdáva. Navrhujem označiť fuzzy.
-# dal som  Riadiaca sekvencia viď ML -ak sa ti to nepozdáva ani teraz označ to ako fuzzy a budem to riešiť po začlenení
-#~ msgid ""
-#~ "Using the \\C escape sequence to match a single byte is not supported."
-#~ msgstr ""
-#~ "Použitie riadiacej sekvencie \\C na hľadanie jedného bajtu nie je "
-#~ "podporované."
+# Poradie kódovania
+#: ../ui/prefdialog.ui.h:12
+msgid "2."
+msgstr "2."
 
-#~ msgid ""
-#~ "Error in regular expression at “%1” (index %2):\n"
-#~ "%3"
-#~ msgstr ""
-#~ "Chyba v regulárnom výraze na “%1” (pozícia %2):\n"
-#~ "%3"
+# Poradie kódovania
+#: ../ui/prefdialog.ui.h:13
+msgid "1."
+msgstr "1."
 
-#~ msgid ""
-#~ "Error in regular expression:\n"
-#~ "%1"
-#~ msgstr ""
-#~ "Chyba v regulárnom výraze:\n"
-#~ "%1"
+# položka zoznamu (1. 2. 3.)
+#: ../ui/prefdialog.ui.h:14
+msgid "UTF-8"
+msgstr "UTF-8"
 
-#~ msgid ""
-#~ "Reached the recursion and backtracking limit of the regular expression "
-#~ "engine."
-#~ msgstr ""
-#~ "Nástroj pre regulárne výrazy dosiahol nastavený limit rekurzie a "
-#~ "vyhľadávania s návratom."
+# položka zoznamu (1. 2. 3.)
+#: ../ui/prefdialog.ui.h:15
+msgid "Fallback _encoding:"
+msgstr "Záložné _kódovanie:"
+
+# položka zoznamu (1. 2. 3.)
+#: ../ui/prefdialog.ui.h:16
+msgid "The encoding specified by the current locale"
+msgstr "Kódovanie určené aktuálnymi miestnymi nastaveniami"
+
+# karta v nastaveniach
+#: ../ui/prefdialog.ui.h:17
+msgid "_File access"
+msgstr "_Prístup k súborom"
