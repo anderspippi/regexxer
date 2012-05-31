@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2011-03-21 18:23+0000\n"
+"POT-Creation-Date: 2011-09-15 15:07+0000\n"
 "PO-Revision-Date: 2011-09-15 17:03+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../ui/regexxer.desktop.in.h:1 ../src/mainwindow.cc:1010
+#: ../ui/regexxer.desktop.in.h:1 ../src/mainwindow.cc:1027
 msgid "Search and replace using regular expressions"
 msgstr "Buscar y reemplazar usando expresiones regulares"
 
@@ -244,7 +244,7 @@ msgstr "No empezar a buscar automáticamente"
 msgid "[FOLDER]"
 msgstr "[CARPETA]"
 
-#: ../src/mainwindow.cc:560
+#: ../src/mainwindow.cc:567
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -252,25 +252,25 @@ msgstr ""
 "Algunos archivos no han sido guardados aún.\n"
 "¿Desea salir de todas formas?"
 
-#: ../src/mainwindow.cc:574
+#: ../src/mainwindow.cc:581
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
 msgstr "Algunos archivos no han sido guardados aún.ºn ¿Aún quiere continuar?"
 
-#: ../src/mainwindow.cc:604
+#: ../src/mainwindow.cc:611
 msgid "The file search pattern is invalid."
-msgstr "El patrón de búsqueda de archivos es inválido."
+msgstr "El patrón de búsqueda de archivos no es válido."
 
-#: ../src/mainwindow.cc:610
+#: ../src/mainwindow.cc:617
 msgid "The following errors occurred during search:"
 msgstr "Los siguientes errores ocurrieron durante la búsqueda:"
 
-#: ../src/mainwindow.cc:864
+#: ../src/mainwindow.cc:881
 msgid "The following errors occurred during save:"
 msgstr "Los siguientes errores ocurrieron al guardar:"
 
-#: ../src/mainwindow.cc:1015
+#: ../src/mainwindow.cc:1032
 msgid "translator-credits"
 msgstr ""
 "Jorge González <jorgegonz@svn.gnome.org>, 2007\n"
