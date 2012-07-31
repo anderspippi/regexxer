@@ -7,151 +7,247 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
-"Report-Msgid-Bugs-To: http://regexxer.sourceforge.net/bugs\n"
-"POT-Creation-Date: 2008-11-09 12:10+0000\n"
-"PO-Revision-Date: 2008-12-01 13:13+0200\n"
-"Last-Translator: Jennie Petoumenou <epetoumenou@gmail.com>\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
+"POT-Creation-Date: 2012-07-13 00:25+0000\n"
+"PO-Revision-Date: 2012-07-26 15:45+0200\n"
+"Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../ui/regexxer.desktop.in.h:1 ../src/mainwindow.cc:849
-msgid "Search and replace using regular expressions"
-msgstr "Αναζήτηση και αντικατάσταση με χρήση κανονικών εκφράσεων"
-
-#: ../ui/regexxer.desktop.in.h:2
+#: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "Εργαλείο αναζήτησης regexxer"
 
-#: ../ui/regexxer.schemas.in.h:1
-msgid "Current-match color"
-msgstr "Χρώμα τρέχουσας αντιστοιχίας"
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1028
+msgid "Search and replace using regular expressions"
+msgstr "Αναζήτηση και αντικατάσταση με χρήση κανονικών εκφράσεων"
 
-#: ../ui/regexxer.schemas.in.h:2
-msgid "Fallback encoding"
-msgstr "Εφεδρική κωδικοποίηση"
+#: ../ui/org.regexxer.gschema.xml.in.h:1
+msgid "File Patterns"
+msgstr "Μοτίβα αρχείου"
 
-#: ../ui/regexxer.schemas.in.h:3
-msgid "Match color"
-msgstr "Χρώμα αντιστοιχίας"
+#: ../ui/org.regexxer.gschema.xml.in.h:2
+msgid "List of pre-defined patterns available in the 'Pattern' entry."
+msgstr ""
+"Λίστα των προκαθορισμένων διαθέσιμων μοτίβων για τη καταχώρηση 'Pattern'."
 
-#: ../ui/regexxer.schemas.in.h:4
-msgid ""
-"Name of the character encoding to use if a file is not readable in either "
-"UTF-8 or the codeset specified by the current locale. Try “iconv --list” for "
-"a complete list of possible values."
-msgstr "Όνομα της κωδικοποίησης χαρακτήρων που θα χρησιμοποιηθεί αν το αρχείο δεν είναι αναγνώσιμο ούτε σε UTF-8, ούτε στην κωδικοποίηση που προβλέπεται από το τρέχον γλωσσικό περιβάλλον. Δοκιμάστε “iconv --list” για να δείτε τη λίστα με όλες τις δυνατές τιμές."
+#: ../ui/org.regexxer.gschema.xml.in.h:3
+msgid "Regex Patterns"
+msgstr "Μοτίβα Regex"
 
-#: ../ui/regexxer.schemas.in.h:5
+#: ../ui/org.regexxer.gschema.xml.in.h:4
+msgid "List of last patterns used in the 'Regex' entry."
+msgstr ""
+"Λίστα των τελευταίων χρησιμοποιημένων μοτίβων από τη καταχώρηση 'Regex'."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:5
+msgid "List of last patterns used in the 'Substitution' entry."
+msgstr ""
+"Λίστα των τελευταίων χρησιμοποιημένων μοτίβων από τη καταχώρηση "
+"'Substitution'."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:6
 msgid "Text view font"
 msgstr "Γραμματοσειρά προβολής κειμένου"
 
-#: ../ui/regexxer.schemas.in.h:6
-msgid "The background color used to highlight matches of the search expression."
-msgstr "Το χρώμα φόντου με το οποίο επισημαίνονται οι αντιστοιχίες της ζητούμενης έκφρασης."
-
-#: ../ui/regexxer.schemas.in.h:7
-msgid ""
-"The background color used to highlight the currently selected match of the "
-"search expression."
-msgstr "Το χρώμα φόντου με το οποίο επισημαίνεται η επιλεγμένη αντιστοιχία της ζητούμενης έκφρασης."
-
-#: ../ui/regexxer.schemas.in.h:8
+#: ../ui/org.regexxer.gschema.xml.in.h:7
 msgid "The font used in the file editor."
 msgstr "Η γραμματοσειρά που χρησιμοποιείται στον επεξεργαστή αρχείων."
 
-#: ../ui/regexxer.schemas.in.h:9
-msgid ""
-"The style of the application’s toolbar. Possible values are “icons”, “text”, "
-"“both”, and “both-horiz”."
-msgstr "Το στυλ της εργαλειοθήκης της εφαρμογής. Οι δυνατές τιμές είναι \"Εικονίδια\", \"Κείμενο\", \"Και τα δύο\" και \"Και τα δύο-οριζ.\"."
+#: ../ui/org.regexxer.gschema.xml.in.h:8
+msgid "Match color"
+msgstr "Χρώμα αντιστοιχίας"
 
-#: ../ui/regexxer.schemas.in.h:10
-msgid "Toolbar style"
-msgstr "Στυλ εργαλειοθήκης"
+#: ../ui/org.regexxer.gschema.xml.in.h:9
+msgid ""
+"The background color used to highlight matches of the search expression."
+msgstr ""
+"Το χρώμα φόντου με το οποίο επισημαίνονται οι αντιστοιχίες της ζητούμενης "
+"έκφρασης."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:10
+msgid "Current-match color"
+msgstr "Χρώμα τρέχουσας αντιστοιχίας"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:11
+msgid ""
+"The background color used to highlight the currently selected match of the "
+"search expression."
+msgstr ""
+"Το χρώμα φόντου με το οποίο επισημαίνεται η επιλεγμένη αντιστοιχία της "
+"ζητούμενης έκφρασης."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:12
+msgid "Fallback encoding"
+msgstr "Εφεδρική κωδικοποίηση"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:13
+msgid ""
+"Name of the character encoding to use if a file is not readable in either "
+"UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" "
+"for a complete list of possible values."
+msgstr ""
+"Όνομα της κωδικοποίησης χαρακτήρων που θα χρησιμοποιηθεί αν το αρχείο δεν "
+"είναι αναγνώσιμο ούτε σε UTF-8, ούτε στην κωδικοποίηση που προβλέπεται από "
+"το τρέχον γλωσσικό περιβάλλον. Δοκιμάστε \"iconv --list\" για να δείτε τη "
+"λίστα με όλες τις δυνατές τιμές."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:14
+msgid "window width"
+msgstr "πλάτος παραθύρου"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:15
+msgid "The width of the window."
+msgstr "Το πλάτος του παραθύρου."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:16
+msgid "window height"
+msgstr "ύψος παραθύρου"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:17
+msgid "The height of the window."
+msgstr "Το ύψος του παραθύρου."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:18
+msgid "window x position"
+msgstr "θέση x του παραθύρου"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:19
+msgid "The X coordinate of the window."
+msgstr "Η συντεταγμένη Χ του παραθύρου."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:20
+msgid "window y position"
+msgstr "θέση y του παραθύρου"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:21
+msgid "The Y coordinate of the window."
+msgstr "Η συντεταγμένη Υ του παραθύρου."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:22
+msgid "window maximization"
+msgstr "μεγιστοποίηση παραθύρου"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:23
+msgid "Whether the window is maximized."
+msgstr "Αν το παράθυρο είναι μεγιστοποιημένο."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:24
+msgid "Show line numbers"
+msgstr "Εμφάνιση αρίθμησης των γραμμών"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:25
+msgid "Whether to show the line numbers of the text view."
+msgstr "Αν θα εμφανιστεί η αρίθμηση των γραμμών στη προβολή κειμένου."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:26
+msgid "Highlight the current line"
+msgstr "Επισήμανση της τρέχουσας γραμμής"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:27
+msgid "Whether to highlight the current line of the text view."
+msgstr "Αν θα επισημανθεί η τρέχουσα γραμμή στη προβολή κειμένου"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:28
+msgid "Auto indentation"
+msgstr "Αυτόματη εσοχή"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:29
+msgid "Whether to enable auto indentation in the text view."
+msgstr "Αν θα ενεργοποιηθεί η αυτόματη εσοχή στη προβολή κειμένου."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:30
+msgid "Draw spaces"
+msgstr "Σχεδίαση διαστημάτων"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:31
+msgid "Which type of space to draw in the text view."
+msgstr "Ποιο είδος διαστήματος θα σχεδιαστεί στη προβολή κειμένου."
 
 #: ../src/filebuffer.cc:198
 msgid "Can’t read file:"
 msgstr "Αδύνατη η ανάγνωση του αρχείου:"
 
-#: ../src/filetree.cc:80
+#: ../src/filetree.cc:60
 msgid "File"
 msgstr "Αρχείο"
 
-#: ../src/filetree.cc:99
+#: ../src/filetree.cc:79
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:530
+#: ../src/filetree.cc:508
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "Αδυναμία αποθήκευσης αρχείου “%1”: %2"
 
-#: ../src/filetree.cc:946
+#: ../src/filetree.cc:924
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "Το “%1” μοιάζει με binary αρχείο."
 
-#: ../src/main.cc:77
+#: ../src/main.cc:78
 msgid "Save _all"
 msgstr "Αποθήκευση ό_λων"
 
-#: ../src/main.cc:134
+#: ../src/main.cc:135
 msgid "Find files matching PATTERN"
 msgstr "Εύρεση αρχείων που αντιστοιχούν στο ΜΟΤΙΒΟ"
 
-#: ../src/main.cc:134
+#: ../src/main.cc:135
 msgid "PATTERN"
 msgstr "ΜΟΤΙΒΟ"
 
-#: ../src/main.cc:136
+#: ../src/main.cc:137
 msgid "Do not recurse into subdirectories"
 msgstr "Χωρίς αναδρομική αναζήτηση στους υποκαταλόγους"
 
-#: ../src/main.cc:138 ../ui/mainwindow.glade.h:3
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:9
 msgid "Also find hidden files"
 msgstr "Εύρεση και κρυφών αρχείων"
 
-#: ../src/main.cc:140
+#: ../src/main.cc:141
 msgid "Find text matching REGEX"
 msgstr "Εύρεση κειμένου που αντιστοιχεί στη REGEX"
 
-#: ../src/main.cc:140
+#: ../src/main.cc:141
 msgid "REGEX"
 msgstr "REGEX"
 
-#: ../src/main.cc:142
+#: ../src/main.cc:143
 msgid "Find only the first match in a line"
 msgstr "Εύρεση μόνο της πρώτης αντιστοιχίας σε κάθε γραμμή"
 
-#: ../src/main.cc:144 ../ui/mainwindow.glade.h:5
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:16
 msgid "Do case insensitive matching"
 msgstr "Αντιστοίχιση χωρίς διάκριση πεζών/κεφαλαίων"
 
-#: ../src/main.cc:146
+#: ../src/main.cc:147
 msgid "Replace matches with STRING"
 msgstr "Αντικατάσταση αντιστοιχιών με ΑΛΦΑΡΙΘΜΗΤΙΚΟ"
 
-#: ../src/main.cc:146
+#: ../src/main.cc:147
 msgid "STRING"
 msgstr "ΑΛΦΑΡΙΘΜΗΤΙΚΟ"
 
-#: ../src/main.cc:148
+#: ../src/main.cc:149
 msgid "Print match location to standard output"
 msgstr "Εκτύπωση της τοποθεσίας της αντιστοιχίας στην κανονική έξοδο"
 
-#: ../src/main.cc:150
+#: ../src/main.cc:151
 msgid "Do not automatically start search"
 msgstr "Χωρίς αυτόματη έναρξη της αναζήτησης"
 
-#: ../src/main.cc:152
+#: ../src/main.cc:153
 msgid "[FOLDER]"
 msgstr "[ΦΑΚΕΛΟΣ]"
 
-#: ../src/mainwindow.cc:413
+#: ../src/mainwindow.cc:568
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -159,7 +255,7 @@ msgstr ""
 "Κάποια αρχεία δεν έχουν αποθηκευτεί ακόμη.\n"
 "Έξοδος παρόλ' αυτά;"
 
-#: ../src/mainwindow.cc:427
+#: ../src/mainwindow.cc:582
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -167,295 +263,324 @@ msgstr ""
 "Κάποια αρχεία δεν έχουν αποθηκευτεί ακόμη.\n"
 "Συνέχεια παρόλ' αυτά;"
 
-#: ../src/mainwindow.cc:455
+#: ../src/mainwindow.cc:612
 msgid "The file search pattern is invalid."
 msgstr "Μη έγκυρο μοτίβο αναζήτησης αρχείων."
 
-#: ../src/mainwindow.cc:461
+#: ../src/mainwindow.cc:618
 msgid "The following errors occurred during search:"
 msgstr "Κατά την αναζήτηση εμφανίστηκαν τα ακόλουθα σφάλματα:"
 
-#: ../src/mainwindow.cc:708
+#: ../src/mainwindow.cc:882
 msgid "The following errors occurred during save:"
 msgstr "Κατά την αποθήκευση εμφανίστηκαν τα ακόλουθα σφάλματα:"
 
-#: ../src/mainwindow.cc:854
+#: ../src/mainwindow.cc:1034
 msgid "translator-credits"
 msgstr "Τζένη Πετούμενου <epetoumenou@gmail.com>"
 
-#: ../src/pcreshell.cc:62
-msgid "Using the \\C escape sequence to match a single byte is not supported."
-msgstr "Δεν υποστηρίζεται η χρήση της ακολουθίας εξόδου \\C για την αντιστοίχιση ενός μόνο byte."
-
-#: ../src/pcreshell.cc:84
-#, qt-format
-msgid ""
-"Error in regular expression at “%1” (index %2):\n"
-"%3"
-msgstr "Σφάλμα στην κανονική έκφραση στην “%1” (δείκτης %2):\n %3"
-
-#: ../src/pcreshell.cc:89
-#, qt-format
-msgid ""
-"Error in regular expression:\n"
-"%1"
-msgstr ""
-"Σφάλμα στην κανονική έκφραση:\n"
-"%1"
-
-#: ../src/pcreshell.cc:171
-msgid ""
-"Reached the recursion and backtracking limit of the regular expression "
-"engine."
-msgstr "Η μηχανή κανονικών εκφράσεων έφτασε στο όριο αναδρομικότητάς της."
-
-#: ../src/prefdialog.cc:249
+#: ../src/prefdialog.cc:186
 #, qt-format
 msgid "“%1” is not a valid encoding."
 msgstr "Η “%1” δεν είναι έγκυρη κωδικοποίηση."
 
-#: ../src/statusline.cc:263
+#: ../src/statusline.cc:245
 msgid "Stop"
 msgstr "Διακοπή"
 
-#: ../src/statusline.cc:270
+#: ../src/statusline.cc:253
 msgid "File:"
 msgstr "Αρχείο:"
 
-#: ../src/statusline.cc:273
+#: ../src/statusline.cc:256
 msgid "Match:"
 msgstr "Αντιστοιχία:"
 
-#: ../src/statusline.cc:284
+#: ../src/statusline.cc:267
 msgid "Cancels the running search"
 msgstr "Ακυρώνει την αναζήτηση σε εξέλιξη"
 
-#: ../ui/mainwindow.glade.h:1
-msgid ""
-"A filename pattern as used by the shell. Character classes [ab] and csh "
-"style brace expressions {a,b} are supported."
-msgstr "Μοτίβο ονόματος αρχείων, όπως χρησιμοποιείται από το φλοιό. Υποστηρίζονται οι τάξεις χαρακτήρων [ab] και οι csh εκφράσεις εντός αγκίστρων {a,b}."
-
-#: ../ui/mainwindow.glade.h:2
-msgid "A regular expression in Perl syntax"
-msgstr "Κανονική έκφραση με σύνταξη Perl"
-
-#: ../ui/mainwindow.glade.h:4
-msgid "Backward"
-msgstr "Πίσω"
-
-#: ../ui/mainwindow.glade.h:6
-msgid "File backward"
-msgstr "Αρχείο προς τα πίσω"
-
-#: ../ui/mainwindow.glade.h:7
-msgid "File forward"
-msgstr "Αρχείο προς τα εμπρός"
-
-#: ../ui/mainwindow.glade.h:8
-msgid "Find all files that match the filename pattern"
-msgstr "Εύρεση όλων των αρχείων που αντιστοιχούν στο μοτίβο ονόματος αρχείων"
-
-#: ../ui/mainwindow.glade.h:9
-msgid "Find all matches of the regular expression"
-msgstr "Εύρεση όλων των αντιστοιχιών της κανονικής έκφρασης"
-
-#: ../ui/mainwindow.glade.h:10
-msgid "Find all possible matches in a line"
-msgstr "Εύρεση όλων των δυνατών αντιστοιχιών σε κάθε γραμμή"
-
-#: ../ui/mainwindow.glade.h:11
-msgid "Find fi_les"
-msgstr "Εύ_ρεση αρχείων"
-
-#: ../ui/mainwindow.glade.h:12
-msgid "Fol_der:"
-msgstr "_Φάκελος:"
-
-#: ../ui/mainwindow.glade.h:13
-msgid "Forward"
-msgstr "Μπροστά"
-
-#: ../ui/mainwindow.glade.h:14
-msgid "Go to next match"
-msgstr "Μετάβαση στην επόμενη αντιστοιχία"
-
-#: ../ui/mainwindow.glade.h:15
-msgid "Go to previous match"
-msgstr "Μετάβαση στην προηγούμενη αντιστοιχία"
-
-#: ../ui/mainwindow.glade.h:16
-msgid "Go to the next matching file"
-msgstr "Μετάβαση στο επόμενο αντίστοιχο αρχείο"
-
-#: ../ui/mainwindow.glade.h:17
-msgid "Go to the previous matching file"
-msgstr "Μετάβαση στο προηγούμενο αντίστοιχο αρχείο"
-
-#: ../ui/mainwindow.glade.h:18
-msgid "Pattern:"
-msgstr "Μοτίβο:"
-
-#: ../ui/mainwindow.glade.h:19
-msgid "Preview"
-msgstr "Προεπισκόπηση"
-
-#: ../ui/mainwindow.glade.h:20
-msgid "Preview of the substitution"
-msgstr "Προεπισκόπηση της αντικατάστασης"
-
-#: ../ui/mainwindow.glade.h:21
-msgid "Recurse into subdirectories"
-msgstr "Αναδρομική αναζήτηση στους υποκαταλόγους"
-
-#: ../ui/mainwindow.glade.h:22
-msgid "Replace _current"
-msgstr "Αντι_κατάσταση  τρέχουσας"
-
-#: ../ui/mainwindow.glade.h:23
-msgid "Replace all matches in all files"
-msgstr "Αντικατάσταση όλων των αντιστοιχιών σε όλα τα αρχεία"
-
-#: ../ui/mainwindow.glade.h:24
-msgid "Replace all matches in the current file"
-msgstr "Αντικατάσταση όλων των αντιστοιχιών στο τρέχον αρχείο"
-
-#: ../ui/mainwindow.glade.h:25
-msgid "Replace current match"
-msgstr "Αντικατάσταση τρέχουσας αντιστοιχίας"
-
-#: ../ui/mainwindow.glade.h:26
-msgid "Replace in _all files"
-msgstr "Αντικατάσταση σε ό_λα τα αρχεία"
-
-#: ../ui/mainwindow.glade.h:27
-msgid "Replace in _this file"
-msgstr "Αντικατάσταση σε αυ_τό το αρχείο"
-
-#: ../ui/mainwindow.glade.h:28
-msgid "Replace:"
-msgstr "Αντικατάσταση:"
-
-#: ../ui/mainwindow.glade.h:29
-msgid "Search:"
-msgstr "Αναζήτηση:"
-
-#: ../ui/mainwindow.glade.h:30
-msgid ""
-"The new string to substitute. As in Perl, you can refer to parts of the "
-"match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, \\u, "
-"\\L, \\U and \\E are supported as well."
-msgstr "Το νέο αλφαριθμητικό που θα εισαχθεί. Όπως και στην Perl, μπορείτε να αναφερθείτε σε τμήματα της αντιστοιχίας χρησιμοποιώντας τα $1, $2, κτλ., αλλά και τα $+, $&, $` και $'. Υποστηρίζονται επίσης οι τελεστές \\l, \\u, \\L, \\U και \\E."
-
-#: ../ui/mainwindow.glade.h:31
-msgid "_All files"
-msgstr "Ό_λα τα αρχεία"
-
-#: ../ui/mainwindow.glade.h:32
-msgid "_Edit"
-msgstr "Ε_πεξεργασία"
-
-#: ../ui/mainwindow.glade.h:33
+#: ../ui/mainwindow.ui.h:1
 msgid "_File"
 msgstr "_Αρχείο"
 
-#: ../ui/mainwindow.glade.h:34
-msgid "_Help"
-msgstr "_Βοήθεια"
+#: ../ui/mainwindow.ui.h:2
+msgid "_Edit"
+msgstr "Ε_πεξεργασία"
 
-#: ../ui/mainwindow.glade.h:35
+#: ../ui/mainwindow.ui.h:3
 msgid "_Match"
 msgstr "Αντι_στοιχία"
 
-#: ../ui/mainwindow.glade.h:36
-msgid "_Next file"
-msgstr "_Επόμενο αρχείο"
+#: ../ui/mainwindow.ui.h:4
+msgid "_Help"
+msgstr "_Βοήθεια"
 
-#: ../ui/mainwindow.glade.h:37
-msgid "_Previous file"
-msgstr "Π_ροηγούμενο αρχείο"
+#: ../ui/mainwindow.ui.h:5
+msgid "Pattern:"
+msgstr "Μοτίβο:"
 
-#: ../ui/mainwindow.glade.h:38
-msgid "_Replace"
-msgstr "Αντι_κατάσταση"
-
-#: ../ui/mainwindow.glade.h:39
-msgid "_This file"
-msgstr "Αυ_τό το αρχείο"
-
-#: ../ui/mainwindow.glade.h:40
-msgid "hidden"
-msgstr "κρυφά αρχεία"
-
-#: ../ui/mainwindow.glade.h:41
+#: ../ui/mainwindow.ui.h:6
 msgid "recursive"
 msgstr "αναδρομική"
 
-#: ../ui/prefdialog.glade.h:1
-msgid "1."
-msgstr "1."
+#: ../ui/mainwindow.ui.h:7
+msgid "Recurse into subdirectories"
+msgstr "Αναδρομική αναζήτηση στους υποκαταλόγους"
 
-#: ../ui/prefdialog.glade.h:2
-msgid "2."
-msgstr "2."
+#: ../ui/mainwindow.ui.h:8
+msgid "hidden"
+msgstr "κρυφά αρχεία"
 
-#: ../ui/prefdialog.glade.h:3
-msgid "3."
-msgstr "3."
+#: ../ui/mainwindow.ui.h:10
+msgid "Find all files that match the filename pattern"
+msgstr "Εύρεση όλων των αρχείων που αντιστοιχούν στο μοτίβο ονόματος αρχείων"
 
-#: ../ui/prefdialog.glade.h:4
-msgid "C_urrent match color:"
-msgstr "Χρώμα _τρέχουσας αντιστοιχίας:"
+#: ../ui/mainwindow.ui.h:11
+msgid "Find fi_les"
+msgstr "Εύ_ρεση αρχείων"
 
-#: ../ui/prefdialog.glade.h:5
-msgid "Fallback _encoding:"
-msgstr "Εφεδρική _κωδικοποίηση:"
+#: ../ui/mainwindow.ui.h:12
+msgid "Fol_der:"
+msgstr "_Φάκελος:"
 
-#: ../ui/prefdialog.glade.h:6
+#: ../ui/mainwindow.ui.h:13
+msgid "Search:"
+msgstr "Αναζήτηση:"
+
+#: ../ui/mainwindow.ui.h:14
+msgid "Replace:"
+msgstr "Αντικατάσταση:"
+
+#: ../ui/mainwindow.ui.h:15
+msgid "Find all possible matches in a line"
+msgstr "Εύρεση όλων των δυνατών αντιστοιχιών σε κάθε γραμμή"
+
+#: ../ui/mainwindow.ui.h:17
+msgid "Find all matches of the regular expression"
+msgstr "Εύρεση όλων των αντιστοιχιών της κανονικής έκφρασης"
+
+#: ../ui/mainwindow.ui.h:18
+msgid "A regular expression in Perl syntax"
+msgstr "Κανονική έκφραση με σύνταξη Perl"
+
+#: ../ui/mainwindow.ui.h:19
 msgid ""
-"Icons only\n"
-"Text only\n"
-"Icons and text\n"
-"Both horizontal"
+"The new string to substitute. As in Perl, you can refer to parts of the "
+"match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
+"\\u, \\L, \\U and \\E are supported as well."
 msgstr ""
-"Μόνο εικονίδια\n"
-"Μόνο κείμενο\n"
-"Εικονίδια και κείμενο\n"
-"Εικονίδια και κείμενο οριζοντίως"
+"Το νέο αλφαριθμητικό που θα εισαχθεί. Όπως και στην Perl, μπορείτε να "
+"αναφερθείτε σε τμήματα της αντιστοιχίας χρησιμοποιώντας τα $1, $2, κτλ., "
+"αλλά και τα $+, $&amp;, $` και $'. Υποστηρίζονται επίσης οι τελεστές \\l, "
+"\\u, \\L, \\U και \\E."
 
-#: ../ui/prefdialog.glade.h:10
+#: ../ui/mainwindow.ui.h:20
+msgid "Preview of the substitution"
+msgstr "Προεπισκόπηση της αντικατάστασης"
+
+#: ../ui/mainwindow.ui.h:21
+msgid "Preview"
+msgstr "Προεπισκόπηση"
+
+#: ../ui/mainwindow.ui.h:22
+msgid "Replace current match"
+msgstr "Αντικατάσταση τρέχουσας αντιστοιχίας"
+
+#: ../ui/mainwindow.ui.h:23
+msgid "_Replace"
+msgstr "Αντι_κατάσταση"
+
+#: ../ui/mainwindow.ui.h:24
+msgid "Replace all matches in the current file"
+msgstr "Αντικατάσταση όλων των αντιστοιχιών στο τρέχον αρχείο"
+
+#: ../ui/mainwindow.ui.h:25
+msgid "_This file"
+msgstr "Αυ_τό το αρχείο"
+
+#: ../ui/mainwindow.ui.h:26
+msgid "Replace all matches in all files"
+msgstr "Αντικατάσταση όλων των αντιστοιχιών σε όλα τα αρχεία"
+
+#: ../ui/mainwindow.ui.h:27
+msgid "_All files"
+msgstr "Ό_λα τα αρχεία"
+
+#: ../ui/mainwindow.ui.h:28
+msgid "File backward"
+msgstr "Αρχείο προς τα πίσω"
+
+#: ../ui/mainwindow.ui.h:29
+msgid "Go to the previous matching file"
+msgstr "Μετάβαση στο προηγούμενο αντίστοιχο αρχείο"
+
+#: ../ui/mainwindow.ui.h:30
+msgid "Backward"
+msgstr "Πίσω"
+
+#: ../ui/mainwindow.ui.h:31
+msgid "Go to previous match"
+msgstr "Μετάβαση στην προηγούμενη αντιστοιχία"
+
+#: ../ui/mainwindow.ui.h:32
+msgid "Forward"
+msgstr "Μπροστά"
+
+#: ../ui/mainwindow.ui.h:33
+msgid "Go to next match"
+msgstr "Μετάβαση στην επόμενη αντιστοιχία"
+
+#: ../ui/mainwindow.ui.h:34
+msgid "File forward"
+msgstr "Αρχείο προς τα εμπρός"
+
+#: ../ui/mainwindow.ui.h:35
+msgid "Go to the next matching file"
+msgstr "Μετάβαση στο επόμενο αντίστοιχο αρχείο"
+
+#: ../ui/prefdialog.ui.h:1
+msgid "Icons only"
+msgstr "Μόνο εικονίδια"
+
+#: ../ui/prefdialog.ui.h:2
+msgid "Text only"
+msgstr "Μόνο κείμενο"
+
+#: ../ui/prefdialog.ui.h:3
+msgid "Icons and text"
+msgstr "Εικονίδια και κείμενο"
+
+#: ../ui/prefdialog.ui.h:4
+msgid "Both horizontal"
+msgstr "Και τα δύο οριζόντια"
+
+#: ../ui/prefdialog.ui.h:5
 msgid "Preferences"
 msgstr "Προτιμήσεις"
 
-#: ../ui/prefdialog.glade.h:11
-msgid "The encoding specified by the current locale"
-msgstr "Η κωδικοποίηση που προβλέπεται από το τρέχον γλωσσικό περιβάλλον"
-
-#: ../ui/prefdialog.glade.h:12
-msgid "Tool_bar style:"
-msgstr "_Στυλ γραμμής εργαλείων:"
-
-#: ../ui/prefdialog.glade.h:13
-msgid "UTF-8"
-msgstr "UTF-8"
-
-#: ../ui/prefdialog.glade.h:14
-msgid "_File access"
-msgstr "_Πρόσβαση σε αρχεία"
-
-#: ../ui/prefdialog.glade.h:15
-msgid "_Look’n’feel"
-msgstr "_Εμφάνιση"
-
-#: ../ui/prefdialog.glade.h:16
-msgid "_Match color:"
-msgstr "_Χρώμα αντιστοιχίας:"
-
-#: ../ui/prefdialog.glade.h:17
+#: ../ui/prefdialog.ui.h:6
 msgid "_Text view font:"
 msgstr "_Γραμματοσειρά προβολής κειμένου:"
 
-#: ../ui/prefdialog.glade.h:18
-msgid "regexxer attempts to read a file in the following encodings before giving up:"
-msgstr "Το regexxer δοκιμάζει να διαβάσει το αρχείο στις ακόλουθες κωδικοποιήσεις πριν εγκαταλείψει την προσπάθεια:"
+#: ../ui/prefdialog.ui.h:7
+msgid "_Match color:"
+msgstr "_Χρώμα αντιστοιχίας:"
 
+#: ../ui/prefdialog.ui.h:8
+msgid "C_urrent match color:"
+msgstr "Χρώμα _τρέχουσας αντιστοιχίας:"
+
+#: ../ui/prefdialog.ui.h:9
+msgid "_Look&#x2019;n&#x2019;feel"
+msgstr "_Look&#x2019;n&#x2019;feel"
+
+#: ../ui/prefdialog.ui.h:10
+msgid ""
+"regexxer attempts to read a file in the following encodings before giving up:"
+msgstr ""
+"Το regexxer δοκιμάζει να διαβάσει το αρχείο στις ακόλουθες κωδικοποιήσεις "
+"πριν εγκαταλείψει την προσπάθεια:"
+
+#: ../ui/prefdialog.ui.h:11
+msgid "3."
+msgstr "3."
+
+#: ../ui/prefdialog.ui.h:12
+msgid "2."
+msgstr "2."
+
+#: ../ui/prefdialog.ui.h:13
+msgid "1."
+msgstr "1."
+
+#: ../ui/prefdialog.ui.h:14
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: ../ui/prefdialog.ui.h:15
+msgid "Fallback _encoding:"
+msgstr "Εφεδρική _κωδικοποίηση:"
+
+#: ../ui/prefdialog.ui.h:16
+msgid "The encoding specified by the current locale"
+msgstr "Η κωδικοποίηση που προβλέπεται από το τρέχον γλωσσικό περιβάλλον"
+
+#: ../ui/prefdialog.ui.h:17
+msgid "_File access"
+msgstr "_Πρόσβαση σε αρχεία"
+
+#~ msgid ""
+#~ "The style of the application’s toolbar. Possible values are “icons”, "
+#~ "“text”, “both”, and “both-horiz”."
+#~ msgstr ""
+#~ "Το στυλ της εργαλειοθήκης της εφαρμογής. Οι δυνατές τιμές είναι "
+#~ "\"Εικονίδια\", \"Κείμενο\", \"Και τα δύο\" και \"Και τα δύο-οριζ.\"."
+
+#~ msgid "Toolbar style"
+#~ msgstr "Στυλ εργαλειοθήκης"
+
+#~ msgid ""
+#~ "Using the \\C escape sequence to match a single byte is not supported."
+#~ msgstr ""
+#~ "Δεν υποστηρίζεται η χρήση της ακολουθίας εξόδου \\C για την αντιστοίχιση "
+#~ "ενός μόνο byte."
+
+#~ msgid ""
+#~ "Error in regular expression at “%1” (index %2):\n"
+#~ "%3"
+#~ msgstr ""
+#~ "Σφάλμα στην κανονική έκφραση στην “%1” (δείκτης %2):\n"
+#~ " %3"
+
+#~ msgid ""
+#~ "Error in regular expression:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Σφάλμα στην κανονική έκφραση:\n"
+#~ "%1"
+
+#~ msgid ""
+#~ "Reached the recursion and backtracking limit of the regular expression "
+#~ "engine."
+#~ msgstr "Η μηχανή κανονικών εκφράσεων έφτασε στο όριο αναδρομικότητάς της."
+
+#~ msgid ""
+#~ "A filename pattern as used by the shell. Character classes [ab] and csh "
+#~ "style brace expressions {a,b} are supported."
+#~ msgstr ""
+#~ "Μοτίβο ονόματος αρχείων, όπως χρησιμοποιείται από το φλοιό. "
+#~ "Υποστηρίζονται οι τάξεις χαρακτήρων [ab] και οι csh εκφράσεις εντός "
+#~ "αγκίστρων {a,b}."
+
+#~ msgid "Replace _current"
+#~ msgstr "Αντι_κατάσταση  τρέχουσας"
+
+#~ msgid "Replace in _all files"
+#~ msgstr "Αντικατάσταση σε ό_λα τα αρχεία"
+
+#~ msgid "Replace in _this file"
+#~ msgstr "Αντικατάσταση σε αυ_τό το αρχείο"
+
+#~ msgid "_Next file"
+#~ msgstr "_Επόμενο αρχείο"
+
+#~ msgid "_Previous file"
+#~ msgstr "Π_ροηγούμενο αρχείο"
+
+#~ msgid ""
+#~ "Icons only\n"
+#~ "Text only\n"
+#~ "Icons and text\n"
+#~ "Both horizontal"
+#~ msgstr ""
+#~ "Μόνο εικονίδια\n"
+#~ "Μόνο κείμενο\n"
+#~ "Εικονίδια και κείμενο\n"
+#~ "Εικονίδια και κείμενο οριζοντίως"
+
+#~ msgid "Tool_bar style:"
+#~ msgstr "_Στυλ γραμμής εργαλείων:"
+
+#~ msgid "_Look’n’feel"
+#~ msgstr "_Εμφάνιση"
