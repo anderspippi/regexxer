@@ -2,77 +2,74 @@
 # Copyright (C) 2005, 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the regexxer package.
 #
-# Gabor Kelemen <kelemeng@gnome.hu>, 2005.
-# Gabor Kelemen <kelemeng at gnome dot hu>, 2010.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2005.
+# Gabor Kelemen <kelemeng at gnome dot hu>, 2010, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://regexxer.sourceforge.net/bugs\n"
-"POT-Creation-Date: 2010-02-25 00:14+0100\n"
-"PO-Revision-Date: 2010-02-25 00:19+0100\n"
+"POT-Creation-Date: 2012-10-08 12:37+0200\n"
+"PO-Revision-Date: 2012-10-08 08:32+0200\n"
 "Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
+"Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 1.4\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
-#: ../ui/regexxer.desktop.in.h:1 ../src/mainwindow.cc:967
-msgid "Search and replace using regular expressions"
-msgstr "Keresés és csere reguláris kifejezések használatával"
-
-#: ../ui/regexxer.desktop.in.h:2
+#: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "regexxer keresőeszköz"
 
-#: ../ui/regexxer.schemas.in.h:1
-msgid "Current-match color"
-msgstr "Jelenlegi találat színe"
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1028
+msgid "Search and replace using regular expressions"
+msgstr "Keresés és csere reguláris kifejezések használatával"
 
-#: ../ui/regexxer.schemas.in.h:2
-msgid "Fallback encoding"
-msgstr "Tartalék kódolás"
+#: ../ui/org.regexxer.gschema.xml.in.h:1
+msgid "File Patterns"
+msgstr "Fájlminták"
 
-#: ../ui/regexxer.schemas.in.h:3
-msgid "List of last pattern used for the file's regex entry."
-msgstr "A fájl regex bejegyzéséhez használt utolsó minták listája."
+#: ../ui/org.regexxer.gschema.xml.in.h:2
+msgid "List of pre-defined patterns available in the 'Pattern' entry."
+msgstr "A „Pattern” bejegyzésben elérhető előre megadott minták listája."
 
-#: ../ui/regexxer.schemas.in.h:4
-msgid "List of last pattern used for the regex entry."
-msgstr "A regex bejegyzéshez használt utolsó minták listája."
-
-#: ../ui/regexxer.schemas.in.h:5
-msgid "List of last pattern used for the substitution entry."
-msgstr "A helyettesítési bejegyzéshez használt utolsó minták listája."
-
-#: ../ui/regexxer.schemas.in.h:6
-msgid "Match color"
-msgstr "Találat színe"
-
-#: ../ui/regexxer.schemas.in.h:7
-msgid ""
-"Name of the character encoding to use if a file is not readable in either "
-"UTF-8 or the codeset specified by the current locale. Try “iconv --list” for "
-"a complete list of possible values."
-msgstr ""
-"A használandó karakterkódolás neve, ha a fájl nem olvasható sem UTF-8, sem a "
-"jelenlegi területi beállítások által meghatározott kódolással. A lehetséges "
-"értékek listáját az „iconv --list” paranccsal kérheti le."
-
-#: ../ui/regexxer.schemas.in.h:8
+#: ../ui/org.regexxer.gschema.xml.in.h:3
 msgid "Regex Patterns"
 msgstr "Regex minták"
 
-#: ../ui/regexxer.schemas.in.h:9
+#: ../ui/org.regexxer.gschema.xml.in.h:4
+msgid "List of last patterns used in the 'Regex' entry."
+msgstr "A „Regex” bejegyzéshez használt utolsó minták listája."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:5
+msgid "List of last patterns used in the 'Substitution' entry."
+msgstr "A „Substitution” bejegyzéshez használt utolsó minták listája."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:6
 msgid "Text view font"
 msgstr "Szövegnézet betűkészlete"
 
-#: ../ui/regexxer.schemas.in.h:10
-msgid "The background color used to highlight matches of the search expression."
-msgstr "A keresőkifejezéssel egyező találatok kiemeléséhez használt háttérszín."
+#: ../ui/org.regexxer.gschema.xml.in.h:7
+msgid "The font used in the file editor."
+msgstr "A fájlszerkesztőben használt betűkészlet."
 
-#: ../ui/regexxer.schemas.in.h:11
+#: ../ui/org.regexxer.gschema.xml.in.h:8
+msgid "Match color"
+msgstr "Találat színe"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:9
+msgid ""
+"The background color used to highlight matches of the search expression."
+msgstr ""
+"A keresőkifejezéssel egyező találatok kiemeléséhez használt háttérszín."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:10
+msgid "Current-match color"
+msgstr "Jelenlegi találat színe"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:11
 msgid ""
 "The background color used to highlight the currently selected match of the "
 "search expression."
@@ -80,89 +77,171 @@ msgstr ""
 "A keresőkifejezéssel egyező jelenleg kiválasztott találat kiemeléséhez "
 "használt háttérszín."
 
-#: ../ui/regexxer.schemas.in.h:12
-msgid "The font used in the file editor."
-msgstr "A fájlszerkesztőben használt betűkészlet."
+#: ../ui/org.regexxer.gschema.xml.in.h:12
+msgid "Fallback encoding"
+msgstr "Tartalék kódolás"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:13
+msgid ""
+"Name of the character encoding to use if a file is not readable in either "
+"UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" "
+"for a complete list of possible values."
+msgstr ""
+"A használandó karakterkódolás neve, ha a fájl nem olvasható sem UTF-8, sem a "
+"jelenlegi területi beállítások által meghatározott kódolással. A lehetséges "
+"értékek listáját az „iconv --list” paranccsal kérheti le."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:14
+msgid "window width"
+msgstr "Ablak szélessége"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:15
+msgid "The width of the window."
+msgstr "Az ablak szélessége."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:16
+msgid "window height"
+msgstr "Ablak magassága"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:17
+msgid "The height of the window."
+msgstr "Az ablak magassága."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:18
+msgid "window x position"
+msgstr "Ablak x pozíciója"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:19
+msgid "The X coordinate of the window."
+msgstr "Az ablak X koordinátája."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:20
+msgid "window y position"
+msgstr "Ablak y pozíciója"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:21
+msgid "The Y coordinate of the window."
+msgstr "Az ablak Y koordinátája."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:22
+msgid "window maximization"
+msgstr "Ablak maximalizált"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:23
+msgid "Whether the window is maximized."
+msgstr "Az ablak teljes méretű-e."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:24
+msgid "Show line numbers"
+msgstr "Sorszámok megjelenítése"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:25
+msgid "Whether to show the line numbers of the text view."
+msgstr "Megjelenjenek-e a sorszámok a szövegnézetben."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:26
+msgid "Highlight the current line"
+msgstr "A jelenlegi sor kiemelése"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:27
+msgid "Whether to highlight the current line of the text view."
+msgstr "Kiemelje-e az aktuális sort a szövegnézetben."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:28
+msgid "Auto indentation"
+msgstr "Automatikus behúzás"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:29
+msgid "Whether to enable auto indentation in the text view."
+msgstr "Engedélyezve legyen-e az automatikus behúzás a szövegnézetben."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:30
+msgid "Draw spaces"
+msgstr "Szóközök rajzolása"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:31
+msgid "Which type of space to draw in the text view."
+msgstr "Milyen típusú szóköz jelenjen meg a szövegnézetben."
 
 #: ../src/filebuffer.cc:198
 msgid "Can’t read file:"
 msgstr "Nem lehet olvasni a fájlt:"
 
-#: ../src/filetree.cc:61
+#: ../src/filetree.cc:60
 msgid "File"
 msgstr "Fájl"
 
-#: ../src/filetree.cc:80
+#: ../src/filetree.cc:79
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:511
+#: ../src/filetree.cc:508
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "A(z) „%1” fájl mentése sikertelen: %2"
 
-#: ../src/filetree.cc:927
+#: ../src/filetree.cc:924
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "„%1” bináris fájlnak tűnik."
 
-#: ../src/main.cc:79
+#: ../src/main.cc:78
 msgid "Save _all"
 msgstr "Összes _mentése"
 
-#: ../src/main.cc:136
+#: ../src/main.cc:135
 msgid "Find files matching PATTERN"
 msgstr "A MINTÁRA illeszkedő fájlok keresése"
 
-#: ../src/main.cc:136
+#: ../src/main.cc:135
 msgid "PATTERN"
 msgstr "MINTA"
 
-#: ../src/main.cc:138
+#: ../src/main.cc:137
 msgid "Do not recurse into subdirectories"
 msgstr "Alkönyvtárakba ne menjen le"
 
-#: ../src/main.cc:140 ../ui/mainwindow.ui.h:2
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:9
 msgid "Also find hidden files"
 msgstr "Rejtett fájlokat is keres"
 
-#: ../src/main.cc:142
+#: ../src/main.cc:141
 msgid "Find text matching REGEX"
 msgstr "A REGEX-re illeszkedő fájlok keresése"
 
-#: ../src/main.cc:142
+#: ../src/main.cc:141
 msgid "REGEX"
 msgstr "REGEX"
 
-#: ../src/main.cc:144
+#: ../src/main.cc:143
 msgid "Find only the first match in a line"
 msgstr "Csak az első találat keresése egy sorban"
 
-#: ../src/main.cc:146 ../ui/mainwindow.ui.h:4
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:16
 msgid "Do case insensitive matching"
 msgstr "A kis- és nagybetűk nem különböznek"
 
-#: ../src/main.cc:148
+#: ../src/main.cc:147
 msgid "Replace matches with STRING"
 msgstr "Találatok helyettesítése a STRING-gel"
 
-#: ../src/main.cc:148
+#: ../src/main.cc:147
 msgid "STRING"
 msgstr "KARAKTERLÁNC"
 
-#: ../src/main.cc:150
+#: ../src/main.cc:149
 msgid "Print match location to standard output"
 msgstr "Találat helyének kiírása a szabvány kimenetre"
 
-#: ../src/main.cc:152
+#: ../src/main.cc:151
 msgid "Do not automatically start search"
 msgstr "Ne kezdjen keresni automatikusan"
 
-#: ../src/main.cc:154
+#: ../src/main.cc:153
 msgid "[FOLDER]"
 msgstr "[MAPPA]"
 
-#: ../src/mainwindow.cc:513
+#: ../src/mainwindow.cc:568
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -170,7 +249,7 @@ msgstr ""
 "Néhány fájl még nincs elmentve.\n"
 "Mindenképp kilép?"
 
-#: ../src/mainwindow.cc:527
+#: ../src/mainwindow.cc:582
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -178,290 +257,295 @@ msgstr ""
 "Néhány fájl még nincs elmentve.\n"
 "Mindenképp folytatja?"
 
-#: ../src/mainwindow.cc:559
+#: ../src/mainwindow.cc:612
 msgid "The file search pattern is invalid."
 msgstr "A fájlkereső minta érvénytelen."
 
-#: ../src/mainwindow.cc:565
+#: ../src/mainwindow.cc:618
 msgid "The following errors occurred during search:"
 msgstr "A következő hibák léptek fel keresés közben:"
 
-#: ../src/mainwindow.cc:824
+#: ../src/mainwindow.cc:882
 msgid "The following errors occurred during save:"
 msgstr "A következő hibák léptek fel mentés közben:"
 
-#: ../src/mainwindow.cc:972
+#: ../src/mainwindow.cc:1034
 msgid "translator-credits"
 msgstr "Kelemen Gábor <kelemeng@gnome.hu>"
 
-#: ../src/pcreshell.cc:62
-msgid "Using the \\C escape sequence to match a single byte is not supported."
-msgstr "A \\C escape-szekvencia használata egyetlen bájt keresésére nem támogatott."
-
-#: ../src/pcreshell.cc:84
-#, qt-format
-msgid ""
-"Error in regular expression at “%1” (index %2):\n"
-"%3"
-msgstr ""
-"Hiba a szabályos kifejezésben itt: „%1” (index %2):\n"
-"%3"
-
-#: ../src/pcreshell.cc:89
-#, qt-format
-msgid ""
-"Error in regular expression:\n"
-"%1"
-msgstr ""
-"Hiba a szabályos kifejezésben:\n"
-"%1"
-
-#: ../src/pcreshell.cc:171
-msgid ""
-"Reached the recursion and backtracking limit of the regular expression "
-"engine."
-msgstr "Elérte a szabályos kifejezés motor rekurziós és visszalépési határértékét."
-
-#: ../src/prefdialog.cc:204
+#: ../src/prefdialog.cc:186
 #, qt-format
 msgid "“%1” is not a valid encoding."
 msgstr "„%1” érvénytelen kódolás."
 
-#: ../src/statusline.cc:244
+#: ../src/statusline.cc:245
 msgid "Stop"
 msgstr "Leállítás"
 
-#: ../src/statusline.cc:251
+#: ../src/statusline.cc:253
 msgid "File:"
 msgstr "Fájl:"
 
-#: ../src/statusline.cc:254
+#: ../src/statusline.cc:256
 msgid "Match:"
 msgstr "Találat:"
 
-#: ../src/statusline.cc:265
+#: ../src/statusline.cc:267
 msgid "Cancels the running search"
 msgstr "Leállítja a futó keresést"
 
 #: ../ui/mainwindow.ui.h:1
-msgid "A regular expression in Perl syntax"
-msgstr "Egy szabályos kifejezés Perl szintaxissal"
-
-#: ../ui/mainwindow.ui.h:3
-msgid "Backward"
-msgstr "Vissza"
-
-#: ../ui/mainwindow.ui.h:5
-msgid "File backward"
-msgstr "Előző fájl"
-
-#: ../ui/mainwindow.ui.h:6
-msgid "File forward"
-msgstr "Következő fájl"
-
-#: ../ui/mainwindow.ui.h:7
-msgid "Find all files that match the filename pattern"
-msgstr "Minden, a fájlnév-mintára illeszkedő fájl megkeresése"
-
-#: ../ui/mainwindow.ui.h:8
-msgid "Find all matches of the regular expression"
-msgstr "A szabályos kifejezés minden illeszkedésének megkeresése"
-
-#: ../ui/mainwindow.ui.h:9
-msgid "Find all possible matches in a line"
-msgstr "Egy soron belül az összes lehetséges találat megkeresése"
-
-#: ../ui/mainwindow.ui.h:10
-msgid "Find fi_les"
-msgstr "Fájlok ke_resése"
-
-#: ../ui/mainwindow.ui.h:11
-msgid "Fol_der:"
-msgstr "Ma_ppa:"
-
-#: ../ui/mainwindow.ui.h:12
-msgid "Forward"
-msgstr "Előre"
-
-#: ../ui/mainwindow.ui.h:13
-msgid "Go to next match"
-msgstr "Ugrás a következő találatra"
-
-#: ../ui/mainwindow.ui.h:14
-msgid "Go to previous match"
-msgstr "Ugrás az előző találatra"
-
-#: ../ui/mainwindow.ui.h:15
-msgid "Go to the next matching file"
-msgstr "Ugrás a következő találatot tartalmazó fájlra"
-
-#: ../ui/mainwindow.ui.h:16
-msgid "Go to the previous matching file"
-msgstr "Ugrás az előző találatot tartalmazó fájlra"
-
-#: ../ui/mainwindow.ui.h:17
-msgid "Pattern:"
-msgstr "Minta:"
-
-#: ../ui/mainwindow.ui.h:18
-msgid "Preview"
-msgstr "Előnézet"
-
-#: ../ui/mainwindow.ui.h:19
-msgid "Preview of the substitution"
-msgstr "A helyettesítés előnézete"
-
-#: ../ui/mainwindow.ui.h:20
-msgid "Recurse into subdirectories"
-msgstr "Alkönyvtárakban is keres"
-
-#: ../ui/mainwindow.ui.h:21
-msgid "Replace _current"
-msgstr "_Jelenlegi cseréje"
-
-#: ../ui/mainwindow.ui.h:22
-msgid "Replace all matches in all files"
-msgstr "Minden találat cseréje minden fájlban"
-
-#: ../ui/mainwindow.ui.h:23
-msgid "Replace all matches in the current file"
-msgstr "Minden találat cseréje a jelenlegi fájlban"
-
-#: ../ui/mainwindow.ui.h:24
-msgid "Replace current match"
-msgstr "A jelenlegi találat cseréje"
-
-#: ../ui/mainwindow.ui.h:25
-msgid "Replace in _all files"
-msgstr "Csere mi_nden fájlban"
-
-#: ../ui/mainwindow.ui.h:26
-msgid "Replace in _this file"
-msgstr "Csere e_bben a fájlban"
-
-#: ../ui/mainwindow.ui.h:27
-msgid "Replace:"
-msgstr "Csere:"
-
-#: ../ui/mainwindow.ui.h:28
-msgid "Save all"
-msgstr "Összes mentése"
-
-#: ../ui/mainwindow.ui.h:29
-msgid "Search:"
-msgstr "Keresés:"
-
-#: ../ui/mainwindow.ui.h:30
-msgid "_All files"
-msgstr "_Minden fájlban"
-
-#: ../ui/mainwindow.ui.h:31
-msgid "_Edit"
-msgstr "S_zerkesztés"
-
-#: ../ui/mainwindow.ui.h:32
 msgid "_File"
 msgstr "_Fájl"
 
-#: ../ui/mainwindow.ui.h:33
-msgid "_Help"
-msgstr "_Súgó"
+#: ../ui/mainwindow.ui.h:2
+msgid "_Edit"
+msgstr "S_zerkesztés"
 
-#: ../ui/mainwindow.ui.h:34
+#: ../ui/mainwindow.ui.h:3
 msgid "_Match"
 msgstr "_Találatok"
 
-#: ../ui/mainwindow.ui.h:35
-msgid "_Next file"
-msgstr "_Következő fájl"
+#: ../ui/mainwindow.ui.h:4
+msgid "_Help"
+msgstr "_Súgó"
 
-#: ../ui/mainwindow.ui.h:36
-msgid "_Previous file"
-msgstr "Elő_ző fájl"
+#: ../ui/mainwindow.ui.h:5
+msgid "Pattern:"
+msgstr "Minta:"
 
-#: ../ui/mainwindow.ui.h:37
-msgid "_Replace"
-msgstr "_Csere"
-
-#: ../ui/mainwindow.ui.h:38
-msgid "_This file"
-msgstr "_Ebben a fájlban"
-
-#: ../ui/mainwindow.ui.h:39
-msgid "hidden"
-msgstr "rejtett"
-
-#: ../ui/mainwindow.ui.h:40
+#: ../ui/mainwindow.ui.h:6
 msgid "recursive"
 msgstr "rekurzív"
 
+#: ../ui/mainwindow.ui.h:7
+msgid "Recurse into subdirectories"
+msgstr "Alkönyvtárakban is keres"
+
+#: ../ui/mainwindow.ui.h:8
+msgid "hidden"
+msgstr "rejtett"
+
+#: ../ui/mainwindow.ui.h:10
+msgid "Find all files that match the filename pattern"
+msgstr "Minden, a fájlnév-mintára illeszkedő fájl megkeresése"
+
+#: ../ui/mainwindow.ui.h:11
+msgid "Find fi_les"
+msgstr "Fájlok ke_resése"
+
+#: ../ui/mainwindow.ui.h:12
+msgid "Fol_der:"
+msgstr "Ma_ppa:"
+
+#: ../ui/mainwindow.ui.h:13
+msgid "Search:"
+msgstr "Keresés:"
+
+#: ../ui/mainwindow.ui.h:14
+msgid "Replace:"
+msgstr "Csere:"
+
+#: ../ui/mainwindow.ui.h:15
+msgid "Find all possible matches in a line"
+msgstr "Egy soron belül az összes lehetséges találat megkeresése"
+
+#: ../ui/mainwindow.ui.h:17
+msgid "Find all matches of the regular expression"
+msgstr "A szabályos kifejezés minden illeszkedésének megkeresése"
+
+#: ../ui/mainwindow.ui.h:18
+msgid "A regular expression in Perl syntax"
+msgstr "Egy szabályos kifejezés Perl szintaxissal"
+
+#: ../ui/mainwindow.ui.h:19
+msgid ""
+"The new string to substitute. As in Perl, you can refer to parts of the "
+"match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
+"\\u, \\L, \\U and \\E are supported as well."
+msgstr ""
+"Az új helyettesítő szöveg. Ahogyan Perlben, a találat részeire hivatkozhat a "
+"$1, $2 stb. vagy akár $+, $&amp;, $` és $' használatával is. A \\l, \\u, "
+"\\L, \\U és \\E operátorok is támogatottak."
+
+#: ../ui/mainwindow.ui.h:20
+msgid "Preview of the substitution"
+msgstr "A helyettesítés előnézete"
+
+#: ../ui/mainwindow.ui.h:21
+msgid "Preview"
+msgstr "Előnézet"
+
+#: ../ui/mainwindow.ui.h:22
+msgid "Replace current match"
+msgstr "A jelenlegi találat cseréje"
+
+#: ../ui/mainwindow.ui.h:23
+msgid "_Replace"
+msgstr "_Csere"
+
+#: ../ui/mainwindow.ui.h:24
+msgid "Replace all matches in the current file"
+msgstr "Minden találat cseréje a jelenlegi fájlban"
+
+#: ../ui/mainwindow.ui.h:25
+msgid "_This file"
+msgstr "_Ebben a fájlban"
+
+#: ../ui/mainwindow.ui.h:26
+msgid "Replace all matches in all files"
+msgstr "Minden találat cseréje minden fájlban"
+
+#: ../ui/mainwindow.ui.h:27
+msgid "_All files"
+msgstr "_Minden fájlban"
+
+#: ../ui/mainwindow.ui.h:28
+msgid "File backward"
+msgstr "Előző fájl"
+
+#: ../ui/mainwindow.ui.h:29
+msgid "Go to the previous matching file"
+msgstr "Ugrás az előző találatot tartalmazó fájlra"
+
+#: ../ui/mainwindow.ui.h:30
+msgid "Backward"
+msgstr "Vissza"
+
+#: ../ui/mainwindow.ui.h:31
+msgid "Go to previous match"
+msgstr "Ugrás az előző találatra"
+
+#: ../ui/mainwindow.ui.h:32
+msgid "Forward"
+msgstr "Előre"
+
+#: ../ui/mainwindow.ui.h:33
+msgid "Go to next match"
+msgstr "Ugrás a következő találatra"
+
+#: ../ui/mainwindow.ui.h:34
+msgid "File forward"
+msgstr "Következő fájl"
+
+#: ../ui/mainwindow.ui.h:35
+msgid "Go to the next matching file"
+msgstr "Ugrás a következő találatot tartalmazó fájlra"
+
 #: ../ui/prefdialog.ui.h:1
-msgid "1."
-msgstr "1."
+msgid "Icons only"
+msgstr "Csak ikonok"
 
 #: ../ui/prefdialog.ui.h:2
-msgid "2."
-msgstr "2."
+msgid "Text only"
+msgstr "Csak szöveg"
 
 #: ../ui/prefdialog.ui.h:3
-msgid "3."
-msgstr "3."
+msgid "Icons and text"
+msgstr "Ikonok és szöveg"
 
 #: ../ui/prefdialog.ui.h:4
 msgid "Both horizontal"
 msgstr "Mindkettő vízszintesen"
 
 #: ../ui/prefdialog.ui.h:5
-msgid "C_urrent match color:"
-msgstr "_Jelenlegi találat színe:"
-
-#: ../ui/prefdialog.ui.h:6
-msgid "Fallback _encoding:"
-msgstr "Tartalék kó_dolás:"
-
-#: ../ui/prefdialog.ui.h:7
-msgid "Icons and text"
-msgstr "Ikonok és szöveg"
-
-#: ../ui/prefdialog.ui.h:8
-msgid "Icons only"
-msgstr "Csak ikonok"
-
-#: ../ui/prefdialog.ui.h:9
 msgid "Preferences"
 msgstr "Beállítások"
 
-#: ../ui/prefdialog.ui.h:10
-msgid "Text only"
-msgstr "Csak szöveg"
-
-#: ../ui/prefdialog.ui.h:11
-msgid "The encoding specified by the current locale"
-msgstr "A jelenlegi területi beállítások által megadott kódolás"
-
-#: ../ui/prefdialog.ui.h:12
-msgid "UTF-8"
-msgstr "UTF-8"
-
-#: ../ui/prefdialog.ui.h:13
-msgid "_File access"
-msgstr "_Fájlelérés"
-
-#: ../ui/prefdialog.ui.h:14
-msgid "_Look&#x2019;n&#x2019;feel"
-msgstr "_Megjelenés"
-
-#: ../ui/prefdialog.ui.h:15
-msgid "_Match color:"
-msgstr "_Találat színe:"
-
-#: ../ui/prefdialog.ui.h:16
+#: ../ui/prefdialog.ui.h:6
 msgid "_Text view font:"
 msgstr "_Szöveg betűtípusa:"
 
-#: ../ui/prefdialog.ui.h:17
-msgid "regexxer attempts to read a file in the following encodings before giving up:"
+#: ../ui/prefdialog.ui.h:7
+msgid "_Match color:"
+msgstr "_Találat színe:"
+
+#: ../ui/prefdialog.ui.h:8
+msgid "C_urrent match color:"
+msgstr "_Jelenlegi találat színe:"
+
+#: ../ui/prefdialog.ui.h:9
+msgid "_Look&#x2019;n&#x2019;feel"
+msgstr "_Megjelenés"
+
+#: ../ui/prefdialog.ui.h:10
+msgid ""
+"regexxer attempts to read a file in the following encodings before giving up:"
 msgstr ""
 "A regexxer a következő kódolásokkal próbálja meg beolvasni a fájlokat, "
 "mielőtt feladja:"
 
+#: ../ui/prefdialog.ui.h:11
+msgid "3."
+msgstr "3."
+
+#: ../ui/prefdialog.ui.h:12
+msgid "2."
+msgstr "2."
+
+#: ../ui/prefdialog.ui.h:13
+msgid "1."
+msgstr "1."
+
+#: ../ui/prefdialog.ui.h:14
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: ../ui/prefdialog.ui.h:15
+msgid "Fallback _encoding:"
+msgstr "Tartalék kó_dolás:"
+
+#: ../ui/prefdialog.ui.h:16
+msgid "The encoding specified by the current locale"
+msgstr "A jelenlegi területi beállítások által megadott kódolás"
+
+#: ../ui/prefdialog.ui.h:17
+msgid "_File access"
+msgstr "_Fájlelérés"
+
+#~ msgid "List of last pattern used for the file's regex entry."
+#~ msgstr "A fájl regex bejegyzéséhez használt utolsó minták listája."
+
+#~ msgid ""
+#~ "Using the \\C escape sequence to match a single byte is not supported."
+#~ msgstr ""
+#~ "A \\C escape-szekvencia használata egyetlen bájt keresésére nem "
+#~ "támogatott."
+
+#~ msgid ""
+#~ "Error in regular expression at “%1” (index %2):\n"
+#~ "%3"
+#~ msgstr ""
+#~ "Hiba a szabályos kifejezésben itt: „%1” (index %2):\n"
+#~ "%3"
+
+#~ msgid ""
+#~ "Error in regular expression:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Hiba a szabályos kifejezésben:\n"
+#~ "%1"
+
+#~ msgid ""
+#~ "Reached the recursion and backtracking limit of the regular expression "
+#~ "engine."
+#~ msgstr ""
+#~ "Elérte a szabályos kifejezés motor rekurziós és visszalépési határértékét."
+
+#~ msgid "Replace _current"
+#~ msgstr "_Jelenlegi cseréje"
+
+#~ msgid "Replace in _all files"
+#~ msgstr "Csere mi_nden fájlban"
+
+#~ msgid "Replace in _this file"
+#~ msgstr "Csere e_bben a fájlban"
+
+#~ msgid "Save all"
+#~ msgstr "Összes mentése"
+
+#~ msgid "_Next file"
+#~ msgstr "_Következő fájl"
+
+#~ msgid "_Previous file"
+#~ msgstr "Elő_ző fájl"
