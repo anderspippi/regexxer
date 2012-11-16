@@ -21,7 +21,7 @@
 #ifndef REGEXXER_GLOBALSTRINGS_H_INCLUDED
 #define REGEXXER_GLOBALSTRINGS_H_INCLUDED
 
-#include <glib/gutils.h>  /* for G_DIR_SEPARATOR_S */
+#include <glib.h>  /* for G_DIR_SEPARATOR_S */
 
 namespace Regexxer
 {

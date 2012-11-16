@@ -24,6 +24,7 @@
 #include "sharedptr.h"
 
 #include <gtkmm/textbuffer.h>
+#include <glibmm/regex.h>
 #include <functional>
 #include <utility>
 #include <vector>
