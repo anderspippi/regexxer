@@ -202,7 +202,9 @@ int main(int argc, char** argv)
     Util::initialize_gettext(PACKAGE_TARNAME, REGEXXER_LOCALEDIR);
 
     std::auto_ptr<RegexxerOptions> options = RegexxerOptions::create();
-    Gtk::Main main_instance (argc, argv, options->context());
+    options->context().parse(argc, argv);
+    Glib::RefPtr<Gtk::Application> app =
+        Gtk::Application::create(argc, argv, Regexxer::conf_schema);
     Gsv::init();
     Gio::init();
 
@@ -215,7 +217,7 @@ int main(int argc, char** argv)
     window.initialize(options->init_state());
     options.reset();
 
-    Gtk::Main::run(*window.get_window());
+    app->run(*window.get_window());
 
     return 0;
   }
