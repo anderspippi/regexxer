@@ -180,7 +180,7 @@ public:
 MainWindow::MainWindow()
 :
   toolbar_                (0),
-  table_file_             (0),
+  grid_file_              (0),
   button_folder_          (0),
   combo_entry_pattern_    (Gtk::manage(new Gtk::ComboBoxText(true))),
   button_recursive_       (0),
@@ -214,7 +214,7 @@ MainWindow::MainWindow()
 
   vbox_main_->pack_start(*statusline_, Gtk::PACK_SHRINK);
   scrollwin_filetree_->add(*filetree_);
-  table_file_->attach(*combo_entry_pattern_, 1, 2, 1, 2, Gtk::EXPAND | Gtk::FILL, Gtk::FILL);
+  grid_file_->attach(*combo_entry_pattern_, 1, 1, 1, 1);
 
   scrollwin_textview_->add(*textview_);
 
@@ -341,7 +341,7 @@ void MainWindow::load_xml()
   xml->get_widget("entry_preview",       entry_preview_);
   xml->get_widget("vbox_main",           vbox_main_);
   xml->get_widget("scrollwin_filetree",  scrollwin_filetree_);
-  xml->get_widget("table_file",          table_file_);
+  xml->get_widget("grid_file",           grid_file_);
 
   controller_.load_xml(xml);
 }

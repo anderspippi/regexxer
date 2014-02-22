@@ -70,10 +70,10 @@ CounterBox::CounterBox(const Glib::ustring& label)
 
   set_shadow_type(SHADOW_ETCHED_IN);
 
-  Box *const paddingbox = new HBox(false, 0);
+  Box *const paddingbox = new Box();
   add(*manage(paddingbox));
 
-  Box *const box = new HBox(false, 0);
+  Box *const box = new Box();
   paddingbox->pack_start(*manage(box), PACK_SHRINK, 2);
 
   box->pack_start(*manage(new Label(label + ' ')), PACK_SHRINK);
@@ -221,7 +221,7 @@ void CounterBox::on_label_style_updated()
 
 StatusLine::StatusLine()
 :
-  Gtk::HBox(false, 3),
+  Gtk::Box        (Gtk::ORIENTATION_HORIZONTAL, 3),
   stop_button_    (0),
   progressbar_    (0),
   file_counter_   (0),
@@ -331,7 +331,7 @@ void StatusLine::on_hierarchy_changed(Gtk::Widget* previous_toplevel)
         window->get_accel_group(), GDK_KEY_Escape, Gdk::ModifierType(0));
   }
 
-  Gtk::HBox::on_hierarchy_changed(previous_toplevel);
+  Gtk::Box::on_hierarchy_changed(previous_toplevel);
 
   if (Gtk::Window *const window = dynamic_cast<Gtk::Window*>(get_toplevel()))
   {

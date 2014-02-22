@@ -44,9 +44,9 @@ class Toolbar;
 class Window;
 class ComboBox;
 class ComboBoxText;
-class VBox;
+class Box;
 class ScrolledWindow;
-class Table;
+class Grid;
 class EntryCompletion;
 }
 
@@ -95,11 +95,11 @@ private:
   std::auto_ptr<Gtk::Window>  window_;
   Controller                  controller_;
 
-  Gtk::VBox*                  vbox_main_;
+  Gtk::Box*                   vbox_main_;
 
   Gtk::Toolbar*               toolbar_;
 
-  Gtk::Table*                 table_file_;
+  Gtk::Grid*                  grid_file_;
   Gtk::FileChooser*           button_folder_;
 
   Gtk::ComboBoxText*          combo_entry_pattern_;

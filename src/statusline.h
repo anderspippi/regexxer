@@ -37,7 +37,7 @@ namespace Regexxer
 
 class CounterBox;
 
-class StatusLine : public Gtk::HBox
+class StatusLine : public Gtk::Box
 {
 public:
   StatusLine();
