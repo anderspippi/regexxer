@@ -16,7 +16,7 @@
 ## along with regexxer; if not, write to the Free Software Foundation, Inc.,
 ## 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
-AC_INIT([regexxer], [0.10], [http://regexxer.sourceforge.net/bugs], [regexxer],
+AC_INIT([regexxer], [0.11], [http://regexxer.sourceforge.net/bugs], [regexxer],
         [http://regexxer.sourceforge.net/])
 AC_PREREQ([2.59])
 
