@@ -7,5 +7,6 @@ src/main.cc
 src/mainwindow.cc
 src/prefdialog.cc
 src/statusline.cc
+[type: gettext/glade]ui/app-menu.xml
 [type: gettext/glade]ui/mainwindow.ui
 [type: gettext/glade]ui/prefdialog.ui
