@@ -179,7 +179,8 @@ public:
 
 MainWindow::MainWindow()
 :
-  toolbar_                (0),
+  headerbar_              (0),
+  button_gear_            (0),
   grid_file_              (0),
   button_folder_          (0),
   combo_entry_pattern_    (Gtk::manage(new Gtk::ComboBoxText(true))),
@@ -202,7 +203,10 @@ MainWindow::MainWindow()
   busy_action_running_    (false),
   busy_action_cancel_     (false),
   busy_action_iteration_  (0),
-  undo_stack_             (new UndoStack())
+  undo_stack_             (new UndoStack()),
+  match_action_group_     (Gio::SimpleActionGroup::create()),
+  edit_action_group_      (Gio::SimpleActionGroup::create()),
+  save_action_group_      (Gio::SimpleActionGroup::create())
 {
   load_xml();
 
@@ -211,6 +215,8 @@ MainWindow::MainWindow()
 
   textview_->set_buffer(FileBuffer::create());
   window_->set_title(PACKAGE_NAME);
+  headerbar_->set_title(PACKAGE_NAME);
+  headerbar_->set_show_close_button(true);
 
   vbox_main_->pack_start(*statusline_, Gtk::PACK_SHRINK);
   scrollwin_filetree_->add(*filetree_);
@@ -218,6 +224,7 @@ MainWindow::MainWindow()
 
   scrollwin_textview_->add(*textview_);
 
+  headerbar_->show_all();
   statusline_->show_all();
   filetree_->show_all();
   combo_entry_pattern_->show_all();
@@ -251,6 +258,19 @@ void MainWindow::initialize(const Glib::RefPtr<Gtk::Application>& application,
   window_->move(x, y);
   if (maximized)
     window_->maximize();
+
+  init_actions();
+  set_sensitive(match_action_group_, false);
+  set_sensitive(edit_action_group_, false);
+  set_sensitive(save_action_group_, true);
+  set_sensitive("save", false);
+  set_sensitive("save-all", false);
+
+  Glib::RefPtr<Gtk::Builder> builder =
+      Gtk::Builder::create_from_file(ui_gearmenu_filename);
+  Glib::RefPtr<Gio::MenuModel> gearmenu =
+    Glib::RefPtr<Gio::MenuModel>::cast_static(builder->get_object("gearmenu"));
+  button_gear_->set_menu_model(gearmenu);
 
   textview_->set_show_line_numbers(settings->get_boolean(conf_key_show_line_numbers));
   textview_->set_highlight_current_line(settings->get_boolean(conf_key_highlight_current_line));
@@ -307,13 +327,6 @@ void MainWindow::initialize(const Glib::RefPtr<Gtk::Application>& application,
   if (init.feedback)
     filetree_->signal_feedback.connect(&print_location);
 
-  Glib::RefPtr<Gtk::StyleContext> style_context =
-      toolbar_->get_style_context ();
-  if (style_context)
-  {
-    style_context->add_class (GTK_STYLE_CLASS_PRIMARY_TOOLBAR);
-  }
-
   // Strangely, folder_exists seems to be always true, probably because the
   // file chooser works asynchronously but the GLib main loop isn't running
   // yet.  As a work-around, explicitely check whether the directory exists
@@ -327,6 +340,35 @@ void MainWindow::initialize(const Glib::RefPtr<Gtk::Application>& application,
 }
 
 /**** Regexxer::MainWindow -- private **************************************/
+
+void MainWindow::set_sensitive(const Glib::RefPtr<Gio::SimpleActionGroup>& group,
+                               bool sensitive)
+{
+  std::vector<Glib::ustring> actions = group->list_actions();
+  for (std::vector<Glib::ustring>::iterator i = actions.begin();
+       i != actions.end();
+       ++i)
+  {
+    Glib::RefPtr<Gio::SimpleAction> action =
+        Glib::RefPtr<Gio::SimpleAction>::cast_static(group->lookup_action(*i));
+    if (!action_enabled_.count(*i))
+        action_enabled_[*i] = true;
+    action->set_enabled(action_enabled_[*i] && sensitive);
+  }
+
+  action_group_enabled_[group] = sensitive;
+}
+
+void MainWindow::set_sensitive(const Glib::ustring& action_name, bool sensitive)
+{
+  Glib::RefPtr<Gio::SimpleActionGroup> group = action_to_group_[action_name];
+  Glib::RefPtr<Gio::SimpleAction> action =
+      Glib::RefPtr<Gio::SimpleAction>::cast_static
+          (group->lookup_action(action_name));
+
+  action->set_enabled(action_group_enabled_[group] && sensitive);
+  action_enabled_[action_name] = sensitive;
+}
 
 void MainWindow::on_startup()
 {
@@ -358,6 +400,76 @@ void MainWindow::on_startup()
   application_->set_app_menu(appmenu);
 }
 
+void MainWindow::init_actions()
+{
+  struct actions
+  {
+    const char *const name;
+    sigc::slot<void> slot;
+  };
+
+  static struct actions match_actions[] =
+  {
+    {"undo", sigc::mem_fun(*this, &MainWindow::on_undo)},
+    {"previous-file", sigc::bind(sigc::mem_fun(*this, &MainWindow::on_go_next_file), false)},
+    {"back", sigc::bind(sigc::mem_fun(*this, &MainWindow::on_go_next), false)},
+    {"forward", sigc::bind(sigc::mem_fun(*this, &MainWindow::on_go_next), true)},
+    {"next-file", sigc::bind(sigc::mem_fun(*this, &MainWindow::on_go_next_file), true)},
+    {"replace-current", sigc::mem_fun(*this, &MainWindow::on_replace)},
+    {"replace-in-file", sigc::mem_fun(*this, &MainWindow::on_replace_file)},
+    {"replace-in-all-files", sigc::mem_fun(*this, &MainWindow::on_replace_all)},
+    {0},
+  };
+
+  for (int i = 0; match_actions[i].name; i++)
+  {
+    Glib::RefPtr<Gio::SimpleAction> action =
+        Gio::SimpleAction::create(match_actions[i].name);
+    action->signal_activate().connect(sigc::hide(match_actions[i].slot));
+    match_action_group_->insert(action);
+    action_to_group_[match_actions[i].name] = match_action_group_;
+  }
+
+  static struct actions edit_actions[] =
+  {
+    {"cut", sigc::mem_fun(*this, &MainWindow::on_cut)},
+    {"copy", sigc::mem_fun(*this, &MainWindow::on_copy)},
+    {"paste", sigc::mem_fun(*this, &MainWindow::on_paste)},
+    {"delete", sigc::mem_fun(*this, &MainWindow::on_erase)},
+  };
+
+  for (int i = 0; edit_actions[i].name; i++)
+  {
+    Glib::RefPtr<Gio::SimpleAction> action =
+        Gio::SimpleAction::create(edit_actions[i].name);
+    action->signal_activate().connect(sigc::hide(edit_actions[i].slot));
+    edit_action_group_->insert(action);
+    action_to_group_[edit_actions[i].name] = edit_action_group_;
+  }
+
+  static struct actions save_actions[] =
+  {
+    {"save", sigc::mem_fun(*this, &MainWindow::on_save_file)},
+    {"save-all", sigc::mem_fun(*this, &MainWindow::on_save_all)},
+  };
+
+  for (int i = 0; save_actions[i].name; i++)
+  {
+    Glib::RefPtr<Gio::SimpleAction> action =
+        Gio::SimpleAction::create(save_actions[i].name);
+    action->signal_activate().connect(sigc::hide(save_actions[i].slot));
+    save_action_group_->insert(action);
+    action_to_group_[save_actions[i].name] = save_action_group_;
+  }
+
+  window_->insert_action_group("match", match_action_group_);
+  window_->insert_action_group("edit", edit_action_group_);
+  window_->insert_action_group("save", save_action_group_);
+
+//  controller_.find_files  .connect(mem_fun(*this, &MainWindow::on_find_files));
+//  controller_.find_matches.connect(mem_fun(*this, &MainWindow::on_exec_search));
+}
+
 void MainWindow::load_xml()
 {
   const Glib::RefPtr<Gtk::Builder> xml = Gtk::Builder::create_from_file(ui_mainwindow_filename);
@@ -366,7 +478,8 @@ void MainWindow::load_xml()
   xml->get_widget("mainwindow", mainwindow);
   window_.reset(mainwindow);
 
-  xml->get_widget("toolbar",             toolbar_);
+  xml->get_widget("headerbar",           headerbar_);
+  xml->get_widget("button_gear",         button_gear_);
   xml->get_widget("button_folder",       button_folder_);
   xml->get_widget("button_recursive",    button_recursive_);
   xml->get_widget("button_hidden",       button_hidden_);
@@ -399,22 +512,8 @@ void MainWindow::connect_signals()
   entry_substitution_->signal_activate().connect(controller_.find_matches.slot());
   entry_substitution_->signal_changed ().connect(mem_fun(*this, &MainWindow::update_preview));
 
-  controller_.save_file   .connect(mem_fun(*this, &MainWindow::on_save_file));
-  controller_.save_all    .connect(mem_fun(*this, &MainWindow::on_save_all));
-  controller_.undo        .connect(mem_fun(*this, &MainWindow::on_undo));
-  controller_.cut         .connect(mem_fun(*this, &MainWindow::on_cut));
-  controller_.copy        .connect(mem_fun(*this, &MainWindow::on_copy));
-  controller_.paste       .connect(mem_fun(*this, &MainWindow::on_paste));
-  controller_.erase       .connect(mem_fun(*this, &MainWindow::on_erase));
   controller_.find_files  .connect(mem_fun(*this, &MainWindow::on_find_files));
   controller_.find_matches.connect(mem_fun(*this, &MainWindow::on_exec_search));
-  controller_.next_file   .connect(bind(mem_fun(*this, &MainWindow::on_go_next_file), true));
-  controller_.prev_file   .connect(bind(mem_fun(*this, &MainWindow::on_go_next_file), false));
-  controller_.next_match  .connect(bind(mem_fun(*this, &MainWindow::on_go_next), true));
-  controller_.prev_match  .connect(bind(mem_fun(*this, &MainWindow::on_go_next), false));
-  controller_.replace     .connect(mem_fun(*this, &MainWindow::on_replace));
-  controller_.replace_file.connect(mem_fun(*this, &MainWindow::on_replace_file));
-  controller_.replace_all .connect(mem_fun(*this, &MainWindow::on_replace_all));
 
   Settings::instance()->signal_changed().connect(mem_fun(*this, &MainWindow::on_conf_value_changed));
 
@@ -750,9 +849,9 @@ void MainWindow::on_filetree_switch_buffer(FileInfoPtr fileinfo, int file_index)
 
     set_title_filename(fileinfo->fullname);
 
-    controller_.replace_file.set_enabled(buffer->get_match_count() > 0);
-    controller_.save_file.set_enabled(buffer->get_modified());
-    controller_.edit_actions.set_enabled(!fileinfo->load_failed);
+    set_sensitive("replace-in-file", buffer->get_match_count() > 0);
+    set_sensitive("save", buffer->get_modified());
+    set_sensitive(edit_action_group_, !fileinfo->load_failed);
 
     statusline_->set_match_count(buffer->get_original_match_count());
     statusline_->set_match_index(buffer->get_match_index());
@@ -765,10 +864,12 @@ void MainWindow::on_filetree_switch_buffer(FileInfoPtr fileinfo, int file_index)
     textview_->set_cursor_visible(false);
 
     window_->set_title(PACKAGE_NAME);
+    headerbar_->set_title(PACKAGE_NAME);
+    headerbar_->set_subtitle("");
 
-    controller_.replace_file.set_enabled(false);
-    controller_.save_file.set_enabled(false);
-    controller_.edit_actions.set_enabled(false);
+    set_sensitive("replace-in-file", false);
+    set_sensitive("save", false);
+    set_sensitive(edit_action_group_, false);
 
     statusline_->set_match_count(0);
     statusline_->set_match_index(0);
@@ -783,14 +884,14 @@ void MainWindow::on_bound_state_changed()
 {
   BoundState bound = filetree_->get_bound_state();
 
-  controller_.prev_file.set_enabled((bound & BOUND_FIRST) == 0);
-  controller_.next_file.set_enabled((bound & BOUND_LAST)  == 0);
+  set_sensitive("previous-file", (bound & BOUND_FIRST) == 0);
+  set_sensitive("next-file", (bound & BOUND_LAST) == 0);
 
   if (const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
     bound &= buffer->get_bound_state();
 
-  controller_.prev_match.set_enabled((bound & BOUND_FIRST) == 0);
-  controller_.next_match.set_enabled((bound & BOUND_LAST)  == 0);
+  set_sensitive("back", (bound & BOUND_FIRST) == 0);
+  set_sensitive("forward", (bound & BOUND_LAST) == 0);
 }
 
 void MainWindow::on_filetree_file_count_changed()
@@ -803,20 +904,23 @@ void MainWindow::on_filetree_file_count_changed()
 
 void MainWindow::on_filetree_match_count_changed()
 {
-  controller_.replace_all.set_enabled(filetree_->get_match_count() > 0);
+  set_sensitive("replace-in-all-files", filetree_->get_match_count() > 0);
 
   if (const FileBufferPtr buffer = FileBufferPtr::cast_static(textview_->get_buffer()))
-    controller_.replace_file.set_enabled(buffer->get_match_count() > 0);
+  {
+    set_sensitive("replace-in-file", buffer->get_match_count() > 0);
+    set_sensitive("replace-current", buffer->get_match_count() > 0);
+  }
 }
 
 void MainWindow::on_filetree_modified_count_changed()
 {
-  controller_.save_all.set_enabled(filetree_->get_modified_count() > 0);
+  set_sensitive("save-all", filetree_->get_modified_count() > 0);
 }
 
 void MainWindow::on_buffer_modified_changed()
 {
-  controller_.save_file.set_enabled(textview_->get_buffer()->get_modified());
+  set_sensitive("save", textview_->get_buffer()->get_modified());
 }
 
 void MainWindow::on_go_next_file(bool move_forward)
@@ -922,7 +1026,7 @@ void MainWindow::on_save_all()
 void MainWindow::on_undo_stack_push(UndoActionPtr action)
 {
   undo_stack_->push(action);
-  controller_.undo.set_enabled(true);
+  set_sensitive("undo", true);
 }
 
 void MainWindow::on_undo()
@@ -931,13 +1035,13 @@ void MainWindow::on_undo()
   {
     BusyAction busy (*this);
     undo_stack_->undo_step(sigc::mem_fun(*this, &MainWindow::on_busy_action_pulse));
-    controller_.undo.set_enabled(!undo_stack_->empty());
+    set_sensitive("undo", !undo_stack_->empty());
   }
 }
 
 void MainWindow::undo_stack_clear()
 {
-  controller_.undo.set_enabled(false);
+  set_sensitive("undo", false);
   undo_stack_.reset(new UndoStack());
 }
 
@@ -954,7 +1058,7 @@ void MainWindow::update_preview()
     const int pos = buffer->get_line_preview(entry_substitution_->get_text(), preview);
 
     entry_preview_->set_text(preview);
-    controller_.replace.set_enabled(pos >= 0);
+    set_sensitive("replace-current", pos >= 0);
 
     // Beware, strange code ahead!
     //
@@ -995,6 +1099,9 @@ void MainWindow::set_title_filename(const std::string& filename)
   title += ") \342\200\223 " PACKAGE_NAME; // U+2013 EN DASH
 
   window_->set_title(title);
+  headerbar_->set_title(Glib::filename_display_basename(filename));
+  headerbar_->set_subtitle(Util::filename_short_display_name
+      (Glib::path_get_dirname(filename)));
 }
 
 void MainWindow::busy_action_enter()
@@ -1002,6 +1109,7 @@ void MainWindow::busy_action_enter()
   g_return_if_fail(!busy_action_running_);
 
   controller_.match_actions.set_enabled(false);
+  set_sensitive(match_action_group_, false);
 
   statusline_->pulse_start();
 
@@ -1019,6 +1127,7 @@ void MainWindow::busy_action_leave()
   statusline_->pulse_stop();
 
   controller_.match_actions.set_enabled(true);
+  set_sensitive(match_action_group_, true);
 }
 
 bool MainWindow::on_busy_action_pulse()

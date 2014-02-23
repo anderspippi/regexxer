@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<interface>
+  <!-- interface-requires gtk+ 3.0 -->
+  <menu id="gearmenu">
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Save</attribute>
+        <attribute name="action">save.save</attribute>
+        <attribute name="accel"><![CDATA[<Ctrl>S]]></attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Save _all</attribute>
+        <attribute name="action">save.save-all</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">_Undo</attribute>
+        <attribute name="action">match.undo</attribute>
+        <attribute name="accel"><![CDATA[<Ctrl>Z]]></attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Cu_t</attribute>
+        <attribute name="action">edit.cut</attribute>
+        <attribute name="accel"><![CDATA[<Ctrl>X]]></attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Copy</attribute>
+        <attribute name="action">edit.copy</attribute>
+        <attribute name="accel"><![CDATA[<Ctrl>C]]></attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Paste</attribute>
+        <attribute name="action">edit.paste</attribute>
+        <attribute name="accel"><![CDATA[<Ctrl>V]]></attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">_Delete</attribute>
+        <attribute name="action">edit.delete</attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Previous file</attribute>
+        <attribute name="action">match.previous-file</attribute>
+        <attribute name="accel"><![CDATA[<Ctrl>P]]></attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Back</attribute>
+        <attribute name="action">match.back</attribute>
+        <attribute name="accel"><![CDATA[<Ctrl>B]]></attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Forward</attribute>
+        <attribute name="action">match.forward</attribute>
+        <attribute name="accel"><![CDATA[<Ctrl>N]]></attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Next file</attribute>
+        <attribute name="action">match.next-file</attribute>
+        <attribute name="accel"><![CDATA[<Ctrl>E]]></attribute>
+      </item>
+    </section>
+    <section>
+      <item>
+        <attribute name="label" translatable="yes">Replace current</attribute>
+        <attribute name="action">match.replace-current</attribute>
+        <attribute name="accel"><![CDATA[<Ctrl>R]]></attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Replace in this file</attribute>
+        <attribute name="action">match.replace-in-file</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="yes">Replace in all files</attribute>
+        <attribute name="action">match.replace-in-all-files</attribute>
+      </item>
+    </section>
+  </menu>
+</interface>

@@ -93,28 +93,9 @@ public:
   // Group for all controls that could change matches
   // or require match information to operate.
   ControlGroup  match_actions;
-  ControlGroup  edit_actions;
-
-  ControlItem   save_file;
-  ControlItem   save_all;
-  ControlItem   undo;
 
   ControlItem   find_files;
   ControlItem   find_matches;
-
-  ControlItem   next_file;
-  ControlItem   prev_file;
-  ControlItem   next_match;
-  ControlItem   prev_match;
-
-  ControlItem   replace;
-  ControlItem   replace_file;
-  ControlItem   replace_all;
-
-  ControlItem   cut;
-  ControlItem   copy;
-  ControlItem   paste;
-  ControlItem   erase;
 
   void load_xml(const Glib::RefPtr<Gtk::Builder>& xml);
 

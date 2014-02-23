@@ -36,12 +36,13 @@
 
 namespace Gtk
 {
+class HeaderBar;
+class MenuButton;
 class Button;
 class CheckButton;
 class Dialog;
 class Entry;
 class FileChooser;
-class Toolbar;
 class ApplicationWindow;
 class Window;
 class ComboBox;
@@ -50,6 +51,11 @@ class Box;
 class ScrolledWindow;
 class Grid;
 class EntryCompletion;
+}
+
+namespace Gio
+{
+class SimpleActionGroup;
 }
 
 namespace Gsv
@@ -101,7 +107,8 @@ private:
 
   Gtk::Box*                   vbox_main_;
 
-  Gtk::Toolbar*               toolbar_;
+  Gtk::HeaderBar*             headerbar_;
+  Gtk::MenuButton*            button_gear_;
 
   Gtk::Grid*                  grid_file_;
   Gtk::FileChooser*           button_folder_;
@@ -143,11 +150,25 @@ private:
   std::auto_ptr<Gtk::Dialog>  about_dialog_;
   std::auto_ptr<PrefDialog>   pref_dialog_;
 
+  Glib::RefPtr<Gio::SimpleActionGroup> match_action_group_;
+  Glib::RefPtr<Gio::SimpleActionGroup> edit_action_group_;
+  Glib::RefPtr<Gio::SimpleActionGroup> save_action_group_;
+
+  std::map<Glib::RefPtr<Gio::SimpleActionGroup>, bool> action_group_enabled_;
+  std::map<Glib::ustring, bool> action_enabled_;
+  std::map<Glib::ustring,
+           Glib::RefPtr<Gio::SimpleActionGroup> > action_to_group_;
+
+  void set_sensitive(const Glib::RefPtr<Gio::SimpleActionGroup>& group,
+                     bool sensitive);
+  void set_sensitive(const Glib::ustring& action_name, bool sensitive);
+
   void on_startup();
   void load_xml();
   void connect_signals();
   bool autorun_idle();
   void save_window_state();
+  void init_actions();
 
   void on_hide();
   void on_style_updated();

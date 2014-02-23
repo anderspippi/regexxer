@@ -156,38 +156,11 @@ void ControlGroup::set_enabled(bool enable)
 Controller::Controller()
 :
   match_actions (true),
-  edit_actions  (false),
-  save_file     (false),
-  save_all      (false),
-  undo          (false),
   find_files    (false),
-  find_matches  (false),
-  next_file     (false),
-  prev_file     (false),
-  next_match    (false),
-  prev_match    (false),
-  replace       (false),
-  replace_file  (false),
-  replace_all   (false),
-  cut           (true),
-  copy          (true),
-  paste         (true),
-  erase         (true)
+  find_matches  (false)
 {
-  match_actions.add(undo);
   match_actions.add(find_files);
   match_actions.add(find_matches);
-  match_actions.add(next_file);
-  match_actions.add(prev_file);
-  match_actions.add(next_match);
-  match_actions.add(prev_match);
-  match_actions.add(replace);
-  match_actions.add(replace_file);
-  match_actions.add(replace_all);
-  edit_actions.add(cut);
-  edit_actions.add(copy);
-  edit_actions.add(paste);
-  edit_actions.add(erase);
 }
 
 Controller::~Controller()
@@ -195,20 +168,6 @@ Controller::~Controller()
 
 void Controller::load_xml(const Glib::RefPtr<Gtk::Builder>& xml)
 {
-  save_file   .add_widgets(xml, "menuitem_save",         "button_save");
-  save_all    .add_widgets(xml, "menuitem_save_all",     "button_save_all");
-  undo        .add_widgets(xml, "menuitem_undo",         "button_undo");
-  cut         .add_widgets(xml, "menuitem_cut",          0);
-  copy        .add_widgets(xml, "menuitem_copy",         0);
-  paste       .add_widgets(xml, "menuitem_paste",        0);
-  erase       .add_widgets(xml, "menuitem_delete",       0);
-  next_file   .add_widgets(xml, "menuitem_next_file",    "button_next_file");
-  prev_file   .add_widgets(xml, "menuitem_prev_file",    "button_prev_file");
-  next_match  .add_widgets(xml, "menuitem_next_match",   "button_next_match");
-  prev_match  .add_widgets(xml, "menuitem_prev_match",   "button_prev_match");
-  replace     .add_widgets(xml, "menuitem_replace",      "button_replace");
-  replace_file.add_widgets(xml, "menuitem_replace_file", "button_replace_file");
-  replace_all .add_widgets(xml, "menuitem_replace_all",  "button_replace_all");
   find_files  .add_widgets(xml, 0,                       "button_find_files");
   find_matches.add_widgets(xml, 0,                       "button_find_matches");
 }
