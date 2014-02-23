@@ -32,7 +32,7 @@
 #include <gtkmm/main.h>
 #include <gtkmm/stock.h>
 #include <gtkmm/stockitem.h>
-#include <gtkmm/window.h>
+#include <gtkmm/applicationwindow.h>
 #include <gtksourceviewmm/init.h>
 #include <giomm/init.h>
 
@@ -205,6 +205,7 @@ int main(int argc, char** argv)
     options->context().parse(argc, argv);
     Glib::RefPtr<Gtk::Application> app =
         Gtk::Application::create(argc, argv, Regexxer::conf_schema);
+
     Gsv::init();
     Gio::init();
 
@@ -214,9 +215,10 @@ int main(int argc, char** argv)
 
     Regexxer::MainWindow window;
 
-    window.initialize(options->init_state());
+    window.initialize(app, options->init_state());
     options.reset();
 
+    //app->register_application();
     app->run(*window.get_window());
 
     return 0;

@@ -54,6 +54,8 @@ const char *const ui_mainwindow_filename       = REGEXXER_PKGDATADIR G_DIR_SEPAR
                                                  "mainwindow.ui";
 const char *const ui_prefdialog_filename       = REGEXXER_PKGDATADIR G_DIR_SEPARATOR_S
                                                  "prefdialog.ui";
+const char *const ui_appmenu_filename          = REGEXXER_PKGDATADIR G_DIR_SEPARATOR_S
+                                                 "app-menu.xml";
 
 } // namespace Regexxer
 

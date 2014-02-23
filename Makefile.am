@@ -78,7 +78,7 @@ AM_CPPFLAGS = $(global_defs) -I$(top_builddir) $(REGEXXER_MODULES_CFLAGS) $(REGE
 
 src_regexxer_LDADD        = $(REGEXXER_MODULES_LIBS) $(INTLLIBS)
 
-dist_pkgdata_DATA   = ui/mainwindow.ui ui/prefdialog.ui
+dist_pkgdata_DATA   = ui/mainwindow.ui ui/prefdialog.ui ui/app-menu.xml
 
 iconthemedir        = $(datadir)/icons/hicolor
 appicondir          = $(iconthemedir)/48x48/apps

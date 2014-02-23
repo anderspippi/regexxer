@@ -29,6 +29,7 @@
 #include <sigc++/sigc++.h>
 #include <glibmm/refptr.h>
 #include <glibmm/ustring.h>
+#include <gtkmm/applicationwindow.h>
 #include <list>
 #include <memory>
 #include <vector>
@@ -41,6 +42,7 @@ class Dialog;
 class Entry;
 class FileChooser;
 class Toolbar;
+class ApplicationWindow;
 class Window;
 class ComboBox;
 class ComboBoxText;
@@ -86,13 +88,15 @@ public:
   MainWindow();
   virtual ~MainWindow();
 
-  void initialize(const InitState& init);
-  Gtk::Window* get_window() { return window_.get(); }
+  void initialize(const Glib::RefPtr<Gtk::Application>& application,
+                  const InitState& init);
+  Gtk::Window* get_window() { return static_cast<Gtk::Window*>(window_.get()); }
 
 private:
   class BusyAction;
 
-  std::auto_ptr<Gtk::Window>  window_;
+  Glib::RefPtr<Gtk::Application> application_;
+  std::auto_ptr<Gtk::ApplicationWindow>  window_;
   Controller                  controller_;
 
   Gtk::Box*                   vbox_main_;
@@ -139,6 +143,7 @@ private:
   std::auto_ptr<Gtk::Dialog>  about_dialog_;
   std::auto_ptr<PrefDialog>   pref_dialog_;
 
+  void on_startup();
   void load_xml();
   void connect_signals();
   bool autorun_idle();

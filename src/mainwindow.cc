@@ -229,7 +229,8 @@ MainWindow::MainWindow()
 MainWindow::~MainWindow()
 {}
 
-void MainWindow::initialize(const InitState& init)
+void MainWindow::initialize(const Glib::RefPtr<Gtk::Application>& application,
+                            const InitState& init)
 {
   Glib::RefPtr<Gio::Settings> settings = Settings::instance();
   int width = settings->get_int(conf_key_window_width);
@@ -240,6 +241,12 @@ void MainWindow::initialize(const InitState& init)
 
   bool maximized = settings->get_boolean(conf_key_window_maximized);
 
+  application_ = application;
+  application->signal_startup().connect
+      (sigc::mem_fun(*this, &MainWindow::on_startup));
+  application->register_application();
+
+  window_->set_application(application_);
   window_->resize(width, height);
   window_->move(x, y);
   if (maximized)
@@ -321,11 +328,41 @@ void MainWindow::initialize(const InitState& init)
 
 /**** Regexxer::MainWindow -- private **************************************/
 
+void MainWindow::on_startup()
+{
+  static struct
+  {
+    const char* const name;
+    sigc::slot<void> slot;
+  } appmenu_actions[] =
+  {
+    {"preferences", sigc::mem_fun(*this, &MainWindow::on_preferences)},
+    {"about", sigc::mem_fun(*this, &MainWindow::on_about)},
+    {"quit", sigc::mem_fun(*this, &MainWindow::on_quit)},
+    {0},
+  };
+
+  Glib::RefPtr<Gtk::Builder> builder =
+      Gtk::Builder::create_from_file(ui_appmenu_filename);
+
+  for (int i = 0; appmenu_actions[i].name; i++)
+  {
+    Glib::RefPtr<Gio::SimpleAction> action =
+        Gio::SimpleAction::create(appmenu_actions[i].name);
+    application_->add_action(action);
+    action->signal_activate().connect(sigc::hide(appmenu_actions[i].slot));
+  }
+
+  Glib::RefPtr<Gio::MenuModel> appmenu =
+      Glib::RefPtr<Gio::MenuModel>::cast_static(builder->get_object("appmenu"));
+  application_->set_app_menu(appmenu);
+}
+
 void MainWindow::load_xml()
 {
   const Glib::RefPtr<Gtk::Builder> xml = Gtk::Builder::create_from_file(ui_mainwindow_filename);
 
-  Gtk::Window* mainwindow = 0;
+  Gtk::ApplicationWindow* mainwindow = 0;
   xml->get_widget("mainwindow", mainwindow);
   window_.reset(mainwindow);
 
