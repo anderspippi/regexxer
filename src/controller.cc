@@ -160,9 +160,6 @@ Controller::Controller()
   save_file     (false),
   save_all      (false),
   undo          (false),
-  preferences   (true),
-  quit          (true),
-  about         (true),
   find_files    (false),
   find_matches  (false),
   next_file     (false),
@@ -200,13 +197,11 @@ void Controller::load_xml(const Glib::RefPtr<Gtk::Builder>& xml)
 {
   save_file   .add_widgets(xml, "menuitem_save",         "button_save");
   save_all    .add_widgets(xml, "menuitem_save_all",     "button_save_all");
-  quit        .add_widgets(xml, "menuitem_quit",         "button_quit");
   undo        .add_widgets(xml, "menuitem_undo",         "button_undo");
   cut         .add_widgets(xml, "menuitem_cut",          0);
   copy        .add_widgets(xml, "menuitem_copy",         0);
   paste       .add_widgets(xml, "menuitem_paste",        0);
   erase       .add_widgets(xml, "menuitem_delete",       0);
-  preferences .add_widgets(xml, "menuitem_preferences",  0);
   next_file   .add_widgets(xml, "menuitem_next_file",    "button_next_file");
   prev_file   .add_widgets(xml, "menuitem_prev_file",    "button_prev_file");
   next_match  .add_widgets(xml, "menuitem_next_match",   "button_next_match");
@@ -216,7 +211,6 @@ void Controller::load_xml(const Glib::RefPtr<Gtk::Builder>& xml)
   replace_all .add_widgets(xml, "menuitem_replace_all",  "button_replace_all");
   find_files  .add_widgets(xml, 0,                       "button_find_files");
   find_matches.add_widgets(xml, 0,                       "button_find_matches");
-  about       .add_widgets(xml, "menuitem_about",        0);
 }
 
 } // namespace Regexxer

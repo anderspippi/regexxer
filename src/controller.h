@@ -98,9 +98,6 @@ public:
   ControlItem   save_file;
   ControlItem   save_all;
   ControlItem   undo;
-  ControlItem   preferences;
-  ControlItem   quit;
-  ControlItem   about;
 
   ControlItem   find_files;
   ControlItem   find_matches;

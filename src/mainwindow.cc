@@ -406,9 +406,6 @@ void MainWindow::connect_signals()
   controller_.copy        .connect(mem_fun(*this, &MainWindow::on_copy));
   controller_.paste       .connect(mem_fun(*this, &MainWindow::on_paste));
   controller_.erase       .connect(mem_fun(*this, &MainWindow::on_erase));
-  controller_.preferences .connect(mem_fun(*this, &MainWindow::on_preferences));
-  controller_.quit        .connect(mem_fun(*this, &MainWindow::on_quit));
-  controller_.about       .connect(mem_fun(*this, &MainWindow::on_about));
   controller_.find_files  .connect(mem_fun(*this, &MainWindow::on_find_files));
   controller_.find_matches.connect(mem_fun(*this, &MainWindow::on_exec_search));
   controller_.next_file   .connect(bind(mem_fun(*this, &MainWindow::on_go_next_file), true));
