@@ -4,26 +4,27 @@
 #
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2005.
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2010, 2012.
+# Balázs Úr <urbalazs at gmail dot com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
-"Report-Msgid-Bugs-To: http://regexxer.sourceforge.net/bugs\n"
-"POT-Creation-Date: 2012-10-08 12:37+0200\n"
-"PO-Revision-Date: 2012-10-08 08:32+0200\n"
-"Last-Translator: Gabor Kelemen <kelemeng at gnome dot hu>\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
+"POT-Creation-Date: 2014-02-23 17:05+0000\n"
+"PO-Revision-Date: 2014-02-28 20:42+0100\n"
+"Last-Translator: Balázs Úr <urbalazs at gmail dot com>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 1.2\n"
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "regexxer keresőeszköz"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1028
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1062
 msgid "Search and replace using regular expressions"
 msgstr "Keresés és csere reguláris kifejezések használatával"
 
@@ -217,7 +218,7 @@ msgstr "REGEX"
 msgid "Find only the first match in a line"
 msgstr "Csak az első találat keresése egy sorban"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:16
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:15
 msgid "Do case insensitive matching"
 msgstr "A kis- és nagybetűk nem különböznek"
 
@@ -241,7 +242,7 @@ msgstr "Ne kezdjen keresni automatikusan"
 msgid "[FOLDER]"
 msgstr "[MAPPA]"
 
-#: ../src/mainwindow.cc:568
+#: ../src/mainwindow.cc:602
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -249,7 +250,7 @@ msgstr ""
 "Néhány fájl még nincs elmentve.\n"
 "Mindenképp kilép?"
 
-#: ../src/mainwindow.cc:582
+#: ../src/mainwindow.cc:616
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -257,19 +258,19 @@ msgstr ""
 "Néhány fájl még nincs elmentve.\n"
 "Mindenképp folytatja?"
 
-#: ../src/mainwindow.cc:612
+#: ../src/mainwindow.cc:646
 msgid "The file search pattern is invalid."
 msgstr "A fájlkereső minta érvénytelen."
 
-#: ../src/mainwindow.cc:618
+#: ../src/mainwindow.cc:652
 msgid "The following errors occurred during search:"
 msgstr "A következő hibák léptek fel keresés közben:"
 
-#: ../src/mainwindow.cc:882
+#: ../src/mainwindow.cc:916
 msgid "The following errors occurred during save:"
 msgstr "A következő hibák léptek fel mentés közben:"
 
-#: ../src/mainwindow.cc:1034
+#: ../src/mainwindow.cc:1068
 msgid "translator-credits"
 msgstr "Kelemen Gábor <kelemeng@gnome.hu>"
 
@@ -294,6 +295,19 @@ msgstr "Találat:"
 msgid "Cancels the running search"
 msgstr "Leállítja a futó keresést"
 
+#: ../ui/app-menu.xml.h:1
+#| msgid "Preferences"
+msgid "_Preferences"
+msgstr "_Beállítások"
+
+#: ../ui/app-menu.xml.h:2
+msgid "_About"
+msgstr "_Névjegy"
+
+#: ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "_Kilépés"
+
 #: ../ui/mainwindow.ui.h:1
 msgid "_File"
 msgstr "_Fájl"
@@ -307,8 +321,8 @@ msgid "_Match"
 msgstr "_Találatok"
 
 #: ../ui/mainwindow.ui.h:4
-msgid "_Help"
-msgstr "_Súgó"
+msgid "Fol_der:"
+msgstr "Ma_ppa:"
 
 #: ../ui/mainwindow.ui.h:5
 msgid "Pattern:"
@@ -335,30 +349,26 @@ msgid "Find fi_les"
 msgstr "Fájlok ke_resése"
 
 #: ../ui/mainwindow.ui.h:12
-msgid "Fol_der:"
-msgstr "Ma_ppa:"
-
-#: ../ui/mainwindow.ui.h:13
 msgid "Search:"
 msgstr "Keresés:"
 
-#: ../ui/mainwindow.ui.h:14
+#: ../ui/mainwindow.ui.h:13
 msgid "Replace:"
 msgstr "Csere:"
 
-#: ../ui/mainwindow.ui.h:15
+#: ../ui/mainwindow.ui.h:14
 msgid "Find all possible matches in a line"
 msgstr "Egy soron belül az összes lehetséges találat megkeresése"
 
-#: ../ui/mainwindow.ui.h:17
+#: ../ui/mainwindow.ui.h:16
 msgid "Find all matches of the regular expression"
 msgstr "A szabályos kifejezés minden illeszkedésének megkeresése"
 
-#: ../ui/mainwindow.ui.h:18
+#: ../ui/mainwindow.ui.h:17
 msgid "A regular expression in Perl syntax"
 msgstr "Egy szabályos kifejezés Perl szintaxissal"
 
-#: ../ui/mainwindow.ui.h:19
+#: ../ui/mainwindow.ui.h:18
 msgid ""
 "The new string to substitute. As in Perl, you can refer to parts of the "
 "match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
@@ -368,67 +378,67 @@ msgstr ""
 "$1, $2 stb. vagy akár $+, $&amp;, $` és $' használatával is. A \\l, \\u, "
 "\\L, \\U és \\E operátorok is támogatottak."
 
-#: ../ui/mainwindow.ui.h:20
+#: ../ui/mainwindow.ui.h:19
 msgid "Preview of the substitution"
 msgstr "A helyettesítés előnézete"
 
-#: ../ui/mainwindow.ui.h:21
+#: ../ui/mainwindow.ui.h:20
 msgid "Preview"
 msgstr "Előnézet"
+
+#: ../ui/mainwindow.ui.h:21
+msgid "_Replace"
+msgstr "_Csere"
 
 #: ../ui/mainwindow.ui.h:22
 msgid "Replace current match"
 msgstr "A jelenlegi találat cseréje"
 
 #: ../ui/mainwindow.ui.h:23
-msgid "_Replace"
-msgstr "_Csere"
+msgid "_This file"
+msgstr "_Ebben a fájlban"
 
 #: ../ui/mainwindow.ui.h:24
 msgid "Replace all matches in the current file"
 msgstr "Minden találat cseréje a jelenlegi fájlban"
 
 #: ../ui/mainwindow.ui.h:25
-msgid "_This file"
-msgstr "_Ebben a fájlban"
+msgid "_All files"
+msgstr "_Minden fájlban"
 
 #: ../ui/mainwindow.ui.h:26
 msgid "Replace all matches in all files"
 msgstr "Minden találat cseréje minden fájlban"
 
 #: ../ui/mainwindow.ui.h:27
-msgid "_All files"
-msgstr "_Minden fájlban"
-
-#: ../ui/mainwindow.ui.h:28
 msgid "File backward"
 msgstr "Előző fájl"
 
-#: ../ui/mainwindow.ui.h:29
+#: ../ui/mainwindow.ui.h:28
 msgid "Go to the previous matching file"
 msgstr "Ugrás az előző találatot tartalmazó fájlra"
 
-#: ../ui/mainwindow.ui.h:30
+#: ../ui/mainwindow.ui.h:29
 msgid "Backward"
 msgstr "Vissza"
 
-#: ../ui/mainwindow.ui.h:31
+#: ../ui/mainwindow.ui.h:30
 msgid "Go to previous match"
 msgstr "Ugrás az előző találatra"
 
-#: ../ui/mainwindow.ui.h:32
+#: ../ui/mainwindow.ui.h:31
 msgid "Forward"
 msgstr "Előre"
 
-#: ../ui/mainwindow.ui.h:33
+#: ../ui/mainwindow.ui.h:32
 msgid "Go to next match"
 msgstr "Ugrás a következő találatra"
 
-#: ../ui/mainwindow.ui.h:34
+#: ../ui/mainwindow.ui.h:33
 msgid "File forward"
 msgstr "Következő fájl"
 
-#: ../ui/mainwindow.ui.h:35
+#: ../ui/mainwindow.ui.h:34
 msgid "Go to the next matching file"
 msgstr "Ugrás a következő találatot tartalmazó fájlra"
 
@@ -465,7 +475,7 @@ msgid "C_urrent match color:"
 msgstr "_Jelenlegi találat színe:"
 
 #: ../ui/prefdialog.ui.h:9
-msgid "_Look&#x2019;n&#x2019;feel"
+msgid "_Look’n’feel"
 msgstr "_Megjelenés"
 
 #: ../ui/prefdialog.ui.h:10
@@ -502,6 +512,12 @@ msgstr "A jelenlegi területi beállítások által megadott kódolás"
 #: ../ui/prefdialog.ui.h:17
 msgid "_File access"
 msgstr "_Fájlelérés"
+
+#~ msgid "_Help"
+#~ msgstr "_Súgó"
+
+#~ msgid "_Look&#x2019;n&#x2019;feel"
+#~ msgstr "_Megjelenés"
 
 #~ msgid "List of last pattern used for the file's regex entry."
 #~ msgstr "A fájl regex bejegyzéséhez használt utolsó minták listája."
