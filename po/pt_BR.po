@@ -5,27 +5,27 @@
 # Andrius da Costa Ribas <andriusmao@gmail.com>, 2008.
 # Marco Biscaro <marcobiscaro2112@gmail.com>, 2011.
 # Enrico Nicoletto <liverig@gmail.com>, 2013.
+# Rafael Ferreira <rafael.f.f1@gmail.com>, 2014.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2012-11-16 13:32+0000\n"
-"PO-Revision-Date: 2013-01-07 22:26-0300\n"
-"Last-Translator: Enrico Nicoletto <liverig@gmail.com>\n"
+"POT-Creation-Date: 2014-02-23 17:05+0000\n"
+"PO-Revision-Date: 2014-02-28 13:08-0300\n"
+"Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "Ferramenta de pesquisa Regexxer"
 
-#: ../ui/regexxer.desktop.in.h:2
-#: ../src/mainwindow.cc:1028
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1062
 msgid "Search and replace using regular expressions"
 msgstr "Pesquise e substitua usando expressões regulares"
 
@@ -62,24 +62,36 @@ msgid "Match color"
 msgstr "Cor da ocorrência"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:9
-msgid "The background color used to highlight matches of the search expression."
-msgstr "A cor de fundo usada para destacar as ocorrências da expressão de pesquisa."
+msgid ""
+"The background color used to highlight matches of the search expression."
+msgstr ""
+"A cor de fundo usada para destacar as ocorrências da expressão de pesquisa."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:10
 msgid "Current-match color"
 msgstr "Cor da ocorrência atual"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:11
-msgid "The background color used to highlight the currently selected match of the search expression."
-msgstr "A cor de fundo usada para destacar a ocorrência atualmente selecionada da expressão de pesquisa."
+msgid ""
+"The background color used to highlight the currently selected match of the "
+"search expression."
+msgstr ""
+"A cor de fundo usada para destacar a ocorrência atualmente selecionada da "
+"expressão de pesquisa."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:12
 msgid "Fallback encoding"
 msgstr "Codificação secundária"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:13
-msgid "Name of the character encoding to use if a file is not readable in either UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" for a complete list of possible values."
-msgstr "Nome da codificação de caracteres para usar se um arquivo não for legível em UTF-8 nem na codificação especificada pela localidade atual. Tente \"iconv --list\" para uma lista completa de possíveis valores."
+msgid ""
+"Name of the character encoding to use if a file is not readable in either "
+"UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" "
+"for a complete list of possible values."
+msgstr ""
+"Nome da codificação de caracteres para usar se um arquivo não for legível em "
+"UTF-8 nem na codificação especificada pela localidade atual. Tente \"iconv --"
+"list\" para uma lista completa de possíveis valores."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:14
 msgid "window width"
@@ -191,8 +203,7 @@ msgstr "PADRÃO"
 msgid "Do not recurse into subdirectories"
 msgstr "Não incluir subdiretórios"
 
-#: ../src/main.cc:139
-#: ../ui/mainwindow.ui.h:9
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:9
 msgid "Also find hidden files"
 msgstr "Localizar arquivos ocultos também"
 
@@ -208,8 +219,7 @@ msgstr "ER"
 msgid "Find only the first match in a line"
 msgstr "Localizar apenas a primeira ocorrência na linha"
 
-#: ../src/main.cc:145
-#: ../ui/mainwindow.ui.h:16
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:15
 msgid "Do case insensitive matching"
 msgstr "Não diferenciar maiúsc./minúsc."
 
@@ -233,7 +243,7 @@ msgstr "Não iniciar pesquisa automaticamente"
 msgid "[FOLDER]"
 msgstr "[PASTA]"
 
-#: ../src/mainwindow.cc:568
+#: ../src/mainwindow.cc:602
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -241,7 +251,7 @@ msgstr ""
 "Alguns arquivos ainda não foram salvos.\n"
 "Sair mesmo assim?"
 
-#: ../src/mainwindow.cc:582
+#: ../src/mainwindow.cc:616
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -249,19 +259,19 @@ msgstr ""
 "Alguns arquivos ainda não foram salvos.\n"
 "Continuar mesmo assim?"
 
-#: ../src/mainwindow.cc:612
+#: ../src/mainwindow.cc:646
 msgid "The file search pattern is invalid."
 msgstr "O padrão de pesquisa de arquivos é invalido."
 
-#: ../src/mainwindow.cc:618
+#: ../src/mainwindow.cc:652
 msgid "The following errors occurred during search:"
 msgstr "Os seguintes erros ocorreram durante a pesquisa:"
 
-#: ../src/mainwindow.cc:882
+#: ../src/mainwindow.cc:916
 msgid "The following errors occurred during save:"
 msgstr "Os seguintes erros ocorreram durante a gravação:"
 
-#: ../src/mainwindow.cc:1034
+#: ../src/mainwindow.cc:1068
 msgid "translator-credits"
 msgstr ""
 "João Paulo Gomes Vanzuita <joaopaulo99@terra.com.br>\n"
@@ -290,6 +300,18 @@ msgstr "Ocorrência:"
 msgid "Cancels the running search"
 msgstr "Cancela a pesquisa em execução"
 
+#: ../ui/app-menu.xml.h:1
+msgid "_Preferences"
+msgstr "_Preferências"
+
+#: ../ui/app-menu.xml.h:2
+msgid "_About"
+msgstr "_Sobre"
+
+#: ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "S_air"
+
 #: ../ui/mainwindow.ui.h:1
 msgid "_File"
 msgstr "_Arquivo"
@@ -303,8 +325,8 @@ msgid "_Match"
 msgstr "_Ocorrência"
 
 #: ../ui/mainwindow.ui.h:4
-msgid "_Help"
-msgstr "Aj_uda"
+msgid "Fol_der:"
+msgstr "_Pasta:"
 
 #: ../ui/mainwindow.ui.h:5
 msgid "Pattern:"
@@ -324,101 +346,104 @@ msgstr "oculto"
 
 #: ../ui/mainwindow.ui.h:10
 msgid "Find all files that match the filename pattern"
-msgstr "Localiza todos os arquivos que coincidem com o padrão de nome de arquivo"
+msgstr ""
+"Localiza todos os arquivos que coincidem com o padrão de nome de arquivo"
 
 #: ../ui/mainwindow.ui.h:11
 msgid "Find fi_les"
 msgstr "Localizar _arquivos"
 
 #: ../ui/mainwindow.ui.h:12
-msgid "Fol_der:"
-msgstr "_Pasta:"
-
-#: ../ui/mainwindow.ui.h:13
 msgid "Search:"
 msgstr "Pesquisar:"
 
-#: ../ui/mainwindow.ui.h:14
+#: ../ui/mainwindow.ui.h:13
 msgid "Replace:"
 msgstr "Substituir:"
 
-#: ../ui/mainwindow.ui.h:15
+#: ../ui/mainwindow.ui.h:14
 msgid "Find all possible matches in a line"
 msgstr "Localiza todas as possíveis ocorrências em uma linha"
 
-#: ../ui/mainwindow.ui.h:17
+#: ../ui/mainwindow.ui.h:16
 msgid "Find all matches of the regular expression"
 msgstr "Localiza todas as ocorrências da expressão regular"
 
-#: ../ui/mainwindow.ui.h:18
+#: ../ui/mainwindow.ui.h:17
 msgid "A regular expression in Perl syntax"
 msgstr "Uma expressão regular na sintaxe Perl"
 
-#: ../ui/mainwindow.ui.h:19
-msgid "The new string to substitute. As in Perl, you can refer to parts of the match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, \\u, \\L, \\U and \\E are supported as well."
-msgstr "A nova expressão para substituir. Assim como em Perl, você pode referir-se às partes da ocorrência usando $1, $2 etc. ou mesmo $+, $&amp;, $` e $'. Também há suporte para os operadores \\l, \\u, \\L, \\U e \\E."
+#: ../ui/mainwindow.ui.h:18
+msgid ""
+"The new string to substitute. As in Perl, you can refer to parts of the "
+"match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
+"\\u, \\L, \\U and \\E are supported as well."
+msgstr ""
+"A nova expressão para substituir. Assim como em Perl, você pode referir-se "
+"às partes da ocorrência usando $1, $2 etc. ou mesmo $+, $&amp;, $` e $'. "
+"Também há suporte para os operadores \\l, \\u, \\L, \\U e \\E."
 
-#: ../ui/mainwindow.ui.h:20
+#: ../ui/mainwindow.ui.h:19
 msgid "Preview of the substitution"
 msgstr "Visualização da substituição"
 
-#: ../ui/mainwindow.ui.h:21
+#: ../ui/mainwindow.ui.h:20
 msgid "Preview"
 msgstr "Visualizar"
+
+#: ../ui/mainwindow.ui.h:21
+msgid "_Replace"
+msgstr "_Substituir"
 
 #: ../ui/mainwindow.ui.h:22
 msgid "Replace current match"
 msgstr "Substitui a ocorrência atual"
 
 #: ../ui/mainwindow.ui.h:23
-msgid "_Replace"
-msgstr "_Substituir"
+msgid "_This file"
+msgstr "_Este arquivo"
 
 #: ../ui/mainwindow.ui.h:24
 msgid "Replace all matches in the current file"
 msgstr "Substitui todas as ocorrências no arquivo atual"
 
 #: ../ui/mainwindow.ui.h:25
-msgid "_This file"
-msgstr "_Este arquivo"
+msgid "_All files"
+msgstr "_Todos os arquivos"
 
 #: ../ui/mainwindow.ui.h:26
 msgid "Replace all matches in all files"
 msgstr "Substitui todas as ocorrências em todos os arquivos"
 
 #: ../ui/mainwindow.ui.h:27
-msgid "_All files"
-msgstr "_Todos os arquivos"
-
-#: ../ui/mainwindow.ui.h:28
 msgid "File backward"
 msgstr "Recuar no arquivo"
 
-#: ../ui/mainwindow.ui.h:29
+#: ../ui/mainwindow.ui.h:28
 msgid "Go to the previous matching file"
 msgstr "Vai ao arquivo correspondente anterior"
 
-#: ../ui/mainwindow.ui.h:30
+#: ../ui/mainwindow.ui.h:29
 msgid "Backward"
 msgstr "Recuar"
 
-#: ../ui/mainwindow.ui.h:31
+#: ../ui/mainwindow.ui.h:30
 msgid "Go to previous match"
 msgstr "Vai à ocorrência anterior"
 
-#: ../ui/mainwindow.ui.h:32
+#: ../ui/mainwindow.ui.h:31
 msgid "Forward"
 msgstr "Avançar"
 
-#: ../ui/mainwindow.ui.h:33
+#: ../ui/mainwindow.ui.h:32
 msgid "Go to next match"
 msgstr "Vai à próxima ocorrência"
 
-#: ../ui/mainwindow.ui.h:34
+#: ../ui/mainwindow.ui.h:33
 msgid "File forward"
 msgstr "Avançar no arquivo"
 
-#: ../ui/mainwindow.ui.h:35
+#: ../ui/mainwindow.ui.h:34
 msgid "Go to the next matching file"
 msgstr "Vai ao próximo arquivo correspondente"
 
@@ -455,12 +480,15 @@ msgid "C_urrent match color:"
 msgstr "Cor da ocorrência at_ual:"
 
 #: ../ui/prefdialog.ui.h:9
-msgid "_Look&#x2019;n&#x2019;feel"
+msgid "_Look’n’feel"
 msgstr "_Aparência"
 
 #: ../ui/prefdialog.ui.h:10
-msgid "regexxer attempts to read a file in the following encodings before giving up:"
-msgstr "O regexxer tentará ler um arquivo nas seguintes codificações antes de desistir:"
+msgid ""
+"regexxer attempts to read a file in the following encodings before giving up:"
+msgstr ""
+"O regexxer tentará ler um arquivo nas seguintes codificações antes de "
+"desistir:"
 
 #: ../ui/prefdialog.ui.h:11
 msgid "3."
@@ -490,3 +518,8 @@ msgstr "A codificação especificada pela localidade atual"
 msgid "_File access"
 msgstr "Acesso de ar_quivo"
 
+#~ msgid "_Help"
+#~ msgstr "Aj_uda"
+
+#~ msgid "_Look&#x2019;n&#x2019;feel"
+#~ msgstr "_Aparência"
