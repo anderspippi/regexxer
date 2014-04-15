@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-02-23 17:05+0000\n"
-"PO-Revision-Date: 2014-02-28 13:08-0300\n"
+"POT-Creation-Date: 2014-04-13 15:59+0000\n"
+"PO-Revision-Date: 2014-04-14 21:13-0300\n"
 "Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -20,12 +20,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.6.4\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "Ferramenta de pesquisa Regexxer"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1062
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
 msgid "Search and replace using regular expressions"
 msgstr "Pesquise e substitua usando expressões regulares"
 
@@ -203,7 +204,7 @@ msgstr "PADRÃO"
 msgid "Do not recurse into subdirectories"
 msgstr "Não incluir subdiretórios"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:9
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Localizar arquivos ocultos também"
 
@@ -219,7 +220,7 @@ msgstr "ER"
 msgid "Find only the first match in a line"
 msgstr "Localizar apenas a primeira ocorrência na linha"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:15
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Não diferenciar maiúsc./minúsc."
 
@@ -243,7 +244,7 @@ msgstr "Não iniciar pesquisa automaticamente"
 msgid "[FOLDER]"
 msgstr "[PASTA]"
 
-#: ../src/mainwindow.cc:602
+#: ../src/mainwindow.cc:701
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -251,7 +252,7 @@ msgstr ""
 "Alguns arquivos ainda não foram salvos.\n"
 "Sair mesmo assim?"
 
-#: ../src/mainwindow.cc:616
+#: ../src/mainwindow.cc:715
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -259,19 +260,19 @@ msgstr ""
 "Alguns arquivos ainda não foram salvos.\n"
 "Continuar mesmo assim?"
 
-#: ../src/mainwindow.cc:646
+#: ../src/mainwindow.cc:745
 msgid "The file search pattern is invalid."
 msgstr "O padrão de pesquisa de arquivos é invalido."
 
-#: ../src/mainwindow.cc:652
+#: ../src/mainwindow.cc:751
 msgid "The following errors occurred during search:"
 msgstr "Os seguintes erros ocorreram durante a pesquisa:"
 
-#: ../src/mainwindow.cc:916
+#: ../src/mainwindow.cc:1020
 msgid "The following errors occurred during save:"
 msgstr "Os seguintes erros ocorreram durante a gravação:"
 
-#: ../src/mainwindow.cc:1068
+#: ../src/mainwindow.cc:1177
 msgid "translator-credits"
 msgstr ""
 "João Paulo Gomes Vanzuita <joaopaulo99@terra.com.br>\n"
@@ -313,67 +314,60 @@ msgid "_Quit"
 msgstr "S_air"
 
 #: ../ui/mainwindow.ui.h:1
-msgid "_File"
-msgstr "_Arquivo"
+#| msgid "Save _all"
+msgid "Save all"
+msgstr "Salvar tudo"
 
 #: ../ui/mainwindow.ui.h:2
-msgid "_Edit"
-msgstr "_Editar"
-
-#: ../ui/mainwindow.ui.h:3
-msgid "_Match"
-msgstr "_Ocorrência"
-
-#: ../ui/mainwindow.ui.h:4
 msgid "Fol_der:"
 msgstr "_Pasta:"
 
-#: ../ui/mainwindow.ui.h:5
+#: ../ui/mainwindow.ui.h:3
 msgid "Pattern:"
 msgstr "Padrão:"
 
-#: ../ui/mainwindow.ui.h:6
+#: ../ui/mainwindow.ui.h:4
 msgid "recursive"
 msgstr "recursivo"
 
-#: ../ui/mainwindow.ui.h:7
+#: ../ui/mainwindow.ui.h:5
 msgid "Recurse into subdirectories"
 msgstr "Incluir subdiretórios"
 
-#: ../ui/mainwindow.ui.h:8
+#: ../ui/mainwindow.ui.h:6
 msgid "hidden"
 msgstr "oculto"
 
-#: ../ui/mainwindow.ui.h:10
+#: ../ui/mainwindow.ui.h:8
 msgid "Find all files that match the filename pattern"
 msgstr ""
 "Localiza todos os arquivos que coincidem com o padrão de nome de arquivo"
 
-#: ../ui/mainwindow.ui.h:11
+#: ../ui/mainwindow.ui.h:9
 msgid "Find fi_les"
 msgstr "Localizar _arquivos"
 
-#: ../ui/mainwindow.ui.h:12
+#: ../ui/mainwindow.ui.h:10
 msgid "Search:"
 msgstr "Pesquisar:"
 
-#: ../ui/mainwindow.ui.h:13
+#: ../ui/mainwindow.ui.h:11
 msgid "Replace:"
 msgstr "Substituir:"
 
-#: ../ui/mainwindow.ui.h:14
+#: ../ui/mainwindow.ui.h:12
 msgid "Find all possible matches in a line"
 msgstr "Localiza todas as possíveis ocorrências em uma linha"
 
-#: ../ui/mainwindow.ui.h:16
+#: ../ui/mainwindow.ui.h:14
 msgid "Find all matches of the regular expression"
 msgstr "Localiza todas as ocorrências da expressão regular"
 
-#: ../ui/mainwindow.ui.h:17
+#: ../ui/mainwindow.ui.h:15
 msgid "A regular expression in Perl syntax"
 msgstr "Uma expressão regular na sintaxe Perl"
 
-#: ../ui/mainwindow.ui.h:18
+#: ../ui/mainwindow.ui.h:16
 msgid ""
 "The new string to substitute. As in Perl, you can refer to parts of the "
 "match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
@@ -383,67 +377,67 @@ msgstr ""
 "às partes da ocorrência usando $1, $2 etc. ou mesmo $+, $&amp;, $` e $'. "
 "Também há suporte para os operadores \\l, \\u, \\L, \\U e \\E."
 
-#: ../ui/mainwindow.ui.h:19
+#: ../ui/mainwindow.ui.h:17
 msgid "Preview of the substitution"
 msgstr "Visualização da substituição"
 
-#: ../ui/mainwindow.ui.h:20
+#: ../ui/mainwindow.ui.h:18
 msgid "Preview"
 msgstr "Visualizar"
 
-#: ../ui/mainwindow.ui.h:21
+#: ../ui/mainwindow.ui.h:19
 msgid "_Replace"
 msgstr "_Substituir"
 
-#: ../ui/mainwindow.ui.h:22
+#: ../ui/mainwindow.ui.h:20
 msgid "Replace current match"
 msgstr "Substitui a ocorrência atual"
 
-#: ../ui/mainwindow.ui.h:23
+#: ../ui/mainwindow.ui.h:21
 msgid "_This file"
 msgstr "_Este arquivo"
 
-#: ../ui/mainwindow.ui.h:24
+#: ../ui/mainwindow.ui.h:22
 msgid "Replace all matches in the current file"
 msgstr "Substitui todas as ocorrências no arquivo atual"
 
-#: ../ui/mainwindow.ui.h:25
+#: ../ui/mainwindow.ui.h:23
 msgid "_All files"
 msgstr "_Todos os arquivos"
 
-#: ../ui/mainwindow.ui.h:26
+#: ../ui/mainwindow.ui.h:24
 msgid "Replace all matches in all files"
 msgstr "Substitui todas as ocorrências em todos os arquivos"
 
-#: ../ui/mainwindow.ui.h:27
+#: ../ui/mainwindow.ui.h:25
 msgid "File backward"
 msgstr "Recuar no arquivo"
 
-#: ../ui/mainwindow.ui.h:28
+#: ../ui/mainwindow.ui.h:26
 msgid "Go to the previous matching file"
 msgstr "Vai ao arquivo correspondente anterior"
 
-#: ../ui/mainwindow.ui.h:29
+#: ../ui/mainwindow.ui.h:27
 msgid "Backward"
 msgstr "Recuar"
 
-#: ../ui/mainwindow.ui.h:30
+#: ../ui/mainwindow.ui.h:28
 msgid "Go to previous match"
 msgstr "Vai à ocorrência anterior"
 
-#: ../ui/mainwindow.ui.h:31
+#: ../ui/mainwindow.ui.h:29
 msgid "Forward"
 msgstr "Avançar"
 
-#: ../ui/mainwindow.ui.h:32
+#: ../ui/mainwindow.ui.h:30
 msgid "Go to next match"
 msgstr "Vai à próxima ocorrência"
 
-#: ../ui/mainwindow.ui.h:33
+#: ../ui/mainwindow.ui.h:31
 msgid "File forward"
 msgstr "Avançar no arquivo"
 
-#: ../ui/mainwindow.ui.h:34
+#: ../ui/mainwindow.ui.h:32
 msgid "Go to the next matching file"
 msgstr "Vai ao próximo arquivo correspondente"
 
@@ -517,6 +511,15 @@ msgstr "A codificação especificada pela localidade atual"
 #: ../ui/prefdialog.ui.h:17
 msgid "_File access"
 msgstr "Acesso de ar_quivo"
+
+#~ msgid "_File"
+#~ msgstr "_Arquivo"
+
+#~ msgid "_Edit"
+#~ msgstr "_Editar"
+
+#~ msgid "_Match"
+#~ msgstr "_Ocorrência"
 
 #~ msgid "_Help"
 #~ msgstr "Aj_uda"
