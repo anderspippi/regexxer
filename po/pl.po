@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://regexxer.sourceforge.net/bugs\n"
-"POT-Creation-Date: 2014-02-23 18:05+0100\n"
-"PO-Revision-Date: 2014-02-23 18:08+0100\n"
+"POT-Creation-Date: 2014-04-17 00:58+0200\n"
+"PO-Revision-Date: 2014-04-17 00:59+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "regexxer Search Tool"
 msgstr "Narzędzie do wyszukiwania regexxer"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1062
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
 msgid "Search and replace using regular expressions"
 msgstr "Wyszukiwanie i zastępowanie używając wyrażeń regularnych"
 
@@ -189,7 +189,7 @@ msgstr "Nie można zapisać pliku \"%1\": %2"
 msgid "“%1” seems to be a binary file."
 msgstr "\"%1\" jest plikiem binarnym."
 
-#: ../src/main.cc:78
+#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
 msgid "Save _all"
 msgstr "Zapisz _wszystko"
 
@@ -205,7 +205,7 @@ msgstr "WZORZEC"
 msgid "Do not recurse into subdirectories"
 msgstr "Bez podkatalogów"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:9
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Wyszukiwanie również ukrytych plików"
 
@@ -221,7 +221,7 @@ msgstr "WYRAŻENIE REGULARNE"
 msgid "Find only the first match in a line"
 msgstr "Wyszukiwanie tylko pierwszego dopasowania w wierszu"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:15
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Wyszukiwanie niezależne od wielkości liter"
 
@@ -245,7 +245,7 @@ msgstr "Bez automatycznego uruchamiania wyszukiwania"
 msgid "[FOLDER]"
 msgstr "[KATALOG]"
 
-#: ../src/mainwindow.cc:602
+#: ../src/mainwindow.cc:701
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -253,7 +253,7 @@ msgstr ""
 "Część plików nie została jeszcze zapisana.\n"
 "Zakończyć mimo to?"
 
-#: ../src/mainwindow.cc:616
+#: ../src/mainwindow.cc:715
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -261,21 +261,24 @@ msgstr ""
 "Część plików nie została jeszcze zapisana.\n"
 "Kontynuować mimo to?"
 
-#: ../src/mainwindow.cc:646
+#: ../src/mainwindow.cc:745
 msgid "The file search pattern is invalid."
 msgstr "Wzorzec wyszukiwania pliku jest nieprawidłowy."
 
-#: ../src/mainwindow.cc:652
+#: ../src/mainwindow.cc:751
 msgid "The following errors occurred during search:"
 msgstr "Następujące błędy wystąpiły podczas wyszukiwania:"
 
-#: ../src/mainwindow.cc:916
+#: ../src/mainwindow.cc:1020
 msgid "The following errors occurred during save:"
 msgstr "Następujące błędy wystąpiły podczas zapisu:"
 
-#: ../src/mainwindow.cc:1068
+#: ../src/mainwindow.cc:1177
 msgid "translator-credits"
-msgstr "Aviary.pl <gnomepl@aviary.pl>, 2012"
+msgstr ""
+"Artur Flinta <aflinta@at.kernel.pl>, 2004\n"
+"Piotr Drąg <piotrdrag@gmail.com>, 2012-2014\n"
+"Aviary.pl <gnomepl@aviary.pl>, 2012-2014"
 
 #: ../src/prefdialog.cc:186
 #, qt-format
@@ -310,67 +313,111 @@ msgstr "_O programie"
 msgid "_Quit"
 msgstr "Za_kończ"
 
+#: ../ui/gear-menu.xml.h:1
+msgid "_Save"
+msgstr "_Zapisz"
+
+#: ../ui/gear-menu.xml.h:3
+msgid "_Undo"
+msgstr "Cof_nij"
+
+#: ../ui/gear-menu.xml.h:4
+msgid "Cu_t"
+msgstr "_Wytnij"
+
+#: ../ui/gear-menu.xml.h:5
+msgid "_Copy"
+msgstr "S_kopiuj"
+
+#: ../ui/gear-menu.xml.h:6
+msgid "_Paste"
+msgstr "Wk_lej"
+
+#: ../ui/gear-menu.xml.h:7
+msgid "_Delete"
+msgstr "_Usuń"
+
+#: ../ui/gear-menu.xml.h:8
+msgid "Previous file"
+msgstr "Poprzedni plik"
+
+#: ../ui/gear-menu.xml.h:9
+msgid "Back"
+msgstr "Wstecz"
+
+#: ../ui/gear-menu.xml.h:10 ../ui/mainwindow.ui.h:29
+msgid "Forward"
+msgstr "Dalej"
+
+#: ../ui/gear-menu.xml.h:11
+msgid "Next file"
+msgstr "Następny plik"
+
+#: ../ui/gear-menu.xml.h:12
+msgid "Replace current"
+msgstr "Zastąp bieżące"
+
+#: ../ui/gear-menu.xml.h:13
+msgid "Replace in this file"
+msgstr "Zastąp w tym pliku"
+
+#: ../ui/gear-menu.xml.h:14
+msgid "Replace in all files"
+msgstr "Zastąp we wszystkich plikach"
+
 #: ../ui/mainwindow.ui.h:1
-msgid "_File"
-msgstr "_Plik"
+msgid "Save all"
+msgstr "Zapisz wszystko"
 
 #: ../ui/mainwindow.ui.h:2
-msgid "_Edit"
-msgstr "_Edycja"
-
-#: ../ui/mainwindow.ui.h:3
-msgid "_Match"
-msgstr "_Dopasowanie"
-
-#: ../ui/mainwindow.ui.h:4
 msgid "Fol_der:"
 msgstr "_Katalog:"
 
-#: ../ui/mainwindow.ui.h:5
+#: ../ui/mainwindow.ui.h:3
 msgid "Pattern:"
 msgstr "Wzorzec:"
 
-#: ../ui/mainwindow.ui.h:6
+#: ../ui/mainwindow.ui.h:4
 msgid "recursive"
 msgstr "rekursywnie"
 
-#: ../ui/mainwindow.ui.h:7
+#: ../ui/mainwindow.ui.h:5
 msgid "Recurse into subdirectories"
 msgstr "Z podkatalogami"
 
-#: ../ui/mainwindow.ui.h:8
+#: ../ui/mainwindow.ui.h:6
 msgid "hidden"
 msgstr "ukryte"
 
-#: ../ui/mainwindow.ui.h:10
+#: ../ui/mainwindow.ui.h:8
 msgid "Find all files that match the filename pattern"
 msgstr "Wyszukuje wszystkie pliki pasujące do wzorca"
 
-#: ../ui/mainwindow.ui.h:11
+#: ../ui/mainwindow.ui.h:9
 msgid "Find fi_les"
 msgstr "Znajdź p_liki"
 
-#: ../ui/mainwindow.ui.h:12
+#: ../ui/mainwindow.ui.h:10
 msgid "Search:"
 msgstr "Wyszukiwanie:"
 
-#: ../ui/mainwindow.ui.h:13
+#: ../ui/mainwindow.ui.h:11
 msgid "Replace:"
 msgstr "Zastąpienie:"
 
-#: ../ui/mainwindow.ui.h:14
+#: ../ui/mainwindow.ui.h:12
 msgid "Find all possible matches in a line"
 msgstr "Wyszukuje wszystkie możliwe dopasowania w wierszu"
 
-#: ../ui/mainwindow.ui.h:16
+#: ../ui/mainwindow.ui.h:14
 msgid "Find all matches of the regular expression"
 msgstr "Wyszukuje wszystkie dopasowania wyrażenia regularnego"
 
-#: ../ui/mainwindow.ui.h:17
+#: ../ui/mainwindow.ui.h:15
 msgid "A regular expression in Perl syntax"
 msgstr "Wyrażenie regularne w składni języka Perl"
 
-#: ../ui/mainwindow.ui.h:18
+#: ../ui/mainwindow.ui.h:16
 msgid ""
 "The new string to substitute. As in Perl, you can refer to parts of the "
 "match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
@@ -380,67 +427,63 @@ msgstr ""
 "części pasujących przy pomocy $1, $2, itd. lub nawet $+, $&amp;, $` i $'. "
 "Operatory \\l, \\u, \\L, \\U i \\E są także obsługiwane."
 
-#: ../ui/mainwindow.ui.h:19
+#: ../ui/mainwindow.ui.h:17
 msgid "Preview of the substitution"
 msgstr "Podgląd przypisania"
 
-#: ../ui/mainwindow.ui.h:20
+#: ../ui/mainwindow.ui.h:18
 msgid "Preview"
 msgstr "Podgląd"
 
-#: ../ui/mainwindow.ui.h:21
+#: ../ui/mainwindow.ui.h:19
 msgid "_Replace"
 msgstr "_Zastąp"
 
-#: ../ui/mainwindow.ui.h:22
+#: ../ui/mainwindow.ui.h:20
 msgid "Replace current match"
 msgstr "Zastępuje bieżące dopasowanie"
 
-#: ../ui/mainwindow.ui.h:23
+#: ../ui/mainwindow.ui.h:21
 msgid "_This file"
 msgstr "_Ten plik"
 
-#: ../ui/mainwindow.ui.h:24
+#: ../ui/mainwindow.ui.h:22
 msgid "Replace all matches in the current file"
 msgstr "Zastępuje wszystkie dopasowania w bieżącym pliku"
 
-#: ../ui/mainwindow.ui.h:25
+#: ../ui/mainwindow.ui.h:23
 msgid "_All files"
 msgstr "_Wszystkie pliki"
 
-#: ../ui/mainwindow.ui.h:26
+#: ../ui/mainwindow.ui.h:24
 msgid "Replace all matches in all files"
 msgstr "Zastępuje wszystkie dopasowania we wszystkich plikach"
 
-#: ../ui/mainwindow.ui.h:27
+#: ../ui/mainwindow.ui.h:25
 msgid "File backward"
 msgstr "Plik wstecz"
 
-#: ../ui/mainwindow.ui.h:28
+#: ../ui/mainwindow.ui.h:26
 msgid "Go to the previous matching file"
 msgstr "Przechodzi do poprzedniego pasującego pliku"
 
-#: ../ui/mainwindow.ui.h:29
+#: ../ui/mainwindow.ui.h:27
 msgid "Backward"
 msgstr "Wstecz"
 
-#: ../ui/mainwindow.ui.h:30
+#: ../ui/mainwindow.ui.h:28
 msgid "Go to previous match"
 msgstr "Przechodzi do poprzedniego dopasowania"
 
-#: ../ui/mainwindow.ui.h:31
-msgid "Forward"
-msgstr "Dalej"
-
-#: ../ui/mainwindow.ui.h:32
+#: ../ui/mainwindow.ui.h:30
 msgid "Go to next match"
 msgstr "Przechodzi do następnego dopasowania"
 
-#: ../ui/mainwindow.ui.h:33
+#: ../ui/mainwindow.ui.h:31
 msgid "File forward"
 msgstr "Plik naprzód"
 
-#: ../ui/mainwindow.ui.h:34
+#: ../ui/mainwindow.ui.h:32
 msgid "Go to the next matching file"
 msgstr "Przechodzi do następnego pasującego pliku"
 
