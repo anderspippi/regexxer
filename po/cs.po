@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-02-23 17:05+0000\n"
-"PO-Revision-Date: 2014-02-27 12:18+0100\n"
+"POT-Creation-Date: 2014-04-16 22:55+0000\n"
+"PO-Revision-Date: 2014-04-22 19:38+0200\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "regexxer Search Tool"
 msgstr "Nástroj pro hledání regexxer"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1062
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
 msgid "Search and replace using regular expressions"
 msgstr "Hledat a nahradit pomocí regulárních výrazů"
 
@@ -187,7 +187,7 @@ msgstr "Selhalo uložení souboru „%1“: %2"
 msgid "“%1” seems to be a binary file."
 msgstr "„%1“ je zřejmě binární soubor."
 
-#: ../src/main.cc:78
+#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
 msgid "Save _all"
 msgstr "Uložit _vše"
 
@@ -203,7 +203,7 @@ msgstr "VZOR"
 msgid "Do not recurse into subdirectories"
 msgstr "Nezanořovat se do podsložek"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:9
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Hledat i skryté soubory"
 
@@ -219,7 +219,7 @@ msgstr "REGEX"
 msgid "Find only the first match in a line"
 msgstr "Hledat pouze první výskyt na řádku"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:15
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Nerozlišovat velikost písmen"
 
@@ -243,7 +243,7 @@ msgstr "Nezačínat hledání automaticky"
 msgid "[FOLDER]"
 msgstr "[SLOŽKA]"
 
-#: ../src/mainwindow.cc:602
+#: ../src/mainwindow.cc:701
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -251,7 +251,7 @@ msgstr ""
 "Některé soubory dosud nebyly uloženy.\n"
 "Přesto skončit?"
 
-#: ../src/mainwindow.cc:616
+#: ../src/mainwindow.cc:715
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -259,19 +259,19 @@ msgstr ""
 "Některé soubory dosud nebyly uloženy.\n"
 "Přesto pokračovat?"
 
-#: ../src/mainwindow.cc:646
+#: ../src/mainwindow.cc:745
 msgid "The file search pattern is invalid."
 msgstr "Vzor pro hledání souborů je neplatný."
 
-#: ../src/mainwindow.cc:652
+#: ../src/mainwindow.cc:751
 msgid "The following errors occurred during search:"
 msgstr "Při hledání došlo k následujícím chybám:"
 
-#: ../src/mainwindow.cc:916
+#: ../src/mainwindow.cc:1020
 msgid "The following errors occurred during save:"
 msgstr "Při ukládání došlo k následujícím chybám:"
 
-#: ../src/mainwindow.cc:1068
+#: ../src/mainwindow.cc:1177
 msgid "translator-credits"
 msgstr ""
 "Miloslav Trmač <mitr@volny.cz>\n"
@@ -310,67 +310,111 @@ msgstr "O _aplikaci"
 msgid "_Quit"
 msgstr "U_končit"
 
+#: ../ui/gear-menu.xml.h:1
+msgid "_Save"
+msgstr "_Uložit"
+
+#: ../ui/gear-menu.xml.h:3
+msgid "_Undo"
+msgstr "_Zpět"
+
+#: ../ui/gear-menu.xml.h:4
+msgid "Cu_t"
+msgstr "_Vyjmout"
+
+#: ../ui/gear-menu.xml.h:5
+msgid "_Copy"
+msgstr "_Kopírovat"
+
+#: ../ui/gear-menu.xml.h:6
+msgid "_Paste"
+msgstr "V_ložit"
+
+#: ../ui/gear-menu.xml.h:7
+msgid "_Delete"
+msgstr "_Smazat"
+
+#: ../ui/gear-menu.xml.h:8
+msgid "Previous file"
+msgstr "Předchozí soubor"
+
+#: ../ui/gear-menu.xml.h:9
+msgid "Back"
+msgstr "Zpět"
+
+#: ../ui/gear-menu.xml.h:10 ../ui/mainwindow.ui.h:29
+msgid "Forward"
+msgstr "Vpřed"
+
+#: ../ui/gear-menu.xml.h:11
+msgid "Next file"
+msgstr "Následující soubor"
+
+#: ../ui/gear-menu.xml.h:12
+msgid "Replace current"
+msgstr "Nahradit aktuální"
+
+#: ../ui/gear-menu.xml.h:13
+msgid "Replace in this file"
+msgstr "Nahradit v tomto souboru"
+
+#: ../ui/gear-menu.xml.h:14
+msgid "Replace in all files"
+msgstr "Nahradit ve všech souborech"
+
 #: ../ui/mainwindow.ui.h:1
-msgid "_File"
-msgstr "_Soubor"
+msgid "Save all"
+msgstr "Uložit vše"
 
 #: ../ui/mainwindow.ui.h:2
-msgid "_Edit"
-msgstr "_Upravit"
-
-#: ../ui/mainwindow.ui.h:3
-msgid "_Match"
-msgstr "_Výskyt"
-
-#: ../ui/mainwindow.ui.h:4
 msgid "Fol_der:"
 msgstr "_Adresář:"
 
-#: ../ui/mainwindow.ui.h:5
+#: ../ui/mainwindow.ui.h:3
 msgid "Pattern:"
 msgstr "Vzor:"
 
-#: ../ui/mainwindow.ui.h:6
+#: ../ui/mainwindow.ui.h:4
 msgid "recursive"
 msgstr "rekurzivně"
 
-#: ../ui/mainwindow.ui.h:7
+#: ../ui/mainwindow.ui.h:5
 msgid "Recurse into subdirectories"
 msgstr "Zanořovat se do podsložek"
 
-#: ../ui/mainwindow.ui.h:8
+#: ../ui/mainwindow.ui.h:6
 msgid "hidden"
 msgstr "skryté"
 
-#: ../ui/mainwindow.ui.h:10
+#: ../ui/mainwindow.ui.h:8
 msgid "Find all files that match the filename pattern"
 msgstr "Hledat všechny soubory, které odpovídají vzoru názvu souboru"
 
-#: ../ui/mainwindow.ui.h:11
+#: ../ui/mainwindow.ui.h:9
 msgid "Find fi_les"
 msgstr "Hledat _soubory"
 
-#: ../ui/mainwindow.ui.h:12
+#: ../ui/mainwindow.ui.h:10
 msgid "Search:"
 msgstr "Hledat:"
 
-#: ../ui/mainwindow.ui.h:13
+#: ../ui/mainwindow.ui.h:11
 msgid "Replace:"
 msgstr "Nahradit:"
 
-#: ../ui/mainwindow.ui.h:14
+#: ../ui/mainwindow.ui.h:12
 msgid "Find all possible matches in a line"
 msgstr "Hledat všechny možné výskyty na řádku"
 
-#: ../ui/mainwindow.ui.h:16
+#: ../ui/mainwindow.ui.h:14
 msgid "Find all matches of the regular expression"
 msgstr "Hledat všechny výskyty regulárního výrazu"
 
-#: ../ui/mainwindow.ui.h:17
+#: ../ui/mainwindow.ui.h:15
 msgid "A regular expression in Perl syntax"
 msgstr "Reguálrní výraz v syntaxi Perlu"
 
-#: ../ui/mainwindow.ui.h:18
+#: ../ui/mainwindow.ui.h:16
 msgid ""
 "The new string to substitute. As in Perl, you can refer to parts of the "
 "match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
@@ -380,67 +424,63 @@ msgstr ""
 "část nalezené shody pomocí $1, $2, atd. nebo i s pomocí $+, $&amp;, $` a $'. "
 "Stejně tak jsou podporovány operátory \\l, \\u, \\L, \\U a \\E."
 
-#: ../ui/mainwindow.ui.h:19
+#: ../ui/mainwindow.ui.h:17
 msgid "Preview of the substitution"
 msgstr "Náhled nahrazení"
 
-#: ../ui/mainwindow.ui.h:20
+#: ../ui/mainwindow.ui.h:18
 msgid "Preview"
 msgstr "Náhled"
 
-#: ../ui/mainwindow.ui.h:21
+#: ../ui/mainwindow.ui.h:19
 msgid "_Replace"
 msgstr "Na_hradit"
 
-#: ../ui/mainwindow.ui.h:22
+#: ../ui/mainwindow.ui.h:20
 msgid "Replace current match"
 msgstr "Nahradit aktuální výskyt"
 
-#: ../ui/mainwindow.ui.h:23
+#: ../ui/mainwindow.ui.h:21
 msgid "_This file"
 msgstr "_Tento soubor"
 
-#: ../ui/mainwindow.ui.h:24
+#: ../ui/mainwindow.ui.h:22
 msgid "Replace all matches in the current file"
 msgstr "Nahradit všechny výskyty v aktuálním souboru"
 
-#: ../ui/mainwindow.ui.h:25
+#: ../ui/mainwindow.ui.h:23
 msgid "_All files"
 msgstr "_Všechny soubory"
 
-#: ../ui/mainwindow.ui.h:26
+#: ../ui/mainwindow.ui.h:24
 msgid "Replace all matches in all files"
 msgstr "Nahradit všechny výskyty ve všech souborech"
 
-#: ../ui/mainwindow.ui.h:27
+#: ../ui/mainwindow.ui.h:25
 msgid "File backward"
 msgstr "Soubor zpět"
 
-#: ../ui/mainwindow.ui.h:28
+#: ../ui/mainwindow.ui.h:26
 msgid "Go to the previous matching file"
 msgstr "Jít na předchozí odpovídající soubor"
 
-#: ../ui/mainwindow.ui.h:29
+#: ../ui/mainwindow.ui.h:27
 msgid "Backward"
 msgstr "Zpět"
 
-#: ../ui/mainwindow.ui.h:30
+#: ../ui/mainwindow.ui.h:28
 msgid "Go to previous match"
 msgstr "Jít na předchozí výskyt"
 
-#: ../ui/mainwindow.ui.h:31
-msgid "Forward"
-msgstr "Vpřed"
-
-#: ../ui/mainwindow.ui.h:32
+#: ../ui/mainwindow.ui.h:30
 msgid "Go to next match"
 msgstr "Jít na následující výskyt"
 
-#: ../ui/mainwindow.ui.h:33
+#: ../ui/mainwindow.ui.h:31
 msgid "File forward"
 msgstr "Soubor vpřed"
 
-#: ../ui/mainwindow.ui.h:34
+#: ../ui/mainwindow.ui.h:32
 msgid "Go to the next matching file"
 msgstr "Jít na následující odpovídající soubor"
 
