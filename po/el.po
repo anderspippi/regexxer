@@ -8,22 +8,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2012-07-13 00:25+0000\n"
-"PO-Revision-Date: 2012-07-26 15:45+0200\n"
+"POT-Creation-Date: 2014-04-16 22:55+0000\n"
+"PO-Revision-Date: 2014-04-24 19:19+0200\n"
 "Last-Translator: Tom Tryfonidis <tomtryf@gmail.com>\n"
 "Language-Team: Greek <team@gnome.gr>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Poedit 1.6.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "Εργαλείο αναζήτησης regexxer"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1028
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
 msgid "Search and replace using regular expressions"
 msgstr "Αναζήτηση και αντικατάσταση με χρήση κανονικών εκφράσεων"
 
@@ -191,7 +191,7 @@ msgstr "Αδυναμία αποθήκευσης αρχείου “%1”: %2"
 msgid "“%1” seems to be a binary file."
 msgstr "Το “%1” μοιάζει με binary αρχείο."
 
-#: ../src/main.cc:78
+#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
 msgid "Save _all"
 msgstr "Αποθήκευση ό_λων"
 
@@ -207,7 +207,7 @@ msgstr "ΜΟΤΙΒΟ"
 msgid "Do not recurse into subdirectories"
 msgstr "Χωρίς αναδρομική αναζήτηση στους υποκαταλόγους"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:9
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Εύρεση και κρυφών αρχείων"
 
@@ -223,7 +223,7 @@ msgstr "REGEX"
 msgid "Find only the first match in a line"
 msgstr "Εύρεση μόνο της πρώτης αντιστοιχίας σε κάθε γραμμή"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:16
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Αντιστοίχιση χωρίς διάκριση πεζών/κεφαλαίων"
 
@@ -247,7 +247,7 @@ msgstr "Χωρίς αυτόματη έναρξη της αναζήτησης"
 msgid "[FOLDER]"
 msgstr "[ΦΑΚΕΛΟΣ]"
 
-#: ../src/mainwindow.cc:568
+#: ../src/mainwindow.cc:701
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -255,7 +255,7 @@ msgstr ""
 "Κάποια αρχεία δεν έχουν αποθηκευτεί ακόμη.\n"
 "Έξοδος παρόλ' αυτά;"
 
-#: ../src/mainwindow.cc:582
+#: ../src/mainwindow.cc:715
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -263,21 +263,24 @@ msgstr ""
 "Κάποια αρχεία δεν έχουν αποθηκευτεί ακόμη.\n"
 "Συνέχεια παρόλ' αυτά;"
 
-#: ../src/mainwindow.cc:612
+#: ../src/mainwindow.cc:745
 msgid "The file search pattern is invalid."
 msgstr "Μη έγκυρο μοτίβο αναζήτησης αρχείων."
 
-#: ../src/mainwindow.cc:618
+#: ../src/mainwindow.cc:751
 msgid "The following errors occurred during search:"
 msgstr "Κατά την αναζήτηση εμφανίστηκαν τα ακόλουθα σφάλματα:"
 
-#: ../src/mainwindow.cc:882
+#: ../src/mainwindow.cc:1020
 msgid "The following errors occurred during save:"
 msgstr "Κατά την αποθήκευση εμφανίστηκαν τα ακόλουθα σφάλματα:"
 
-#: ../src/mainwindow.cc:1034
+#: ../src/mainwindow.cc:1177
 msgid "translator-credits"
-msgstr "Τζένη Πετούμενου <epetoumenou@gmail.com>"
+msgstr ""
+"Ελληνική μεταφραστική ομάδα GNOME\n"
+" Τζένη Πετούμενου <epetoumenou@gmail.com>Για περισσότερα δείτε: http://gnome."
+"gr"
 
 #: ../src/prefdialog.cc:186
 #, qt-format
@@ -300,71 +303,131 @@ msgstr "Αντιστοιχία:"
 msgid "Cancels the running search"
 msgstr "Ακυρώνει την αναζήτηση σε εξέλιξη"
 
+#: ../ui/app-menu.xml.h:1
+#| msgid "Preferences"
+msgid "_Preferences"
+msgstr "Π_ροτιμήσεις"
+
+#: ../ui/app-menu.xml.h:2
+msgid "_About"
+msgstr "_Περί"
+
+#: ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "Έ_ξοδος"
+
+#: ../ui/gear-menu.xml.h:1
+msgid "_Save"
+msgstr "Απο_θήκευση ως…"
+
+#: ../ui/gear-menu.xml.h:3
+msgid "_Undo"
+msgstr "Α_ναίρεση"
+
+#: ../ui/gear-menu.xml.h:4
+msgid "Cu_t"
+msgstr "Απο_κοπή"
+
+#: ../ui/gear-menu.xml.h:5
+msgid "_Copy"
+msgstr "Αντι_γραφή..."
+
+#: ../ui/gear-menu.xml.h:6
+msgid "_Paste"
+msgstr "Επ_ικόλληση"
+
+#: ../ui/gear-menu.xml.h:7
+msgid "_Delete"
+msgstr "_Διαγραφή"
+
+#: ../ui/gear-menu.xml.h:8
+#| msgid "_Previous file"
+msgid "Previous file"
+msgstr "Προηγούμενο αρχείο"
+
+#: ../ui/gear-menu.xml.h:9
+#| msgid "Backward"
+msgid "Back"
+msgstr "Πίσω"
+
+#: ../ui/gear-menu.xml.h:10 ../ui/mainwindow.ui.h:29
+msgid "Forward"
+msgstr "Μπροστά"
+
+#: ../ui/gear-menu.xml.h:11
+#| msgid "_Next file"
+msgid "Next file"
+msgstr "Επόμενο αρχείο"
+
+#: ../ui/gear-menu.xml.h:12
+#| msgid "Replace _current"
+msgid "Replace current"
+msgstr "Αντικατάσταση τρέχοντος"
+
+#: ../ui/gear-menu.xml.h:13
+#| msgid "Replace in _this file"
+msgid "Replace in this file"
+msgstr "Αντικατάσταση σε αυτό το αρχείο"
+
+#: ../ui/gear-menu.xml.h:14
+#| msgid "Replace in _all files"
+msgid "Replace in all files"
+msgstr "Αντικατάσταση σε όλα τα αρχεία"
+
 #: ../ui/mainwindow.ui.h:1
-msgid "_File"
-msgstr "_Αρχείο"
+#| msgid "Save _all"
+msgid "Save all"
+msgstr "Αποθήκευση όλων"
 
 #: ../ui/mainwindow.ui.h:2
-msgid "_Edit"
-msgstr "Ε_πεξεργασία"
-
-#: ../ui/mainwindow.ui.h:3
-msgid "_Match"
-msgstr "Αντι_στοιχία"
-
-#: ../ui/mainwindow.ui.h:4
-msgid "_Help"
-msgstr "_Βοήθεια"
-
-#: ../ui/mainwindow.ui.h:5
-msgid "Pattern:"
-msgstr "Μοτίβο:"
-
-#: ../ui/mainwindow.ui.h:6
-msgid "recursive"
-msgstr "αναδρομική"
-
-#: ../ui/mainwindow.ui.h:7
-msgid "Recurse into subdirectories"
-msgstr "Αναδρομική αναζήτηση στους υποκαταλόγους"
-
-#: ../ui/mainwindow.ui.h:8
-msgid "hidden"
-msgstr "κρυφά αρχεία"
-
-#: ../ui/mainwindow.ui.h:10
-msgid "Find all files that match the filename pattern"
-msgstr "Εύρεση όλων των αρχείων που αντιστοιχούν στο μοτίβο ονόματος αρχείων"
-
-#: ../ui/mainwindow.ui.h:11
-msgid "Find fi_les"
-msgstr "Εύ_ρεση αρχείων"
-
-#: ../ui/mainwindow.ui.h:12
 msgid "Fol_der:"
 msgstr "_Φάκελος:"
 
-#: ../ui/mainwindow.ui.h:13
+#: ../ui/mainwindow.ui.h:3
+msgid "Pattern:"
+msgstr "Μοτίβο:"
+
+#: ../ui/mainwindow.ui.h:4
+msgid "recursive"
+msgstr "αναδρομική"
+
+#: ../ui/mainwindow.ui.h:5
+msgid "Recurse into subdirectories"
+msgstr "Αναδρομική αναζήτηση στους υποκαταλόγους"
+
+#: ../ui/mainwindow.ui.h:6
+msgid "hidden"
+msgstr "κρυφά αρχεία"
+
+#: ../ui/mainwindow.ui.h:8
+msgid "Find all files that match the filename pattern"
+msgstr "Εύρεση όλων των αρχείων που αντιστοιχούν στο μοτίβο ονόματος αρχείων"
+
+#: ../ui/mainwindow.ui.h:9
+msgid "Find fi_les"
+msgstr "Εύ_ρεση αρχείων"
+
+#: ../ui/mainwindow.ui.h:10
 msgid "Search:"
 msgstr "Αναζήτηση:"
 
-#: ../ui/mainwindow.ui.h:14
+#: ../ui/mainwindow.ui.h:11
 msgid "Replace:"
 msgstr "Αντικατάσταση:"
 
-#: ../ui/mainwindow.ui.h:15
+#: ../ui/mainwindow.ui.h:12
 msgid "Find all possible matches in a line"
 msgstr "Εύρεση όλων των δυνατών αντιστοιχιών σε κάθε γραμμή"
 
-#: ../ui/mainwindow.ui.h:17
+#: ../ui/mainwindow.ui.h:14
 msgid "Find all matches of the regular expression"
 msgstr "Εύρεση όλων των αντιστοιχιών της κανονικής έκφρασης"
 
-#: ../ui/mainwindow.ui.h:18
+#: ../ui/mainwindow.ui.h:15
 msgid "A regular expression in Perl syntax"
 msgstr "Κανονική έκφραση με σύνταξη Perl"
 
-#: ../ui/mainwindow.ui.h:19
+#: ../ui/mainwindow.ui.h:16
 msgid ""
 "The new string to substitute. As in Perl, you can refer to parts of the "
 "match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
@@ -375,67 +438,63 @@ msgstr ""
 "αλλά και τα $+, $&amp;, $` και $'. Υποστηρίζονται επίσης οι τελεστές \\l, "
 "\\u, \\L, \\U και \\E."
 
-#: ../ui/mainwindow.ui.h:20
+#: ../ui/mainwindow.ui.h:17
 msgid "Preview of the substitution"
 msgstr "Προεπισκόπηση της αντικατάστασης"
 
-#: ../ui/mainwindow.ui.h:21
+#: ../ui/mainwindow.ui.h:18
 msgid "Preview"
 msgstr "Προεπισκόπηση"
 
-#: ../ui/mainwindow.ui.h:22
-msgid "Replace current match"
-msgstr "Αντικατάσταση τρέχουσας αντιστοιχίας"
-
-#: ../ui/mainwindow.ui.h:23
+#: ../ui/mainwindow.ui.h:19
 msgid "_Replace"
 msgstr "Αντι_κατάσταση"
 
-#: ../ui/mainwindow.ui.h:24
-msgid "Replace all matches in the current file"
-msgstr "Αντικατάσταση όλων των αντιστοιχιών στο τρέχον αρχείο"
+#: ../ui/mainwindow.ui.h:20
+msgid "Replace current match"
+msgstr "Αντικατάσταση τρέχουσας αντιστοιχίας"
 
-#: ../ui/mainwindow.ui.h:25
+#: ../ui/mainwindow.ui.h:21
 msgid "_This file"
 msgstr "Αυ_τό το αρχείο"
 
-#: ../ui/mainwindow.ui.h:26
-msgid "Replace all matches in all files"
-msgstr "Αντικατάσταση όλων των αντιστοιχιών σε όλα τα αρχεία"
+#: ../ui/mainwindow.ui.h:22
+msgid "Replace all matches in the current file"
+msgstr "Αντικατάσταση όλων των αντιστοιχιών στο τρέχον αρχείο"
 
-#: ../ui/mainwindow.ui.h:27
+#: ../ui/mainwindow.ui.h:23
 msgid "_All files"
 msgstr "Ό_λα τα αρχεία"
 
-#: ../ui/mainwindow.ui.h:28
+#: ../ui/mainwindow.ui.h:24
+msgid "Replace all matches in all files"
+msgstr "Αντικατάσταση όλων των αντιστοιχιών σε όλα τα αρχεία"
+
+#: ../ui/mainwindow.ui.h:25
 msgid "File backward"
 msgstr "Αρχείο προς τα πίσω"
 
-#: ../ui/mainwindow.ui.h:29
+#: ../ui/mainwindow.ui.h:26
 msgid "Go to the previous matching file"
 msgstr "Μετάβαση στο προηγούμενο αντίστοιχο αρχείο"
 
-#: ../ui/mainwindow.ui.h:30
+#: ../ui/mainwindow.ui.h:27
 msgid "Backward"
 msgstr "Πίσω"
 
-#: ../ui/mainwindow.ui.h:31
+#: ../ui/mainwindow.ui.h:28
 msgid "Go to previous match"
 msgstr "Μετάβαση στην προηγούμενη αντιστοιχία"
 
-#: ../ui/mainwindow.ui.h:32
-msgid "Forward"
-msgstr "Μπροστά"
-
-#: ../ui/mainwindow.ui.h:33
+#: ../ui/mainwindow.ui.h:30
 msgid "Go to next match"
 msgstr "Μετάβαση στην επόμενη αντιστοιχία"
 
-#: ../ui/mainwindow.ui.h:34
+#: ../ui/mainwindow.ui.h:31
 msgid "File forward"
 msgstr "Αρχείο προς τα εμπρός"
 
-#: ../ui/mainwindow.ui.h:35
+#: ../ui/mainwindow.ui.h:32
 msgid "Go to the next matching file"
 msgstr "Μετάβαση στο επόμενο αντίστοιχο αρχείο"
 
@@ -472,8 +531,8 @@ msgid "C_urrent match color:"
 msgstr "Χρώμα _τρέχουσας αντιστοιχίας:"
 
 #: ../ui/prefdialog.ui.h:9
-msgid "_Look&#x2019;n&#x2019;feel"
-msgstr "_Look&#x2019;n&#x2019;feel"
+msgid "_Look’n’feel"
+msgstr "_Εμφάνιση"
 
 #: ../ui/prefdialog.ui.h:10
 msgid ""
@@ -509,6 +568,21 @@ msgstr "Η κωδικοποίηση που προβλέπεται από το τ
 #: ../ui/prefdialog.ui.h:17
 msgid "_File access"
 msgstr "_Πρόσβαση σε αρχεία"
+
+#~ msgid "_File"
+#~ msgstr "_Αρχείο"
+
+#~ msgid "_Edit"
+#~ msgstr "Ε_πεξεργασία"
+
+#~ msgid "_Match"
+#~ msgstr "Αντι_στοιχία"
+
+#~ msgid "_Help"
+#~ msgstr "_Βοήθεια"
+
+#~ msgid "_Look&#x2019;n&#x2019;feel"
+#~ msgstr "_Look&#x2019;n&#x2019;feel"
 
 #~ msgid ""
 #~ "The style of the application’s toolbar. Possible values are “icons”, "
@@ -553,21 +627,6 @@ msgstr "_Πρόσβαση σε αρχεία"
 #~ "Υποστηρίζονται οι τάξεις χαρακτήρων [ab] και οι csh εκφράσεις εντός "
 #~ "αγκίστρων {a,b}."
 
-#~ msgid "Replace _current"
-#~ msgstr "Αντι_κατάσταση  τρέχουσας"
-
-#~ msgid "Replace in _all files"
-#~ msgstr "Αντικατάσταση σε ό_λα τα αρχεία"
-
-#~ msgid "Replace in _this file"
-#~ msgstr "Αντικατάσταση σε αυ_τό το αρχείο"
-
-#~ msgid "_Next file"
-#~ msgstr "_Επόμενο αρχείο"
-
-#~ msgid "_Previous file"
-#~ msgstr "Π_ροηγούμενο αρχείο"
-
 #~ msgid ""
 #~ "Icons only\n"
 #~ "Text only\n"
@@ -581,6 +640,3 @@ msgstr "_Πρόσβαση σε αρχεία"
 
 #~ msgid "Tool_bar style:"
 #~ msgstr "_Στυλ γραμμής εργαλείων:"
-
-#~ msgid "_Look’n’feel"
-#~ msgstr "_Εμφάνιση"
