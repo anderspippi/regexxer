@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-04-13 15:59+0000\n"
-"PO-Revision-Date: 2014-04-14 21:13-0300\n"
+"POT-Creation-Date: 2014-04-16 22:55+0000\n"
+"PO-Revision-Date: 2014-04-30 01:53-0300\n"
 "Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
@@ -188,7 +188,7 @@ msgstr "Falha ao salvar o arquivo \"%1\": %2"
 msgid "“%1” seems to be a binary file."
 msgstr "\"%1\" parece ser um arquivo binário."
 
-#: ../src/main.cc:78
+#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
 msgid "Save _all"
 msgstr "Salvar _tudo"
 
@@ -313,8 +313,65 @@ msgstr "_Sobre"
 msgid "_Quit"
 msgstr "S_air"
 
+#: ../ui/gear-menu.xml.h:1
+#| msgid "Save all"
+msgid "_Save"
+msgstr "_Salvar"
+
+#: ../ui/gear-menu.xml.h:3
+msgid "_Undo"
+msgstr "_Desfazer"
+
+#: ../ui/gear-menu.xml.h:4
+msgid "Cu_t"
+msgstr "Cor_tar"
+
+#: ../ui/gear-menu.xml.h:5
+msgid "_Copy"
+msgstr "_Copiar"
+
+#: ../ui/gear-menu.xml.h:6
+msgid "_Paste"
+msgstr "Co_lar"
+
+#: ../ui/gear-menu.xml.h:7
+msgid "_Delete"
+msgstr "_Excluir"
+
+#: ../ui/gear-menu.xml.h:8
+#| msgid "_This file"
+msgid "Previous file"
+msgstr "Arquivo anterior"
+
+#: ../ui/gear-menu.xml.h:9
+#| msgid "Backward"
+msgid "Back"
+msgstr "Voltar"
+
+#: ../ui/gear-menu.xml.h:10 ../ui/mainwindow.ui.h:29
+msgid "Forward"
+msgstr "Avançar"
+
+#: ../ui/gear-menu.xml.h:11
+msgid "Next file"
+msgstr "Próximo arquivo"
+
+#: ../ui/gear-menu.xml.h:12
+#| msgid "Replace current match"
+msgid "Replace current"
+msgstr "Substitui atual"
+
+#: ../ui/gear-menu.xml.h:13
+#| msgid "Replace all matches in all files"
+msgid "Replace in this file"
+msgstr "Substitui neste arquivo"
+
+#: ../ui/gear-menu.xml.h:14
+#| msgid "Replace all matches in all files"
+msgid "Replace in all files"
+msgstr "Substitui em todos arquivos"
+
 #: ../ui/mainwindow.ui.h:1
-#| msgid "Save _all"
 msgid "Save all"
 msgstr "Salvar tudo"
 
@@ -424,10 +481,6 @@ msgstr "Recuar"
 #: ../ui/mainwindow.ui.h:28
 msgid "Go to previous match"
 msgstr "Vai à ocorrência anterior"
-
-#: ../ui/mainwindow.ui.h:29
-msgid "Forward"
-msgstr "Avançar"
 
 #: ../ui/mainwindow.ui.h:30
 msgid "Go to next match"
