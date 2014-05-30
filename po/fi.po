@@ -3,160 +3,252 @@
 # This file is distributed under the same license as the regexxer package.
 # Ilkka Tuohela <hile@iki.fi> 2004.
 #
+# Lasse Liehu <lasse.liehu@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
-"Report-Msgid-Bugs-To: http://regexxer.sourceforge.net/bugs\n"
-"POT-Creation-Date: 2007-08-16 11:37+0300\n"
-"PO-Revision-Date: 2004-09-05 13:34+0300\n"
-"Last-Translator: hile@iki.fi <hile@iki.fi\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
+"POT-Creation-Date: 2014-04-16 22:55+0000\n"
+"PO-Revision-Date: 2014-05-04 04:10+0300\n"
+"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
 "Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
 
-#: ../ui/regexxer.desktop.in.h:1 ../src/mainwindow.cc:849
-msgid "Search and replace using regular expressions"
-msgstr "Hae ja korvaa käyttäen säännöllisiä lausekkeita"
-
-#: ../ui/regexxer.desktop.in.h:2
+#: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "regexxer hakutyökalu"
 
-#: ../ui/regexxer.schemas.in.h:1
-msgid "Current-match color"
-msgstr "Nykyisen osuman väri"
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
+msgid "Search and replace using regular expressions"
+msgstr "Hae ja korvaa käyttäen säännöllisiä lausekkeita"
 
-#: ../ui/regexxer.schemas.in.h:2
-msgid "Fallback encoding"
-msgstr "Muu merkistökoodaus, jos tyyppi ei vastaa"
+#: ../ui/org.regexxer.gschema.xml.in.h:1
+#, fuzzy
+#| msgid "Pattern:"
+msgid "File Patterns"
+msgstr "Malli:"
 
-#: ../ui/regexxer.schemas.in.h:3
+#: ../ui/org.regexxer.gschema.xml.in.h:2
+msgid "List of pre-defined patterns available in the 'Pattern' entry."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:3
+#, fuzzy
+#| msgid "Pattern:"
+msgid "Regex Patterns"
+msgstr "Malli:"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:4
+msgid "List of last patterns used in the 'Regex' entry."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:5
+msgid "List of last patterns used in the 'Substitution' entry."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:6
+msgid "Text view font"
+msgstr "Tekstinäytön fontti"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:7
+msgid "The font used in the file editor."
+msgstr "Tiedostomuokkaimessa käytettävä fontti."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:8
 msgid "Match color"
 msgstr "Osuman väri"
 
-#: ../ui/regexxer.schemas.in.h:4
+#: ../ui/org.regexxer.gschema.xml.in.h:9
+msgid ""
+"The background color used to highlight matches of the search expression."
+msgstr "Hakulausekkeen osumien korostuksessa käytettävä taustaväri."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:10
+msgid "Current-match color"
+msgstr "Nykyisen osuman väri"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:11
+msgid ""
+"The background color used to highlight the currently selected match of the "
+"search expression."
+msgstr "Taustaväri, jota käytetään korostamaan valittu osuma hakulausekkeelle."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:12
+msgid "Fallback encoding"
+msgstr "Muu merkistökoodaus, jos tyyppi ei vastaa"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:13
+#, fuzzy
+#| msgid ""
+#| "Name of the character encoding to use if a file is not readable in either "
+#| "UTF-8 or the codeset specified by the current locale. Try “iconv --list” "
+#| "for a complete list of possible values."
 msgid ""
 "Name of the character encoding to use if a file is not readable in either "
-"UTF-8 or the codeset specified by the current locale. Try “iconv --list” for "
-"a complete list of possible values."
+"UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" "
+"for a complete list of possible values."
 msgstr ""
 "Käytettävän merkistökoodauksen nimi, jos tiedosto ei ole luettavissa joko "
 "UTF-8 muodossa tai merkistökoodauksessa, joka on määritelty nykyisissä "
 "lokalisointiasetuksissa. Komennolla “iconv --list” saat listan kaikista "
 "mahdollisista arvoista."
 
-#: ../ui/regexxer.schemas.in.h:5
-msgid "Text view font"
-msgstr "Tekstinäytön kirjasin"
-
-#: ../ui/regexxer.schemas.in.h:6
-msgid ""
-"The background color used to highlight matches of the search expression."
-msgstr "Hakulausekkeen osumien korostuksessa käytettävä taustaväri."
-
-#: ../ui/regexxer.schemas.in.h:7
-msgid ""
-"The background color used to highlight the currently selected match of the "
-"search expression."
-msgstr "Taustaväri, jota käytetään korostamaan valittu osuma hakulausekkeelle."
-
-#: ../ui/regexxer.schemas.in.h:8
-msgid "The font used in the file editor."
-msgstr "Tiedostomuokkaimessa käytettävä kirjasin."
-
-#: ../ui/regexxer.schemas.in.h:9
-msgid ""
-"The style of the application’s toolbar. Possible values are “icons”, “text”, "
-"“both”, and “both-horiz”."
+#: ../ui/org.regexxer.gschema.xml.in.h:14
+msgid "window width"
 msgstr ""
-"Ohjelman työkalupalkin tyyli. Mahdolliset arvot ovat \"kuvakkeet\", \"teksti"
-"\", \"molemmat\" tai \"molemmat-rinnakkain\"."
 
-#: ../ui/regexxer.schemas.in.h:10
-msgid "Toolbar style"
-msgstr "Työkalupalkin tyyli"
+#: ../ui/org.regexxer.gschema.xml.in.h:15
+msgid "The width of the window."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:16
+msgid "window height"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:17
+msgid "The height of the window."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:18
+msgid "window x position"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:19
+msgid "The X coordinate of the window."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:20
+msgid "window y position"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:21
+msgid "The Y coordinate of the window."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:22
+msgid "window maximization"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:23
+msgid "Whether the window is maximized."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:24
+msgid "Show line numbers"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:25
+msgid "Whether to show the line numbers of the text view."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:26
+msgid "Highlight the current line"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:27
+msgid "Whether to highlight the current line of the text view."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:28
+msgid "Auto indentation"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:29
+msgid "Whether to enable auto indentation in the text view."
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:30
+msgid "Draw spaces"
+msgstr ""
+
+#: ../ui/org.regexxer.gschema.xml.in.h:31
+msgid "Which type of space to draw in the text view."
+msgstr ""
 
 #: ../src/filebuffer.cc:198
 msgid "Can’t read file:"
 msgstr "Tiedostoa ei voida lukea"
 
-#: ../src/filetree.cc:80
+#: ../src/filetree.cc:60
 msgid "File"
 msgstr "Tiedosto"
 
-#: ../src/filetree.cc:99
+#: ../src/filetree.cc:79
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:530
+#: ../src/filetree.cc:508
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "Tiedostoa “%1” ei voitu tallentaa: %2"
 
-#: ../src/filetree.cc:946
+#: ../src/filetree.cc:924
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "“%1” näyttää olevan binäääritiedosto."
 
-#: ../src/main.cc:77
+#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
 msgid "Save _all"
 msgstr "Tallenna _kaikki"
 
-#: ../src/main.cc:134
+#: ../src/main.cc:135
 msgid "Find files matching PATTERN"
 msgstr "Etsi tiedostoja, jotka vastaavat LAUSEKETTA"
 
-#: ../src/main.cc:134
+#: ../src/main.cc:135
 msgid "PATTERN"
 msgstr "LAUSEKE"
 
-#: ../src/main.cc:136
+#: ../src/main.cc:137
 msgid "Do not recurse into subdirectories"
 msgstr "Älä mene alihakemistoihin"
 
-#: ../src/main.cc:138 ../ui/mainwindow.glade.h:3
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Etsi myös piilotiedostoja"
 
-#: ../src/main.cc:140
+#: ../src/main.cc:141
 msgid "Find text matching REGEX"
 msgstr "Etsi tekstiä, joka vastaa säännöllistä lauseketta"
 
-#: ../src/main.cc:140
+#: ../src/main.cc:141
 msgid "REGEX"
 msgstr "Säännöllinen lauseke"
 
-#: ../src/main.cc:142
+#: ../src/main.cc:143
 msgid "Find only the first match in a line"
 msgstr "Etsi vain ensimmäinen osuma riviltä"
 
-#: ../src/main.cc:144 ../ui/mainwindow.glade.h:5
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Älä välitä kirjainten koosta vertailtaessa"
 
-#: ../src/main.cc:146
+#: ../src/main.cc:147
 msgid "Replace matches with STRING"
 msgstr "Korvaa osumat merkkijonolla"
 
-#: ../src/main.cc:146
+#: ../src/main.cc:147
 msgid "STRING"
 msgstr "Merkkijono"
 
-#: ../src/main.cc:148
+#: ../src/main.cc:149
 msgid "Print match location to standard output"
 msgstr "Tulosta osuman sijainti oletustulosteeseen"
 
-#: ../src/main.cc:150
+#: ../src/main.cc:151
 msgid "Do not automatically start search"
 msgstr "Älä käynnistä hakua automaattisesti"
 
-#: ../src/main.cc:152
+#: ../src/main.cc:153
 msgid "[FOLDER]"
 msgstr "[KANSIO]"
 
-#: ../src/mainwindow.cc:413
+#: ../src/mainwindow.cc:701
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -164,7 +256,7 @@ msgstr ""
 "Joitain tiedostoja ei ole vielä tallennettu.\n"
 "Lopetaanko siitä huolimatta?"
 
-#: ../src/mainwindow.cc:427
+#: ../src/mainwindow.cc:715
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -172,346 +264,322 @@ msgstr ""
 "Joitain tiedostoja ei ole vielä tallennettu.\n"
 "Jatketaanko siitä huolimatta?"
 
-#: ../src/mainwindow.cc:455
+#: ../src/mainwindow.cc:745
 msgid "The file search pattern is invalid."
 msgstr "Tiedostojen hakumalli on virheellinen"
 
-#: ../src/mainwindow.cc:461
+#: ../src/mainwindow.cc:751
 msgid "The following errors occurred during search:"
 msgstr "Seuraavat virheet tapahtuivat haettaessa:"
 
-#: ../src/mainwindow.cc:708
+#: ../src/mainwindow.cc:1020
 msgid "The following errors occurred during save:"
 msgstr "Seuraavat virheet tapahtuivat tallennettaessa:"
 
-#: ../src/mainwindow.cc:854
+#: ../src/mainwindow.cc:1177
 msgid "translator-credits"
 msgstr ""
 "Ilkka Tuohela, 2004\n"
 "\n"
 "http://gnome.fi/"
 
-#: ../src/pcreshell.cc:62
-msgid "Using the \\C escape sequence to match a single byte is not supported."
-msgstr "\\C escape-sekvenssin käyttö yhden tavun hakuun ei ole tuettu."
-
-#: ../src/pcreshell.cc:84
-#, qt-format
-msgid ""
-"Error in regular expression at “%1” (index %2):\n"
-"%3"
-msgstr ""
-"Virhe säännöllisessä lausekkeessa kohdassa “%1” (indeksi %2):\n"
-"%3"
-
-#: ../src/pcreshell.cc:89
-#, qt-format
-msgid ""
-"Error in regular expression:\n"
-"%1"
-msgstr ""
-"Virhe säännöllisessä lausekkessa:\n"
-"%1"
-
-#: ../src/pcreshell.cc:171
-msgid ""
-"Reached the recursion and backtracking limit of the regular expression "
-"engine."
-msgstr ""
-"Rekursion ja takaisinseurannan rajat säännöllisten lausekkeiden moottorissa "
-"tulivat vastaan."
-
-#: ../src/prefdialog.cc:249
+#: ../src/prefdialog.cc:186
 #, qt-format
 msgid "“%1” is not a valid encoding."
 msgstr "“%1” ei ole kelvollinen merkistökooda"
 
-#: ../src/statusline.cc:263
+#: ../src/statusline.cc:245
 msgid "Stop"
 msgstr "Pysäyte"
 
-#: ../src/statusline.cc:270
+#: ../src/statusline.cc:253
 msgid "File:"
 msgstr "Tiedosto:"
 
-#: ../src/statusline.cc:273
+#: ../src/statusline.cc:256
 msgid "Match:"
 msgstr "Osuma:"
 
-#: ../src/statusline.cc:284
+#: ../src/statusline.cc:267
 msgid "Cancels the running search"
 msgstr "Keskeyttää suoritettavan haun"
 
-#: ../ui/mainwindow.glade.h:1
-msgid ""
-"A filename pattern as used by the shell. Character classes [ab] and csh "
-"style brace expressions {a,b} are supported."
+#: ../ui/app-menu.xml.h:1
+#, fuzzy
+#| msgid "Preferences"
+msgid "_Preferences"
+msgstr "Asetukset"
+
+#: ../ui/app-menu.xml.h:2
+msgid "_About"
+msgstr "_Tietoja"
+
+#: ../ui/app-menu.xml.h:3
+msgid "_Quit"
 msgstr ""
-"Tiedostinimien hakumalli komentotulkin käyttämässä muodossa. Merkkiluokat "
-"[ab] ja csh-tyyliset aaltosulkulausekkeet {a,b} ovat tuettuja."
 
-#: ../ui/mainwindow.glade.h:2
-msgid "A regular expression in Perl syntax"
-msgstr "Säännöllinen lauseke perl-syntaksissa"
+#: ../ui/gear-menu.xml.h:1
+msgid "_Save"
+msgstr ""
 
-#: ../ui/mainwindow.glade.h:4
-msgid "Backward"
+#: ../ui/gear-menu.xml.h:3
+msgid "_Undo"
+msgstr ""
+
+#: ../ui/gear-menu.xml.h:4
+msgid "Cu_t"
+msgstr ""
+
+#: ../ui/gear-menu.xml.h:5
+msgid "_Copy"
+msgstr ""
+
+#: ../ui/gear-menu.xml.h:6
+msgid "_Paste"
+msgstr ""
+
+#: ../ui/gear-menu.xml.h:7
+msgid "_Delete"
+msgstr ""
+
+#: ../ui/gear-menu.xml.h:8
+#, fuzzy
+#| msgid "_Previous file"
+msgid "Previous file"
+msgstr "_Edellinen tiedosto"
+
+#: ../ui/gear-menu.xml.h:9
+#, fuzzy
+#| msgid "Backward"
+msgid "Back"
 msgstr "Taaksepäin"
 
-#: ../ui/mainwindow.glade.h:6
-msgid "File backward"
-msgstr "Tiedosto taaksepäin"
-
-#: ../ui/mainwindow.glade.h:7
-msgid "File forward"
-msgstr "Tiedosto eteenpäin"
-
-#: ../ui/mainwindow.glade.h:8
-msgid "Find all files that match the filename pattern"
-msgstr "Etsi kaikki tiedostot, jotka vastaavat tiedostonimen hakumallia"
-
-#: ../ui/mainwindow.glade.h:9
-msgid "Find all matches of the regular expression"
-msgstr "Etsi kaikki säännöllistä lauseketta vastaavat osumat"
-
-#: ../ui/mainwindow.glade.h:10
-msgid "Find all possible matches in a line"
-msgstr "Etsi kaikki osumat rivillä"
-
-#: ../ui/mainwindow.glade.h:11
-msgid "Find fi_les"
-msgstr "Etsi _tiedostoja"
-
-#: ../ui/mainwindow.glade.h:12
-msgid "Fol_der:"
-msgstr "_Kansio:"
-
-#: ../ui/mainwindow.glade.h:13
+#: ../ui/gear-menu.xml.h:10 ../ui/mainwindow.ui.h:29
 msgid "Forward"
 msgstr "Eteenpäin"
 
-#: ../ui/mainwindow.glade.h:14
-msgid "Go to next match"
-msgstr "Siirry seuraavaan osumaan"
+#: ../ui/gear-menu.xml.h:11
+#, fuzzy
+#| msgid "_Next file"
+msgid "Next file"
+msgstr "_Seuraava tiedosto"
 
-#: ../ui/mainwindow.glade.h:15
-msgid "Go to previous match"
-msgstr "Siirry edelliseen osumaan"
+#: ../ui/gear-menu.xml.h:12
+#, fuzzy
+#| msgid "Replace _current"
+msgid "Replace current"
+msgstr "Korvaa _nykyinen"
 
-#: ../ui/mainwindow.glade.h:16
-msgid "Go to the next matching file"
-msgstr "Siirry seuraavaan hakua vastaavan nimiseen tiedostoon"
+#: ../ui/gear-menu.xml.h:13
+#, fuzzy
+#| msgid "Replace in _this file"
+msgid "Replace in this file"
+msgstr "Korvaa _tässä tiedostossa"
 
-#: ../ui/mainwindow.glade.h:17
-msgid "Go to the previous matching file"
-msgstr "Siirry edelliseen hakua vastaavan nimiseen tiedostoon"
+#: ../ui/gear-menu.xml.h:14
+#, fuzzy
+#| msgid "Replace in _all files"
+msgid "Replace in all files"
+msgstr "Korvaa _kaikissa tiedostoissa"
 
-#: ../ui/mainwindow.glade.h:18
+#: ../ui/mainwindow.ui.h:1
+#, fuzzy
+#| msgid "Save _all"
+msgid "Save all"
+msgstr "Tallenna _kaikki"
+
+#: ../ui/mainwindow.ui.h:2
+msgid "Fol_der:"
+msgstr "_Kansio:"
+
+#: ../ui/mainwindow.ui.h:3
 msgid "Pattern:"
 msgstr "Malli:"
 
-#: ../ui/mainwindow.glade.h:19
-msgid "Preview"
-msgstr "Esikatselu"
+#: ../ui/mainwindow.ui.h:4
+msgid "recursive"
+msgstr "rekursiivinen"
 
-#: ../ui/mainwindow.glade.h:20
-msgid "Preview of the substitution"
-msgstr "Esikatselu muutoksesta"
-
-#: ../ui/mainwindow.glade.h:21
+#: ../ui/mainwindow.ui.h:5
 msgid "Recurse into subdirectories"
 msgstr "Käy läpi myös alihakemistot"
 
-#: ../ui/mainwindow.glade.h:22
-msgid "Replace _current"
-msgstr "Korvaa _nykyinen"
+#: ../ui/mainwindow.ui.h:6
+msgid "hidden"
+msgstr "piilotettu"
 
-#: ../ui/mainwindow.glade.h:23
-msgid "Replace all matches in all files"
-msgstr "Korvaa kaikki osumat kaikissa tiedostoissa"
+#: ../ui/mainwindow.ui.h:8
+msgid "Find all files that match the filename pattern"
+msgstr "Etsi kaikki tiedostot, jotka vastaavat tiedostonimen hakumallia"
 
-#: ../ui/mainwindow.glade.h:24
-msgid "Replace all matches in the current file"
-msgstr "Korvaa kaikki osumat nykyisessä tiedostossa"
+#: ../ui/mainwindow.ui.h:9
+msgid "Find fi_les"
+msgstr "Etsi _tiedostoja"
 
-#: ../ui/mainwindow.glade.h:25
-msgid "Replace current match"
-msgstr "Korvaa nykyinen osuma"
-
-#: ../ui/mainwindow.glade.h:26
-msgid "Replace in _all files"
-msgstr "Korvaa _kaikissa tiedostoissa"
-
-#: ../ui/mainwindow.glade.h:27
-msgid "Replace in _this file"
-msgstr "Korvaa _tässä tiedostossa"
-
-#: ../ui/mainwindow.glade.h:28
-msgid "Replace:"
-msgstr "Korvaa:"
-
-#: ../ui/mainwindow.glade.h:29
+#: ../ui/mainwindow.ui.h:10
 msgid "Search:"
 msgstr "Hae:"
 
-#: ../ui/mainwindow.glade.h:30
+#: ../ui/mainwindow.ui.h:11
+msgid "Replace:"
+msgstr "Korvaa:"
+
+#: ../ui/mainwindow.ui.h:12
+msgid "Find all possible matches in a line"
+msgstr "Etsi kaikki osumat rivillä"
+
+#: ../ui/mainwindow.ui.h:14
+msgid "Find all matches of the regular expression"
+msgstr "Etsi kaikki säännöllistä lauseketta vastaavat osumat"
+
+#: ../ui/mainwindow.ui.h:15
+msgid "A regular expression in Perl syntax"
+msgstr "Säännöllinen lauseke perl-syntaksissa"
+
+#: ../ui/mainwindow.ui.h:16
+#, fuzzy
+#| msgid ""
+#| "The new string to substitute. As in Perl, you can refer to parts of the "
+#| "match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, "
+#| "\\u, \\L, \\U and \\E are supported as well."
 msgid ""
 "The new string to substitute. As in Perl, you can refer to parts of the "
-"match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, \\u, "
-"\\L, \\U and \\E are supported as well."
+"match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
+"\\u, \\L, \\U and \\E are supported as well."
 msgstr ""
 "Uusi korvaava merkkijono. Kuten perlissä, voit viitata osuman osiin "
 "käyttämällä muuttujia $1, $2 jne. tai $+, $& $` ja $'. Operaattorit \\l, "
 "\\u, \\L, \\U ja \\E ovat myös tuettuja."
 
-#: ../ui/mainwindow.glade.h:31
-msgid "_All files"
-msgstr "_Kaikki tiedostot"
+#: ../ui/mainwindow.ui.h:17
+msgid "Preview of the substitution"
+msgstr "Esikatselu muutoksesta"
 
-#: ../ui/mainwindow.glade.h:32
-msgid "_Edit"
-msgstr "_Muokkaa"
+#: ../ui/mainwindow.ui.h:18
+msgid "Preview"
+msgstr "Esikatselu"
 
-#: ../ui/mainwindow.glade.h:33
-msgid "_File"
-msgstr "_Tiedosto"
-
-#: ../ui/mainwindow.glade.h:34
-msgid "_Help"
-msgstr "O_hje"
-
-#: ../ui/mainwindow.glade.h:35
-msgid "_Match"
-msgstr "_Osuma"
-
-#: ../ui/mainwindow.glade.h:36
-msgid "_Next file"
-msgstr "_Seuraava tiedosto"
-
-#: ../ui/mainwindow.glade.h:37
-msgid "_Previous file"
-msgstr "_Edellinen tiedosto"
-
-#: ../ui/mainwindow.glade.h:38
+#: ../ui/mainwindow.ui.h:19
 msgid "_Replace"
 msgstr "Ko_rvaa"
 
-#: ../ui/mainwindow.glade.h:39
+#: ../ui/mainwindow.ui.h:20
+msgid "Replace current match"
+msgstr "Korvaa nykyinen osuma"
+
+#: ../ui/mainwindow.ui.h:21
 msgid "_This file"
 msgstr "_Tämä tiedosto"
 
-#: ../ui/mainwindow.glade.h:40
-msgid "hidden"
-msgstr "piilotettu"
+#: ../ui/mainwindow.ui.h:22
+msgid "Replace all matches in the current file"
+msgstr "Korvaa kaikki osumat nykyisessä tiedostossa"
 
-#: ../ui/mainwindow.glade.h:41
-msgid "recursive"
-msgstr "rekursiivinen"
+#: ../ui/mainwindow.ui.h:23
+msgid "_All files"
+msgstr "_Kaikki tiedostot"
 
-#: ../ui/prefdialog.glade.h:1
-msgid "1."
-msgstr "1."
+#: ../ui/mainwindow.ui.h:24
+msgid "Replace all matches in all files"
+msgstr "Korvaa kaikki osumat kaikissa tiedostoissa"
 
-#: ../ui/prefdialog.glade.h:2
-msgid "2."
-msgstr "2."
+#: ../ui/mainwindow.ui.h:25
+msgid "File backward"
+msgstr "Tiedosto taaksepäin"
 
-#: ../ui/prefdialog.glade.h:3
-msgid "3."
-msgstr "3."
+#: ../ui/mainwindow.ui.h:26
+msgid "Go to the previous matching file"
+msgstr "Siirry edelliseen hakua vastaavan nimiseen tiedostoon"
 
-#: ../ui/prefdialog.glade.h:4
-msgid "C_urrent match color:"
-msgstr "_Nykyisen osuman väri:"
+#: ../ui/mainwindow.ui.h:27
+msgid "Backward"
+msgstr "Taaksepäin"
 
-#: ../ui/prefdialog.glade.h:5
-msgid "Fallback _encoding:"
-msgstr "Muu koodaus:"
+#: ../ui/mainwindow.ui.h:28
+msgid "Go to previous match"
+msgstr "Siirry edelliseen osumaan"
 
-#: ../ui/prefdialog.glade.h:6
-msgid ""
-"Icons only\n"
-"Text only\n"
-"Icons and text\n"
-"Both horizontal"
+#: ../ui/mainwindow.ui.h:30
+msgid "Go to next match"
+msgstr "Siirry seuraavaan osumaan"
+
+#: ../ui/mainwindow.ui.h:31
+msgid "File forward"
+msgstr "Tiedosto eteenpäin"
+
+#: ../ui/mainwindow.ui.h:32
+msgid "Go to the next matching file"
+msgstr "Siirry seuraavaan hakua vastaavan nimiseen tiedostoon"
+
+#: ../ui/prefdialog.ui.h:1
+msgid "Icons only"
 msgstr ""
-"Vain kuvakkeet\n"
-"Vain teksti\n"
-"Kuvakkeet ja teksti\n"
-"Molemmat vierekkäin"
 
-#: ../ui/prefdialog.glade.h:10
+#: ../ui/prefdialog.ui.h:2
+#, fuzzy
+#| msgid "Text view font"
+msgid "Text only"
+msgstr "Tekstinäytön fontti"
+
+#: ../ui/prefdialog.ui.h:3
+msgid "Icons and text"
+msgstr ""
+
+#: ../ui/prefdialog.ui.h:4
+msgid "Both horizontal"
+msgstr ""
+
+#: ../ui/prefdialog.ui.h:5
 msgid "Preferences"
 msgstr "Asetukset"
 
-#: ../ui/prefdialog.glade.h:11
-msgid "The encoding specified by the current locale"
-msgstr "Valitun lokalisoinnin mukainen merkistökoodaus"
+#: ../ui/prefdialog.ui.h:6
+msgid "_Text view font:"
+msgstr "_Tekstinäytön fontti:"
 
-#: ../ui/prefdialog.glade.h:12
-msgid "Tool_bar style:"
-msgstr "_Työkalupalkin tyyli:"
-
-#: ../ui/prefdialog.glade.h:13
-msgid "UTF-8"
-msgstr "UTF-8"
-
-#: ../ui/prefdialog.glade.h:14
-msgid "_File access"
-msgstr "_Tiedoston luku"
-
-#: ../ui/prefdialog.glade.h:15
-msgid "_Look’n’feel"
-msgstr "_Käyttöliittymä"
-
-#: ../ui/prefdialog.glade.h:16
+#: ../ui/prefdialog.ui.h:7
 msgid "_Match color:"
 msgstr "_Osuman väri:"
 
-#: ../ui/prefdialog.glade.h:17
-msgid "_Text view font:"
-msgstr "_Tekstinäytön kirjasin:"
+#: ../ui/prefdialog.ui.h:8
+msgid "C_urrent match color:"
+msgstr "_Nykyisen osuman väri:"
 
-#: ../ui/prefdialog.glade.h:18
+#: ../ui/prefdialog.ui.h:9
+msgid "_Look’n’feel"
+msgstr "_Käyttöliittymä"
+
+#: ../ui/prefdialog.ui.h:10
 msgid ""
 "regexxer attempts to read a file in the following encodings before giving up:"
 msgstr ""
 "regexxer yrittää lukea tiedostoja seuraavilla merkistökoodauksilla ennen "
 "luovuttamista:"
 
-#~ msgid "_About"
-#~ msgstr "_Tietoja"
+#: ../ui/prefdialog.ui.h:11
+msgid "3."
+msgstr "3."
 
-#~ msgid "[OPTION]... [FOLDER]"
-#~ msgstr "[OPTIO] ... [KANSIO]"
+#: ../ui/prefdialog.ui.h:12
+msgid "2."
+msgstr "2."
 
-#~ msgid "Try “regexxer --help” for more information."
-#~ msgstr "Kokeile “regexxer --help” saadaksesi lisätietoja."
+#: ../ui/prefdialog.ui.h:13
+msgid "1."
+msgstr "1."
 
-#~ msgid ""
-#~ "The folder name “%1” contains characters not representable in the "
-#~ "encoding of the local file system."
-#~ msgstr ""
-#~ "Kansion nimi “%1” sisältää merkkejä, joita ei voida esittää paikkalisen "
-#~ "tiedostojärjestelmän merkistökoodauksessa."
+#: ../ui/prefdialog.ui.h:14
+msgid "UTF-8"
+msgstr "UTF-8"
 
-#~ msgid "Select a folder"
-#~ msgstr "Valitse kansio"
+#: ../ui/prefdialog.ui.h:15
+msgid "Fallback _encoding:"
+msgstr "Muu koodaus:"
 
-#~ msgid "About regexxer"
-#~ msgstr "Keskeytä regexxer"
+#: ../ui/prefdialog.ui.h:16
+msgid "The encoding specified by the current locale"
+msgstr "Valitun lokalisoinnin mukainen merkistökoodaus"
 
-#~ msgid "The application icon of regexxer"
-#~ msgstr "Ohjelman regexxer kuvake"
-
-#~ msgid "regexxer icon"
-#~ msgstr "regexxerin kuvake"
-
-#~ msgid "translated by"
-#~ msgstr "Kääntänyt"
-
-#~ msgid "written by"
-#~ msgstr "Kirjoittanut"
-
-#~ msgid "The directory to be searched"
-#~ msgstr "Hakemisto, josta haetaan"
+#: ../ui/prefdialog.ui.h:17
+msgid "_File access"
+msgstr "_Tiedoston luku"
