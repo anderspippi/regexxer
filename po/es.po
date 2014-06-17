@@ -10,22 +10,22 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-02-23 17:05+0000\n"
-"PO-Revision-Date: 2014-03-10 18:22+0100\n"
+"POT-Creation-Date: 2014-04-16 22:55+0000\n"
+"PO-Revision-Date: 2014-06-17 19:15+0200\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
-"Language-Team: Español <gnome-es-list@gnome.org>\n"
+"Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 2.91.5\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Generator: Gtranslator 2.91.6\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "Herramienta de búsqueda regexxer"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1062
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
 msgid "Search and replace using regular expressions"
 msgstr "Buscar y reemplazar usando expresiones regulares"
 
@@ -189,7 +189,7 @@ msgstr "Falló al guardar el archivo «%1»: %2"
 msgid "“%1” seems to be a binary file."
 msgstr "«%1» parece ser un archivo binario."
 
-#: ../src/main.cc:78
+#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
 msgid "Save _all"
 msgstr "Guardar _todo"
 
@@ -205,7 +205,7 @@ msgstr "PATRÓN"
 msgid "Do not recurse into subdirectories"
 msgstr "No ir recursivamente por las subcarpetas"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:9
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "También buscar en los archivos ocultos"
 
@@ -221,7 +221,7 @@ msgstr "EXPREG"
 msgid "Find only the first match in a line"
 msgstr "Buscar sólo la primera coincidencia en una línea"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:15
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Coincidencias no sensibles a mayúsculas"
 
@@ -245,7 +245,7 @@ msgstr "No empezar a buscar automáticamente"
 msgid "[FOLDER]"
 msgstr "[CARPETA]"
 
-#: ../src/mainwindow.cc:602
+#: ../src/mainwindow.cc:701
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -253,25 +253,25 @@ msgstr ""
 "Algunos archivos no han sido guardados aún.\n"
 "¿Desea salir de todas formas?"
 
-#: ../src/mainwindow.cc:616
+#: ../src/mainwindow.cc:715
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
 msgstr "Algunos archivos no han sido guardados aún.ºn ¿Aún quiere continuar?"
 
-#: ../src/mainwindow.cc:646
+#: ../src/mainwindow.cc:745
 msgid "The file search pattern is invalid."
 msgstr "El patrón de búsqueda de archivos no es válido."
 
-#: ../src/mainwindow.cc:652
+#: ../src/mainwindow.cc:751
 msgid "The following errors occurred during search:"
 msgstr "Los siguientes errores ocurrieron durante la búsqueda:"
 
-#: ../src/mainwindow.cc:916
+#: ../src/mainwindow.cc:1020
 msgid "The following errors occurred during save:"
 msgstr "Los siguientes errores ocurrieron al guardar:"
 
-#: ../src/mainwindow.cc:1068
+#: ../src/mainwindow.cc:1177
 msgid "translator-credits"
 msgstr ""
 "Jorge González <jorgegonz@svn.gnome.org>, 2007\n"
@@ -299,7 +299,6 @@ msgid "Cancels the running search"
 msgstr "Cancela la búsqueda actual"
 
 #: ../ui/app-menu.xml.h:1
-#| msgid "Preferences"
 msgid "_Preferences"
 msgstr "_Preferencias"
 
@@ -311,69 +310,120 @@ msgstr "_Acerca de"
 msgid "_Quit"
 msgstr "_Quitar"
 
+#: ../ui/gear-menu.xml.h:1
+#| msgid "Save all"
+msgid "_Save"
+msgstr "_Guardar"
+
+#: ../ui/gear-menu.xml.h:3
+msgid "_Undo"
+msgstr "_Deshacer"
+
+#: ../ui/gear-menu.xml.h:4
+msgid "Cu_t"
+msgstr "Co_rtar"
+
+#: ../ui/gear-menu.xml.h:5
+msgid "_Copy"
+msgstr "_Copiar"
+
+#: ../ui/gear-menu.xml.h:6
+msgid "_Paste"
+msgstr "_Pegar"
+
+#: ../ui/gear-menu.xml.h:7
+msgid "_Delete"
+msgstr "_Eliminar"
+
+#: ../ui/gear-menu.xml.h:8
+#| msgid "_Previous file"
+msgid "Previous file"
+msgstr "Archivo anterior"
+
+#: ../ui/gear-menu.xml.h:9
+#| msgid "Backward"
+msgid "Back"
+msgstr "Atrás"
+
+#: ../ui/gear-menu.xml.h:10 ../ui/mainwindow.ui.h:29
+msgid "Forward"
+msgstr "Adelante"
+
+#: ../ui/gear-menu.xml.h:11
+#| msgid "_Next file"
+msgid "Next file"
+msgstr "Siguiente archivo"
+
+#: ../ui/gear-menu.xml.h:12
+#| msgid "Replace _current"
+msgid "Replace current"
+msgstr "Reemplazar el actual"
+
+#: ../ui/gear-menu.xml.h:13
+#| msgid "Replace in _this file"
+msgid "Replace in this file"
+msgstr "Reemplazar en este archivo"
+
+#: ../ui/gear-menu.xml.h:14
+#| msgid "Replace in _all files"
+msgid "Replace in all files"
+msgstr "Reemplazar en todos los archivos"
+
 #: ../ui/mainwindow.ui.h:1
-msgid "_File"
-msgstr "_Archivo"
+msgid "Save all"
+msgstr "Guardar todo"
 
 #: ../ui/mainwindow.ui.h:2
-msgid "_Edit"
-msgstr "_Editar"
-
-#: ../ui/mainwindow.ui.h:3
-msgid "_Match"
-msgstr "_Coincide"
-
-#: ../ui/mainwindow.ui.h:4
 msgid "Fol_der:"
 msgstr "Car_peta:"
 
-#: ../ui/mainwindow.ui.h:5
+#: ../ui/mainwindow.ui.h:3
 msgid "Pattern:"
 msgstr "Patrón:"
 
-#: ../ui/mainwindow.ui.h:6
+#: ../ui/mainwindow.ui.h:4
 msgid "recursive"
 msgstr "recursivo"
 
-#: ../ui/mainwindow.ui.h:7
+#: ../ui/mainwindow.ui.h:5
 msgid "Recurse into subdirectories"
 msgstr "Recursivamente por las carpetas"
 
-#: ../ui/mainwindow.ui.h:8
+#: ../ui/mainwindow.ui.h:6
 msgid "hidden"
 msgstr "oculto"
 
-#: ../ui/mainwindow.ui.h:10
+#: ../ui/mainwindow.ui.h:8
 msgid "Find all files that match the filename pattern"
 msgstr ""
 "Encontrar todos los archivos que coincidan con el patrón en el nombre del "
 "archivo"
 
-#: ../ui/mainwindow.ui.h:11
+#: ../ui/mainwindow.ui.h:9
 msgid "Find fi_les"
 msgstr "Buscar _archivos"
 
-#: ../ui/mainwindow.ui.h:12
+#: ../ui/mainwindow.ui.h:10
 msgid "Search:"
 msgstr "Buscar:"
 
-#: ../ui/mainwindow.ui.h:13
+#: ../ui/mainwindow.ui.h:11
 msgid "Replace:"
 msgstr "Reemplazar:"
 
-#: ../ui/mainwindow.ui.h:14
+#: ../ui/mainwindow.ui.h:12
 msgid "Find all possible matches in a line"
 msgstr "Buscar todas las posibles coincidencias en una línea"
 
-#: ../ui/mainwindow.ui.h:16
+#: ../ui/mainwindow.ui.h:14
 msgid "Find all matches of the regular expression"
 msgstr "Buscar todas las coincidencias de la expresión regular"
 
-#: ../ui/mainwindow.ui.h:17
+#: ../ui/mainwindow.ui.h:15
 msgid "A regular expression in Perl syntax"
 msgstr "Una expresión regular en sintaxis Perl"
 
-#: ../ui/mainwindow.ui.h:18
+#: ../ui/mainwindow.ui.h:16
 msgid ""
 "The new string to substitute. As in Perl, you can refer to parts of the "
 "match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
@@ -383,67 +433,63 @@ msgstr ""
 "coincidencia usando $1, $2, etc. o incluso $+, $&, $` y $'. Los operadores "
 "\\l, \\u, \\L, \\U y \\E también están soportados."
 
-#: ../ui/mainwindow.ui.h:19
+#: ../ui/mainwindow.ui.h:17
 msgid "Preview of the substitution"
 msgstr "Vista previa de la sustitución"
 
-#: ../ui/mainwindow.ui.h:20
+#: ../ui/mainwindow.ui.h:18
 msgid "Preview"
 msgstr "Vista previa"
 
-#: ../ui/mainwindow.ui.h:21
+#: ../ui/mainwindow.ui.h:19
 msgid "_Replace"
 msgstr "_Reemplazar"
 
-#: ../ui/mainwindow.ui.h:22
+#: ../ui/mainwindow.ui.h:20
 msgid "Replace current match"
 msgstr "Reemplazar la coincidencia actual"
 
-#: ../ui/mainwindow.ui.h:23
+#: ../ui/mainwindow.ui.h:21
 msgid "_This file"
 msgstr "_Este archivo"
 
-#: ../ui/mainwindow.ui.h:24
+#: ../ui/mainwindow.ui.h:22
 msgid "Replace all matches in the current file"
 msgstr "Reemplazar todas las coincidencias en el archivo actual"
 
-#: ../ui/mainwindow.ui.h:25
+#: ../ui/mainwindow.ui.h:23
 msgid "_All files"
 msgstr "_Todos los archivos"
 
-#: ../ui/mainwindow.ui.h:26
+#: ../ui/mainwindow.ui.h:24
 msgid "Replace all matches in all files"
 msgstr "Reemplazar todas las coincidencias en todos los archivos"
 
-#: ../ui/mainwindow.ui.h:27
+#: ../ui/mainwindow.ui.h:25
 msgid "File backward"
 msgstr "Archivo anterior"
 
-#: ../ui/mainwindow.ui.h:28
+#: ../ui/mainwindow.ui.h:26
 msgid "Go to the previous matching file"
 msgstr "Ir al archivo coincidente anterior"
 
-#: ../ui/mainwindow.ui.h:29
+#: ../ui/mainwindow.ui.h:27
 msgid "Backward"
 msgstr "Atrás"
 
-#: ../ui/mainwindow.ui.h:30
+#: ../ui/mainwindow.ui.h:28
 msgid "Go to previous match"
 msgstr "Ir a la anterior coincidencia"
 
-#: ../ui/mainwindow.ui.h:31
-msgid "Forward"
-msgstr "Adelante"
-
-#: ../ui/mainwindow.ui.h:32
+#: ../ui/mainwindow.ui.h:30
 msgid "Go to next match"
 msgstr "Ir a la siguiente coincidencia"
 
-#: ../ui/mainwindow.ui.h:33
+#: ../ui/mainwindow.ui.h:31
 msgid "File forward"
 msgstr "Archivo siguiente"
 
-#: ../ui/mainwindow.ui.h:34
+#: ../ui/mainwindow.ui.h:32
 msgid "Go to the next matching file"
 msgstr "Ir al archivo coincidente siguiente"
 
@@ -518,6 +564,15 @@ msgstr "La codificación especificada por la localización actual"
 msgid "_File access"
 msgstr "Acceso al _archivo"
 
+#~ msgid "_File"
+#~ msgstr "_Archivo"
+
+#~ msgid "_Edit"
+#~ msgstr "_Editar"
+
+#~ msgid "_Match"
+#~ msgstr "_Coincide"
+
 #~ msgid "_Help"
 #~ msgstr "Ay_uda"
 
@@ -554,25 +609,6 @@ msgstr "Acceso al _archivo"
 #~ msgstr ""
 #~ "Se alcanzó el límite de recursión y vuelta atrás del motor de expresiones "
 #~ "regulares."
-
-#~ msgid "Replace _current"
-#~ msgstr "Reemplazar el _actual"
-
-#~ msgid "Replace in _all files"
-#~ msgstr "Reemplazar en _todos los archivos"
-
-#~ msgid "Replace in _this file"
-#~ msgstr "Reemplazar en _este archivo"
-
-#~| msgid "Save _all"
-#~ msgid "Save all"
-#~ msgstr "Guardar todo"
-
-#~ msgid "_Next file"
-#~ msgstr "Siguiente _archivo"
-
-#~ msgid "_Previous file"
-#~ msgstr "Archivo _anterior"
 
 #~ msgid ""
 #~ "The style of the application’s toolbar. Possible values are “icons”, "
