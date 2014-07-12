@@ -521,6 +521,7 @@
                     <child>
                       <object class="GtkButton" id="button_replace">
                         <property name="use_action_appearance">False</property>
+                        <property name="action_name">match.replace-current</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
@@ -579,6 +580,7 @@
                     <child>
                       <object class="GtkButton" id="button_replace_file">
                         <property name="use_action_appearance">False</property>
+                        <property name="action_name">match.replace-in-file</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
@@ -637,6 +639,7 @@
                     <child>
                       <object class="GtkButton" id="button_replace_all">
                         <property name="use_action_appearance">False</property>
+                        <property name="action_name">match.replace-in-all-files</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
@@ -709,6 +712,7 @@
                     <child>
                       <object class="GtkButton" id="button_prev_file">
                         <property name="use_action_appearance">False</property>
+                        <property name="action_name">match.previous-file</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
@@ -735,6 +739,7 @@
                     <child>
                       <object class="GtkButton" id="button_prev_match">
                         <property name="use_action_appearance">False</property>
+                        <property name="action_name">match.back</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
@@ -761,6 +766,7 @@
                     <child>
                       <object class="GtkButton" id="button_next_match">
                         <property name="use_action_appearance">False</property>
+                        <property name="action_name">match.forward</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
@@ -787,6 +793,7 @@
                     <child>
                       <object class="GtkButton" id="button_next_file">
                         <property name="use_action_appearance">False</property>
+                        <property name="action_name">match.next-file</property>
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
                         <property name="receives_default">False</property>
