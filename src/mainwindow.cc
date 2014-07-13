@@ -440,6 +440,7 @@ void MainWindow::init_actions()
     {"copy", "<Ctrl>C", sigc::mem_fun(*this, &MainWindow::on_copy)},
     {"paste", "<Ctrl>V", sigc::mem_fun(*this, &MainWindow::on_paste)},
     {"delete", NULL, sigc::mem_fun(*this, &MainWindow::on_erase)},
+    {0},
   };
 
   for (int i = 0; edit_actions[i].name; i++)
@@ -458,6 +459,7 @@ void MainWindow::init_actions()
   {
     {"save", "<Ctrl>S", sigc::mem_fun(*this, &MainWindow::on_save_file)},
     {"save-all", NULL, sigc::mem_fun(*this, &MainWindow::on_save_all)},
+    {0},
   };
 
   for (int i = 0; save_actions[i].name; i++)
