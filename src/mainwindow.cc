@@ -405,19 +405,20 @@ void MainWindow::init_actions()
   struct actions
   {
     const char *const name;
+    const char* accelerator;
     sigc::slot<void> slot;
   };
 
   static struct actions match_actions[] =
   {
-    {"undo", sigc::mem_fun(*this, &MainWindow::on_undo)},
-    {"previous-file", sigc::bind(sigc::mem_fun(*this, &MainWindow::on_go_next_file), false)},
-    {"back", sigc::bind(sigc::mem_fun(*this, &MainWindow::on_go_next), false)},
-    {"forward", sigc::bind(sigc::mem_fun(*this, &MainWindow::on_go_next), true)},
-    {"next-file", sigc::bind(sigc::mem_fun(*this, &MainWindow::on_go_next_file), true)},
-    {"replace-current", sigc::mem_fun(*this, &MainWindow::on_replace)},
-    {"replace-in-file", sigc::mem_fun(*this, &MainWindow::on_replace_file)},
-    {"replace-in-all-files", sigc::mem_fun(*this, &MainWindow::on_replace_all)},
+    {"undo", "<Ctrl>Z", sigc::mem_fun(*this, &MainWindow::on_undo)},
+    {"previous-file", "<Ctrl>P",sigc::bind(sigc::mem_fun(*this, &MainWindow::on_go_next_file), false)},
+    {"back", "<Ctrl>B", sigc::bind(sigc::mem_fun(*this, &MainWindow::on_go_next), false)},
+    {"forward", "<Ctrl>N", sigc::bind(sigc::mem_fun(*this, &MainWindow::on_go_next), true)},
+    {"next-file", "<Ctrl>E", sigc::bind(sigc::mem_fun(*this, &MainWindow::on_go_next_file), true)},
+    {"replace-current", "<Ctrl>R", sigc::mem_fun(*this, &MainWindow::on_replace)},
+    {"replace-in-file", NULL, sigc::mem_fun(*this, &MainWindow::on_replace_file)},
+    {"replace-in-all-files", NULL, sigc::mem_fun(*this, &MainWindow::on_replace_all)},
     {0},
   };
 
@@ -428,14 +429,17 @@ void MainWindow::init_actions()
     action->signal_activate().connect(sigc::hide(match_actions[i].slot));
     match_action_group_->insert(action);
     action_to_group_[match_actions[i].name] = match_action_group_;
+    if (match_actions[i].accelerator)
+        application_->add_accelerator(match_actions[i].accelerator,
+                                      Glib::ustring("match.") + match_actions[i].name);
   }
 
   static struct actions edit_actions[] =
   {
-    {"cut", sigc::mem_fun(*this, &MainWindow::on_cut)},
-    {"copy", sigc::mem_fun(*this, &MainWindow::on_copy)},
-    {"paste", sigc::mem_fun(*this, &MainWindow::on_paste)},
-    {"delete", sigc::mem_fun(*this, &MainWindow::on_erase)},
+    {"cut", "<Ctrl>X", sigc::mem_fun(*this, &MainWindow::on_cut)},
+    {"copy", "<Ctrl>C", sigc::mem_fun(*this, &MainWindow::on_copy)},
+    {"paste", "<Ctrl>V", sigc::mem_fun(*this, &MainWindow::on_paste)},
+    {"delete", NULL, sigc::mem_fun(*this, &MainWindow::on_erase)},
   };
 
   for (int i = 0; edit_actions[i].name; i++)
@@ -445,12 +449,15 @@ void MainWindow::init_actions()
     action->signal_activate().connect(sigc::hide(edit_actions[i].slot));
     edit_action_group_->insert(action);
     action_to_group_[edit_actions[i].name] = edit_action_group_;
+    if (edit_actions[i].accelerator)
+        application_->add_accelerator(edit_actions[i].accelerator,
+                                      Glib::ustring("edit.") + edit_actions[i].name);
   }
 
   static struct actions save_actions[] =
   {
-    {"save", sigc::mem_fun(*this, &MainWindow::on_save_file)},
-    {"save-all", sigc::mem_fun(*this, &MainWindow::on_save_all)},
+    {"save", "<Ctrl>S", sigc::mem_fun(*this, &MainWindow::on_save_file)},
+    {"save-all", NULL, sigc::mem_fun(*this, &MainWindow::on_save_all)},
   };
 
   for (int i = 0; save_actions[i].name; i++)
@@ -460,6 +467,9 @@ void MainWindow::init_actions()
     action->signal_activate().connect(sigc::hide(save_actions[i].slot));
     save_action_group_->insert(action);
     action_to_group_[save_actions[i].name] = save_action_group_;
+    if (save_actions[i].accelerator)
+        application_->add_accelerator(save_actions[i].accelerator,
+                                      Glib::ustring("save.") + save_actions[i].name);
   }
 
   window_->insert_action_group("match", match_action_group_);
