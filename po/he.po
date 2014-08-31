@@ -1,0 +1,534 @@
+# Hebrew translation for regexxer.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# fr33domlover <fr33domlover@riseup.net>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: regexxer 0.11\n"
+"Report-Msgid-Bugs-To: http://regexxer.sourceforge.net/bugs\n"
+"POT-Creation-Date: 2014-08-31 02:26+0300\n"
+"PO-Revision-Date: 2014-08-31 20:35+0200\n"
+"Last-Translator: fr33domlover <fr33domlover@riseup.net>\n"
+"Language-Team: עברית <>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../ui/regexxer.desktop.in.h:1
+msgid "regexxer Search Tool"
+msgstr "כלי החיפוש regexxer"
+
+#: ../ui/regexxer.desktop.in.h:2
+#: ../src/mainwindow.cc:1183
+msgid "Search and replace using regular expressions"
+msgstr "חיפוש והחלפה בעזרת ביטויים רגולריים"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:1
+msgid "File Patterns"
+msgstr "File Patterns"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:2
+msgid "List of pre-defined patterns available in the 'Pattern' entry."
+msgstr "List of pre-defined patterns available in the 'Pattern' entry."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:3
+msgid "Regex Patterns"
+msgstr "Regex Patterns"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:4
+msgid "List of last patterns used in the 'Regex' entry."
+msgstr "List of last patterns used in the 'Regex' entry."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:5
+msgid "List of last patterns used in the 'Substitution' entry."
+msgstr "List of last patterns used in the 'Substitution' entry."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:6
+msgid "Text view font"
+msgstr "Text view font"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:7
+msgid "The font used in the file editor."
+msgstr "The font used in the file editor."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:8
+msgid "Match color"
+msgstr "Match color"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:9
+msgid "The background color used to highlight matches of the search expression."
+msgstr "The background color used to highlight matches of the search expression."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:10
+msgid "Current-match color"
+msgstr "Current-match color"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:11
+msgid "The background color used to highlight the currently selected match of the search expression."
+msgstr "The background color used to highlight the currently selected match of the search expression."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:12
+msgid "Fallback encoding"
+msgstr "Fallback encoding"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:13
+msgid "Name of the character encoding to use if a file is not readable in either UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" for a complete list of possible values."
+msgstr "Name of the character encoding to use if a file is not readable in either UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" for a complete list of possible values."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:14
+msgid "window width"
+msgstr "window width"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:15
+msgid "The width of the window."
+msgstr "The width of the window."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:16
+msgid "window height"
+msgstr "window height"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:17
+msgid "The height of the window."
+msgstr "The height of the window."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:18
+msgid "window x position"
+msgstr "window x position"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:19
+msgid "The X coordinate of the window."
+msgstr "The X coordinate of the window."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:20
+msgid "window y position"
+msgstr "window y position"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:21
+msgid "The Y coordinate of the window."
+msgstr "The Y coordinate of the window."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:22
+msgid "window maximization"
+msgstr "window maximization"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:23
+msgid "Whether the window is maximized."
+msgstr "Whether the window is maximized."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:24
+msgid "Show line numbers"
+msgstr "Show line numbers"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:25
+msgid "Whether to show the line numbers of the text view."
+msgstr "Whether to show the line numbers of the text view."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:26
+msgid "Highlight the current line"
+msgstr "Highlight the current line"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:27
+msgid "Whether to highlight the current line of the text view."
+msgstr "Whether to highlight the current line of the text view."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:28
+msgid "Auto indentation"
+msgstr "Auto indentation"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:29
+msgid "Whether to enable auto indentation in the text view."
+msgstr "Whether to enable auto indentation in the text view."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:30
+msgid "Draw spaces"
+msgstr "Draw spaces"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:31
+msgid "Which type of space to draw in the text view."
+msgstr "Which type of space to draw in the text view."
+
+#: ../src/filebuffer.cc:198
+msgid "Can’t read file:"
+msgstr "לא ניתן לקרוא את הקובץ:"
+
+#: ../src/filetree.cc:60
+msgid "File"
+msgstr "קובץ"
+
+#: ../src/filetree.cc:79
+msgid "#"
+msgstr "#"
+
+#: ../src/filetree.cc:508
+#, qt-format
+msgid "Failed to save file “%1”: %2"
+msgstr "שמירת הקובץ \"%1\" נכשלה: %2"
+
+#: ../src/filetree.cc:924
+#, qt-format
+msgid "“%1” seems to be a binary file."
+msgstr "נראה שהקובץ \"%1\" אינו קובץ טקסט."
+
+#: ../src/main.cc:78
+#: ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "שמירת _הכל"
+
+#: ../src/main.cc:135
+msgid "Find files matching PATTERN"
+msgstr "חיפוש קבצים ששמותיהם מתאימים לתבנית"
+
+#: ../src/main.cc:135
+msgid "PATTERN"
+msgstr "תבנית"
+
+#: ../src/main.cc:137
+msgid "Do not recurse into subdirectories"
+msgstr "אין לחפש בתת־תיקיות"
+
+#: ../src/main.cc:139
+#: ../ui/mainwindow.ui.h:7
+msgid "Also find hidden files"
+msgstr "יש לכלול בחיפוש גם קבצים נסתרים"
+
+#: ../src/main.cc:141
+msgid "Find text matching REGEX"
+msgstr "חיפוש טקסט שמתאים לביטוי הרגולרי"
+
+#: ../src/main.cc:141
+msgid "REGEX"
+msgstr "ביטוי רגולרי"
+
+#: ../src/main.cc:143
+msgid "Find only the first match in a line"
+msgstr "רק ההתאמה הראשונה בשורה"
+
+#: ../src/main.cc:145
+#: ../ui/mainwindow.ui.h:13
+msgid "Do case insensitive matching"
+msgstr "ללא רגישות לרישיות"
+
+#: ../src/main.cc:147
+msgid "Replace matches with STRING"
+msgstr "החלפת ההתאמות במחרוזת"
+
+#: ../src/main.cc:147
+msgid "STRING"
+msgstr "מחרוזת"
+
+#: ../src/main.cc:149
+msgid "Print match location to standard output"
+msgstr "הדפסת מיקום ההתאמה לפלט התקני"
+
+#: ../src/main.cc:151
+msgid "Do not automatically start search"
+msgstr "אין להתחיל חיפוש אוטומטית"
+
+#: ../src/main.cc:153
+msgid "[FOLDER]"
+msgstr "[תיקייה]"
+
+#: ../src/mainwindow.cc:713
+msgid ""
+"Some files haven’t been saved yet.\n"
+"Quit anyway?"
+msgstr ""
+"קבצים אחדים טרם נשמרו.\n"
+"האם לצאת בכל־זאת?"
+
+#: ../src/mainwindow.cc:727
+msgid ""
+"Some files haven’t been saved yet.\n"
+"Continue anyway?"
+msgstr ""
+"קבצים אחדים טרם נשמרו.\n"
+"האם להמשיך בכל־זאת?"
+
+#: ../src/mainwindow.cc:757
+msgid "The file search pattern is invalid."
+msgstr "התבנית לחיפוש קבצים אינה תקינה."
+
+#: ../src/mainwindow.cc:763
+msgid "The following errors occurred during search:"
+msgstr "השגיאות הבאות אירעו במהלך החיפוש:"
+
+#: ../src/mainwindow.cc:1032
+msgid "The following errors occurred during save:"
+msgstr "השגיאות הבאות אירעו במהלך השמירה:"
+
+#: ../src/mainwindow.cc:1189
+msgid "translator-credits"
+msgstr "fr33domlover <fr33domlover@riseup.net>"
+
+#: ../src/prefdialog.cc:186
+#, qt-format
+msgid "“%1” is not a valid encoding."
+msgstr "‏\"%1\" אינו קידוד תקין."
+
+#: ../src/statusline.cc:245
+msgid "Stop"
+msgstr "עצירה"
+
+#: ../src/statusline.cc:253
+msgid "File:"
+msgstr "קובץ:"
+
+#: ../src/statusline.cc:256
+msgid "Match:"
+msgstr "התאמה:"
+
+#: ../src/statusline.cc:267
+msgid "Cancels the running search"
+msgstr "ביטול החיפוש שמתבצע כעת"
+
+#: ../ui/app-menu.xml.h:1
+msgid "_Preferences"
+msgstr "ה_עדפות"
+
+#: ../ui/app-menu.xml.h:2
+msgid "_About"
+msgstr "_אודות"
+
+#: ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "_יציאה"
+
+#: ../ui/gear-menu.xml.h:1
+msgid "_Save"
+msgstr "_שמירה"
+
+#: ../ui/gear-menu.xml.h:3
+msgid "_Undo"
+msgstr "_ביטול"
+
+#: ../ui/gear-menu.xml.h:4
+msgid "Cu_t"
+msgstr "_גזירה"
+
+#: ../ui/gear-menu.xml.h:5
+msgid "_Copy"
+msgstr "ה_עתקה"
+
+#: ../ui/gear-menu.xml.h:6
+msgid "_Paste"
+msgstr "ה_דבקה"
+
+#: ../ui/gear-menu.xml.h:7
+msgid "_Delete"
+msgstr "_מחיקה"
+
+#: ../ui/gear-menu.xml.h:8
+msgid "Previous file"
+msgstr "הקובץ הקודם"
+
+#: ../ui/gear-menu.xml.h:9
+msgid "Back"
+msgstr "אחורה"
+
+#: ../ui/gear-menu.xml.h:10
+#: ../ui/mainwindow.ui.h:29
+msgid "Forward"
+msgstr "קדימה"
+
+#: ../ui/gear-menu.xml.h:11
+msgid "Next file"
+msgstr "הקובץ הבא"
+
+#: ../ui/gear-menu.xml.h:12
+msgid "Replace current"
+msgstr "החלפת הנוכחי"
+
+#: ../ui/gear-menu.xml.h:13
+msgid "Replace in this file"
+msgstr "החלפה בקובץ זה"
+
+#: ../ui/gear-menu.xml.h:14
+msgid "Replace in all files"
+msgstr "החלפה בכל הקבצים"
+
+#: ../ui/mainwindow.ui.h:1
+msgid "Save all"
+msgstr "שמירת הכל"
+
+#: ../ui/mainwindow.ui.h:2
+msgid "Fol_der:"
+msgstr "_תיקייה:"
+
+#: ../ui/mainwindow.ui.h:3
+msgid "Pattern:"
+msgstr "תבנית:"
+
+#: ../ui/mainwindow.ui.h:4
+msgid "recursive"
+msgstr "תת־תיקיות"
+
+#: ../ui/mainwindow.ui.h:5
+msgid "Recurse into subdirectories"
+msgstr "יש לחפש גם בתת־תיקיות"
+
+#: ../ui/mainwindow.ui.h:6
+msgid "hidden"
+msgstr "קבצים נסתרים"
+
+#: ../ui/mainwindow.ui.h:8
+msgid "Find all files that match the filename pattern"
+msgstr "מציאת כל הקבצים ששמותיהם מתאימים לתבנית"
+
+#: ../ui/mainwindow.ui.h:9
+msgid "Find fi_les"
+msgstr "_חיפוש קבצים"
+
+#: ../ui/mainwindow.ui.h:10
+msgid "Search:"
+msgstr "חיפוש של:"
+
+#: ../ui/mainwindow.ui.h:11
+msgid "Replace:"
+msgstr "החלפה עם:"
+
+#: ../ui/mainwindow.ui.h:12
+msgid "Find all possible matches in a line"
+msgstr "מציאת כל ההתאמות בשורה"
+
+#: ../ui/mainwindow.ui.h:14
+msgid "Find all matches of the regular expression"
+msgstr "מציאת כל ההתאמות לביטוי הרגולרי"
+
+#: ../ui/mainwindow.ui.h:15
+msgid "A regular expression in Perl syntax"
+msgstr "ביטוי רגולרי בתחביר Perl"
+
+#: ../ui/mainwindow.ui.h:16
+msgid "The new string to substitute. As in Perl, you can refer to parts of the match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, \\u, \\L, \\U and \\E are supported as well."
+msgstr "הטקסט החדש שבו יוחלפו ההתאמות. כמו ב־Perl, ניתן להשתמש בחלקים של ההתאמה בעזרת $1, $2 וכן הלאה, וגם באלה: ‎$+, $&amp;, $`, $'‎.‏ גם האופרטורים ‎\\l, \\u, \\L, \\U, \\E נתמכים."
+
+#: ../ui/mainwindow.ui.h:17
+msgid "Preview of the substitution"
+msgstr "תצוגה מקדימה של ההחלפה"
+
+#: ../ui/mainwindow.ui.h:18
+msgid "Preview"
+msgstr "תצוגה מקדימה"
+
+#: ../ui/mainwindow.ui.h:19
+msgid "_Replace"
+msgstr "_החלפה"
+
+#: ../ui/mainwindow.ui.h:20
+msgid "Replace current match"
+msgstr "החלפת ההתאמה הנוכחית"
+
+#: ../ui/mainwindow.ui.h:21
+msgid "_This file"
+msgstr "קובץ _זה"
+
+#: ../ui/mainwindow.ui.h:22
+msgid "Replace all matches in the current file"
+msgstr "החלפת כל ההתאמות בקובץ הנוכחי"
+
+#: ../ui/mainwindow.ui.h:23
+msgid "_All files"
+msgstr "_כל הקבצים"
+
+#: ../ui/mainwindow.ui.h:24
+msgid "Replace all matches in all files"
+msgstr "החלפת כל ההתאמות בכל הקבצים"
+
+#: ../ui/mainwindow.ui.h:25
+msgid "File backward"
+msgstr "הקובץ המתאים הקודם"
+
+#: ../ui/mainwindow.ui.h:26
+msgid "Go to the previous matching file"
+msgstr "מעבר לקובץ הקודם שנמצאה בו התאמה"
+
+#: ../ui/mainwindow.ui.h:27
+msgid "Backward"
+msgstr "אחורה"
+
+#: ../ui/mainwindow.ui.h:28
+msgid "Go to previous match"
+msgstr "מעבר להתאמה הקודמת"
+
+#: ../ui/mainwindow.ui.h:30
+msgid "Go to next match"
+msgstr "מעבר להתאמה הבאה"
+
+#: ../ui/mainwindow.ui.h:31
+msgid "File forward"
+msgstr "הקובץ המתאים הבא"
+
+#: ../ui/mainwindow.ui.h:32
+msgid "Go to the next matching file"
+msgstr "מעבר לקובץ הבא שנמצאה בו התאמה"
+
+#: ../ui/prefdialog.ui.h:1
+msgid "Icons only"
+msgstr "סמלים בלבד"
+
+#: ../ui/prefdialog.ui.h:2
+msgid "Text only"
+msgstr "טקסט בלבד"
+
+#: ../ui/prefdialog.ui.h:3
+msgid "Icons and text"
+msgstr "סמלים וטקסט"
+
+#: ../ui/prefdialog.ui.h:4
+msgid "Both horizontal"
+msgstr "שניהם אופקיים"
+
+#: ../ui/prefdialog.ui.h:5
+msgid "Preferences"
+msgstr "העדפות"
+
+#: ../ui/prefdialog.ui.h:6
+msgid "_Text view font:"
+msgstr "_גופן טקסט:"
+
+#: ../ui/prefdialog.ui.h:7
+msgid "_Match color:"
+msgstr "_צבע התאמה:"
+
+#: ../ui/prefdialog.ui.h:8
+msgid "C_urrent match color:"
+msgstr "צבע התאמה _נוכחית:"
+
+#: ../ui/prefdialog.ui.h:9
+msgid "_Look’n’feel"
+msgstr "_תצוגה"
+
+#: ../ui/prefdialog.ui.h:10
+msgid "regexxer attempts to read a file in the following encodings before giving up:"
+msgstr "היישום ינסה לקרוא כל קובץ בקידודים הבאים:"
+
+#: ../ui/prefdialog.ui.h:11
+msgid "3."
+msgstr "3."
+
+#: ../ui/prefdialog.ui.h:12
+msgid "2."
+msgstr "‏2."
+
+#: ../ui/prefdialog.ui.h:13
+msgid "1."
+msgstr "‏1."
+
+#: ../ui/prefdialog.ui.h:14
+msgid "UTF-8"
+msgstr "‏UTF-8"
+
+#: ../ui/prefdialog.ui.h:15
+msgid "Fallback _encoding:"
+msgstr "_קידוד ברירת מחדל אם הקודמים לא התאימו:"
+
+#: ../ui/prefdialog.ui.h:16
+msgid "The encoding specified by the current locale"
+msgstr "הקידוד של המיקום הנוכחי (current locale encoding)"
+
+#: ../ui/prefdialog.ui.h:17
+msgid "_File access"
+msgstr "_גישה לקבצים"
