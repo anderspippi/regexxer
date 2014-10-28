@@ -7,11 +7,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-02-23 17:05+0000\n"
-"PO-Revision-Date: 2014-03-24 21:34+0200\n"
+"POT-Creation-Date: 2014-04-16 22:55+0000\n"
+"PO-Revision-Date: 2014-10-28 21:15+0200\n"
 "Last-Translator: Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
-"Language: Serbian (sr)\n"
+"Language: sr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "regexxer Search Tool"
 msgstr "Regizrer — alat za pretragu"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1062
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
 msgid "Search and replace using regular expressions"
 msgstr "Tražite i zamenite koristeći regularne izraze"
 
@@ -184,7 +184,7 @@ msgstr "Nisam uspeo da sačuvam datoteku „%1“: %2"
 msgid "“%1” seems to be a binary file."
 msgstr "Čini se da je „%1“ binarna datoteka."
 
-#: ../src/main.cc:78
+#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
 msgid "Save _all"
 msgstr "Sačuvaj s_ve"
 
@@ -200,7 +200,7 @@ msgstr "OBRAZAC"
 msgid "Do not recurse into subdirectories"
 msgstr "Ne ulazi u pod-direktroijume"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:9
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Nalazi takođe i skrivene datoteke"
 
@@ -216,7 +216,7 @@ msgstr "REGIZ"
 msgid "Find only the first match in a line"
 msgstr "Nalazi samo prvo poklapanje u redu"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:15
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Traži nezavisno od veličine slova"
 
@@ -240,7 +240,7 @@ msgstr "Ne započinje samostalno pretragu"
 msgid "[FOLDER]"
 msgstr "[FASCIKLA]"
 
-#: ../src/mainwindow.cc:602
+#: ../src/mainwindow.cc:701
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -248,7 +248,7 @@ msgstr ""
 "Neke datoteke još uvek nisu sačuvane.\n"
 "Da zatvorim ipak?"
 
-#: ../src/mainwindow.cc:616
+#: ../src/mainwindow.cc:715
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -256,25 +256,25 @@ msgstr ""
 "Neke datoteke još uvek nisu sačuvane.\n"
 "Da nastavim ipak?"
 
-#: ../src/mainwindow.cc:646
+#: ../src/mainwindow.cc:745
 msgid "The file search pattern is invalid."
 msgstr "Obrazac za traženje datoteka je neispravan."
 
-#: ../src/mainwindow.cc:652
+#: ../src/mainwindow.cc:751
 msgid "The following errors occurred during search:"
 msgstr "Došlo je do sledećih grešaka prilikom pretrage:"
 
-#: ../src/mainwindow.cc:916
+#: ../src/mainwindow.cc:1020
 msgid "The following errors occurred during save:"
 msgstr "Došlo je do sledećih grešaka prilikom čuvanja:"
 
-#: ../src/mainwindow.cc:1068
+#: ../src/mainwindow.cc:1177
 msgid "translator-credits"
 msgstr ""
 "Danilo Šegan <danilo@gnome.org>\n"
 "Miroslav Nikolić <miroslavnikolic@rocketmail.com>\n"
 "\n"
-"Prevod.org — prevod na srpski jezik."
+"http://prevod.org — prevod na srpski jezik."
 
 #: ../src/prefdialog.cc:186
 #, qt-format
@@ -298,7 +298,6 @@ msgid "Cancels the running search"
 msgstr "Obustavite tekuću pretragu"
 
 #: ../ui/app-menu.xml.h:1
-#| msgid "Preferences"
 msgid "_Preferences"
 msgstr "_Postavke"
 
@@ -308,69 +307,120 @@ msgstr "_O programu"
 
 #: ../ui/app-menu.xml.h:3
 msgid "_Quit"
-msgstr "_Izađi"
+msgstr "I_zađi"
+
+#: ../ui/gear-menu.xml.h:1
+msgid "_Save"
+msgstr "_Sačuvaj"
+
+#: ../ui/gear-menu.xml.h:3
+msgid "_Undo"
+msgstr "O_pozovi"
+
+#: ../ui/gear-menu.xml.h:4
+msgid "Cu_t"
+msgstr "_Iseci"
+
+#: ../ui/gear-menu.xml.h:5
+msgid "_Copy"
+msgstr "U_množi"
+
+#: ../ui/gear-menu.xml.h:6
+msgid "_Paste"
+msgstr "U_baci"
+
+#: ../ui/gear-menu.xml.h:7
+msgid "_Delete"
+msgstr "Ob_riši"
+
+#: ../ui/gear-menu.xml.h:8
+#| msgid "_Previous file"
+msgid "Previous file"
+msgstr "Prethodna datoteka"
+
+#: ../ui/gear-menu.xml.h:9
+#| msgid "Backward"
+msgid "Back"
+msgstr "Nazad"
+
+#: ../ui/gear-menu.xml.h:10 ../ui/mainwindow.ui.h:29
+msgid "Forward"
+msgstr "Napred"
+
+#: ../ui/gear-menu.xml.h:11
+#| msgid "_Next file"
+msgid "Next file"
+msgstr "Sledeća datoteka"
+
+#: ../ui/gear-menu.xml.h:12
+#| msgid "Replace _current"
+msgid "Replace current"
+msgstr "Zamenite tekuće"
+
+#: ../ui/gear-menu.xml.h:13
+#| msgid "Replace in _this file"
+msgid "Replace in this file"
+msgstr "Zameni u ovoj datoteci"
+
+#: ../ui/gear-menu.xml.h:14
+#| msgid "Replace in _all files"
+msgid "Replace in all files"
+msgstr "Zameni u svim datotekama"
 
 #: ../ui/mainwindow.ui.h:1
-msgid "_File"
-msgstr "_Datoteka"
+#| msgid "Save _all"
+msgid "Save all"
+msgstr "Sačuvaj sve"
 
 #: ../ui/mainwindow.ui.h:2
-msgid "_Edit"
-msgstr "_Uređivanje"
-
-#: ../ui/mainwindow.ui.h:3
-msgid "_Match"
-msgstr "Po_klapanje"
-
-#: ../ui/mainwindow.ui.h:4
 msgid "Fol_der:"
 msgstr "_Direktorijum:"
 
-#: ../ui/mainwindow.ui.h:5
+#: ../ui/mainwindow.ui.h:3
 msgid "Pattern:"
 msgstr "Obrazac:"
 
-#: ../ui/mainwindow.ui.h:6
+#: ../ui/mainwindow.ui.h:4
 msgid "recursive"
-msgstr "rekurzivno"
+msgstr "dubinski"
 
-#: ../ui/mainwindow.ui.h:7
+#: ../ui/mainwindow.ui.h:5
 msgid "Recurse into subdirectories"
 msgstr "Ulazi u poddirektorijume"
 
-#: ../ui/mainwindow.ui.h:8
+#: ../ui/mainwindow.ui.h:6
 msgid "hidden"
 msgstr "skrivene"
 
-#: ../ui/mainwindow.ui.h:10
+#: ../ui/mainwindow.ui.h:8
 msgid "Find all files that match the filename pattern"
 msgstr "Nađite sve datoteke čiji naziv odgovara obrascu"
 
-#: ../ui/mainwindow.ui.h:11
+#: ../ui/mainwindow.ui.h:9
 msgid "Find fi_les"
 msgstr "Nađi da_toteke"
 
-#: ../ui/mainwindow.ui.h:12
+#: ../ui/mainwindow.ui.h:10
 msgid "Search:"
 msgstr "Traži:"
 
-#: ../ui/mainwindow.ui.h:13
+#: ../ui/mainwindow.ui.h:11
 msgid "Replace:"
 msgstr "Zameni:"
 
-#: ../ui/mainwindow.ui.h:14
+#: ../ui/mainwindow.ui.h:12
 msgid "Find all possible matches in a line"
 msgstr "Nađite sva moguća poklapanja u redu"
 
-#: ../ui/mainwindow.ui.h:16
+#: ../ui/mainwindow.ui.h:14
 msgid "Find all matches of the regular expression"
 msgstr "Nađite sva poklapanja sa regularnim izrazom"
 
-#: ../ui/mainwindow.ui.h:17
+#: ../ui/mainwindow.ui.h:15
 msgid "A regular expression in Perl syntax"
 msgstr "Regularni izraz u Perl sintaksi"
 
-#: ../ui/mainwindow.ui.h:18
+#: ../ui/mainwindow.ui.h:16
 msgid ""
 "The new string to substitute. As in Perl, you can refer to parts of the "
 "match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
@@ -380,67 +430,63 @@ msgstr ""
 "možete zameniti delove poklapanja koristeći: „$1, $2“, itd.; a čak i: „$+, "
 "$&, $` i $'“. Operatori: „\\l, \\u, \\L, \\U i \\E“ su takođe podržani."
 
-#: ../ui/mainwindow.ui.h:19
+#: ../ui/mainwindow.ui.h:17
 msgid "Preview of the substitution"
 msgstr "Pregled zamene"
 
-#: ../ui/mainwindow.ui.h:20
+#: ../ui/mainwindow.ui.h:18
 msgid "Preview"
 msgstr "Pregled"
 
-#: ../ui/mainwindow.ui.h:21
+#: ../ui/mainwindow.ui.h:19
 msgid "_Replace"
 msgstr "_Zameni"
 
-#: ../ui/mainwindow.ui.h:22
+#: ../ui/mainwindow.ui.h:20
 msgid "Replace current match"
 msgstr "Zamenite tekuće poklapanje"
 
-#: ../ui/mainwindow.ui.h:23
+#: ../ui/mainwindow.ui.h:21
 msgid "_This file"
 msgstr "_Ova datoteka"
 
-#: ../ui/mainwindow.ui.h:24
+#: ../ui/mainwindow.ui.h:22
 msgid "Replace all matches in the current file"
 msgstr "Zamenite sva poklapanja u tekućoj datoteci"
 
-#: ../ui/mainwindow.ui.h:25
+#: ../ui/mainwindow.ui.h:23
 msgid "_All files"
 msgstr "_Sve datoteke"
 
-#: ../ui/mainwindow.ui.h:26
+#: ../ui/mainwindow.ui.h:24
 msgid "Replace all matches in all files"
 msgstr "Zamenite sva poklapanja u svim datotekama"
 
-#: ../ui/mainwindow.ui.h:27
+#: ../ui/mainwindow.ui.h:25
 msgid "File backward"
 msgstr "Datoteka unazad"
 
-#: ../ui/mainwindow.ui.h:28
+#: ../ui/mainwindow.ui.h:26
 msgid "Go to the previous matching file"
 msgstr "Idite na prethodnu nađenu datoteku"
 
-#: ../ui/mainwindow.ui.h:29
+#: ../ui/mainwindow.ui.h:27
 msgid "Backward"
 msgstr "Nazad"
 
-#: ../ui/mainwindow.ui.h:30
+#: ../ui/mainwindow.ui.h:28
 msgid "Go to previous match"
 msgstr "Idite na prethodno poklapanje"
 
-#: ../ui/mainwindow.ui.h:31
-msgid "Forward"
-msgstr "Napred"
-
-#: ../ui/mainwindow.ui.h:32
+#: ../ui/mainwindow.ui.h:30
 msgid "Go to next match"
 msgstr "Idite na sledeće poklapanje"
 
-#: ../ui/mainwindow.ui.h:33
+#: ../ui/mainwindow.ui.h:31
 msgid "File forward"
 msgstr "Datoteka unapred"
 
-#: ../ui/mainwindow.ui.h:34
+#: ../ui/mainwindow.ui.h:32
 msgid "Go to the next matching file"
 msgstr "Idite na sledeću nađenu datoteku"
 
@@ -515,6 +561,15 @@ msgstr "U kodiranju iz tekućeg lokaliteta"
 msgid "_File access"
 msgstr "_Pristup datoteci"
 
+#~ msgid "_File"
+#~ msgstr "_Datoteka"
+
+#~ msgid "_Edit"
+#~ msgstr "_Uređivanje"
+
+#~ msgid "_Match"
+#~ msgstr "Po_klapanje"
+
 #~ msgid "_Help"
 #~ msgstr "_Pomoć"
 
@@ -562,21 +617,6 @@ msgstr "_Pristup datoteci"
 #~ msgstr ""
 #~ "Obrazac imena datoteka se koristi u ljusci. Klase znakova [ab] i izrazi u "
 #~ "vitičastim zagradama u csh-stilu {a,b} su podržani."
-
-#~ msgid "Replace _current"
-#~ msgstr "Zameni _tekući"
-
-#~ msgid "Replace in _all files"
-#~ msgstr "Zameni u _svim datotekama"
-
-#~ msgid "Replace in _this file"
-#~ msgstr "Zameni u _ovoj datoteci"
-
-#~ msgid "_Next file"
-#~ msgstr "S_ledeća datoteka"
-
-#~ msgid "_Previous file"
-#~ msgstr "P_rethodna datoteka"
 
 #~ msgid ""
 #~ "Icons only\n"
