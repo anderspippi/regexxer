@@ -1,0 +1,604 @@
+# Romanian translation for regexxer.
+# Copyright (C) 2010 regexxer's COPYRIGHT HOLDER
+# This file is distributed under the same license as the regexxer package.
+# Nandor Licker <licker.nandor@gmail.com>, 2010.
+# Nandor Licker <lickernandor@yahoo.com>, 2010.
+# Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: regexxer master\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
+"POT-Creation-Date: 2014-07-13 12:03+0000\n"
+"PO-Revision-Date: 2014-12-08 18:40+0200\n"
+"Last-Translator: Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>\n"
+"Language-Team: Gnome Romanian Translation Team\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2);;\n"
+"X-Generator: Virtaal 0.7.1\n"
+
+#: ../ui/regexxer.desktop.in.h:1
+msgid "regexxer Search Tool"
+msgstr "Instrument de căutare regexxer"
+
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1183
+msgid "Search and replace using regular expressions"
+msgstr "Cautăre și înlocuire folosind expresii regulate"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:1
+msgid "File Patterns"
+msgstr "Modele de fișiere"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:2
+msgid "List of pre-defined patterns available in the 'Pattern' entry."
+msgstr "Listă de modele predefinite disponibile la intrarea „Model”."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:3
+msgid "Regex Patterns"
+msgstr "Modele regex"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:4
+msgid "List of last patterns used in the 'Regex' entry."
+msgstr "Lista ultimelor modele folosite la intrarea „Regex”."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:5
+msgid "List of last patterns used in the 'Substitution' entry."
+msgstr "Lista ultimelor modele folosite la intrarea de „Înlocuire”."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:6
+msgid "Text view font"
+msgstr "Font pentru vizualizarea textului"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:7
+msgid "The font used in the file editor."
+msgstr "Font utilizat în editorul de fișiere."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:8
+msgid "Match color"
+msgstr "Culoare de potrivire"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:9
+msgid ""
+"The background color used to highlight matches of the search expression."
+msgstr ""
+"Culoarea de fundal utilizată pentru evidențierea potrivirilor expresiei de "
+"căutare."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:10
+msgid "Current-match color"
+msgstr "Culoarea de potrivire curentă"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:11
+msgid ""
+"The background color used to highlight the currently selected match of the "
+"search expression."
+msgstr ""
+"Culoarea de fundal utilizată pentru evidențierea potrivirii curente a "
+"expresiei de căutare selectate."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:12
+msgid "Fallback encoding"
+msgstr "Codificare de rezervă"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:13
+msgid ""
+"Name of the character encoding to use if a file is not readable in either "
+"UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" "
+"for a complete list of possible values."
+msgstr ""
+"Numele codificării caracterelor de utilizat dacă fișierul nu poate fi citit "
+"nici în UTF-8, nici în codificarea specificată de localizarea actuală. "
+"Încercați „iconv --list” pentru o listă completă a valorilor posibile."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:14
+msgid "window width"
+msgstr "lățimea ferestrei"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:15
+msgid "The width of the window."
+msgstr "Lățimea ferestrei."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:16
+msgid "window height"
+msgstr "înălțimea ferestrei"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:17
+msgid "The height of the window."
+msgstr "Înălțimea ferestrei."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:18
+msgid "window x position"
+msgstr "poziția x a ferestrei"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:19
+msgid "The X coordinate of the window."
+msgstr "Coordonata X a ferestrei."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:20
+msgid "window y position"
+msgstr "poziția y a ferestrei"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:21
+msgid "The Y coordinate of the window."
+msgstr "Coordonata Y a ferestrei."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:22
+msgid "window maximization"
+msgstr "maximizarea ferestrei"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:23
+msgid "Whether the window is maximized."
+msgstr "Dacă fereastra este maximizată sau nu."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:24
+msgid "Show line numbers"
+msgstr "Arată numerele liniilor"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:25
+msgid "Whether to show the line numbers of the text view."
+msgstr "Dacă să se arate numerele liniilor în vizualizarea text sau nu."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:26
+msgid "Highlight the current line"
+msgstr "Evidențiază linia curentă"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:27
+msgid "Whether to highlight the current line of the text view."
+msgstr "Dacă să se evidențieze linia curentă în vizualizarea text sau nu."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:28
+msgid "Auto indentation"
+msgstr "Indentare automată"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:29
+msgid "Whether to enable auto indentation in the text view."
+msgstr "Dacă să se activeze identarea automată în vizualizarea text sau nu."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:30
+msgid "Draw spaces"
+msgstr "Desenează spații"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:31
+msgid "Which type of space to draw in the text view."
+msgstr "Ce tip de spații să se deseneze în vizualizarea text."
+
+#: ../src/filebuffer.cc:198
+msgid "Can’t read file:"
+msgstr "Nu se poate citi fișierul:"
+
+#: ../src/filetree.cc:60
+msgid "File"
+msgstr "Fișier"
+
+#: ../src/filetree.cc:79
+msgid "#"
+msgstr "#"
+
+#: ../src/filetree.cc:508
+#, qt-format
+msgid "Failed to save file “%1”: %2"
+msgstr "Salvarea fișierului „%1” a eșuat: %2"
+
+#: ../src/filetree.cc:924
+#, qt-format
+msgid "“%1” seems to be a binary file."
+msgstr "„%1” pare a fi un fișier binar."
+
+#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "S_alvează tot"
+
+#: ../src/main.cc:135
+msgid "Find files matching PATTERN"
+msgstr "Caută fișiere ce se potrivesc cu MODEL"
+
+#: ../src/main.cc:135
+msgid "PATTERN"
+msgstr "MODEL"
+
+#: ../src/main.cc:137
+msgid "Do not recurse into subdirectories"
+msgstr "Nu intra recursiv prin subdosare"
+
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
+msgid "Also find hidden files"
+msgstr "Caută și fișiere ascunse"
+
+#: ../src/main.cc:141
+msgid "Find text matching REGEX"
+msgstr "Caută text ce se potrivește cu REGEX"
+
+#: ../src/main.cc:141
+msgid "REGEX"
+msgstr "REGEX"
+
+#: ../src/main.cc:143
+msgid "Find only the first match in a line"
+msgstr "Caută doar prima potrivire într-o linie"
+
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
+msgid "Do case insensitive matching"
+msgstr "Fă potrivire cu majuscule nesemnificative"
+
+#: ../src/main.cc:147
+msgid "Replace matches with STRING"
+msgstr "Înlocuiește potrivirile cu ȘIR"
+
+#: ../src/main.cc:147
+msgid "STRING"
+msgstr "ȘIR"
+
+#: ../src/main.cc:149
+msgid "Print match location to standard output"
+msgstr "Tipărește locația potrivirii pe ieșirea standard "
+
+#: ../src/main.cc:151
+msgid "Do not automatically start search"
+msgstr "Nu porni căutarea automat"
+
+#: ../src/main.cc:153
+msgid "[FOLDER]"
+msgstr "[DOSAR]"
+
+#: ../src/mainwindow.cc:713
+msgid ""
+"Some files haven’t been saved yet.\n"
+"Quit anyway?"
+msgstr ""
+"Unele fișiere nu au fost încă salvate.\n"
+"Ieșiți oricum?"
+
+#: ../src/mainwindow.cc:727
+msgid ""
+"Some files haven’t been saved yet.\n"
+"Continue anyway?"
+msgstr ""
+"Unele fișiere nu au fost încă salvate.\n"
+"Ieșiți oricum?"
+
+#: ../src/mainwindow.cc:757
+msgid "The file search pattern is invalid."
+msgstr "Modelul de căutare de fișier nu este valid."
+
+#: ../src/mainwindow.cc:763
+msgid "The following errors occurred during search:"
+msgstr "Următoarele erori au apărut în timpul căutării:"
+
+#: ../src/mainwindow.cc:1032
+msgid "The following errors occurred during save:"
+msgstr "Următoarele erori au apărut în timpul salvării:"
+
+#: ../src/mainwindow.cc:1189
+msgid "translator-credits"
+msgstr "Licker Nandor (licker.nandor@gmail.com)"
+
+#: ../src/prefdialog.cc:186
+#, qt-format
+msgid "“%1” is not a valid encoding."
+msgstr "„%1” nu este o codificare validă."
+
+#: ../src/statusline.cc:245
+msgid "Stop"
+msgstr "Oprește"
+
+#: ../src/statusline.cc:253
+msgid "File:"
+msgstr "Fișier:"
+
+#: ../src/statusline.cc:256
+msgid "Match:"
+msgstr "Potrivire:"
+
+#: ../src/statusline.cc:267
+msgid "Cancels the running search"
+msgstr "Anulează căutarea curentă"
+
+#: ../ui/app-menu.xml.h:1
+#| msgid "Preferences"
+msgid "_Preferences"
+msgstr "_Preferințe"
+
+#: ../ui/app-menu.xml.h:2
+msgid "_About"
+msgstr "_Despre"
+
+#: ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "_Ieșire"
+
+#: ../ui/gear-menu.xml.h:1
+#| msgid "Save all"
+msgid "_Save"
+msgstr "_Salvează"
+
+#: ../ui/gear-menu.xml.h:3
+msgid "_Undo"
+msgstr "An_ulează"
+
+#: ../ui/gear-menu.xml.h:4
+msgid "Cu_t"
+msgstr "_Taie"
+
+#: ../ui/gear-menu.xml.h:5
+msgid "_Copy"
+msgstr "_Copiază"
+
+#: ../ui/gear-menu.xml.h:6
+msgid "_Paste"
+msgstr "Li_pește"
+
+#: ../ui/gear-menu.xml.h:7
+msgid "_Delete"
+msgstr "Ș_terge"
+
+#: ../ui/gear-menu.xml.h:8
+#| msgid "_Previous file"
+msgid "Previous file"
+msgstr "Fișierul precedent"
+
+#: ../ui/gear-menu.xml.h:9
+#| msgid "Backward"
+msgid "Back"
+msgstr "Înapoi"
+
+#: ../ui/gear-menu.xml.h:10 ../ui/mainwindow.ui.h:29
+msgid "Forward"
+msgstr "Înainte"
+
+#: ../ui/gear-menu.xml.h:11
+#| msgid "_Next file"
+msgid "Next file"
+msgstr "Fișierul următor"
+
+#: ../ui/gear-menu.xml.h:12
+#| msgid "Replace _current"
+msgid "Replace current"
+msgstr "Înlocuiește actualul"
+
+#: ../ui/gear-menu.xml.h:13
+#| msgid "Replace in _this file"
+msgid "Replace in this file"
+msgstr "Înlocuiește în acest fișier"
+
+#: ../ui/gear-menu.xml.h:14
+#| msgid "Replace in _all files"
+msgid "Replace in all files"
+msgstr "Înlocuiește în toate fișierele"
+
+#: ../ui/mainwindow.ui.h:1
+msgid "Save all"
+msgstr "Salvează tot"
+
+#: ../ui/mainwindow.ui.h:2
+msgid "Fol_der:"
+msgstr "_Dosar:"
+
+#: ../ui/mainwindow.ui.h:3
+msgid "Pattern:"
+msgstr "Model:"
+
+#: ../ui/mainwindow.ui.h:4
+msgid "recursive"
+msgstr "recursiv"
+
+#: ../ui/mainwindow.ui.h:5
+msgid "Recurse into subdirectories"
+msgstr "Intră recursiv în subdosare"
+
+#: ../ui/mainwindow.ui.h:6
+msgid "hidden"
+msgstr "ascuns"
+
+#: ../ui/mainwindow.ui.h:8
+msgid "Find all files that match the filename pattern"
+msgstr "Caută toate fișierele care se potrivesc cu modelul numelui de fișier"
+
+#: ../ui/mainwindow.ui.h:9
+msgid "Find fi_les"
+msgstr "Caută fiș_iere"
+
+#: ../ui/mainwindow.ui.h:10
+msgid "Search:"
+msgstr "Caută:"
+
+#: ../ui/mainwindow.ui.h:11
+msgid "Replace:"
+msgstr "Înlocuiește:"
+
+#: ../ui/mainwindow.ui.h:12
+msgid "Find all possible matches in a line"
+msgstr "Caută toate potrivirile posibile într-o linie"
+
+#: ../ui/mainwindow.ui.h:14
+msgid "Find all matches of the regular expression"
+msgstr "Caută toate potrivirile expresiei regulate"
+
+#: ../ui/mainwindow.ui.h:15
+msgid "A regular expression in Perl syntax"
+msgstr "O expresie regulată în sintaxa Perl"
+
+#: ../ui/mainwindow.ui.h:16
+msgid ""
+"The new string to substitute. As in Perl, you can refer to parts of the "
+"match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
+"\\u, \\L, \\U and \\E are supported as well."
+msgstr ""
+"Noul șir de înlocuit. În Perl, vă puteți referi la părți ale unei potriviri "
+"folosind $1, $2, etc. chiar și $+, $&amp;, $` și $'. Operatorii \\l, \\u, "
+"\\L, \\U și \\E sunt suportați de asemenea."
+
+#: ../ui/mainwindow.ui.h:17
+msgid "Preview of the substitution"
+msgstr "Previzualizarea înlocuirii"
+
+#: ../ui/mainwindow.ui.h:18
+msgid "Preview"
+msgstr "Previzualizare"
+
+#: ../ui/mainwindow.ui.h:19
+msgid "_Replace"
+msgstr "Î_nlocuiește"
+
+#: ../ui/mainwindow.ui.h:20
+msgid "Replace current match"
+msgstr "Înlocuiește potrivirea actuală"
+
+#: ../ui/mainwindow.ui.h:21
+msgid "_This file"
+msgstr "Aces_t fișier"
+
+#: ../ui/mainwindow.ui.h:22
+msgid "Replace all matches in the current file"
+msgstr "Înlocuiește toate potrivirile din fișierul actual"
+
+#: ../ui/mainwindow.ui.h:23
+msgid "_All files"
+msgstr "To_ate fișierele"
+
+#: ../ui/mainwindow.ui.h:24
+msgid "Replace all matches in all files"
+msgstr "Înlocuiește toate potrivirile în toate fișierele"
+
+#: ../ui/mainwindow.ui.h:25
+msgid "File backward"
+msgstr "Înapoi în fișier"
+
+#: ../ui/mainwindow.ui.h:26
+msgid "Go to the previous matching file"
+msgstr "Navighează la fișierul potrivit precedent"
+
+#: ../ui/mainwindow.ui.h:27
+msgid "Backward"
+msgstr "Înapoi"
+
+#: ../ui/mainwindow.ui.h:28
+msgid "Go to previous match"
+msgstr "Navighează la potrivirea precedentă"
+
+#: ../ui/mainwindow.ui.h:30
+msgid "Go to next match"
+msgstr "Navighează la potrivirea următoare"
+
+#: ../ui/mainwindow.ui.h:31
+msgid "File forward"
+msgstr "Înainte în fișier"
+
+#: ../ui/mainwindow.ui.h:32
+msgid "Go to the next matching file"
+msgstr "Navighează la fișierul potrivit următor"
+
+#: ../ui/prefdialog.ui.h:1
+msgid "Icons only"
+msgstr "Doar iconițe"
+
+#: ../ui/prefdialog.ui.h:2
+msgid "Text only"
+msgstr "Doar text"
+
+#: ../ui/prefdialog.ui.h:3
+msgid "Icons and text"
+msgstr "Iconițe și text"
+
+#: ../ui/prefdialog.ui.h:4
+msgid "Both horizontal"
+msgstr "Ambele orizontal"
+
+#: ../ui/prefdialog.ui.h:5
+msgid "Preferences"
+msgstr "Preferințe"
+
+#: ../ui/prefdialog.ui.h:6
+msgid "_Text view font:"
+msgstr "Font pentru vizualizarea _textului:"
+
+#: ../ui/prefdialog.ui.h:7
+msgid "_Match color:"
+msgstr "Culoare potrivi_re:"
+
+#: ../ui/prefdialog.ui.h:8
+msgid "C_urrent match color:"
+msgstr "Culoarea potrivirii c_urente:"
+
+#: ../ui/prefdialog.ui.h:9
+msgid "_Look’n’feel"
+msgstr ""
+
+#: ../ui/prefdialog.ui.h:10
+msgid ""
+"regexxer attempts to read a file in the following encodings before giving up:"
+msgstr ""
+"regexxer încearcă să citească un fișier în următoarele codificări înainte de "
+"a renunța:"
+
+#: ../ui/prefdialog.ui.h:11
+msgid "3."
+msgstr "3."
+
+#: ../ui/prefdialog.ui.h:12
+msgid "2."
+msgstr "2."
+
+#: ../ui/prefdialog.ui.h:13
+msgid "1."
+msgstr "1."
+
+#: ../ui/prefdialog.ui.h:14
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: ../ui/prefdialog.ui.h:15
+msgid "Fallback _encoding:"
+msgstr "Codificare d_e rezervă:"
+
+#: ../ui/prefdialog.ui.h:16
+msgid "The encoding specified by the current locale"
+msgstr "Codificarea specificată de localizarea actuală"
+
+#: ../ui/prefdialog.ui.h:17
+msgid "_File access"
+msgstr "Acces _fișier"
+
+#~ msgid "_File"
+#~ msgstr "_Fișier"
+
+#~ msgid "_Edit"
+#~ msgstr "_Editare"
+
+#~ msgid "_Match"
+#~ msgstr "P_otrivire"
+
+#~ msgid "_Help"
+#~ msgstr "A_jutor"
+
+#~ msgid "_Look&#x2019;n&#x2019;feel"
+#~ msgstr "Elemente vizua_le"
+
+#~ msgid ""
+#~ "Using the \\C escape sequence to match a single byte is not supported."
+#~ msgstr ""
+#~ "Folosirea secvenței de citare \\C pentru a potrivi un singur octet nu "
+#~ "este suportată"
+
+#~ msgid ""
+#~ "Error in regular expression at “%1” (index %2):\n"
+#~ "%3"
+#~ msgstr ""
+#~ "Eroare în expresia regulată la „%1” (index %2):\n"
+#~ "%3"
+
+#~ msgid ""
+#~ "Error in regular expression:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Eroare în expresia regulată:\n"
+#~ "%1"
+
+#~ msgid ""
+#~ "Reached the recursion and backtracking limit of the regular expression "
+#~ "engine."
+#~ msgstr ""
+#~ "Limita recursiei și backtrackingului, dată de motorul de expresii "
+#~ "regulate, a fost atinsă."
