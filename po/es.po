@@ -4,14 +4,14 @@
 #
 # Francisco Javier F. Serrador <serrador@cvs.gnome.org>, 2004, 2006.
 # Jorge González <jorgegonz@svn.gnome.org>, 200, 2009, 2010.
-# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2014.
+# Daniel Mustieles <daniel.mustieles@gmail.com>, 2011, 2014, 2015.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer.HEAD.es\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-04-16 22:55+0000\n"
-"PO-Revision-Date: 2014-06-17 19:15+0200\n"
+"POT-Creation-Date: 2014-06-17 17:25+0000\n"
+"PO-Revision-Date: 2015-01-08 18:12+0100\n"
 "Last-Translator: Daniel Mustieles <daniel.mustieles@gmail.com>\n"
 "Language-Team: Español; Castellano <gnome-es-list@gnome.org>\n"
 "Language: \n"
@@ -251,7 +251,7 @@ msgid ""
 "Quit anyway?"
 msgstr ""
 "Algunos archivos no han sido guardados aún.\n"
-"¿Desea salir de todas formas?"
+"¿Quiere salir de todas formas?"
 
 #: ../src/mainwindow.cc:715
 msgid ""
@@ -308,10 +308,9 @@ msgstr "_Acerca de"
 
 #: ../ui/app-menu.xml.h:3
 msgid "_Quit"
-msgstr "_Quitar"
+msgstr "_Salir"
 
 #: ../ui/gear-menu.xml.h:1
-#| msgid "Save all"
 msgid "_Save"
 msgstr "_Guardar"
 
@@ -336,12 +335,10 @@ msgid "_Delete"
 msgstr "_Eliminar"
 
 #: ../ui/gear-menu.xml.h:8
-#| msgid "_Previous file"
 msgid "Previous file"
 msgstr "Archivo anterior"
 
 #: ../ui/gear-menu.xml.h:9
-#| msgid "Backward"
 msgid "Back"
 msgstr "Atrás"
 
@@ -350,22 +347,18 @@ msgid "Forward"
 msgstr "Adelante"
 
 #: ../ui/gear-menu.xml.h:11
-#| msgid "_Next file"
 msgid "Next file"
 msgstr "Siguiente archivo"
 
 #: ../ui/gear-menu.xml.h:12
-#| msgid "Replace _current"
 msgid "Replace current"
 msgstr "Reemplazar el actual"
 
 #: ../ui/gear-menu.xml.h:13
-#| msgid "Replace in _this file"
 msgid "Replace in this file"
 msgstr "Reemplazar en este archivo"
 
 #: ../ui/gear-menu.xml.h:14
-#| msgid "Replace in _all files"
 msgid "Replace in all files"
 msgstr "Reemplazar en todos los archivos"
 
