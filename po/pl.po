@@ -5,14 +5,14 @@
 # gnomepl@aviary.pl
 # -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 # Artur Flinta <aflinta@at.kernel.pl>, 2004.
-# Piotr Drąg <piotrdrag@gmail.com>, 2012-2014.
-# Aviary.pl <gnomepl@aviary.pl>, 2012-2014.
+# Piotr Drąg <piotrdrag@gmail.com>, 2012-2015.
+# Aviary.pl <gnomepl@aviary.pl>, 2012-2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://regexxer.sourceforge.net/bugs\n"
-"POT-Creation-Date: 2014-04-17 00:58+0200\n"
-"PO-Revision-Date: 2014-04-17 00:59+0200\n"
+"POT-Creation-Date: 2015-09-02 03:02+0200\n"
+"PO-Revision-Date: 2015-09-02 03:04+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "regexxer Search Tool"
 msgstr "Narzędzie do wyszukiwania regexxer"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1183
 msgid "Search and replace using regular expressions"
 msgstr "Wyszukiwanie i zastępowanie używając wyrażeń regularnych"
 
@@ -38,7 +38,7 @@ msgstr "Wzorce plików"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:2
 msgid "List of pre-defined patterns available in the 'Pattern' entry."
-msgstr "Lista uprzednio określonych wzorców dostępnych w polu \"Wzorzec\"."
+msgstr "Lista uprzednio określonych wzorców dostępnych w polu „Wzorzec”."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:3
 msgid "Regex Patterns"
@@ -46,11 +46,11 @@ msgstr "Wzorce wyrażeń regularnych"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:4
 msgid "List of last patterns used in the 'Regex' entry."
-msgstr "Lista ostatnich wzorców używanych w polu \"Wyrażenie regularne\"."
+msgstr "Lista ostatnich wzorców używanych w polu „Wyrażenie regularne”."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:5
 msgid "List of last patterns used in the 'Substitution' entry."
-msgstr "Lista ostatnich wzorców używanych w polu \"Przypisanie\"."
+msgstr "Lista ostatnich wzorców używanych w polu „Przypisanie”."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:6
 msgid "Text view font"
@@ -92,8 +92,8 @@ msgid ""
 "for a complete list of possible values."
 msgstr ""
 "Nazwa kodowania znaków używana, gdy pliku nie można odczytać zarówno w "
-"UTF-8, jak i zestawie znaków określonym przez bieżące ustawienia locale. "
-"Polecenie \"iconv --list\" wyświetli listę możliwych wartości."
+"UTF-8, jak i zestawie znaków określonym przez bieżące ustawienia "
+"lokalizacji. Polecenie „iconv --list” wyświetli listę możliwych wartości."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:14
 msgid "window width"
@@ -182,12 +182,12 @@ msgstr "#"
 #: ../src/filetree.cc:508
 #, qt-format
 msgid "Failed to save file “%1”: %2"
-msgstr "Nie można zapisać pliku \"%1\": %2"
+msgstr "Nie można zapisać pliku „%1”: %2"
 
 #: ../src/filetree.cc:924
 #, qt-format
 msgid "“%1” seems to be a binary file."
-msgstr "\"%1\" jest plikiem binarnym."
+msgstr "„%1” jest plikiem binarnym."
 
 #: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
 msgid "Save _all"
@@ -211,11 +211,11 @@ msgstr "Wyszukiwanie również ukrytych plików"
 
 #: ../src/main.cc:141
 msgid "Find text matching REGEX"
-msgstr "Wyszukuje tekst pasujący do WYRAŻENIA REGULARNEGO"
+msgstr "Wyszukuje tekst pasujący do WYRAŻENIA-REGULARNEGO"
 
 #: ../src/main.cc:141
 msgid "REGEX"
-msgstr "WYRAŻENIE REGULARNE"
+msgstr "WYRAŻENIE-REGULARNE"
 
 #: ../src/main.cc:143
 msgid "Find only the first match in a line"
@@ -245,7 +245,7 @@ msgstr "Bez automatycznego uruchamiania wyszukiwania"
 msgid "[FOLDER]"
 msgstr "[KATALOG]"
 
-#: ../src/mainwindow.cc:701
+#: ../src/mainwindow.cc:713
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -253,7 +253,7 @@ msgstr ""
 "Część plików nie została jeszcze zapisana.\n"
 "Zakończyć mimo to?"
 
-#: ../src/mainwindow.cc:715
+#: ../src/mainwindow.cc:727
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -261,29 +261,29 @@ msgstr ""
 "Część plików nie została jeszcze zapisana.\n"
 "Kontynuować mimo to?"
 
-#: ../src/mainwindow.cc:745
+#: ../src/mainwindow.cc:757
 msgid "The file search pattern is invalid."
 msgstr "Wzorzec wyszukiwania pliku jest nieprawidłowy."
 
-#: ../src/mainwindow.cc:751
+#: ../src/mainwindow.cc:763
 msgid "The following errors occurred during search:"
 msgstr "Następujące błędy wystąpiły podczas wyszukiwania:"
 
-#: ../src/mainwindow.cc:1020
+#: ../src/mainwindow.cc:1032
 msgid "The following errors occurred during save:"
 msgstr "Następujące błędy wystąpiły podczas zapisu:"
 
-#: ../src/mainwindow.cc:1177
+#: ../src/mainwindow.cc:1189
 msgid "translator-credits"
 msgstr ""
 "Artur Flinta <aflinta@at.kernel.pl>, 2004\n"
-"Piotr Drąg <piotrdrag@gmail.com>, 2012-2014\n"
-"Aviary.pl <gnomepl@aviary.pl>, 2012-2014"
+"Piotr Drąg <piotrdrag@gmail.com>, 2012-2015\n"
+"Aviary.pl <gnomepl@aviary.pl>, 2012-2015"
 
 #: ../src/prefdialog.cc:186
 #, qt-format
 msgid "“%1” is not a valid encoding."
-msgstr "\"%1\" nie jest prawidłowym kodowaniem."
+msgstr "„%1” nie jest prawidłowym kodowaniem."
 
 #: ../src/statusline.cc:245
 msgid "Stop"
@@ -423,7 +423,7 @@ msgid ""
 "match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
 "\\u, \\L, \\U and \\E are supported as well."
 msgstr ""
-"Nowy ciąg do przypisania. Tak jak w języku Perlu, można się odwoływać do "
+"Nowy ciąg do przypisania. Tak jak w języku Perl, można się odwoływać do "
 "części pasujących przy pomocy $1, $2, itd. lub nawet $+, $&amp;, $` i $'. "
 "Operatory \\l, \\u, \\L, \\U i \\E są także obsługiwane."
 
