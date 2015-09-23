@@ -4,26 +4,28 @@
 # Ilkka Tuohela <hile@iki.fi> 2004.
 #
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2015.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-04-16 22:55+0000\n"
-"PO-Revision-Date: 2014-05-04 04:10+0300\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@gmail.com>\n"
-"Language-Team: Finnish <gnome-fi-laatu@lists.sourceforge.net>\n"
+"POT-Creation-Date: 2014-11-03 17:03+0000\n"
+"PO-Revision-Date: 2015-09-14 22:25+0300\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
+"Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Gtranslator 2.91.6\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "regexxer hakutyökalu"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1183
 msgid "Search and replace using regular expressions"
 msgstr "Hae ja korvaa käyttäen säännöllisiä lausekkeita"
 
@@ -104,7 +106,7 @@ msgstr ""
 
 #: ../ui/org.regexxer.gschema.xml.in.h:15
 msgid "The width of the window."
-msgstr ""
+msgstr "Ikkunan leveys."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:16
 msgid "window height"
@@ -112,7 +114,7 @@ msgstr ""
 
 #: ../ui/org.regexxer.gschema.xml.in.h:17
 msgid "The height of the window."
-msgstr ""
+msgstr "Ikkunan korkeus."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:18
 msgid "window x position"
@@ -140,7 +142,7 @@ msgstr ""
 
 #: ../ui/org.regexxer.gschema.xml.in.h:24
 msgid "Show line numbers"
-msgstr ""
+msgstr "Näytä rivinumerot"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:25
 msgid "Whether to show the line numbers of the text view."
@@ -148,7 +150,7 @@ msgstr ""
 
 #: ../ui/org.regexxer.gschema.xml.in.h:26
 msgid "Highlight the current line"
-msgstr ""
+msgstr "Korosta nykyinen rivi"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:27
 msgid "Whether to highlight the current line of the text view."
@@ -248,7 +250,7 @@ msgstr "Älä käynnistä hakua automaattisesti"
 msgid "[FOLDER]"
 msgstr "[KANSIO]"
 
-#: ../src/mainwindow.cc:701
+#: ../src/mainwindow.cc:713
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -256,7 +258,7 @@ msgstr ""
 "Joitain tiedostoja ei ole vielä tallennettu.\n"
 "Lopetaanko siitä huolimatta?"
 
-#: ../src/mainwindow.cc:715
+#: ../src/mainwindow.cc:727
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -264,19 +266,19 @@ msgstr ""
 "Joitain tiedostoja ei ole vielä tallennettu.\n"
 "Jatketaanko siitä huolimatta?"
 
-#: ../src/mainwindow.cc:745
+#: ../src/mainwindow.cc:757
 msgid "The file search pattern is invalid."
 msgstr "Tiedostojen hakumalli on virheellinen"
 
-#: ../src/mainwindow.cc:751
+#: ../src/mainwindow.cc:763
 msgid "The following errors occurred during search:"
 msgstr "Seuraavat virheet tapahtuivat haettaessa:"
 
-#: ../src/mainwindow.cc:1020
+#: ../src/mainwindow.cc:1032
 msgid "The following errors occurred during save:"
 msgstr "Seuraavat virheet tapahtuivat tallennettaessa:"
 
-#: ../src/mainwindow.cc:1177
+#: ../src/mainwindow.cc:1189
 msgid "translator-credits"
 msgstr ""
 "Ilkka Tuohela, 2004\n"
@@ -305,10 +307,9 @@ msgid "Cancels the running search"
 msgstr "Keskeyttää suoritettavan haun"
 
 #: ../ui/app-menu.xml.h:1
-#, fuzzy
 #| msgid "Preferences"
 msgid "_Preferences"
-msgstr "Asetukset"
+msgstr "_Asetukset"
 
 #: ../ui/app-menu.xml.h:2
 msgid "_About"
@@ -316,77 +317,70 @@ msgstr "_Tietoja"
 
 #: ../ui/app-menu.xml.h:3
 msgid "_Quit"
-msgstr ""
+msgstr "_Lopeta"
 
 #: ../ui/gear-menu.xml.h:1
 msgid "_Save"
-msgstr ""
+msgstr "_Tallenna"
 
 #: ../ui/gear-menu.xml.h:3
 msgid "_Undo"
-msgstr ""
+msgstr "_Kumoa"
 
 #: ../ui/gear-menu.xml.h:4
 msgid "Cu_t"
-msgstr ""
+msgstr "_Leikkaa"
 
 #: ../ui/gear-menu.xml.h:5
 msgid "_Copy"
-msgstr ""
+msgstr "_Kopioi"
 
 #: ../ui/gear-menu.xml.h:6
 msgid "_Paste"
-msgstr ""
+msgstr "L_iitä"
 
 #: ../ui/gear-menu.xml.h:7
 msgid "_Delete"
-msgstr ""
+msgstr "_Poista"
 
 #: ../ui/gear-menu.xml.h:8
-#, fuzzy
 #| msgid "_Previous file"
 msgid "Previous file"
-msgstr "_Edellinen tiedosto"
+msgstr "Edellinen tiedosto"
 
 #: ../ui/gear-menu.xml.h:9
-#, fuzzy
 #| msgid "Backward"
 msgid "Back"
-msgstr "Taaksepäin"
+msgstr "Takaisin"
 
 #: ../ui/gear-menu.xml.h:10 ../ui/mainwindow.ui.h:29
 msgid "Forward"
 msgstr "Eteenpäin"
 
 #: ../ui/gear-menu.xml.h:11
-#, fuzzy
 #| msgid "_Next file"
 msgid "Next file"
-msgstr "_Seuraava tiedosto"
+msgstr "Seuraava tiedosto"
 
 #: ../ui/gear-menu.xml.h:12
-#, fuzzy
 #| msgid "Replace _current"
 msgid "Replace current"
-msgstr "Korvaa _nykyinen"
+msgstr "Korvaa nykyinen"
 
 #: ../ui/gear-menu.xml.h:13
-#, fuzzy
 #| msgid "Replace in _this file"
 msgid "Replace in this file"
-msgstr "Korvaa _tässä tiedostossa"
+msgstr "Korvaa tässä tiedostossa"
 
 #: ../ui/gear-menu.xml.h:14
-#, fuzzy
 #| msgid "Replace in _all files"
 msgid "Replace in all files"
-msgstr "Korvaa _kaikissa tiedostoissa"
+msgstr "Korvaa kaikissa tiedostoissa"
 
 #: ../ui/mainwindow.ui.h:1
-#, fuzzy
 #| msgid "Save _all"
 msgid "Save all"
-msgstr "Tallenna _kaikki"
+msgstr "Tallenna kaikki"
 
 #: ../ui/mainwindow.ui.h:2
 msgid "Fol_der:"
@@ -513,17 +507,16 @@ msgstr "Siirry seuraavaan hakua vastaavan nimiseen tiedostoon"
 
 #: ../ui/prefdialog.ui.h:1
 msgid "Icons only"
-msgstr ""
+msgstr "Vain kuvakkeet"
 
 #: ../ui/prefdialog.ui.h:2
-#, fuzzy
 #| msgid "Text view font"
 msgid "Text only"
-msgstr "Tekstinäytön fontti"
+msgstr "Vain teksti"
 
 #: ../ui/prefdialog.ui.h:3
 msgid "Icons and text"
-msgstr ""
+msgstr "Kuvakkeet ja teksti"
 
 #: ../ui/prefdialog.ui.h:4
 msgid "Both horizontal"
