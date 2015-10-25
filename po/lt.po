@@ -1,0 +1,553 @@
+# Lithuanian translation for regexxer.
+# Copyright (C) 2015 regexxer's COPYRIGHT HOLDER
+# This file is distributed under the same license as the regexxer package.
+# Moo <hazap@hotmail.com>, 2015.
+# Aurimas Černius <aurisc4@gmail.com>, 2015.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: regexxer master\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
+"POT-Creation-Date: 2015-10-24 13:04+0000\n"
+"PO-Revision-Date: 2015-10-25 20:48+0200\n"
+"Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
+"Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Gtranslator 2.91.7\n"
+
+#: ../ui/regexxer.desktop.in.h:1
+msgid "regexxer Search Tool"
+msgstr "regexxer paieškos įrankis"
+
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1183
+msgid "Search and replace using regular expressions"
+msgstr "Ieškoti ir pakeisti naudojant reguliariuosius reiškinius"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:1
+msgid "File Patterns"
+msgstr "Failų šablonai"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:2
+msgid "List of pre-defined patterns available in the 'Pattern' entry."
+msgstr "Iš anksto apibrėžtų šablonų sąrašas yra prieinamas „Šablono“ įraše."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:3
+msgid "Regex Patterns"
+msgstr "Reguliariųjų reiškinių šablonai"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:4
+msgid "List of last patterns used in the 'Regex' entry."
+msgstr "Paskutinių „Reguliariojo reiškinio“ įraše naudotų šablonų sąrašas."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:5
+msgid "List of last patterns used in the 'Substitution' entry."
+msgstr "Paskutinių „Pakeitimo“ įraše naudotų šablonų sąrašas."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:6
+msgid "Text view font"
+msgstr "Teksto rodymo šriftas"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:7
+msgid "The font used in the file editor."
+msgstr "Teksto redaktoriuje naudojamas šriftas."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:8
+msgid "Match color"
+msgstr "Atitikties spalva"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:9
+msgid ""
+"The background color used to highlight matches of the search expression."
+msgstr "Fono spalva, naudojama paryškinant paieškos reiškinių atitiktis."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:10
+msgid "Current-match color"
+msgstr "Esamos atitikties spalva"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:11
+msgid ""
+"The background color used to highlight the currently selected match of the "
+"search expression."
+msgstr ""
+"Fono spalva, naudojama paryškinant esamu metu paieškos reiškinio pasirinktas "
+"atitiktis."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:12
+msgid "Fallback encoding"
+msgstr "Atsarginė koduotė"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:13
+msgid ""
+"Name of the character encoding to use if a file is not readable in either "
+"UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" "
+"for a complete list of possible values."
+msgstr ""
+"Simbolių koduotės, kuri bus naudojama, jei failas nebus skaitomas UTF-8 "
+"koduote arba lokalėje nurodytu kodiniu rinkiniu, pavadinimas. Visų galimų "
+"reikšmių sąrašui, įvykdykite „iconv --list“."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:14
+msgid "window width"
+msgstr "lango plotis"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:15
+msgid "The width of the window."
+msgstr "Lango plotis."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:16
+msgid "window height"
+msgstr "lango aukštis"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:17
+msgid "The height of the window."
+msgstr "Lango aukštis."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:18
+msgid "window x position"
+msgstr "Lango x padėtis"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:19
+msgid "The X coordinate of the window."
+msgstr "Lango X koordinatė."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:20
+msgid "window y position"
+msgstr "lango y padėtis"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:21
+msgid "The Y coordinate of the window."
+msgstr "Lango Y koordinatė."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:22
+msgid "window maximization"
+msgstr "lango išdidinimas"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:23
+msgid "Whether the window is maximized."
+msgstr "Ar langas yra išdidintas."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:24
+msgid "Show line numbers"
+msgstr "Rodyti eilučių numerius"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:25
+msgid "Whether to show the line numbers of the text view."
+msgstr "Ar rodyti teksto rodinyje eilučių numerius."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:26
+msgid "Highlight the current line"
+msgstr "Paryškinti esamą eilutę"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:27
+msgid "Whether to highlight the current line of the text view."
+msgstr "Ar paryškinti teksto rodinyje esamą eilutę."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:28
+msgid "Auto indentation"
+msgstr "Automatinės įtraukos"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:29
+msgid "Whether to enable auto indentation in the text view."
+msgstr "Ar įjungti teksto rodinyje automatines įtraukas."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:30
+msgid "Draw spaces"
+msgstr "Piešti tarpus"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:31
+msgid "Which type of space to draw in the text view."
+msgstr "Kokio tipo tarpus piešti tekto rodinyje."
+
+#: ../src/filebuffer.cc:198
+msgid "Can’t read file:"
+msgstr "Nepavyksta perskaityti failo:"
+
+#: ../src/filetree.cc:60
+msgid "File"
+msgstr "Failas"
+
+#: ../src/filetree.cc:79
+msgid "#"
+msgstr "#"
+
+#: ../src/filetree.cc:508
+#, qt-format
+msgid "Failed to save file “%1”: %2"
+msgstr "Nepavyko įrašyti failo „%1“: %2"
+
+#: ../src/filetree.cc:924
+#, qt-format
+msgid "“%1” seems to be a binary file."
+msgstr "Atrodo, kad „%1“ yra dvejetainis failas."
+
+#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "Įrašyti _visus"
+
+#: ../src/main.cc:135
+msgid "Find files matching PATTERN"
+msgstr "Rasti failus, kurie atitinka ŠABLONĄ"
+
+#: ../src/main.cc:135
+msgid "PATTERN"
+msgstr "ŠABLONAS"
+
+#: ../src/main.cc:137
+msgid "Do not recurse into subdirectories"
+msgstr "Neapdoroti su pakatalogiais"
+
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
+msgid "Also find hidden files"
+msgstr "Taip pat rasti ir paslėptus failus"
+
+#: ../src/main.cc:141
+msgid "Find text matching REGEX"
+msgstr "Rasti tekstą, kuris atitiktų REGULIARŲJĮ REIŠKINĮ"
+
+#: ../src/main.cc:141
+msgid "REGEX"
+msgstr "REGULIARUSIS REIŠKINYS"
+
+#: ../src/main.cc:143
+msgid "Find only the first match in a line"
+msgstr "Rasti tik pirmą atitiktį eilutėje"
+
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
+msgid "Do case insensitive matching"
+msgstr "Ieškoti atitikčių, neskiriant raidžių dydžio"
+
+#: ../src/main.cc:147
+msgid "Replace matches with STRING"
+msgstr "Pakeisti atitiktis EILUTE"
+
+#: ../src/main.cc:147
+msgid "STRING"
+msgstr "EILUTĖ"
+
+#: ../src/main.cc:149
+msgid "Print match location to standard output"
+msgstr "Išspausdinti atitikties vietą į standartinę išvestį"
+
+#: ../src/main.cc:151
+msgid "Do not automatically start search"
+msgstr "Nepradėti paieškos automatiškai"
+
+#: ../src/main.cc:153
+msgid "[FOLDER]"
+msgstr "[APLANKAS]"
+
+#: ../src/mainwindow.cc:713
+msgid ""
+"Some files haven’t been saved yet.\n"
+"Quit anyway?"
+msgstr ""
+"Kai kurie failai dar nebuvo įrašyti.\n"
+"Vis tiek baigti programos darbą?"
+
+#: ../src/mainwindow.cc:727
+msgid ""
+"Some files haven’t been saved yet.\n"
+"Continue anyway?"
+msgstr ""
+"Kai kurie failai dar nebuvo įrašyti.\n"
+"Vis tiek tęsti?"
+
+#: ../src/mainwindow.cc:757
+msgid "The file search pattern is invalid."
+msgstr "Failų paieškos šablonas yra neteisingas."
+
+#: ../src/mainwindow.cc:763
+msgid "The following errors occurred during search:"
+msgstr "Paieškos metu įvyko šios klaidos:"
+
+#: ../src/mainwindow.cc:1032
+msgid "The following errors occurred during save:"
+msgstr "Įrašymo metu įvyko šios klaidos:"
+
+#: ../src/mainwindow.cc:1189
+msgid "translator-credits"
+msgstr ""
+"Išverte:\n"
+"Moo <hazap@hotmail.com>"
+
+#: ../src/prefdialog.cc:186
+#, qt-format
+msgid "“%1” is not a valid encoding."
+msgstr "„%1“ nėra teisinga koduotė."
+
+#: ../src/statusline.cc:245
+msgid "Stop"
+msgstr "Stabdyti"
+
+#: ../src/statusline.cc:253
+msgid "File:"
+msgstr "Failas:"
+
+#: ../src/statusline.cc:256
+msgid "Match:"
+msgstr "Atitiktis:"
+
+#: ../src/statusline.cc:267
+msgid "Cancels the running search"
+msgstr "Atšaukia vykdomą paiešką"
+
+#: ../ui/app-menu.xml.h:1
+msgid "_Preferences"
+msgstr "_Nustatymai"
+
+#: ../ui/app-menu.xml.h:2
+msgid "_About"
+msgstr "_Apie"
+
+#: ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "_Baigti"
+
+#: ../ui/gear-menu.xml.h:1
+msgid "_Save"
+msgstr "Į_rašyti"
+
+#: ../ui/gear-menu.xml.h:3
+msgid "_Undo"
+msgstr "_Atšaukti"
+
+#: ../ui/gear-menu.xml.h:4
+msgid "Cu_t"
+msgstr "Iškirp_ti"
+
+#: ../ui/gear-menu.xml.h:5
+msgid "_Copy"
+msgstr "_Kopijuoti"
+
+#: ../ui/gear-menu.xml.h:6
+msgid "_Paste"
+msgstr "Į_dėti"
+
+#: ../ui/gear-menu.xml.h:7
+msgid "_Delete"
+msgstr "_Ištrinti"
+
+#: ../ui/gear-menu.xml.h:8
+msgid "Previous file"
+msgstr "Ankstesnis failas"
+
+#: ../ui/gear-menu.xml.h:9
+msgid "Back"
+msgstr "Atgal"
+
+#: ../ui/gear-menu.xml.h:10 ../ui/mainwindow.ui.h:29
+msgid "Forward"
+msgstr "Pirmyn"
+
+#: ../ui/gear-menu.xml.h:11
+msgid "Next file"
+msgstr "Kitas failas"
+
+#: ../ui/gear-menu.xml.h:12
+msgid "Replace current"
+msgstr "Pakeisti esamą"
+
+#: ../ui/gear-menu.xml.h:13
+msgid "Replace in this file"
+msgstr "Pakeisti šiame faile"
+
+#: ../ui/gear-menu.xml.h:14
+msgid "Replace in all files"
+msgstr "Pakeisti visuose failuose"
+
+#: ../ui/mainwindow.ui.h:1
+msgid "Save all"
+msgstr "Įrašyti visus"
+
+#: ../ui/mainwindow.ui.h:2
+msgid "Fol_der:"
+msgstr "Ap_lankas:"
+
+#: ../ui/mainwindow.ui.h:3
+msgid "Pattern:"
+msgstr "Šablonas:"
+
+#: ../ui/mainwindow.ui.h:4
+msgid "recursive"
+msgstr "su pakatalogiais"
+
+#: ../ui/mainwindow.ui.h:5
+msgid "Recurse into subdirectories"
+msgstr "Apdoroti su pakatalogiais"
+
+#: ../ui/mainwindow.ui.h:6
+msgid "hidden"
+msgstr "paslėpti failai"
+
+#: ../ui/mainwindow.ui.h:8
+msgid "Find all files that match the filename pattern"
+msgstr "Rasti visus failus, kurie atitinka failo pavadinimo šabloną"
+
+#: ../ui/mainwindow.ui.h:9
+msgid "Find fi_les"
+msgstr "Rasti fai_lus"
+
+#: ../ui/mainwindow.ui.h:10
+msgid "Search:"
+msgstr "Ieškoti:"
+
+#: ../ui/mainwindow.ui.h:11
+msgid "Replace:"
+msgstr "Pakeisti:"
+
+#: ../ui/mainwindow.ui.h:12
+msgid "Find all possible matches in a line"
+msgstr "Rasti visas galimas atitiktis eilutėje"
+
+#: ../ui/mainwindow.ui.h:14
+msgid "Find all matches of the regular expression"
+msgstr "Rasti visas reguliariojo reiškinio atitiktis"
+
+#: ../ui/mainwindow.ui.h:15
+msgid "A regular expression in Perl syntax"
+msgstr "Reguliarusis reiškinys, parašytas Perl sintakse"
+
+#: ../ui/mainwindow.ui.h:16
+msgid ""
+"The new string to substitute. As in Perl, you can refer to parts of the "
+"match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
+"\\u, \\L, \\U and \\E are supported as well."
+msgstr ""
+"Nauja eilutė, kurią pakeisti. Perl sintaksėje atitikties dalis galite "
+"nurodyti naudodami $1, $2, ir t. t. arba net $+, $&amp;, $` ir $'. "
+"Operatoriai \\l, \\u, \\L, \\U ir \\E taip pat yra palaikomi."
+
+#: ../ui/mainwindow.ui.h:17
+msgid "Preview of the substitution"
+msgstr "Pakeitimo peržiūra"
+
+#: ../ui/mainwindow.ui.h:18
+msgid "Preview"
+msgstr "Peržiūra"
+
+#: ../ui/mainwindow.ui.h:19
+msgid "_Replace"
+msgstr "_Pakeisti"
+
+#: ../ui/mainwindow.ui.h:20
+msgid "Replace current match"
+msgstr "Pakeisti esamą atitiktį"
+
+#: ../ui/mainwindow.ui.h:21
+msgid "_This file"
+msgstr "Š_iame faile"
+
+#: ../ui/mainwindow.ui.h:22
+msgid "Replace all matches in the current file"
+msgstr "Pakeisti visas atitiktis dabartiniame faile"
+
+#: ../ui/mainwindow.ui.h:23
+msgid "_All files"
+msgstr "_Visi failai"
+
+#: ../ui/mainwindow.ui.h:24
+msgid "Replace all matches in all files"
+msgstr "Pakeisti visas atitiktis visuose failuose"
+
+#: ../ui/mainwindow.ui.h:25
+msgid "File backward"
+msgstr "Ankstesnis failas"
+
+#: ../ui/mainwindow.ui.h:26
+msgid "Go to the previous matching file"
+msgstr "Pereiti prie ankstesnio atitinkančio failo"
+
+#: ../ui/mainwindow.ui.h:27
+msgid "Backward"
+msgstr "Atgal"
+
+#: ../ui/mainwindow.ui.h:28
+msgid "Go to previous match"
+msgstr "Pereiti prie ankstesnės atitikties"
+
+#: ../ui/mainwindow.ui.h:30
+msgid "Go to next match"
+msgstr "Pereiti prie kitos atitikties"
+
+#: ../ui/mainwindow.ui.h:31
+msgid "File forward"
+msgstr "Kitas failas"
+
+#: ../ui/mainwindow.ui.h:32
+msgid "Go to the next matching file"
+msgstr "Pereiti prie kito atitinkančio failo"
+
+#: ../ui/prefdialog.ui.h:1
+msgid "Icons only"
+msgstr "Tik piktogramos"
+
+#: ../ui/prefdialog.ui.h:2
+msgid "Text only"
+msgstr "Tik tekstas"
+
+#: ../ui/prefdialog.ui.h:3
+msgid "Icons and text"
+msgstr "Piktogramos ir tekstas"
+
+#: ../ui/prefdialog.ui.h:4
+msgid "Both horizontal"
+msgstr "Abu horizontaliai"
+
+#: ../ui/prefdialog.ui.h:5
+msgid "Preferences"
+msgstr "Nustatymai"
+
+#: ../ui/prefdialog.ui.h:6
+msgid "_Text view font:"
+msgstr "_Teksto rodymo šriftas:"
+
+#: ../ui/prefdialog.ui.h:7
+msgid "_Match color:"
+msgstr "_Atitikties spalva:"
+
+#: ../ui/prefdialog.ui.h:8
+msgid "C_urrent match color:"
+msgstr "_Esamos atitikties spalva:"
+
+#: ../ui/prefdialog.ui.h:9
+msgid "_Look’n’feel"
+msgstr "Išvaiz_da ir turinys"
+
+#: ../ui/prefdialog.ui.h:10
+msgid ""
+"regexxer attempts to read a file in the following encodings before giving up:"
+msgstr ""
+"Prieš pasiduodama, programa regexxer bando skaityti failus šiomis koduotėmis:"
+
+#: ../ui/prefdialog.ui.h:11
+msgid "3."
+msgstr "3."
+
+#: ../ui/prefdialog.ui.h:12
+msgid "2."
+msgstr "2."
+
+#: ../ui/prefdialog.ui.h:13
+msgid "1."
+msgstr "1."
+
+#: ../ui/prefdialog.ui.h:14
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: ../ui/prefdialog.ui.h:15
+msgid "Fallback _encoding:"
+msgstr "Atsarginė _koduotė:"
+
+#: ../ui/prefdialog.ui.h:16
+msgid "The encoding specified by the current locale"
+msgstr "Esamos lokalės nurodyta koduotė"
+
+#: ../ui/prefdialog.ui.h:17
+msgid "_File access"
+msgstr "_Failų prieiga"
