@@ -1,4 +1,4 @@
-# regexxer's Portuguese translation.
+# regexxer"s Portuguese translation.
 # Copyright © 2004, 2008 regexxer
 # This file is distributed under the same license as the regexxer package.
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2004, 2008.
@@ -6,159 +6,228 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: 2.24\n"
-"Report-Msgid-Bugs-To: http://regexxer.sourceforge.net/bugs\n"
-"POT-Creation-Date: 2008-09-15 00:01+0100\n"
-"PO-Revision-Date: 2008-09-15 00:05+0000\n"
-"Last-Translator: Duarte Loreto <happyguy_pt@hotmail.com>\n"
+"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
+"POT-Creation-Date: 2015-11-11 14:10+0000\n"
+"PO-Revision-Date: 2015-11-16 09:58+0000\n"
+"Last-Translator:  <>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
 
-#: ../ui/regexxer.desktop.in.h:1 ../src/mainwindow.cc:849
-msgid "Search and replace using regular expressions"
-msgstr "Procurar e substituir utilizando expressões regulares"
-
-#: ../ui/regexxer.desktop.in.h:2
+#: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
-msgstr "Ferramenta de Procura regexxer"
+msgstr "Ferramenta de procura Regexxer"
 
-#: ../ui/regexxer.schemas.in.h:1
-msgid "Current-match color"
-msgstr "Cor de coincidência-actual"
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1183
+msgid "Search and replace using regular expressions"
+msgstr "Procurar e substituir usando expressões regulares"
 
-#: ../ui/regexxer.schemas.in.h:2
-msgid "Fallback encoding"
-msgstr "Codificação de recurso"
+#: ../ui/org.regexxer.gschema.xml.in.h:1
+msgid "File Patterns"
+msgstr "Padrões de ficheiros"
 
-#: ../ui/regexxer.schemas.in.h:3
+#: ../ui/org.regexxer.gschema.xml.in.h:2
+msgid "List of pre-defined patterns available in the \"Pattern\" entry."
+msgstr "Lista de padrões predefinidos disponíveis na entrada \"Padrões\"."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:3
+msgid "Regex Patterns"
+msgstr "Padrões de ExpReg"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:4
+msgid "List of last patterns used in the \"Regex\" entry."
+msgstr "Lista dos últimos padrões usados na entrada \"ExpReg\"."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:5
+msgid "List of last patterns used in the \"Substitution\" entry."
+msgstr "Lista dos últimos padrões utilizados na entrada \"Substituíções\"."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:6
+msgid "Text view font"
+msgstr "Letra da vista de texto"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:7
+msgid "The font used in the file editor."
+msgstr "A letra usada no editor de ficheiros."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:8
 msgid "Match color"
 msgstr "Cor de coincidências"
 
-#: ../ui/regexxer.schemas.in.h:4
-msgid ""
-"Name of the character encoding to use if a file is not readable in either "
-"UTF-8 or the codeset specified by the current locale. Try “iconv --list” for "
-"a complete list of possible values."
-msgstr ""
-"Nome da codificação de caracteres a utilizar se um ficheiro não for legível "
-"em UTF-8 nem na codificação especificada pela configuração regional actual. "
-"Tente “iconv --list” para obter uma lista completa dos valores possíveis."
+#: ../ui/org.regexxer.gschema.xml.in.h:9
+msgid "The background color used to highlight matches of the search expression."
+msgstr "A cor de fundo utilizada para realçar as coincidências da expressão procurada."
 
-#: ../ui/regexxer.schemas.in.h:5
-msgid "Text view font"
-msgstr "Fonte da vista de texto"
+#: ../ui/org.regexxer.gschema.xml.in.h:10
+msgid "Current-match color"
+msgstr "Cor de coincidência atual"
 
-#: ../ui/regexxer.schemas.in.h:6
-msgid ""
-"The background color used to highlight matches of the search expression."
-msgstr ""
-"A cor de fundo utilizada para realçar as coincidências da expressão "
-"procurada."
+#: ../ui/org.regexxer.gschema.xml.in.h:11
+msgid "The background color used to highlight the currently selected match of the search expression."
+msgstr "A cor de fundo utilizada para realçar a coincidência atualmente selecionada de entre as obtidas pela expressão de procura."
 
-#: ../ui/regexxer.schemas.in.h:7
-msgid ""
-"The background color used to highlight the currently selected match of the "
-"search expression."
-msgstr ""
-"A cor de fundo utilizada para realçar a coincidência actualmente "
-"seleccionada de entre as obtidas pela expressão de procura."
+#: ../ui/org.regexxer.gschema.xml.in.h:12
+msgid "Fallback encoding"
+msgstr "Codificação de recurso"
 
-#: ../ui/regexxer.schemas.in.h:8
-msgid "The font used in the file editor."
-msgstr "A fonte utilizada no editor de ficheiros."
+#: ../ui/org.regexxer.gschema.xml.in.h:13
+msgid "Name of the character encoding to use if a file is not readable in either UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" for a complete list of possible values."
+msgstr "Nome da codificação de caracteres a usar se um ficheiro não for legível em UTF-8 nem na codificação especificada pela configuração regional atual. Tente “iconv --list” para obter uma lista completa dos valores possíveis."
 
-#: ../ui/regexxer.schemas.in.h:9
-msgid ""
-"The style of the application’s toolbar. Possible values are “icons”, “text”, "
-"“both”, and “both-horiz”."
-msgstr ""
-"O estilo da barra de ferramentas da aplicação. Valores possíveis são "
-"“icons”, “text”, “both”, e “both-horiz”."
+#: ../ui/org.regexxer.gschema.xml.in.h:14
+msgid "window width"
+msgstr "largura da janela"
 
-#: ../ui/regexxer.schemas.in.h:10
-msgid "Toolbar style"
-msgstr "Estilo da barra de ferramentas"
+#: ../ui/org.regexxer.gschema.xml.in.h:15
+msgid "The width of the window."
+msgstr "A largura da janela."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:16
+msgid "window height"
+msgstr "altura da janela"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:17
+msgid "The height of the window."
+msgstr "A altura da janela."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:18
+msgid "window x position"
+msgstr "posição X da janela"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:19
+msgid "The X coordinate of the window."
+msgstr "A coordenada X da janela."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:20
+msgid "window y position"
+msgstr "Posição Y da janela"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:21
+msgid "The Y coordinate of the window."
+msgstr "A coordenada Y da janela."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:22
+msgid "window maximization"
+msgstr "maximização da janela"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:23
+msgid "Whether the window is maximized."
+msgstr "Se a janela está maximizada ou não."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:24
+msgid "Show line numbers"
+msgstr "Mostrar números de linhas"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:25
+msgid "Whether to show the line numbers of the text view."
+msgstr "Se deve mostrar a numeração das linhas da vista de texto."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:26
+msgid "Highlight the current line"
+msgstr "Realçar a linha atual"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:27
+msgid "Whether to highlight the current line of the text view."
+msgstr "Se deve realçar a linha atual na vista de texto."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:28
+msgid "Auto indentation"
+msgstr "Indentação automática"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:29
+msgid "Whether to enable auto indentation in the text view."
+msgstr "Se deve ativar a indentação automática na vista de texto."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:30
+msgid "Draw spaces"
+msgstr "Desenhar espaços"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:31
+msgid "Which type of space to draw in the text view."
+msgstr "Que tipo de espaços desenhar na vista de texto."
 
 #: ../src/filebuffer.cc:198
 msgid "Can’t read file:"
-msgstr "Incapaz de ler o ficheiro:"
+msgstr "Impossível ler o ficheiro:"
 
-#: ../src/filetree.cc:80
+#: ../src/filetree.cc:60
 msgid "File"
 msgstr "Ficheiro"
 
-#: ../src/filetree.cc:99
+#: ../src/filetree.cc:79
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:530
+#: ../src/filetree.cc:508
 #, qt-format
 msgid "Failed to save file “%1”: %2"
-msgstr "Falha ao gravar o ficheiro “%1”. %2"
+msgstr "Falha ao gravar o ficheiro “%1”: %2"
 
-#: ../src/filetree.cc:946
+#: ../src/filetree.cc:924
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "“%1” parece ser um ficheiro binário."
 
-#: ../src/main.cc:77
+#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
 msgid "Save _all"
-msgstr "Gravar _todos"
+msgstr "Gravar _Tudo"
 
-#: ../src/main.cc:134
+#: ../src/main.cc:135
 msgid "Find files matching PATTERN"
-msgstr "Procurar ficheiros com um PADRÃO coincidente"
+msgstr "Procurar ficheiros coincidentes com PADRÃO"
 
-#: ../src/main.cc:134
+#: ../src/main.cc:135
 msgid "PATTERN"
 msgstr "PADRÃO"
 
-#: ../src/main.cc:136
+#: ../src/main.cc:137
 msgid "Do not recurse into subdirectories"
-msgstr "Não efectuar recursividade sobre os subdirectórios"
+msgstr "Sem recursividade nas subpastas"
 
-#: ../src/main.cc:138 ../ui/mainwindow.glade.h:3
+#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
-msgstr "Também procurar ficheiros escondidos"
+msgstr "Procurar também ficheiros ocultos"
 
-#: ../src/main.cc:140
+#: ../src/main.cc:141
 msgid "Find text matching REGEX"
-msgstr "Procurar texto que coincida com a EXPREG"
+msgstr "Procurar texto coincidente com EXPREG"
 
-#: ../src/main.cc:140
+#: ../src/main.cc:141
 msgid "REGEX"
 msgstr "EXPREG"
 
-#: ../src/main.cc:142
+#: ../src/main.cc:143
 msgid "Find only the first match in a line"
-msgstr "Procurar apenas a primeira coincidência numa linha"
+msgstr "Procurar só a primeira coincidência numa linha"
 
-#: ../src/main.cc:144 ../ui/mainwindow.glade.h:5
+#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
-msgstr "Efectuar coincidências insensíveis à capitalização"
+msgstr "Não comparar maiúsculas"
 
-#: ../src/main.cc:146
+#: ../src/main.cc:147
 msgid "Replace matches with STRING"
-msgstr "Substituir as coincidências por EXPRESSÃO"
+msgstr "Substituir as coincidências por CADEIA"
 
-#: ../src/main.cc:146
+#: ../src/main.cc:147
 msgid "STRING"
-msgstr "EXPRESSÃO"
+msgstr "CADEIA"
 
-#: ../src/main.cc:148
+#: ../src/main.cc:149
 msgid "Print match location to standard output"
-msgstr "Imprimir a localização da coincidência para a consola"
+msgstr "Imprimir a localização da coincidência para a saída padrão"
 
-#: ../src/main.cc:150
+#: ../src/main.cc:151
 msgid "Do not automatically start search"
 msgstr "Não iniciar a procura automaticamente"
 
-#: ../src/main.cc:152
+#: ../src/main.cc:153
 msgid "[FOLDER]"
 msgstr "[PASTA]"
 
-#: ../src/mainwindow.cc:413
+#: ../src/mainwindow.cc:713
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -166,7 +235,7 @@ msgstr ""
 "Alguns ficheiros ainda não foram gravados.\n"
 "Ainda assim terminar?"
 
-#: ../src/mainwindow.cc:427
+#: ../src/mainwindow.cc:727
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -174,315 +243,360 @@ msgstr ""
 "Alguns ficheiros ainda não foram gravados.\n"
 "Ainda assim prosseguir?"
 
-#: ../src/mainwindow.cc:455
+#: ../src/mainwindow.cc:757
 msgid "The file search pattern is invalid."
 msgstr "O padrão de procura de ficheiros é inválido."
 
-#: ../src/mainwindow.cc:461
+#: ../src/mainwindow.cc:763
 msgid "The following errors occurred during search:"
 msgstr "Ocorreram os seguintes erros durante a procura:"
 
-#: ../src/mainwindow.cc:708
+#: ../src/mainwindow.cc:1032
 msgid "The following errors occurred during save:"
 msgstr "Ocorreram os seguintes erros durante a gravação:"
 
-#: ../src/mainwindow.cc:854
+#: ../src/mainwindow.cc:1189
 msgid "translator-credits"
-msgstr "Duarte Loreto <happyguy_pt@hotmail.com>"
+msgstr "Duarte Loreto <happyguy_pt@hotmail.com>Pedro Albuquerque <palbuquerque73@gmail.com>Tiago S. <almosthumane@portugalmail.pt>"
 
-#: ../src/pcreshell.cc:62
-msgid "Using the \\C escape sequence to match a single byte is not supported."
-msgstr ""
-"A utilização da sequência de escape \\C para coincidir um único byte não é "
-"suportada."
-
-#: ../src/pcreshell.cc:84
-#, qt-format
-msgid ""
-"Error in regular expression at “%1” (index %2):\n"
-"%3"
-msgstr ""
-"Erro na expressão regular em “%1” (índice %2):\n"
-"%3"
-
-#: ../src/pcreshell.cc:89
-#, qt-format
-msgid ""
-"Error in regular expression:\n"
-"%1"
-msgstr ""
-"Erro na expressão regular:\n"
-"%1"
-
-#: ../src/pcreshell.cc:171
-msgid ""
-"Reached the recursion and backtracking limit of the regular expression "
-"engine."
-msgstr ""
-"Atingido o limite de recursividade e retrocesso do motor de expressões "
-"regulares."
-
-#: ../src/prefdialog.cc:249
+#: ../src/prefdialog.cc:186
 #, qt-format
 msgid "“%1” is not a valid encoding."
 msgstr "“%1” não é uma codificação válida."
 
-#: ../src/statusline.cc:263
+#: ../src/statusline.cc:245
 msgid "Stop"
 msgstr "Parar"
 
-#: ../src/statusline.cc:270
+#: ../src/statusline.cc:253
 msgid "File:"
 msgstr "Ficheiro:"
 
-#: ../src/statusline.cc:273
+#: ../src/statusline.cc:256
 msgid "Match:"
 msgstr "Coincidência:"
 
-#: ../src/statusline.cc:284
+#: ../src/statusline.cc:267
 msgid "Cancels the running search"
 msgstr "Cancela a procura em execução"
 
-#: ../ui/mainwindow.glade.h:1
-msgid ""
-"A filename pattern as used by the shell. Character classes [ab] and csh "
-"style brace expressions {a,b} are supported."
-msgstr ""
-"Um padrão de nome de ficheiro tal como o utilizado pela consola. São "
-"suportadas classes de caracteres [ab] e expressões estilo csh como {a,b}."
+#: ../ui/app-menu.xml.h:1
+msgid "_Preferences"
+msgstr "_Preferências"
 
-#: ../ui/mainwindow.glade.h:2
-msgid "A regular expression in Perl syntax"
-msgstr "Uma expressão regular em sintaxe Perl"
+#: ../ui/app-menu.xml.h:2
+msgid "_About"
+msgstr "_Sobre"
 
-#: ../ui/mainwindow.glade.h:4
-msgid "Backward"
-msgstr "Retroceder"
+#: ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "_Sair"
 
-#: ../ui/mainwindow.glade.h:6
-msgid "File backward"
-msgstr "Retroceder no ficheiro"
+#: ../ui/gear-menu.xml.h:1
+msgid "_Save"
+msgstr "_Gravar"
 
-#: ../ui/mainwindow.glade.h:7
-msgid "File forward"
-msgstr "Avançar no ficheiro"
+#: ../ui/gear-menu.xml.h:3
+msgid "_Undo"
+msgstr "_Desfazer"
 
-#: ../ui/mainwindow.glade.h:8
-msgid "Find all files that match the filename pattern"
-msgstr ""
-"Procurar todos os ficheiros que coincidam com o padrão de nome de ficheiro"
+#: ../ui/gear-menu.xml.h:4
+msgid "Cu_t"
+msgstr "Cor_Tar"
 
-#: ../ui/mainwindow.glade.h:9
-msgid "Find all matches of the regular expression"
-msgstr "Procurar todas as coincidências da expressão regular"
+#: ../ui/gear-menu.xml.h:5
+msgid "_Copy"
+msgstr "_Copiar"
 
-#: ../ui/mainwindow.glade.h:10
-msgid "Find all possible matches in a line"
-msgstr "Procurar todas as coincidências possíveis numa linha"
+#: ../ui/gear-menu.xml.h:6
+msgid "_Paste"
+msgstr "Co_Lar"
 
-#: ../ui/mainwindow.glade.h:11
-msgid "Find fi_les"
-msgstr "Procurar fic_heiros"
+#: ../ui/gear-menu.xml.h:7
+msgid "_Delete"
+msgstr "_Eliminar"
 
-#: ../ui/mainwindow.glade.h:12
-msgid "Fol_der:"
-msgstr "_Pasta:"
+#: ../ui/gear-menu.xml.h:8
+msgid "Previous file"
+msgstr "Ficheiro anterior"
 
-#: ../ui/mainwindow.glade.h:13
+#: ../ui/gear-menu.xml.h:9
+msgid "Back"
+msgstr "Recuar"
+
+#: ../ui/gear-menu.xml.h:10 ../ui/mainwindow.ui.h:29
 msgid "Forward"
 msgstr "Avançar"
 
-#: ../ui/mainwindow.glade.h:14
-msgid "Go to next match"
-msgstr "Ir para a coincidência seguinte"
+#: ../ui/gear-menu.xml.h:11
+msgid "Next file"
+msgstr "Ficheiro seguinte"
 
-#: ../ui/mainwindow.glade.h:15
-msgid "Go to previous match"
-msgstr "Ir para a coincidência anterior"
+#: ../ui/gear-menu.xml.h:12
+msgid "Replace current"
+msgstr "Substituir a atual"
 
-#: ../ui/mainwindow.glade.h:16
-msgid "Go to the next matching file"
-msgstr "Ir para o ficheiro coincidente seguinte"
+#: ../ui/gear-menu.xml.h:13
+msgid "Replace in this file"
+msgstr "Substituir neste ficheiro"
 
-#: ../ui/mainwindow.glade.h:17
-msgid "Go to the previous matching file"
-msgstr "Ir para o ficheiro coincidente anterior"
+#: ../ui/gear-menu.xml.h:14
+msgid "Replace in all files"
+msgstr "Substituir em todos os ficheiros"
 
-#: ../ui/mainwindow.glade.h:18
+#: ../ui/mainwindow.ui.h:1
+msgid "Save all"
+msgstr "Gravar todos"
+
+#: ../ui/mainwindow.ui.h:2
+msgid "Fol_der:"
+msgstr "_Pasta:"
+
+#: ../ui/mainwindow.ui.h:3
 msgid "Pattern:"
 msgstr "Padrão:"
 
-#: ../ui/mainwindow.glade.h:19
-msgid "Preview"
-msgstr "Antever"
-
-#: ../ui/mainwindow.glade.h:20
-msgid "Preview of the substitution"
-msgstr "Antever a substituição"
-
-#: ../ui/mainwindow.glade.h:21
-msgid "Recurse into subdirectories"
-msgstr "Recursividade sobre os subdirectórios"
-
-#: ../ui/mainwindow.glade.h:22
-msgid "Replace _current"
-msgstr "Substituir a a_ctual"
-
-#: ../ui/mainwindow.glade.h:23
-msgid "Replace all matches in all files"
-msgstr "Substituir todas as coincidências em todos os ficheiros"
-
-#: ../ui/mainwindow.glade.h:24
-msgid "Replace all matches in the current file"
-msgstr "Substituir todas as coincidências no ficheiro actual"
-
-#: ../ui/mainwindow.glade.h:25
-msgid "Replace current match"
-msgstr "Substituir a coincidência actual"
-
-#: ../ui/mainwindow.glade.h:26
-msgid "Replace in _all files"
-msgstr "Substituir em _todos os ficheiros"
-
-#: ../ui/mainwindow.glade.h:27
-msgid "Replace in _this file"
-msgstr "Substituir _neste ficheiro"
-
-#: ../ui/mainwindow.glade.h:28
-msgid "Replace:"
-msgstr "Substituir:"
-
-#: ../ui/mainwindow.glade.h:29
-msgid "Search:"
-msgstr "Procurar:"
-
-#: ../ui/mainwindow.glade.h:30
-msgid ""
-"The new string to substitute. As in Perl, you can refer to parts of the "
-"match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, \\u, "
-"\\L, \\U and \\E are supported as well."
-msgstr ""
-"A nova expressão a substituir. Tal como no Perl, pode referir-se a partes da "
-"coincidência utilizando $1, $2, etc. ou mesmo $+, $&, $` e $'. Também são "
-"suportados os operadores \\l, \\u, \\L, \\U e \\E."
-
-#: ../ui/mainwindow.glade.h:31
-msgid "_All files"
-msgstr "_Todos os ficheiros"
-
-#: ../ui/mainwindow.glade.h:32
-msgid "_Edit"
-msgstr "_Editar"
-
-#: ../ui/mainwindow.glade.h:33
-msgid "_File"
-msgstr "_Ficheiro"
-
-#: ../ui/mainwindow.glade.h:34
-msgid "_Help"
-msgstr "_Ajuda"
-
-#: ../ui/mainwindow.glade.h:35
-msgid "_Match"
-msgstr "_Coincidir"
-
-#: ../ui/mainwindow.glade.h:36
-msgid "_Next file"
-msgstr "Ficheiro _seguinte"
-
-#: ../ui/mainwindow.glade.h:37
-msgid "_Previous file"
-msgstr "Ficheiro _anterior"
-
-#: ../ui/mainwindow.glade.h:38
-msgid "_Replace"
-msgstr "_Substituir"
-
-#: ../ui/mainwindow.glade.h:39
-msgid "_This file"
-msgstr "_Este ficheiro"
-
-#: ../ui/mainwindow.glade.h:40
-msgid "hidden"
-msgstr "escondido"
-
-#: ../ui/mainwindow.glade.h:41
+#: ../ui/mainwindow.ui.h:4
 msgid "recursive"
 msgstr "recursivo"
 
-#: ../ui/prefdialog.glade.h:1
-msgid "1."
-msgstr "1."
+#: ../ui/mainwindow.ui.h:5
+msgid "Recurse into subdirectories"
+msgstr "Com recursividade nas subpastas"
 
-#: ../ui/prefdialog.glade.h:2
-msgid "2."
-msgstr "2."
+#: ../ui/mainwindow.ui.h:6
+msgid "hidden"
+msgstr "oculto"
 
-#: ../ui/prefdialog.glade.h:3
-msgid "3."
-msgstr "3."
+#: ../ui/mainwindow.ui.h:8
+msgid "Find all files that match the filename pattern"
+msgstr "Procurar todos os ficheiros que coincidam com o padrão de nome de ficheiro"
 
-#: ../ui/prefdialog.glade.h:4
-msgid "C_urrent match color:"
-msgstr "Cor de coincidência act_ual:"
+#: ../ui/mainwindow.ui.h:9
+msgid "Find fi_les"
+msgstr "_Localizar ficheiros"
 
-#: ../ui/prefdialog.glade.h:5
-msgid "Fallback _encoding:"
-msgstr "Codificação de _recurso:"
+#: ../ui/mainwindow.ui.h:10
+msgid "Search:"
+msgstr "Procurar:"
 
-#: ../ui/prefdialog.glade.h:6
-msgid ""
-"Icons only\n"
-"Text only\n"
-"Icons and text\n"
-"Both horizontal"
-msgstr ""
-"Apenas ícones\n"
-"Apenas texto\n"
-"Ícones e texto\n"
-"Ambas horizontais"
+#: ../ui/mainwindow.ui.h:11
+msgid "Replace:"
+msgstr "Substituir:"
 
-#: ../ui/prefdialog.glade.h:10
+#: ../ui/mainwindow.ui.h:12
+msgid "Find all possible matches in a line"
+msgstr "Procurar todas as coincidências possíveis numa linha"
+
+#: ../ui/mainwindow.ui.h:14
+msgid "Find all matches of the regular expression"
+msgstr "Procurar todas as coincidências da expressão regular"
+
+#: ../ui/mainwindow.ui.h:15
+msgid "A regular expression in Perl syntax"
+msgstr "Uma expressão regular em sintaxe Perl"
+
+#: ../ui/mainwindow.ui.h:16
+msgid "The new string to substitute. As in Perl, you can refer to parts of the match using $1, $2, etc. or even $+, $&amp;, $` and \"$"". The operators \\l, \\u, \\L, \\U and \\E are supported as well."
+msgstr "A nova expressão a substituir. Tal como no Perl, pode referir-se a partes da correspondência utilizando \"$1\", \"$2\", etc. ou mesmo \"$+\", \"$&amp;\", \"$`\" e \"$\"\". Também são suportados os operadores \"\\l\", \"\\u\", \"\\L\", \"\\U\" e \"\\E\"."
+
+#: ../ui/mainwindow.ui.h:17
+msgid "Preview of the substitution"
+msgstr "Antever a substituição"
+
+#: ../ui/mainwindow.ui.h:18
+msgid "Preview"
+msgstr "Antever"
+
+#: ../ui/mainwindow.ui.h:19
+msgid "_Replace"
+msgstr "_Substituir"
+
+#: ../ui/mainwindow.ui.h:20
+msgid "Replace current match"
+msgstr "Substituir a coincidência atual"
+
+#: ../ui/mainwindow.ui.h:21
+msgid "_This file"
+msgstr "_Este ficheiro"
+
+#: ../ui/mainwindow.ui.h:22
+msgid "Replace all matches in the current file"
+msgstr "Substituir todas as coincidências no ficheiro atual"
+
+#: ../ui/mainwindow.ui.h:23
+msgid "_All files"
+msgstr "_Todos os ficheiros"
+
+#: ../ui/mainwindow.ui.h:24
+msgid "Replace all matches in all files"
+msgstr "Substituir todas as coincidências em todos os ficheiros"
+
+#: ../ui/mainwindow.ui.h:25
+msgid "File backward"
+msgstr "Recuar no ficheiro"
+
+#: ../ui/mainwindow.ui.h:26
+msgid "Go to the previous matching file"
+msgstr "Ir para o ficheiro coincidente anterior"
+
+#: ../ui/mainwindow.ui.h:27
+msgid "Backward"
+msgstr "Recuar"
+
+#: ../ui/mainwindow.ui.h:28
+msgid "Go to previous match"
+msgstr "Ir para a coincidência anterior"
+
+#: ../ui/mainwindow.ui.h:30
+msgid "Go to next match"
+msgstr "Ir para a coincidência seguinte"
+
+#: ../ui/mainwindow.ui.h:31
+msgid "File forward"
+msgstr "Avançar no ficheiro"
+
+#: ../ui/mainwindow.ui.h:32
+msgid "Go to the next matching file"
+msgstr "Ir para o ficheiro coincidente seguinte"
+
+#: ../ui/prefdialog.ui.h:1
+msgid "Icons only"
+msgstr "Só ícones"
+
+#: ../ui/prefdialog.ui.h:2
+msgid "Text only"
+msgstr "Só texto"
+
+#: ../ui/prefdialog.ui.h:3
+msgid "Icons and text"
+msgstr "Texto e ícones"
+
+#: ../ui/prefdialog.ui.h:4
+msgid "Both horizontal"
+msgstr "Ambos horizontais"
+
+#: ../ui/prefdialog.ui.h:5
 msgid "Preferences"
 msgstr "Preferências"
 
-#: ../ui/prefdialog.glade.h:11
-msgid "The encoding specified by the current locale"
-msgstr "A codificação especificada pela configuração regional actual"
+#: ../ui/prefdialog.ui.h:6
+msgid "_Text view font:"
+msgstr "Letra da vista de _texto:"
 
-#: ../ui/prefdialog.glade.h:12
-msgid "Tool_bar style:"
-msgstr "Estilo da _barra de ferramentas:"
-
-#: ../ui/prefdialog.glade.h:13
-msgid "UTF-8"
-msgstr "UTF-8"
-
-#: ../ui/prefdialog.glade.h:14
-msgid "_File access"
-msgstr "Acesso de _ficheiros"
-
-#: ../ui/prefdialog.glade.h:15
-msgid "_Look’n’feel"
-msgstr "_Aparência"
-
-#: ../ui/prefdialog.glade.h:16
+#: ../ui/prefdialog.ui.h:7
 msgid "_Match color:"
 msgstr "_Cor de coincidência:"
 
-#: ../ui/prefdialog.glade.h:17
-msgid "_Text view font:"
-msgstr "Fonte da vista de _texto:"
+#: ../ui/prefdialog.ui.h:8
+msgid "C_urrent match color:"
+msgstr "Cor de coincidência at_Ual:"
 
-#: ../ui/prefdialog.glade.h:18
-msgid ""
-"regexxer attempts to read a file in the following encodings before giving up:"
-msgstr ""
-"regexxer tentará ler um ficheiro nas seguintes codificações, antes de "
-"desistir:"
+#: ../ui/prefdialog.ui.h:9
+msgid "_Look’n’feel"
+msgstr "_Aparência"
 
-#~ msgid "_About"
-#~ msgstr "_Sobre"
+#: ../ui/prefdialog.ui.h:10
+msgid "regexxer attempts to read a file in the following encodings before giving up:"
+msgstr "O Regexxer tentará ler um ficheiro nas seguintes codificações, antes de desistir:"
+
+#: ../ui/prefdialog.ui.h:11
+msgid "3."
+msgstr "3."
+
+#: ../ui/prefdialog.ui.h:12
+msgid "2."
+msgstr "2."
+
+#: ../ui/prefdialog.ui.h:13
+msgid "1."
+msgstr "1."
+
+#: ../ui/prefdialog.ui.h:14
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: ../ui/prefdialog.ui.h:15
+msgid "Fallback _encoding:"
+msgstr "_Codificação de recurso:"
+
+#: ../ui/prefdialog.ui.h:16
+msgid "The encoding specified by the current locale"
+msgstr "A codificação especificada pela configuração regional atual"
+
+#: ../ui/prefdialog.ui.h:17
+msgid "_File access"
+msgstr "Acesso a _Ficheiro"
+
+#~ msgid ""
+#~ "The style of the application’s toolbar. Possible values are “icons”, "
+#~ "“text”, “both”, and “both-horiz”."
+#~ msgstr ""
+#~ "O estilo da barra de ferramentas da aplicação. Valores possíveis são "
+#~ "“icons”, “text”, “both”, e “both-horiz”."
+
+#~ msgid "Toolbar style"
+#~ msgstr "Estilo da barra de ferramentas"
+
+#~ msgid ""
+#~ "Using the \\C escape sequence to match a single byte is not supported."
+#~ msgstr ""
+#~ "A utilização da sequência de escape \\C para coincidir um único byte não "
+#~ "é suportada."
+
+#~ msgid ""
+#~ "Error in regular expression at “%1” (index %2):\n"
+#~ "%3"
+#~ msgstr ""
+#~ "Erro na expressão regular em “%1” (índice %2):\n"
+#~ "%3"
+
+#~ msgid ""
+#~ "Error in regular expression:\n"
+#~ "%1"
+#~ msgstr ""
+#~ "Erro na expressão regular:\n"
+#~ "%1"
+
+#~ msgid ""
+#~ "Reached the recursion and backtracking limit of the regular expression "
+#~ "engine."
+#~ msgstr ""
+#~ "Atingido o limite de recursividade e retrocesso do motor de expressões "
+#~ "regulares."
+
+#~ msgid ""
+#~ "A filename pattern as used by the shell. Character classes [ab] and csh "
+#~ "style brace expressions {a,b} are supported."
+#~ msgstr ""
+#~ "Um padrão de nome de ficheiro tal como o utilizado pela consola. São "
+#~ "suportadas classes de caracteres [ab] e expressões estilo csh como {a,b}."
+
+#~ msgid "_Edit"
+#~ msgstr "_Editar"
+
+#~ msgid "_File"
+#~ msgstr "_Ficheiro"
+
+#~ msgid "_Help"
+#~ msgstr "_Ajuda"
+
+#~ msgid "_Match"
+#~ msgstr "_Coincidir"
+
+#~ msgid ""
+#~ "Icons only\n"
+#~ "Text only\n"
+#~ "Icons and text\n"
+#~ "Both horizontal"
+#~ msgstr ""
+#~ "Apenas ícones\n"
+#~ "Apenas texto\n"
+#~ "Ícones e texto\n"
+#~ "Ambas horizontais"
+
+#~ msgid "Tool_bar style:"
+#~ msgstr "Estilo da _barra de ferramentas:"
 
 #~ msgid "[OPTION]... [FOLDER]"
 #~ msgstr "[OPÇºÃO]... [PASTA]"
@@ -498,7 +612,7 @@ msgstr ""
 #~ "do sistema de ficheiros local."
 
 #~ msgid "Select a folder"
-#~ msgstr "Seleccione uma pasta"
+#~ msgstr "Selecione uma pasta"
 
 #~ msgid "About regexxer"
 #~ msgstr "Sobre o regexxer"
@@ -518,14 +632,12 @@ msgstr ""
 #~ msgid "The directory to be searched"
 #~ msgstr "O directório onde procurar"
 
-#~ msgid ""
-#~ "If enabled, the text direction of the file editor, preview area, and all "
+#~ msgid "If enabled, the text direction of the file editor, preview area, and all "
 #~ "file-related entry boxes is always set to left-to-right no matter what "
 #~ "the locale's default direction is."
-#~ msgstr ""
-#~ "Se activo, a direcção do texto do editor de ficheiro, área de antevisão e "
+#~ msgstr "Se activo, a direção do texto do editor de ficheiro, área de antevisão e "
 #~ "todas as caixas de entrada relacionadas com ficheiros será sempre da "
-#~ "esquerda para a direita, independentemente de qual é a direcção por "
+#~ "esquerda para a direita, independentemente de qual é a direção por "
 #~ "omissão da configuração regional."
 
 #~ msgid "Override text direction"
