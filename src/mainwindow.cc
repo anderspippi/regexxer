@@ -381,7 +381,7 @@ void MainWindow::on_startup()
     {"preferences", sigc::mem_fun(*this, &MainWindow::on_preferences)},
     {"about", sigc::mem_fun(*this, &MainWindow::on_about)},
     {"quit", sigc::mem_fun(*this, &MainWindow::on_quit)},
-    {0},
+    {nullptr, sigc::slot<void>()},
   };
 
   Glib::RefPtr<Gtk::Builder> builder =
@@ -419,7 +419,7 @@ void MainWindow::init_actions()
     {"replace-current", "<Ctrl>R", sigc::mem_fun(*this, &MainWindow::on_replace)},
     {"replace-in-file", NULL, sigc::mem_fun(*this, &MainWindow::on_replace_file)},
     {"replace-in-all-files", NULL, sigc::mem_fun(*this, &MainWindow::on_replace_all)},
-    {0},
+    {nullptr, nullptr, sigc::slot<void>()},
   };
 
   for (int i = 0; match_actions[i].name; i++)
@@ -440,7 +440,7 @@ void MainWindow::init_actions()
     {"copy", "<Ctrl>C", sigc::mem_fun(*this, &MainWindow::on_copy)},
     {"paste", "<Ctrl>V", sigc::mem_fun(*this, &MainWindow::on_paste)},
     {"delete", NULL, sigc::mem_fun(*this, &MainWindow::on_erase)},
-    {0},
+    {nullptr, nullptr, sigc::slot<void>()},
   };
 
   for (int i = 0; edit_actions[i].name; i++)
@@ -459,7 +459,7 @@ void MainWindow::init_actions()
   {
     {"save", "<Ctrl>S", sigc::mem_fun(*this, &MainWindow::on_save_file)},
     {"save-all", NULL, sigc::mem_fun(*this, &MainWindow::on_save_all)},
-    {0},
+    {nullptr, nullptr, sigc::slot<void>()},
   };
 
   for (int i = 0; save_actions[i].name; i++)
