@@ -708,8 +708,8 @@ bool MainWindow::confirm_quit_request()
                              _("Some files haven\342\200\231t been saved yet.\nQuit anyway?"),
                              false, Gtk::MESSAGE_WARNING, Gtk::BUTTONS_NONE, true);
 
-  dialog.add_button(Gtk::Stock::CANCEL, Gtk::RESPONSE_CANCEL);
-  dialog.add_button(Gtk::Stock::QUIT,   Gtk::RESPONSE_OK);
+  dialog.add_button(_("_Cancel"), Gtk::RESPONSE_CANCEL);
+  dialog.add_button(_("_Quit"), Gtk::RESPONSE_OK);
 
   return (dialog.run() == Gtk::RESPONSE_OK);
 }
