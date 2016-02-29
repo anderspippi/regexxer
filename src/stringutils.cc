@@ -23,7 +23,7 @@
 #include <glib.h>
 #include <glib-object.h>
 #include <glibmm.h>
-#include <gdkmm/color.h>
+#include <gdkmm/rgba.h>
 
 #include <algorithm>
 #include <iomanip>
@@ -680,7 +680,7 @@ Glib::ustring Util::filename_short_display_name(const std::string& filename)
   return Glib::filename_display_name(filename);
 }
 
-Glib::ustring Util::color_to_string(const Gdk::Color& color)
+Glib::ustring Util::color_to_string(const Gdk::RGBA& color)
 {
   std::ostringstream output;
 

@@ -27,7 +27,7 @@
 #include <string>
 #include <vector>
 
-namespace Gdk { class Color; }
+namespace Gdk { class RGBA; }
 
 namespace Util
 {
@@ -47,7 +47,7 @@ Glib::ustring substitute_references(const Glib::ustring& substitution,
 Glib::ustring filename_short_display_name(const std::string& filename);
 
 Glib::ustring int_to_string(int number);
-Glib::ustring color_to_string(const Gdk::Color& color);
+Glib::ustring color_to_string(const Gdk::RGBA& color);
 
 int enum_from_nick_impl(GType type, const Glib::ustring& nick);
 Glib::ustring enum_to_nick_impl(GType type, int value);

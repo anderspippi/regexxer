@@ -26,7 +26,7 @@
 #include "signalutils.h"
 #include "undostack.h"
 
-#include <gdkmm/color.h>
+#include <gdkmm/rgba.h>
 #include <gdkmm/pixbuf.h>
 #include <gtkmm/treemodel.h>
 #include <gtkmm/treeview.h>
@@ -97,8 +97,8 @@ private:
   Glib::RefPtr<Gdk::Pixbuf>     pixbuf_file_;
   Glib::RefPtr<Gdk::Pixbuf>     pixbuf_load_failed_;
 
-  Gdk::Color                    color_modified_;
-  Gdk::Color                    color_load_failed_;
+  Gdk::RGBA                    color_modified_;
+  Gdk::RGBA                    color_load_failed_;
 
   TreeRowRefPtr                 last_selected_rowref_;
   FileInfoPtr                   last_selected_;

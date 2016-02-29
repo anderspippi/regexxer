@@ -286,7 +286,7 @@ void FileTree::on_style_updated()
   pixbuf_load_failed_ = render_icon_pixbuf(Gtk::Stock::MISSING_IMAGE, Gtk::ICON_SIZE_MENU);
 
   Gdk::RGBA rgba = get_style_context()->get_color(Gtk::STATE_FLAG_INSENSITIVE);
-  color_load_failed_.set_rgb_p(rgba.get_red(), rgba.get_green(), rgba.get_blue());
+  color_load_failed_.set_rgba(rgba.get_red(), rgba.get_green(), rgba.get_blue());
 
   Gtk::TreeView::on_style_updated();
 }
@@ -317,7 +317,7 @@ void FileTree::text_cell_data_func(Gtk::CellRenderer* cell, const Gtk::TreeModel
   Gtk::CellRendererText& renderer = dynamic_cast<Gtk::CellRendererText&>(*cell);
   const FileInfoBasePtr  infobase = (*iter)[FileTreeColumns::instance().fileinfo];
 
-  const Gdk::Color* color = 0;
+  const Gdk::RGBA* color = 0;
 
   if (const FileInfoPtr fileinfo = shared_dynamic_cast<FileInfo>(infobase))
   {
@@ -333,9 +333,9 @@ void FileTree::text_cell_data_func(Gtk::CellRenderer* cell, const Gtk::TreeModel
   }
 
   if (color)
-    renderer.property_foreground_gdk() = *color;
+    renderer.property_foreground_rgba() = *color;
   else
-    renderer.property_foreground_gdk().reset_value();
+    renderer.property_foreground_rgba().reset_value();
 
   if (color == &color_modified_)
     renderer.property_style() = Pango::STYLE_OBLIQUE;

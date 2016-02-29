@@ -122,11 +122,11 @@ void PrefDialog::on_conf_value_changed(const Glib::ustring& key)
   }
   else if (key.raw() == conf_key_match_color)
   {
-    button_match_color_->set_color(Gdk::Color(settings->get_string(key)));
+    button_match_color_->set_rgba(Gdk::RGBA(settings->get_string(key)));
   }
   else if (key.raw() == conf_key_current_match_color)
   {
-    button_current_color_->set_color(Gdk::Color(settings->get_string(key)));
+    button_current_color_->set_rgba(Gdk::RGBA(settings->get_string(key)));
   }
   else if (key.raw() == conf_key_fallback_encoding)
   {
@@ -154,13 +154,13 @@ void PrefDialog::on_textview_font_set()
 
 void PrefDialog::on_match_color_set()
 {
-  const Glib::ustring value = Util::color_to_string(button_match_color_->get_color());
+  const Glib::ustring value = Util::color_to_string(button_match_color_->get_rgba());
   Settings::instance()->set_string(conf_key_match_color, value);
 }
 
 void PrefDialog::on_current_color_set()
 {
-  const Glib::ustring value = Util::color_to_string(button_current_color_->get_color());
+  const Glib::ustring value = Util::color_to_string(button_current_color_->get_rgba());
   Settings::instance()->set_string(conf_key_current_match_color, value);
 }
 
