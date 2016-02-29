@@ -95,7 +95,7 @@ FileErrorDialog::FileErrorDialog(Gtk::Window& parent, const Glib::ustring& messa
   for (ErrorList::const_iterator perr = error_list.begin(); perr != error_list.end(); ++perr)
     buffer_end = buffer->insert(buffer_end, *perr + '\n');
 
-  Box& box = *get_vbox();
+  Box& box = *get_content_area();
   Frame *const frame = new Frame();
   box.pack_start(*manage(frame), PACK_EXPAND_WIDGET);
   frame->set_border_width(6); // HIG spacing
