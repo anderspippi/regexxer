@@ -102,7 +102,7 @@ private:
   class BusyAction;
 
   Glib::RefPtr<Gtk::Application> application_;
-  std::auto_ptr<Gtk::ApplicationWindow>  window_;
+  std::unique_ptr<Gtk::ApplicationWindow>  window_;
   Controller                  controller_;
 
   Gtk::Box*                   vbox_main_;
@@ -147,8 +147,8 @@ private:
 
   std::list<sigc::connection> buffer_connections_;
 
-  std::auto_ptr<Gtk::Dialog>  about_dialog_;
-  std::auto_ptr<PrefDialog>   pref_dialog_;
+  std::unique_ptr<Gtk::Dialog>  about_dialog_;
+  std::unique_ptr<PrefDialog>   pref_dialog_;
 
   Glib::RefPtr<Gio::SimpleActionGroup> match_action_group_;
   Glib::RefPtr<Gio::SimpleActionGroup> edit_action_group_;

@@ -50,7 +50,7 @@ public:
   Gtk::Dialog* get_dialog() { return dialog_.get(); }
 
 private:
-  std::auto_ptr<Gtk::Dialog>  dialog_;
+  std::unique_ptr<Gtk::Dialog>  dialog_;
   Gtk::FontButton*            button_textview_font_;
   Gtk::ColorButton*           button_match_color_;
   Gtk::ColorButton*           button_current_color_;

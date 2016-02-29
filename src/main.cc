@@ -90,7 +90,7 @@ private:
   RegexxerOptions();
 
 public:
-  static std::auto_ptr<RegexxerOptions> create();
+  static std::unique_ptr<RegexxerOptions> create();
   ~RegexxerOptions();
 
   Glib::OptionContext& context()    { return context_; }
@@ -125,9 +125,9 @@ RegexxerOptions::~RegexxerOptions()
 {}
 
 // static
-std::auto_ptr<RegexxerOptions> RegexxerOptions::create()
+std::unique_ptr<RegexxerOptions> RegexxerOptions::create()
 {
-  std::auto_ptr<RegexxerOptions> options (new RegexxerOptions());
+  std::unique_ptr<RegexxerOptions> options (new RegexxerOptions());
 
   Glib::OptionGroup&  group = options->group_;
   Regexxer::InitState& init = options->init_state_;
@@ -201,7 +201,7 @@ int main(int argc, char** argv)
   {
     Util::initialize_gettext(PACKAGE_TARNAME, REGEXXER_LOCALEDIR);
 
-    std::auto_ptr<RegexxerOptions> options = RegexxerOptions::create();
+    std::unique_ptr<RegexxerOptions> options = RegexxerOptions::create();
     options->context().parse(argc, argv);
     Glib::RefPtr<Gtk::Application> app =
         Gtk::Application::create(argc, argv, Regexxer::conf_schema);

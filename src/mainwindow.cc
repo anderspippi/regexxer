@@ -572,13 +572,8 @@ void MainWindow::on_hide()
   // necessary since they'd be deleted in the destructor anyway.  But if we
   // have to do a lot of cleanup the dialogs would stay open for that time,
   // which doesn't look neat.
-  {
-    // Play safe and transfer ownership, and let the dtor do the delete.
-    const std::auto_ptr<Gtk::Dialog> temp (about_dialog_);
-  }
-  {
-    const std::auto_ptr<PrefDialog> temp (pref_dialog_);
-  }
+  about_dialog_.reset();
+  pref_dialog_.reset();
 }
 
 void MainWindow::on_style_updated()
@@ -1173,7 +1168,7 @@ void MainWindow::on_about()
   }
   else
   {
-    std::auto_ptr<Gtk::AboutDialog> dialog (new Gtk::AboutDialog());
+    std::unique_ptr<Gtk::AboutDialog> dialog (new Gtk::AboutDialog());
     std::vector<Glib::ustring> authors;
     for (int i = 0; program_authors[i]; i++)
       authors.push_back(program_authors[i]);
@@ -1194,14 +1189,13 @@ void MainWindow::on_about()
     dialog->show();
     dialog->signal_response().connect(sigc::mem_fun(*this, &MainWindow::on_about_dialog_response));
 
-    about_dialog_ = dialog;
+    about_dialog_ = std::move(dialog);
   }
 }
 
 void MainWindow::on_about_dialog_response(int)
 {
-  // Play safe and transfer ownership, and let the dtor do the delete.
-  const std::auto_ptr<Gtk::Dialog> temp (about_dialog_);
+  about_dialog_.reset();
 }
 
 void MainWindow::on_preferences()
@@ -1212,20 +1206,19 @@ void MainWindow::on_preferences()
   }
   else
   {
-    std::auto_ptr<PrefDialog> dialog (new PrefDialog(*window_));
+    std::unique_ptr<PrefDialog> dialog (new PrefDialog(*window_));
 
     dialog->get_dialog()->signal_hide()
         .connect(sigc::mem_fun(*this, &MainWindow::on_pref_dialog_hide));
     dialog->get_dialog()->show();
 
-    pref_dialog_ = dialog;
+    pref_dialog_ = std::move(dialog);
   }
 }
 
 void MainWindow::on_pref_dialog_hide()
 {
-  // Play safe and transfer ownership, and let the dtor do the delete.
-  const std::auto_ptr<PrefDialog> temp (pref_dialog_);
+  pref_dialog_.reset();
 }
 
 void MainWindow::on_conf_value_changed(const Glib::ustring& key)
