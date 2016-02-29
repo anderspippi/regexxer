@@ -26,7 +26,9 @@
 #include "settings.h"
 
 #include <glibmm.h>
-#include <gtkmm/stock.h>
+#include <gtkmm/icontheme.h>
+
+#include <iostream>
 
 #include <config.h>
 
@@ -281,9 +283,18 @@ int FileTree::get_modified_count() const
 
 void FileTree::on_style_updated()
 {
-  pixbuf_directory_   = render_icon_pixbuf(Gtk::Stock::DIRECTORY,     Gtk::ICON_SIZE_MENU);
-  pixbuf_file_        = render_icon_pixbuf(Gtk::Stock::FILE,          Gtk::ICON_SIZE_MENU);
-  pixbuf_load_failed_ = render_icon_pixbuf(Gtk::Stock::MISSING_IMAGE, Gtk::ICON_SIZE_MENU);
+  auto theme = Gtk::IconTheme::get_default();
+
+  try
+  {
+    pixbuf_directory_   = theme->load_icon("folder",     Gtk::ICON_SIZE_MENU);
+    pixbuf_file_        = theme->load_icon("text-x-generic",          Gtk::ICON_SIZE_MENU);
+    pixbuf_load_failed_ = theme->load_icon("missing-image", Gtk::ICON_SIZE_MENU);
+  }
+  catch(const Glib::Error& ex)
+  {
+    std::cerr << G_STRFUNC << ": Could not load icons: " << ex.what() << std::endl;
+  }
 
   Gdk::RGBA rgba = get_style_context()->get_color(Gtk::STATE_FLAG_INSENSITIVE);
   color_load_failed_.set_rgba(rgba.get_red(), rgba.get_green(), rgba.get_blue());
@@ -906,6 +917,17 @@ void FileTree::load_file_with_fallback(const Gtk::TreeModel::iterator& iter,
 
   const bool old_load_failed = fileinfo->load_failed;
 
+  auto theme = Gtk::IconTheme::get_default();
+  Glib::RefPtr<Gdk::Pixbuf> icon;
+  try
+  {
+    icon = theme->load_icon("dialog-error", Gtk::ICON_SIZE_DIALOG);
+  }
+  catch(const Glib::Error& ex)
+  {
+    std::cerr << G_STRFUNC << ": Could not load icon: " << ex.what() << std::endl;
+  }
+
   try
   {
     load_file(fileinfo, fallback_encoding_);
@@ -913,14 +935,14 @@ void FileTree::load_file_with_fallback(const Gtk::TreeModel::iterator& iter,
   catch (const Glib::Error& error)
   {
     fileinfo->buffer = FileBuffer::create_with_error_message(
-        render_icon_pixbuf(Gtk::Stock::DIALOG_ERROR, Gtk::ICON_SIZE_DIALOG), error.what());
+        icon, error.what());
   }
   catch (const ErrorBinaryFile&)
   {
     const Glib::ustring filename = (*iter)[FileTreeColumns::instance().filename];
 
     fileinfo->buffer = FileBuffer::create_with_error_message(
-        render_icon_pixbuf(Gtk::Stock::DIALOG_ERROR, Gtk::ICON_SIZE_DIALOG),
+        icon,
         Util::compose(_("\342\200\234%1\342\200\235 seems to be a binary file."), filename));
   }
 
