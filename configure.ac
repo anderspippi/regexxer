@@ -30,6 +30,8 @@ AC_ARG_VAR([ACLOCAL_FLAGS], [aclocal flags, e.g. -I <macro dir>])
 AC_PROG_CC
 AC_PROG_CXX
 
+AX_CXX_COMPILE_STDCXX([11], [noext], [mandatory])
+
 IT_PROG_INTLTOOL([0.35])
 AC_SUBST([GETTEXT_PACKAGE], [regexxer])
 AM_GNU_GETTEXT_VERSION([0.11])
