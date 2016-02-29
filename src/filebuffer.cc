@@ -813,7 +813,7 @@ void FileBuffer::remove_match_at_iter(const FileBuffer::iterator& start)
 
       remove_tag(tagtable->match, start, stop);
 
-      if (start.begins_tag(tagtable->current))
+      if (start.starts_tag(tagtable->current))
         remove_tag(tagtable->current, start, stop);
     }
 
