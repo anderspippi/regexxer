@@ -67,8 +67,7 @@ src_regexxer_SOURCES =		\
 	src/undostack.h		\
 	src/settings.h
 
-nodist_src_regexxer_SOURCES =	\
-	ui/stockimages.h
+nodist_src_regexxer_SOURCES =
 
 # The location of the gettext catalogs as defined by intltool.
 rxlocaledir = $(prefix)/$(DATADIRNAME)/locale
@@ -93,9 +92,8 @@ desktopdir          = $(datadir)/applications
 desktop_DATA        = ui/regexxer.desktop
 
 dist_intltool       = intltool-extract.in intltool-merge.in intltool-update.in
-stockimages         = ui/stock_save_all_16.png ui/stock_save_all_24.png
 
-dist_noinst_DATA    = $(stockimages) $(dist_intltool) $(desktop_in_files) $(gsettingsschema_in_files)
+dist_noinst_DATA    = $(dist_intltool) $(desktop_in_files) $(gsettingsschema_in_files)
 dist_noinst_SCRIPTS = autogen.sh
 
 BUILT_SOURCES       = $(nodist_src_regexxer_SOURCES)
@@ -115,21 +113,6 @@ install-data-hook: install-update-icon-cache
 uninstall-hook: uninstall-update-icon-cache
 
 dist-hook: dist-changelog
-
-# Note that this rule creates the ui/ build directory as a side effect.
-# This works just fine because the target is in BUILT_SOURCES and thus
-# built before everything else.  Otherwise a special ui/.dirstamp rule
-# would be necessary.
-ui/stockimages.h: $(stockimages)
-	@mkdir ui >/dev/null 2>&1 || test -d ui
-	@build_list='--build-list'; \
-	list='$(stockimages)'; for file in $$list; do \
-	  name=`expr "X/$$file" : '.*[\\/]\([^.]*\)' | sed 'y/-/_/'`; \
-	  dir=; test -f "$$file" || dir='$(srcdir)/'; \
-	  build_list="$$build_list $$name $$dir$$file"; \
-	done; \
-	echo " $(pixbuf_csource) $$build_list >$@"; \
-	$(pixbuf_csource) $$build_list >$@
 
 dist-changelog:
 	@if test -r "$(top_srcdir)/.git"; then \
