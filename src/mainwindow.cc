@@ -430,8 +430,8 @@ void MainWindow::init_actions()
     match_action_group_->insert(action);
     action_to_group_[match_actions[i].name] = match_action_group_;
     if (match_actions[i].accelerator)
-        application_->set_accel_for_action(match_actions[i].accelerator,
-                                      Glib::ustring("match.") + match_actions[i].name);
+        application_->set_accel_for_action(Glib::ustring("match.") + match_actions[i].name,
+                                      match_actions[i].accelerator);
   }
 
   static struct actions edit_actions[] =
@@ -451,8 +451,8 @@ void MainWindow::init_actions()
     edit_action_group_->insert(action);
     action_to_group_[edit_actions[i].name] = edit_action_group_;
     if (edit_actions[i].accelerator)
-        application_->set_accel_for_action(edit_actions[i].accelerator,
-                                      Glib::ustring("edit.") + edit_actions[i].name);
+        application_->set_accel_for_action(Glib::ustring("edit.") + edit_actions[i].name,
+                                      edit_actions[i].accelerator);
   }
 
   static struct actions save_actions[] =
@@ -470,8 +470,8 @@ void MainWindow::init_actions()
     save_action_group_->insert(action);
     action_to_group_[save_actions[i].name] = save_action_group_;
     if (save_actions[i].accelerator)
-        application_->set_accel_for_action(save_actions[i].accelerator,
-                                      Glib::ustring("save.") + save_actions[i].name);
+        application_->set_accel_for_action(Glib::ustring("save.") + save_actions[i].name,
+                                      save_actions[i].accelerator);
   }
 
   window_->insert_action_group("match", match_action_group_);
