@@ -78,12 +78,12 @@ CounterBox::CounterBox(const Glib::ustring& label)
 
   box->pack_start(*manage(new Label(label + ' ')), PACK_SHRINK);
 
-  label_index_ = new Label("", 1.0, 0.5);
+  label_index_ = new Label("", ALIGN_END, ALIGN_CENTER);
   box->pack_start(*manage(label_index_), PACK_SHRINK);
 
   box->pack_start(*manage(new Label("/")), PACK_SHRINK, 2);
 
-  label_count_ = new Label("", 0.0, 0.5);
+  label_count_ = new Label("", ALIGN_START, ALIGN_CENTER);
   box->pack_start(*manage(label_count_), PACK_SHRINK);
 
   label_index_->set_single_line_mode(true);
