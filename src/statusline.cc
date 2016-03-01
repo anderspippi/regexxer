@@ -168,15 +168,15 @@ void CounterBox::recalculate_label_width()
     widest_number = (digits_range_ / 10) * second_widest_digit_;
   }
 
-  int width = 0, height = 0, xpad = 0, ypad = 0;
+  int width = 0, height = 0, xpad = 0;
 
   const Glib::ustring text = number_to_string(widest_number);
   label_index_->create_pango_layout(text)->get_pixel_size(width, height);
 
-  label_index_->get_padding(xpad, ypad);
+  xpad = label_index_->get_margin_start() + label_index_->get_margin_end();
   label_index_->set_size_request(width + 2 * xpad, -1);
 
-  label_count_->get_padding(xpad, ypad);
+  xpad = label_count_->get_margin_start() + label_count_->get_margin_end();
   label_count_->set_size_request(width + 2 * xpad, -1);
 }
 
