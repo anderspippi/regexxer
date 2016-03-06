@@ -1,14 +1,14 @@
 # Serbian translation of regexxer
-# Courtesy of Prevod.org team (http://prevod.org/) -- 2004—2014.
+# Courtesy of Prevod.org team (http://prevod.org/) -- 2004—2016.
 # This file is distributed under the same license as the regexxer package.
-# Maintainer: Данило Шеган <dsegan@gmx.net>, 2004.
-# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011—2014.
+# Данило Шеган <dsegan@gmx.net>, 2004.
+# Мирослав Николић <miroslavnikolic@rocketmail.com>, 2011—2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-04-16 22:55+0000\n"
-"PO-Revision-Date: 2014-10-28 21:15+0200\n"
+"POT-Creation-Date: 2016-03-01 11:16+0000\n"
+"PO-Revision-Date: 2016-03-06 11:10+0200\n"
 "Last-Translator: Мирослав Николић <miroslavnikolic@rocketmail.com>\n"
 "Language-Team: Serbian <gnom@prevod.org>\n"
 "Language: sr\n"
@@ -17,13 +17,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
 "n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Project-Style: gnome\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "Регизрер — алат за претрагу"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
 msgid "Search and replace using regular expressions"
 msgstr "Тражите и замените користећи регуларне изразе"
 
@@ -166,81 +165,77 @@ msgstr "Одређује која врста размака ће бити исц
 msgid "Can’t read file:"
 msgstr "Не могу да учитам датотеку:"
 
-#: ../src/filetree.cc:60
+#: ../src/filetree.cc:62
 msgid "File"
 msgstr "Датотека"
 
-#: ../src/filetree.cc:79
+#: ../src/filetree.cc:81
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:508
+#: ../src/filetree.cc:519
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "Нисам успео да сачувам датотеку „%1“: %2"
 
-#: ../src/filetree.cc:924
+#: ../src/filetree.cc:946
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "Чини се да је „%1“ бинарна датотека."
 
-#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
-msgid "Save _all"
-msgstr "Сачувај с_ве"
-
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "Find files matching PATTERN"
 msgstr "Налази датотеке које одговарају ОБРАСЦУ"
 
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "PATTERN"
 msgstr "ОБРАЗАЦ"
 
-#: ../src/main.cc:137
+#: ../src/main.cc:103
 msgid "Do not recurse into subdirectories"
 msgstr "Не улази у под-директроијуме"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
+#: ../src/main.cc:105 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Налази такође и скривене датотеке"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "Find text matching REGEX"
 msgstr "Налази текст који одговара РЕГИЗУ"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "REGEX"
 msgstr "РЕГИЗ"
 
-#: ../src/main.cc:143
+#: ../src/main.cc:109
 msgid "Find only the first match in a line"
 msgstr "Налази само прво поклапање у реду"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
+#: ../src/main.cc:111 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Тражи независно од величине слова"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "Replace matches with STRING"
 msgstr "Поклапања замењује НИСКОМ"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "STRING"
 msgstr "НИСКА"
 
-#: ../src/main.cc:149
+#: ../src/main.cc:115
 msgid "Print match location to standard output"
 msgstr "Исписује положај поклапања на стандардни излаз"
 
-#: ../src/main.cc:151
+#: ../src/main.cc:117
 msgid "Do not automatically start search"
 msgstr "Не започиње самостално претрагу"
 
-#: ../src/main.cc:153
+#: ../src/main.cc:119
 msgid "[FOLDER]"
 msgstr "[ФАСЦИКЛА]"
 
-#: ../src/mainwindow.cc:701
+#: ../src/mainwindow.cc:708
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -248,7 +243,15 @@ msgstr ""
 "Неке датотеке још увек нису сачуване.\n"
 "Да затворим ипак?"
 
-#: ../src/mainwindow.cc:715
+#: ../src/mainwindow.cc:711
+msgid "_Cancel"
+msgstr "_Откажи"
+
+#: ../src/mainwindow.cc:712 ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "И_зађи"
+
+#: ../src/mainwindow.cc:722
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -256,19 +259,19 @@ msgstr ""
 "Неке датотеке још увек нису сачуване.\n"
 "Да наставим ипак?"
 
-#: ../src/mainwindow.cc:745
+#: ../src/mainwindow.cc:752
 msgid "The file search pattern is invalid."
 msgstr "Образац за тражење датотека је неисправан."
 
-#: ../src/mainwindow.cc:751
+#: ../src/mainwindow.cc:758
 msgid "The following errors occurred during search:"
 msgstr "Дошло је до следећих грешака приликом претраге:"
 
-#: ../src/mainwindow.cc:1020
+#: ../src/mainwindow.cc:1027
 msgid "The following errors occurred during save:"
 msgstr "Дошло је до следећих грешака приликом чувања:"
 
-#: ../src/mainwindow.cc:1177
+#: ../src/mainwindow.cc:1184
 msgid "translator-credits"
 msgstr ""
 "Данило Шеган <danilo@gnome.org>\n"
@@ -305,13 +308,13 @@ msgstr "_Поставке"
 msgid "_About"
 msgstr "_О програму"
 
-#: ../ui/app-menu.xml.h:3
-msgid "_Quit"
-msgstr "И_зађи"
-
 #: ../ui/gear-menu.xml.h:1
 msgid "_Save"
 msgstr "_Сачувај"
+
+#: ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "Сачувај с_ве"
 
 #: ../ui/gear-menu.xml.h:3
 msgid "_Undo"
@@ -334,12 +337,10 @@ msgid "_Delete"
 msgstr "Об_риши"
 
 #: ../ui/gear-menu.xml.h:8
-#| msgid "_Previous file"
 msgid "Previous file"
 msgstr "Претходна датотека"
 
 #: ../ui/gear-menu.xml.h:9
-#| msgid "Backward"
 msgid "Back"
 msgstr "Назад"
 
@@ -348,27 +349,22 @@ msgid "Forward"
 msgstr "Напред"
 
 #: ../ui/gear-menu.xml.h:11
-#| msgid "_Next file"
 msgid "Next file"
 msgstr "Следећа датотека"
 
 #: ../ui/gear-menu.xml.h:12
-#| msgid "Replace _current"
 msgid "Replace current"
 msgstr "Замените текуће"
 
 #: ../ui/gear-menu.xml.h:13
-#| msgid "Replace in _this file"
 msgid "Replace in this file"
 msgstr "Замени у овој датотеци"
 
 #: ../ui/gear-menu.xml.h:14
-#| msgid "Replace in _all files"
 msgid "Replace in all files"
 msgstr "Замени у свим датотекама"
 
 #: ../ui/mainwindow.ui.h:1
-#| msgid "Save _all"
 msgid "Save all"
 msgstr "Сачувај све"
 
