@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the regexxer package.
 #
 # Gabor Kelemen <kelemeng at gnome dot hu>, 2005, 2010, 2012.
-# Balázs Úr <urbalazs at gmail dot com>, 2014.
+# Balázs Úr <urbalazs at gmail dot com>, 2014, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-04-16 22:55+0000\n"
-"PO-Revision-Date: 2014-09-21 01:02+0200\n"
+"POT-Creation-Date: 2016-03-01 11:16+0000\n"
+"PO-Revision-Date: 2016-03-06 23:35+0100\n"
 "Last-Translator: Balázs Úr <urbalazs@gmail.com>\n"
 "Language-Team: Hungarian <gnome at fsf dot hu>\n"
 "Language: hu\n"
@@ -23,7 +23,7 @@ msgstr ""
 msgid "regexxer Search Tool"
 msgstr "regexxer keresőeszköz"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
 msgid "Search and replace using regular expressions"
 msgstr "Keresés és csere reguláris kifejezések használatával"
 
@@ -167,81 +167,77 @@ msgstr "Milyen típusú szóköz jelenjen meg a szövegnézetben."
 msgid "Can’t read file:"
 msgstr "Nem lehet olvasni a fájlt:"
 
-#: ../src/filetree.cc:60
+#: ../src/filetree.cc:62
 msgid "File"
 msgstr "Fájl"
 
-#: ../src/filetree.cc:79
+#: ../src/filetree.cc:81
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:508
+#: ../src/filetree.cc:519
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "A(z) „%1” fájl mentése sikertelen: %2"
 
-#: ../src/filetree.cc:924
+#: ../src/filetree.cc:946
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "„%1” bináris fájlnak tűnik."
 
-#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
-msgid "Save _all"
-msgstr "Összes _mentése"
-
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "Find files matching PATTERN"
 msgstr "A MINTÁRA illeszkedő fájlok keresése"
 
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "PATTERN"
 msgstr "MINTA"
 
-#: ../src/main.cc:137
+#: ../src/main.cc:103
 msgid "Do not recurse into subdirectories"
 msgstr "Alkönyvtárakba ne menjen le"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
+#: ../src/main.cc:105 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Rejtett fájlokat is keres"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "Find text matching REGEX"
 msgstr "A REGEX-re illeszkedő fájlok keresése"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "REGEX"
 msgstr "REGEX"
 
-#: ../src/main.cc:143
+#: ../src/main.cc:109
 msgid "Find only the first match in a line"
 msgstr "Csak az első találat keresése egy sorban"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
+#: ../src/main.cc:111 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "A kis- és nagybetűk nem különböznek"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "Replace matches with STRING"
 msgstr "Találatok helyettesítése a STRING-gel"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "STRING"
 msgstr "KARAKTERLÁNC"
 
-#: ../src/main.cc:149
+#: ../src/main.cc:115
 msgid "Print match location to standard output"
 msgstr "Találat helyének kiírása a szabvány kimenetre"
 
-#: ../src/main.cc:151
+#: ../src/main.cc:117
 msgid "Do not automatically start search"
 msgstr "Ne kezdjen keresni automatikusan"
 
-#: ../src/main.cc:153
+#: ../src/main.cc:119
 msgid "[FOLDER]"
 msgstr "[MAPPA]"
 
-#: ../src/mainwindow.cc:701
+#: ../src/mainwindow.cc:708
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -249,7 +245,15 @@ msgstr ""
 "Néhány fájl még nincs elmentve.\n"
 "Mindenképp kilép?"
 
-#: ../src/mainwindow.cc:715
+#: ../src/mainwindow.cc:711
+msgid "_Cancel"
+msgstr "_Mégse"
+
+#: ../src/mainwindow.cc:712 ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "_Kilépés"
+
+#: ../src/mainwindow.cc:722
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -257,19 +261,19 @@ msgstr ""
 "Néhány fájl még nincs elmentve.\n"
 "Mindenképp folytatja?"
 
-#: ../src/mainwindow.cc:745
+#: ../src/mainwindow.cc:752
 msgid "The file search pattern is invalid."
 msgstr "A fájlkereső minta érvénytelen."
 
-#: ../src/mainwindow.cc:751
+#: ../src/mainwindow.cc:758
 msgid "The following errors occurred during search:"
 msgstr "A következő hibák léptek fel keresés közben:"
 
-#: ../src/mainwindow.cc:1020
+#: ../src/mainwindow.cc:1027
 msgid "The following errors occurred during save:"
 msgstr "A következő hibák léptek fel mentés közben:"
 
-#: ../src/mainwindow.cc:1177
+#: ../src/mainwindow.cc:1184
 msgid "translator-credits"
 msgstr "Kelemen Gábor <kelemeng@gnome.hu>"
 
@@ -302,14 +306,13 @@ msgstr "_Beállítások"
 msgid "_About"
 msgstr "_Névjegy"
 
-#: ../ui/app-menu.xml.h:3
-msgid "_Quit"
-msgstr "_Kilépés"
-
 #: ../ui/gear-menu.xml.h:1
-#| msgid "Save all"
 msgid "_Save"
 msgstr "M_entés"
+
+#: ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "Összes _mentése"
 
 #: ../ui/gear-menu.xml.h:3
 msgid "_Undo"
@@ -332,12 +335,10 @@ msgid "_Delete"
 msgstr "_Törlés"
 
 #: ../ui/gear-menu.xml.h:8
-#| msgid "_Previous file"
 msgid "Previous file"
 msgstr "Előző fájl"
 
 #: ../ui/gear-menu.xml.h:9
-#| msgid "Backward"
 msgid "Back"
 msgstr "Vissza"
 
@@ -346,22 +347,18 @@ msgid "Forward"
 msgstr "Előre"
 
 #: ../ui/gear-menu.xml.h:11
-#| msgid "_Next file"
 msgid "Next file"
 msgstr "Következő fájl"
 
 #: ../ui/gear-menu.xml.h:12
-#| msgid "Replace _current"
 msgid "Replace current"
 msgstr "Jelenlegi cseréje"
 
 #: ../ui/gear-menu.xml.h:13
-#| msgid "Replace in _this file"
 msgid "Replace in this file"
 msgstr "Csere ebben a fájlban"
 
 #: ../ui/gear-menu.xml.h:14
-#| msgid "Replace in _all files"
 msgid "Replace in all files"
 msgstr "Csere minden fájlban"
 
