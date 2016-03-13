@@ -5,14 +5,14 @@
 #
 # Miloslav Trmac <mitr@volny.cz>, 2004.
 # Lucas Lommer <llommer@svn.gnome.org>, 2008 (I did one string only...).
-# Marek Černocký <marek@manet.cz>, 2009, 2010, 2011, 2014.
+# Marek Černocký <marek@manet.cz>, 2009, 2010, 2011, 2014, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-04-16 22:55+0000\n"
-"PO-Revision-Date: 2014-04-22 19:38+0200\n"
+"POT-Creation-Date: 2016-03-01 11:16+0000\n"
+"PO-Revision-Date: 2016-03-13 08:33+0100\n"
 "Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "Language: cs\n"
@@ -20,13 +20,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "Nástroj pro hledání regexxer"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
 msgid "Search and replace using regular expressions"
 msgstr "Hledat a nahradit pomocí regulárních výrazů"
 
@@ -169,81 +169,77 @@ msgstr "Jaký typ mezer vykreslovat v zobrazeném textu."
 msgid "Can’t read file:"
 msgstr "Nelze číst soubor:"
 
-#: ../src/filetree.cc:60
+#: ../src/filetree.cc:62
 msgid "File"
 msgstr "Soubor"
 
-#: ../src/filetree.cc:79
+#: ../src/filetree.cc:81
 msgid "#"
 msgstr "Počet"
 
-#: ../src/filetree.cc:508
+#: ../src/filetree.cc:519
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "Selhalo uložení souboru „%1“: %2"
 
-#: ../src/filetree.cc:924
+#: ../src/filetree.cc:946
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "„%1“ je zřejmě binární soubor."
 
-#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
-msgid "Save _all"
-msgstr "Uložit _vše"
-
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "Find files matching PATTERN"
 msgstr "Hledat soubory odpovídající VZORU"
 
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "PATTERN"
 msgstr "VZOR"
 
-#: ../src/main.cc:137
+#: ../src/main.cc:103
 msgid "Do not recurse into subdirectories"
 msgstr "Nezanořovat se do podsložek"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
+#: ../src/main.cc:105 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Hledat i skryté soubory"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "Find text matching REGEX"
 msgstr "Hledat text odpovídající REGEX"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "REGEX"
 msgstr "REGEX"
 
-#: ../src/main.cc:143
+#: ../src/main.cc:109
 msgid "Find only the first match in a line"
 msgstr "Hledat pouze první výskyt na řádku"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
+#: ../src/main.cc:111 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Nerozlišovat velikost písmen"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "Replace matches with STRING"
 msgstr "Nahradit výskyty ŘETĚZCEM"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "STRING"
 msgstr "ŘETĚZEC"
 
-#: ../src/main.cc:149
+#: ../src/main.cc:115
 msgid "Print match location to standard output"
 msgstr "Vypsat umístění výskytů na standardní výstup"
 
-#: ../src/main.cc:151
+#: ../src/main.cc:117
 msgid "Do not automatically start search"
 msgstr "Nezačínat hledání automaticky"
 
-#: ../src/main.cc:153
+#: ../src/main.cc:119
 msgid "[FOLDER]"
 msgstr "[SLOŽKA]"
 
-#: ../src/mainwindow.cc:701
+#: ../src/mainwindow.cc:708
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -251,7 +247,15 @@ msgstr ""
 "Některé soubory dosud nebyly uloženy.\n"
 "Přesto skončit?"
 
-#: ../src/mainwindow.cc:715
+#: ../src/mainwindow.cc:711
+msgid "_Cancel"
+msgstr "_Zrušit"
+
+#: ../src/mainwindow.cc:712 ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "U_končit"
+
+#: ../src/mainwindow.cc:722
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -259,19 +263,19 @@ msgstr ""
 "Některé soubory dosud nebyly uloženy.\n"
 "Přesto pokračovat?"
 
-#: ../src/mainwindow.cc:745
+#: ../src/mainwindow.cc:752
 msgid "The file search pattern is invalid."
 msgstr "Vzor pro hledání souborů je neplatný."
 
-#: ../src/mainwindow.cc:751
+#: ../src/mainwindow.cc:758
 msgid "The following errors occurred during search:"
 msgstr "Při hledání došlo k následujícím chybám:"
 
-#: ../src/mainwindow.cc:1020
+#: ../src/mainwindow.cc:1027
 msgid "The following errors occurred during save:"
 msgstr "Při ukládání došlo k následujícím chybám:"
 
-#: ../src/mainwindow.cc:1177
+#: ../src/mainwindow.cc:1184
 msgid "translator-credits"
 msgstr ""
 "Miloslav Trmač <mitr@volny.cz>\n"
@@ -306,13 +310,13 @@ msgstr "_Předvolby"
 msgid "_About"
 msgstr "O _aplikaci"
 
-#: ../ui/app-menu.xml.h:3
-msgid "_Quit"
-msgstr "U_končit"
-
 #: ../ui/gear-menu.xml.h:1
 msgid "_Save"
 msgstr "_Uložit"
+
+#: ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "Uložit _vše"
 
 #: ../ui/gear-menu.xml.h:3
 msgid "_Undo"
