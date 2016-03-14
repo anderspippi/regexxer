@@ -11,8 +11,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://regexxer.sourceforge.net/bugs\n"
-"POT-Creation-Date: 2016-03-01 22:03+0100\n"
-"PO-Revision-Date: 2016-03-01 22:04+0100\n"
+"POT-Creation-Date: 2016-03-14 04:37+0100\n"
+"PO-Revision-Date: 2016-03-14 04:38+0100\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <gnomepl@aviary.pl>\n"
 "Language: pl\n"
@@ -26,7 +26,7 @@ msgstr ""
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
-msgstr "Narzędzie do wyszukiwania regexxer"
+msgstr "regexxer"
 
 #: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
 msgid "Search and replace using regular expressions"
