@@ -1,15 +1,15 @@
 # Swedish messages for regexxer.
-# Copyright © 2004-2015 Free Software Foundation, Inc.
+# Copyright © 2004-2016 Free Software Foundation, Inc.
 # Christian Rose <menthos@menthos.com>, 2004.
 # Daniel Nylander <po@danielnylander.se>, 2006, 2009, 2011.
-# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015.
+# Anders Jonsson <anders.jonsson@norsjovallen.se>, 2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2015-03-01 11:52+0000\n"
-"PO-Revision-Date: 2015-03-08 12:34+0100\n"
+"POT-Creation-Date: 2016-03-01 11:16+0000\n"
+"PO-Revision-Date: 2016-03-18 22:50+0100\n"
 "Last-Translator: Anders Jonsson <anders.jonsson@norsjovallen.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.3\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "regexxer sökverktyg"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1183
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
 msgid "Search and replace using regular expressions"
 msgstr "Sök och ersätt med hjälp av reguljära uttryck"
 
@@ -167,81 +167,77 @@ msgstr "Vilken typ av mellanslag som ska ritas ut i textvyn."
 msgid "Can’t read file:"
 msgstr "Kan inte läsa fil:"
 
-#: ../src/filetree.cc:60
+#: ../src/filetree.cc:62
 msgid "File"
 msgstr "Fil"
 
-#: ../src/filetree.cc:79
+#: ../src/filetree.cc:81
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:508
+#: ../src/filetree.cc:519
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "Misslyckades med att spara filen \"%1\": %2"
 
-#: ../src/filetree.cc:924
+#: ../src/filetree.cc:946
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "\"%1\" verkar vara en binärfil."
 
-#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
-msgid "Save _all"
-msgstr "Spara _alla"
-
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "Find files matching PATTERN"
 msgstr "Hitta filer som matchar MÖNSTER"
 
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "PATTERN"
 msgstr "MÖNSTER"
 
-#: ../src/main.cc:137
+#: ../src/main.cc:103
 msgid "Do not recurse into subdirectories"
 msgstr "Gå inte rekursivt in i underkataloger"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
+#: ../src/main.cc:105 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Hitta även dolda filer"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "Find text matching REGEX"
 msgstr "Hitta text som matchar REGUTR"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "REGEX"
 msgstr "REGUTR"
 
-#: ../src/main.cc:143
+#: ../src/main.cc:109
 msgid "Find only the first match in a line"
 msgstr "Hitta endast första träffen på en rad"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
+#: ../src/main.cc:111 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Utför skiftlägesokänslig matchning"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "Replace matches with STRING"
 msgstr "Ersätt träffar med STRÄNG"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "STRING"
 msgstr "STRÄNG"
 
-#: ../src/main.cc:149
+#: ../src/main.cc:115
 msgid "Print match location to standard output"
 msgstr "Skriv ut träffplats till standard ut"
 
-#: ../src/main.cc:151
+#: ../src/main.cc:117
 msgid "Do not automatically start search"
 msgstr "Starta inte sökningen automatiskt"
 
-#: ../src/main.cc:153
+#: ../src/main.cc:119
 msgid "[FOLDER]"
 msgstr "[MAPP]"
 
-#: ../src/mainwindow.cc:713
+#: ../src/mainwindow.cc:708
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -249,7 +245,15 @@ msgstr ""
 "Vissa filer har inte sparats ännu.\n"
 "Avsluta ändå?"
 
-#: ../src/mainwindow.cc:727
+#: ../src/mainwindow.cc:711
+msgid "_Cancel"
+msgstr "_Avbryt"
+
+#: ../src/mainwindow.cc:712 ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "A_vsluta"
+
+#: ../src/mainwindow.cc:722
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -257,20 +261,20 @@ msgstr ""
 "Vissa filer har inte sparats ännu.\n"
 "Fortsätta ändå?"
 
-#: ../src/mainwindow.cc:757
+#: ../src/mainwindow.cc:752
 msgid "The file search pattern is invalid."
 msgstr "Filsökmönstret är ogiltigt."
 
-#: ../src/mainwindow.cc:763
+#: ../src/mainwindow.cc:758
 msgid "The following errors occurred during search:"
 msgstr "Följande fel inträffade under sökningen:"
 
 # Sparandet?
-#: ../src/mainwindow.cc:1032
+#: ../src/mainwindow.cc:1027
 msgid "The following errors occurred during save:"
 msgstr "Följande fel inträffade under sparning:"
 
-#: ../src/mainwindow.cc:1189
+#: ../src/mainwindow.cc:1184
 msgid "translator-credits"
 msgstr ""
 "Daniel Nylander <po@danielnylander.se>\n"
@@ -309,13 +313,13 @@ msgstr "_Inställningar"
 msgid "_About"
 msgstr "_Om"
 
-#: ../ui/app-menu.xml.h:3
-msgid "_Quit"
-msgstr "A_vsluta"
-
 #: ../ui/gear-menu.xml.h:1
 msgid "_Save"
 msgstr "_Spara"
+
+#: ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "Spara _alla"
 
 #: ../ui/gear-menu.xml.h:3
 msgid "_Undo"
