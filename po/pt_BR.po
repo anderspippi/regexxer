@@ -1,32 +1,32 @@
 # Brazilian Portuguese translation of regexxer.
+# Copyright (C) 2016 regexxer's COPYRIGHT HOLDER
 # This file is distributed under the same license as the regexxer package.
 # João Paulo Gomes Vanzuita <joaopaulo99@terra.com.br>, 2004.
 # Raphael Higino <In memoriam>, 2004.
 # Andrius da Costa Ribas <andriusmao@gmail.com>, 2008.
 # Marco Biscaro <marcobiscaro2112@gmail.com>, 2011.
 # Enrico Nicoletto <liverig@gmail.com>, 2013.
-# Rafael Ferreira <rafael.f.f1@gmail.com>, 2014.
-#
+# Rafael Fontenelle <rafaelff@gnome.org>, 2014, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-04-16 22:55+0000\n"
-"PO-Revision-Date: 2014-04-30 01:53-0300\n"
-"Last-Translator: Rafael Ferreira <rafael.f.f1@gmail.com>\n"
+"POT-Creation-Date: 2016-03-01 11:16+0000\n"
+"PO-Revision-Date: 2016-03-18 04:54-0200\n"
+"Last-Translator: Rafael Fontenelle <rafaelff@gnome.org>\n"
 "Language-Team: Brazilian Portuguese <gnome-pt_br-list@gnome.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 1.6.4\n"
+"X-Generator: Virtaal 0.7.1\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "Ferramenta de pesquisa Regexxer"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
 msgid "Search and replace using regular expressions"
 msgstr "Pesquise e substitua usando expressões regulares"
 
@@ -48,7 +48,7 @@ msgstr "Lista dos últimos padrões utilizados na entrada 'ER'."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:5
 msgid "List of last patterns used in the 'Substitution' entry."
-msgstr "Lista dos últimos padrões utilizados na entrada 'Substituição'."
+msgstr "Lista dos últimos padrões utilizados na entrada \"Substituição\"."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:6
 msgid "Text view font"
@@ -170,81 +170,77 @@ msgstr "Qual tipo de espaço a ser desenhado na visualização do texto."
 msgid "Can’t read file:"
 msgstr "Não é possível ler o arquivo:"
 
-#: ../src/filetree.cc:60
+#: ../src/filetree.cc:62
 msgid "File"
 msgstr "Arquivo"
 
-#: ../src/filetree.cc:79
+#: ../src/filetree.cc:81
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:508
+#: ../src/filetree.cc:519
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "Falha ao salvar o arquivo \"%1\": %2"
 
-#: ../src/filetree.cc:924
+#: ../src/filetree.cc:946
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "\"%1\" parece ser um arquivo binário."
 
-#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
-msgid "Save _all"
-msgstr "Salvar _tudo"
-
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "Find files matching PATTERN"
 msgstr "Localizar arquivos que coincidem com PADRÃO"
 
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "PATTERN"
 msgstr "PADRÃO"
 
-#: ../src/main.cc:137
+#: ../src/main.cc:103
 msgid "Do not recurse into subdirectories"
 msgstr "Não incluir subdiretórios"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
+#: ../src/main.cc:105 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Localizar arquivos ocultos também"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "Find text matching REGEX"
 msgstr "Localizar texto que coincida com ER"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "REGEX"
 msgstr "ER"
 
-#: ../src/main.cc:143
+#: ../src/main.cc:109
 msgid "Find only the first match in a line"
 msgstr "Localizar apenas a primeira ocorrência na linha"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
+#: ../src/main.cc:111 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Não diferenciar maiúsc./minúsc."
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "Replace matches with STRING"
 msgstr "Substituir ocorrências com EXPRESSÃO"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "STRING"
 msgstr "EXPRESSÃO"
 
-#: ../src/main.cc:149
+#: ../src/main.cc:115
 msgid "Print match location to standard output"
 msgstr "Imprimir a localização da ocorrência na saída padrão"
 
-#: ../src/main.cc:151
+#: ../src/main.cc:117
 msgid "Do not automatically start search"
 msgstr "Não iniciar pesquisa automaticamente"
 
-#: ../src/main.cc:153
+#: ../src/main.cc:119
 msgid "[FOLDER]"
 msgstr "[PASTA]"
 
-#: ../src/mainwindow.cc:701
+#: ../src/mainwindow.cc:708
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -252,7 +248,15 @@ msgstr ""
 "Alguns arquivos ainda não foram salvos.\n"
 "Sair mesmo assim?"
 
-#: ../src/mainwindow.cc:715
+#: ../src/mainwindow.cc:711
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+#: ../src/mainwindow.cc:712 ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "S_air"
+
+#: ../src/mainwindow.cc:722
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -260,19 +264,19 @@ msgstr ""
 "Alguns arquivos ainda não foram salvos.\n"
 "Continuar mesmo assim?"
 
-#: ../src/mainwindow.cc:745
+#: ../src/mainwindow.cc:752
 msgid "The file search pattern is invalid."
 msgstr "O padrão de pesquisa de arquivos é invalido."
 
-#: ../src/mainwindow.cc:751
+#: ../src/mainwindow.cc:758
 msgid "The following errors occurred during search:"
 msgstr "Os seguintes erros ocorreram durante a pesquisa:"
 
-#: ../src/mainwindow.cc:1020
+#: ../src/mainwindow.cc:1027
 msgid "The following errors occurred during save:"
 msgstr "Os seguintes erros ocorreram durante a gravação:"
 
-#: ../src/mainwindow.cc:1177
+#: ../src/mainwindow.cc:1184
 msgid "translator-credits"
 msgstr ""
 "João Paulo Gomes Vanzuita <joaopaulo99@terra.com.br>\n"
@@ -309,14 +313,13 @@ msgstr "_Preferências"
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../ui/app-menu.xml.h:3
-msgid "_Quit"
-msgstr "S_air"
-
 #: ../ui/gear-menu.xml.h:1
-#| msgid "Save all"
 msgid "_Save"
 msgstr "_Salvar"
+
+#: ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "Salvar _tudo"
 
 #: ../ui/gear-menu.xml.h:3
 msgid "_Undo"
@@ -339,12 +342,10 @@ msgid "_Delete"
 msgstr "_Excluir"
 
 #: ../ui/gear-menu.xml.h:8
-#| msgid "_This file"
 msgid "Previous file"
 msgstr "Arquivo anterior"
 
 #: ../ui/gear-menu.xml.h:9
-#| msgid "Backward"
 msgid "Back"
 msgstr "Voltar"
 
@@ -357,17 +358,14 @@ msgid "Next file"
 msgstr "Próximo arquivo"
 
 #: ../ui/gear-menu.xml.h:12
-#| msgid "Replace current match"
 msgid "Replace current"
 msgstr "Substitui atual"
 
 #: ../ui/gear-menu.xml.h:13
-#| msgid "Replace all matches in all files"
 msgid "Replace in this file"
 msgstr "Substitui neste arquivo"
 
 #: ../ui/gear-menu.xml.h:14
-#| msgid "Replace all matches in all files"
 msgid "Replace in all files"
 msgstr "Substitui em todos arquivos"
 
