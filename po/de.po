@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer master\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-04-16 22:55+0000\n"
-"PO-Revision-Date: 2016-01-04 15:00+0100\n"
+"POT-Creation-Date: 2016-03-01 11:16+0000\n"
+"PO-Revision-Date: 2016-03-21 21:33+0100\n"
 "Last-Translator: Mario Blättermann <mario.blaettermann@gmail.com>\n"
 "Language-Team: German <gnome-de@gnome.org>\n"
 "Language: de\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "regexxer Suchwerkzeug"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1171
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
 msgid "Search and replace using regular expressions"
 msgstr "Suchen und Ersetzen mit regulären Ausdrücken"
 
@@ -173,81 +173,77 @@ msgstr "Legt die Darstellung von Leerzeichen in der Textansicht fest."
 msgid "Can’t read file:"
 msgstr "Datei nicht lesbar:"
 
-#: ../src/filetree.cc:60
+#: ../src/filetree.cc:62
 msgid "File"
 msgstr "Datei"
 
-#: ../src/filetree.cc:79
+#: ../src/filetree.cc:81
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:508
+#: ../src/filetree.cc:519
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "Fehler beim Speichern der Datei »%1«: %2"
 
-#: ../src/filetree.cc:924
+#: ../src/filetree.cc:946
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "»%1« scheint eine Binärdatei zu sein."
 
-#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
-msgid "Save _all"
-msgstr "_Alle speichern"
-
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "Find files matching PATTERN"
 msgstr "Dateien suchen, die auf MUSTER passen"
 
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "PATTERN"
 msgstr "MUSTER"
 
-#: ../src/main.cc:137
+#: ../src/main.cc:103
 msgid "Do not recurse into subdirectories"
 msgstr "Nicht in Unterordner hinabsteigen"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
+#: ../src/main.cc:105 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Auch verborgene Dateien suchen"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "Find text matching REGEX"
 msgstr "Text suchen, der auf REGEX passt"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "REGEX"
 msgstr "REGEX"
 
-#: ../src/main.cc:143
+#: ../src/main.cc:109
 msgid "Find only the first match in a line"
 msgstr "Nur den ersten Treffer in einer Zeile suchen"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
+#: ../src/main.cc:111 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Groß-/Kleinschreibung beim Suchen ignorieren"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "Replace matches with STRING"
 msgstr "Treffer durch STRING ersetzen"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "STRING"
 msgstr "STRING"
 
-#: ../src/main.cc:149
+#: ../src/main.cc:115
 msgid "Print match location to standard output"
 msgstr "Trefferposition auf Standardausgabe anzeigen"
 
-#: ../src/main.cc:151
+#: ../src/main.cc:117
 msgid "Do not automatically start search"
 msgstr "Keine automatische Suche starten"
 
-#: ../src/main.cc:153
+#: ../src/main.cc:119
 msgid "[FOLDER]"
 msgstr "[ORDNER]"
 
-#: ../src/mainwindow.cc:701
+#: ../src/mainwindow.cc:708
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -255,7 +251,15 @@ msgstr ""
 "Einige Dateien wurden noch nicht gespeichert.\n"
 "Trotzdem beenden?"
 
-#: ../src/mainwindow.cc:715
+#: ../src/mainwindow.cc:711
+msgid "_Cancel"
+msgstr "Abbre_chen"
+
+#: ../src/mainwindow.cc:712 ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "_Beenden"
+
+#: ../src/mainwindow.cc:722
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -263,19 +267,19 @@ msgstr ""
 "Einige Dateien wurden noch nicht gespeichert.\n"
 "Trotzdem fortsetzen?"
 
-#: ../src/mainwindow.cc:745
+#: ../src/mainwindow.cc:752
 msgid "The file search pattern is invalid."
 msgstr "Das Dateinamen-Suchmuster ist ungültig."
 
-#: ../src/mainwindow.cc:751
+#: ../src/mainwindow.cc:758
 msgid "The following errors occurred during search:"
 msgstr "Die folgenden Fehler sind beim Suchen aufgetreten:"
 
-#: ../src/mainwindow.cc:1020
+#: ../src/mainwindow.cc:1027
 msgid "The following errors occurred during save:"
 msgstr "Die folgenden Fehler sind beim Speichern aufgetreten:"
 
-#: ../src/mainwindow.cc:1177
+#: ../src/mainwindow.cc:1184
 msgid "translator-credits"
 msgstr ""
 "Daniel Elstner <daniel.kitta@gmail.com>\n"
@@ -310,13 +314,13 @@ msgstr "_Einstellungen"
 msgid "_About"
 msgstr "_Info"
 
-#: ../ui/app-menu.xml.h:3
-msgid "_Quit"
-msgstr "_Beenden"
-
 #: ../ui/gear-menu.xml.h:1
 msgid "_Save"
 msgstr "_Speichern"
+
+#: ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "_Alle speichern"
 
 #: ../ui/gear-menu.xml.h:3
 msgid "_Undo"
