@@ -7,9 +7,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 2.24\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2015-11-16 10:00+0000\n"
-"PO-Revision-Date: 2015-11-16 10:03+0000\n"
-"Last-Translator:  <>\n"
+"POT-Creation-Date: 2016-03-01 11:16+0000\n"
+"PO-Revision-Date: 2016-05-04 20:29+0100\n"
+"Last-Translator: Tiago Santos <tiagofsantos81@sapo.pt>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
@@ -21,7 +21,7 @@ msgstr ""
 msgid "regexxer Search Tool"
 msgstr "Ferramenta de procura Regexxer"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1183
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
 msgid "Search and replace using regular expressions"
 msgstr "Procurar e substituir usando expressões regulares"
 
@@ -30,7 +30,6 @@ msgid "File Patterns"
 msgstr "Padrões de ficheiros"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:2
-#| msgid "List of pre-defined patterns available in the \"Pattern\" entry."
 msgid "List of pre-defined patterns available in the 'Pattern' entry."
 msgstr "Lista de padrões predefinidos disponíveis na entrada \"Padrões\"."
 
@@ -39,12 +38,10 @@ msgid "Regex Patterns"
 msgstr "Padrões de ExpReg"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:4
-#| msgid "List of last patterns used in the \"Regex\" entry."
 msgid "List of last patterns used in the 'Regex' entry."
 msgstr "Lista dos últimos padrões usados na entrada \"ExpReg\"."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:5
-#| msgid "List of last patterns used in the \"Substitution\" entry."
 msgid "List of last patterns used in the 'Substitution' entry."
 msgstr "Lista dos últimos padrões usados na entrada \"Substituíções\"."
 
@@ -169,81 +166,77 @@ msgstr "Que tipo de espaços desenhar na vista de texto."
 msgid "Can’t read file:"
 msgstr "Impossível ler o ficheiro:"
 
-#: ../src/filetree.cc:60
+#: ../src/filetree.cc:62
 msgid "File"
 msgstr "Ficheiro"
 
-#: ../src/filetree.cc:79
+#: ../src/filetree.cc:81
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:508
+#: ../src/filetree.cc:519
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "Falha ao gravar o ficheiro “%1”: %2"
 
-#: ../src/filetree.cc:924
+#: ../src/filetree.cc:946
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "“%1” parece ser um ficheiro binário."
 
-#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
-msgid "Save _all"
-msgstr "Gravar _Tudo"
-
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "Find files matching PATTERN"
 msgstr "Procurar ficheiros coincidentes com PADRÃO"
 
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "PATTERN"
 msgstr "PADRÃO"
 
-#: ../src/main.cc:137
+#: ../src/main.cc:103
 msgid "Do not recurse into subdirectories"
 msgstr "Sem recursividade nas subpastas"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
+#: ../src/main.cc:105 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Procurar também ficheiros ocultos"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "Find text matching REGEX"
 msgstr "Procurar texto coincidente com EXPREG"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "REGEX"
 msgstr "EXPREG"
 
-#: ../src/main.cc:143
+#: ../src/main.cc:109
 msgid "Find only the first match in a line"
 msgstr "Procurar só a primeira coincidência numa linha"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
+#: ../src/main.cc:111 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Não comparar maiúsculas"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "Replace matches with STRING"
 msgstr "Substituir as coincidências por CADEIA"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "STRING"
 msgstr "CADEIA"
 
-#: ../src/main.cc:149
+#: ../src/main.cc:115
 msgid "Print match location to standard output"
 msgstr "Imprimir a localização da coincidência para a saída padrão"
 
-#: ../src/main.cc:151
+#: ../src/main.cc:117
 msgid "Do not automatically start search"
 msgstr "Não iniciar a procura automaticamente"
 
-#: ../src/main.cc:153
+#: ../src/main.cc:119
 msgid "[FOLDER]"
 msgstr "[PASTA]"
 
-#: ../src/mainwindow.cc:713
+#: ../src/mainwindow.cc:708
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -251,7 +244,15 @@ msgstr ""
 "Alguns ficheiros ainda não foram gravados.\n"
 "Ainda assim terminar?"
 
-#: ../src/mainwindow.cc:727
+#: ../src/mainwindow.cc:711
+msgid "_Cancel"
+msgstr "_Cancelar"
+
+#: ../src/mainwindow.cc:712 ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "_Sair"
+
+#: ../src/mainwindow.cc:722
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -259,23 +260,24 @@ msgstr ""
 "Alguns ficheiros ainda não foram gravados.\n"
 "Ainda assim prosseguir?"
 
-#: ../src/mainwindow.cc:757
+#: ../src/mainwindow.cc:752
 msgid "The file search pattern is invalid."
 msgstr "O padrão de procura de ficheiros é inválido."
 
-#: ../src/mainwindow.cc:763
+#: ../src/mainwindow.cc:758
 msgid "The following errors occurred during search:"
 msgstr "Ocorreram os seguintes erros durante a procura:"
 
-#: ../src/mainwindow.cc:1032
+#: ../src/mainwindow.cc:1027
 msgid "The following errors occurred during save:"
 msgstr "Ocorreram os seguintes erros durante a gravação:"
 
-#: ../src/mainwindow.cc:1189
+#: ../src/mainwindow.cc:1184
 msgid "translator-credits"
 msgstr ""
-"Duarte Loreto <happyguy_pt@hotmail.com>Pedro Albuquerque "
-"<palbuquerque73@gmail.com>Tiago S. <almosthumane@portugalmail.pt>"
+"Duarte Loreto <happyguy_pt@hotmail.com>\n"
+"Pedro Albuquerque <palbuquerque73@gmail.com>\n"
+"Tiago Santos <tiagofsantos81@sapo.pt>"
 
 #: ../src/prefdialog.cc:186
 #, qt-format
@@ -306,13 +308,13 @@ msgstr "_Preferências"
 msgid "_About"
 msgstr "_Sobre"
 
-#: ../ui/app-menu.xml.h:3
-msgid "_Quit"
-msgstr "_Sair"
-
 #: ../ui/gear-menu.xml.h:1
 msgid "_Save"
 msgstr "_Gravar"
+
+#: ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "Gravar _Tudo"
 
 #: ../ui/gear-menu.xml.h:3
 msgid "_Undo"
@@ -416,10 +418,6 @@ msgid "A regular expression in Perl syntax"
 msgstr "Uma expressão regular em sintaxe Perl"
 
 #: ../ui/mainwindow.ui.h:16
-#| msgid ""
-#| "The new string to substitute. As in Perl, you can refer to parts of the "
-#| "match using $1, $2, etc. or even $+, $&amp;, $` and \"$. The operators "
-#| "\\l, \\u, \\L, \\U and \\E are supported as well."
 msgid ""
 "The new string to substitute. As in Perl, you can refer to parts of the "
 "match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
