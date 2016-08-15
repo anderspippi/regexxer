@@ -2,14 +2,14 @@
 # Copyright (C) 2015 regexxer's COPYRIGHT HOLDER
 # This file is distributed under the same license as the regexxer package.
 # Moo <hazap@hotmail.com>, 2015.
-# Aurimas Černius <aurisc4@gmail.com>, 2015.
+# Aurimas Černius <aurisc4@gmail.com>, 2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer master\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2016-01-08 14:19+0000\n"
-"PO-Revision-Date: 2016-01-08 20:13+0200\n"
+"POT-Creation-Date: 2016-03-01 11:16+0000\n"
+"PO-Revision-Date: 2016-08-15 13:39+0300\n"
 "Last-Translator: Aurimas Černius <aurisc4@gmail.com>\n"
 "Language-Team: Lietuvių <gnome-lt@lists.akl.lt>\n"
 "Language: lt\n"
@@ -18,13 +18,13 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
 "%100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Poedit 1.8.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
 msgstr "regexxer paieškos įrankis"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1183
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
 msgid "Search and replace using regular expressions"
 msgstr "Ieškoti ir pakeisti naudojant reguliariuosius reiškinius"
 
@@ -167,81 +167,77 @@ msgstr "Kokio tipo tarpus piešti tekto rodinyje."
 msgid "Can’t read file:"
 msgstr "Nepavyksta perskaityti failo:"
 
-#: ../src/filetree.cc:60
+#: ../src/filetree.cc:62
 msgid "File"
 msgstr "Failas"
 
-#: ../src/filetree.cc:79
+#: ../src/filetree.cc:81
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:508
+#: ../src/filetree.cc:519
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "Nepavyko įrašyti failo „%1“: %2"
 
-#: ../src/filetree.cc:924
+#: ../src/filetree.cc:946
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "Atrodo, kad „%1“ yra dvejetainis failas."
 
-#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
-msgid "Save _all"
-msgstr "Įrašyti _visus"
-
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "Find files matching PATTERN"
 msgstr "Rasti failus, kurie atitinka ŠABLONĄ"
 
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "PATTERN"
 msgstr "ŠABLONAS"
 
-#: ../src/main.cc:137
+#: ../src/main.cc:103
 msgid "Do not recurse into subdirectories"
 msgstr "Neapdoroti su pakatalogiais"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
+#: ../src/main.cc:105 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Taip pat rasti ir paslėptus failus"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "Find text matching REGEX"
 msgstr "Rasti tekstą, kuris atitiktų REGULIARŲJĮ REIŠKINĮ"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "REGEX"
 msgstr "REGULIARUSIS REIŠKINYS"
 
-#: ../src/main.cc:143
+#: ../src/main.cc:109
 msgid "Find only the first match in a line"
 msgstr "Rasti tik pirmą atitiktį eilutėje"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
+#: ../src/main.cc:111 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Ieškoti atitikčių, neskiriant raidžių dydžio"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "Replace matches with STRING"
 msgstr "Pakeisti atitiktis EILUTE"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "STRING"
 msgstr "EILUTĖ"
 
-#: ../src/main.cc:149
+#: ../src/main.cc:115
 msgid "Print match location to standard output"
 msgstr "Išspausdinti atitikties vietą į standartinę išvestį"
 
-#: ../src/main.cc:151
+#: ../src/main.cc:117
 msgid "Do not automatically start search"
 msgstr "Nepradėti paieškos automatiškai"
 
-#: ../src/main.cc:153
+#: ../src/main.cc:119
 msgid "[FOLDER]"
 msgstr "[APLANKAS]"
 
-#: ../src/mainwindow.cc:713
+#: ../src/mainwindow.cc:708
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -249,7 +245,15 @@ msgstr ""
 "Kai kurie failai dar nebuvo įrašyti.\n"
 "Vis tiek baigti programos darbą?"
 
-#: ../src/mainwindow.cc:727
+#: ../src/mainwindow.cc:711
+msgid "_Cancel"
+msgstr "_Atsisakyti"
+
+#: ../src/mainwindow.cc:712 ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "_Baigti"
+
+#: ../src/mainwindow.cc:722
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -257,19 +261,19 @@ msgstr ""
 "Kai kurie failai dar nebuvo įrašyti.\n"
 "Vis tiek tęsti?"
 
-#: ../src/mainwindow.cc:757
+#: ../src/mainwindow.cc:752
 msgid "The file search pattern is invalid."
 msgstr "Failų paieškos šablonas yra neteisingas."
 
-#: ../src/mainwindow.cc:763
+#: ../src/mainwindow.cc:758
 msgid "The following errors occurred during search:"
 msgstr "Paieškos metu įvyko šios klaidos:"
 
-#: ../src/mainwindow.cc:1032
+#: ../src/mainwindow.cc:1027
 msgid "The following errors occurred during save:"
 msgstr "Įrašymo metu įvyko šios klaidos:"
 
-#: ../src/mainwindow.cc:1189
+#: ../src/mainwindow.cc:1184
 msgid "translator-credits"
 msgstr ""
 "Išverte:\n"
@@ -304,13 +308,13 @@ msgstr "_Nuostatos"
 msgid "_About"
 msgstr "_Apie"
 
-#: ../ui/app-menu.xml.h:3
-msgid "_Quit"
-msgstr "_Baigti"
-
 #: ../ui/gear-menu.xml.h:1
 msgid "_Save"
 msgstr "Į_rašyti"
+
+#: ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "Įrašyti _visus"
 
 #: ../ui/gear-menu.xml.h:3
 msgid "_Undo"
