@@ -4,28 +4,28 @@
 # Ilkka Tuohela <hile@iki.fi> 2004.
 #
 # Lasse Liehu <lasse.liehu@gmail.com>, 2014.
-# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2015.
+# Jiri Grönroos <jiri.gronroos+l10n@iki.fi>, 2015, 2016.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-11-03 17:03+0000\n"
-"PO-Revision-Date: 2015-09-14 22:25+0300\n"
+"POT-Creation-Date: 2016-03-01 11:16+0000\n"
+"PO-Revision-Date: 2016-09-04 16:45+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
-"Language-Team: suomi <gnome-fi-laatu@lists.sourceforge.net>\n"
+"Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.6\n"
+"X-Generator: Gtranslator 2.91.7\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
-msgstr "regexxer hakutyökalu"
+msgstr "regexxer-hakutyökalu"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1183
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
 msgid "Search and replace using regular expressions"
 msgstr "Hae ja korvaa käyttäen säännöllisiä lausekkeita"
 
@@ -158,7 +158,7 @@ msgstr ""
 
 #: ../ui/org.regexxer.gschema.xml.in.h:28
 msgid "Auto indentation"
-msgstr ""
+msgstr "Automaattinen sisennys"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:29
 msgid "Whether to enable auto indentation in the text view."
@@ -174,83 +174,79 @@ msgstr ""
 
 #: ../src/filebuffer.cc:198
 msgid "Can’t read file:"
-msgstr "Tiedostoa ei voida lukea"
+msgstr "Tiedostoa ei voida lukea:"
 
-#: ../src/filetree.cc:60
+#: ../src/filetree.cc:62
 msgid "File"
 msgstr "Tiedosto"
 
-#: ../src/filetree.cc:79
+#: ../src/filetree.cc:81
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:508
+#: ../src/filetree.cc:519
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "Tiedostoa “%1” ei voitu tallentaa: %2"
 
-#: ../src/filetree.cc:924
+#: ../src/filetree.cc:946
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "“%1” näyttää olevan binäääritiedosto."
 
-#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
-msgid "Save _all"
-msgstr "Tallenna _kaikki"
-
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "Find files matching PATTERN"
 msgstr "Etsi tiedostoja, jotka vastaavat LAUSEKETTA"
 
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "PATTERN"
 msgstr "LAUSEKE"
 
-#: ../src/main.cc:137
+#: ../src/main.cc:103
 msgid "Do not recurse into subdirectories"
 msgstr "Älä mene alihakemistoihin"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
+#: ../src/main.cc:105 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Etsi myös piilotiedostoja"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "Find text matching REGEX"
 msgstr "Etsi tekstiä, joka vastaa säännöllistä lauseketta"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "REGEX"
 msgstr "Säännöllinen lauseke"
 
-#: ../src/main.cc:143
+#: ../src/main.cc:109
 msgid "Find only the first match in a line"
 msgstr "Etsi vain ensimmäinen osuma riviltä"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
+#: ../src/main.cc:111 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Älä välitä kirjainten koosta vertailtaessa"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "Replace matches with STRING"
 msgstr "Korvaa osumat merkkijonolla"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "STRING"
 msgstr "Merkkijono"
 
-#: ../src/main.cc:149
+#: ../src/main.cc:115
 msgid "Print match location to standard output"
 msgstr "Tulosta osuman sijainti oletustulosteeseen"
 
-#: ../src/main.cc:151
+#: ../src/main.cc:117
 msgid "Do not automatically start search"
 msgstr "Älä käynnistä hakua automaattisesti"
 
-#: ../src/main.cc:153
+#: ../src/main.cc:119
 msgid "[FOLDER]"
 msgstr "[KANSIO]"
 
-#: ../src/mainwindow.cc:713
+#: ../src/mainwindow.cc:708
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -258,7 +254,15 @@ msgstr ""
 "Joitain tiedostoja ei ole vielä tallennettu.\n"
 "Lopetaanko siitä huolimatta?"
 
-#: ../src/mainwindow.cc:727
+#: ../src/mainwindow.cc:711
+msgid "_Cancel"
+msgstr "_Peru"
+
+#: ../src/mainwindow.cc:712 ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "_Lopeta"
+
+#: ../src/mainwindow.cc:722
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -266,21 +270,22 @@ msgstr ""
 "Joitain tiedostoja ei ole vielä tallennettu.\n"
 "Jatketaanko siitä huolimatta?"
 
-#: ../src/mainwindow.cc:757
+#: ../src/mainwindow.cc:752
 msgid "The file search pattern is invalid."
 msgstr "Tiedostojen hakumalli on virheellinen"
 
-#: ../src/mainwindow.cc:763
+#: ../src/mainwindow.cc:758
 msgid "The following errors occurred during search:"
 msgstr "Seuraavat virheet tapahtuivat haettaessa:"
 
-#: ../src/mainwindow.cc:1032
+#: ../src/mainwindow.cc:1027
 msgid "The following errors occurred during save:"
 msgstr "Seuraavat virheet tapahtuivat tallennettaessa:"
 
-#: ../src/mainwindow.cc:1189
+#: ../src/mainwindow.cc:1184
 msgid "translator-credits"
 msgstr ""
+"Jiri Grönroos, 2015-2016\n"
 "Ilkka Tuohela, 2004\n"
 "\n"
 "https://l10n.gnome.org/teams/fi/"
@@ -288,7 +293,7 @@ msgstr ""
 #: ../src/prefdialog.cc:186
 #, qt-format
 msgid "“%1” is not a valid encoding."
-msgstr "“%1” ei ole kelvollinen merkistökooda"
+msgstr "“%1” ei ole kelvollinen merkistökoodaus."
 
 #: ../src/statusline.cc:245
 msgid "Stop"
@@ -307,7 +312,6 @@ msgid "Cancels the running search"
 msgstr "Keskeyttää suoritettavan haun"
 
 #: ../ui/app-menu.xml.h:1
-#| msgid "Preferences"
 msgid "_Preferences"
 msgstr "_Asetukset"
 
@@ -315,13 +319,13 @@ msgstr "_Asetukset"
 msgid "_About"
 msgstr "_Tietoja"
 
-#: ../ui/app-menu.xml.h:3
-msgid "_Quit"
-msgstr "_Lopeta"
-
 #: ../ui/gear-menu.xml.h:1
 msgid "_Save"
 msgstr "_Tallenna"
+
+#: ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "Tallenna _kaikki"
 
 #: ../ui/gear-menu.xml.h:3
 msgid "_Undo"
@@ -344,12 +348,10 @@ msgid "_Delete"
 msgstr "_Poista"
 
 #: ../ui/gear-menu.xml.h:8
-#| msgid "_Previous file"
 msgid "Previous file"
 msgstr "Edellinen tiedosto"
 
 #: ../ui/gear-menu.xml.h:9
-#| msgid "Backward"
 msgid "Back"
 msgstr "Takaisin"
 
@@ -358,27 +360,22 @@ msgid "Forward"
 msgstr "Eteenpäin"
 
 #: ../ui/gear-menu.xml.h:11
-#| msgid "_Next file"
 msgid "Next file"
 msgstr "Seuraava tiedosto"
 
 #: ../ui/gear-menu.xml.h:12
-#| msgid "Replace _current"
 msgid "Replace current"
 msgstr "Korvaa nykyinen"
 
 #: ../ui/gear-menu.xml.h:13
-#| msgid "Replace in _this file"
 msgid "Replace in this file"
 msgstr "Korvaa tässä tiedostossa"
 
 #: ../ui/gear-menu.xml.h:14
-#| msgid "Replace in _all files"
 msgid "Replace in all files"
 msgstr "Korvaa kaikissa tiedostoissa"
 
 #: ../ui/mainwindow.ui.h:1
-#| msgid "Save _all"
 msgid "Save all"
 msgstr "Tallenna kaikki"
 
@@ -510,7 +507,6 @@ msgid "Icons only"
 msgstr "Vain kuvakkeet"
 
 #: ../ui/prefdialog.ui.h:2
-#| msgid "Text view font"
 msgid "Text only"
 msgstr "Vain teksti"
 
