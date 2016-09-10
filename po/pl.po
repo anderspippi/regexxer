@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
 "Report-Msgid-Bugs-To: http://regexxer.sourceforge.net/bugs\n"
-"POT-Creation-Date: 2016-08-21 16:21+0200\n"
-"PO-Revision-Date: 2016-08-21 16:22+0200\n"
+"POT-Creation-Date: 2016-09-10 18:43+0200\n"
+"PO-Revision-Date: 2016-09-10 18:44+0200\n"
 "Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <community-poland@mozilla.org>\n"
 "Language: pl\n"
@@ -26,7 +26,7 @@ msgstr "regexxer"
 
 #: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
 msgid "Search and replace using regular expressions"
-msgstr "Wyszukiwanie i zastępowanie używając wyrażeń regularnych"
+msgstr "Wyszukiwanie i zastępowanie za pomocą wyrażeń regularnych"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:1
 msgid "File Patterns"
@@ -424,7 +424,7 @@ msgid ""
 "\\u, \\L, \\U and \\E are supported as well."
 msgstr ""
 "Nowy ciąg do przypisania. Tak jak w języku Perl, można się odwoływać do "
-"części pasujących przy pomocy $1, $2, itd. lub nawet $+, $&amp;, $` i $'. "
+"części pasujących przy pomocy $1, $2 itd. lub nawet $+, $&amp;, $` i $'. "
 "Operatory \\l, \\u, \\L, \\U i \\E są także obsługiwane."
 
 #: ../ui/mainwindow.ui.h:17
