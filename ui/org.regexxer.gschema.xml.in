@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <schemalist>
    <flags id="draw-space-flags">
     <value nick="space" value="1"/>
@@ -6,7 +7,7 @@
     <value nick="nbsp" value="8"/>
   </flags>
 
-  <schema id="org.regexxer" path="/apps/regexxer/">
+  <schema id="org.regexxer" path="/apps/regexxer/" gettext-domain="regexxer">
     <key name="files-patterns" type="as">
       <default>['*.[ch]','*.{c,cc,cpp,cxx,c++,C,h,hh,hpp,hxx,h++}','*.{ccg,hg}','*.idl','*.{java,jsp}','*.{pl,pm,cgi}','*.py','*.php[0-9]?','*.{html,htm,shtml,js,wml}','*.{xml,xsl,css,dtd,xsd}']</default>
       <_summary>File Patterns</_summary>
