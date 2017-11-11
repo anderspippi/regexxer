@@ -9,8 +9,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer master\n"
-"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2016-03-01 11:16+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-08 15:31+0000\n"
 "PO-Revision-Date: 2017-01-14 17:48+0100\n"
 "Last-Translator: Alan Mortensen <alanmortensen.am@gmail.com>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -91,8 +91,8 @@ msgid ""
 "for a complete list of possible values."
 msgstr ""
 "Navn på tegnkodningen som skal bruges hvis en fil ikke er læsbar i enten "
-"UTF-8 eller kodesættet angivet af det aktuelle sprog. Prøv med \"iconv --list"
-"\"for en fuldstændig liste over mulige værdier."
+"UTF-8 eller kodesættet angivet af det aktuelle sprog. Prøv med “iconv --"
+"list”for en fuldstændig liste over mulige værdier."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:14
 msgid "window width"
@@ -181,12 +181,12 @@ msgstr "#"
 #: ../src/filetree.cc:519
 #, qt-format
 msgid "Failed to save file “%1”: %2"
-msgstr "Kunne ikke gemme fil \"%1\": %2"
+msgstr "Kunne ikke gemme fil “%1”: %2"
 
 #: ../src/filetree.cc:946
 #, qt-format
 msgid "“%1” seems to be a binary file."
-msgstr "\"%1\" ser ud til at være en binær fil."
+msgstr "“%1” ser ud til at være en binær fil."
 
 #: ../src/main.cc:101
 msgid "Find files matching PATTERN"
@@ -288,7 +288,7 @@ msgstr ""
 #: ../src/prefdialog.cc:186
 #, qt-format
 msgid "“%1” is not a valid encoding."
-msgstr "\"%1\" er ikke en gyldig kodning."
+msgstr "“%1” er ikke en gyldig kodning."
 
 #: ../src/statusline.cc:245
 msgid "Stop"
