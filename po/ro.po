@@ -7,10 +7,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer master\n"
-"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2014-07-13 12:03+0000\n"
-"PO-Revision-Date: 2014-12-08 18:40+0200\n"
-"Last-Translator: Daniel Șerbănescu <daniel [at] serbanescu [dot] dk>\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/regexxer/issues\n"
+"POT-Creation-Date: 2020-04-04 08:13+0000\n"
+"PO-Revision-Date: 2020-07-13 15:04+0300\n"
+"Last-Translator: Florentina Mușat <florentina.musat.28@gmail.com>\n"
 "Language-Team: Gnome Romanian Translation Team\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
@@ -18,15 +18,15 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2);;\n"
-"X-Generator: Virtaal 0.7.1\n"
+"X-Generator: Poedit 2.3.1\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
-msgstr "Instrument de căutare regexxer"
+msgstr "unealtă de căutare regexxer"
 
-#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1183
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
 msgid "Search and replace using regular expressions"
-msgstr "Cautăre și înlocuire folosind expresii regulate"
+msgstr "Caută și înlocuiește utilizând expresii regulare"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:1
 msgid "File Patterns"
@@ -169,81 +169,77 @@ msgstr "Ce tip de spații să se deseneze în vizualizarea text."
 msgid "Can’t read file:"
 msgstr "Nu se poate citi fișierul:"
 
-#: ../src/filetree.cc:60
+#: ../src/filetree.cc:62
 msgid "File"
 msgstr "Fișier"
 
-#: ../src/filetree.cc:79
+#: ../src/filetree.cc:81
 msgid "#"
 msgstr "#"
 
-#: ../src/filetree.cc:508
+#: ../src/filetree.cc:519
 #, qt-format
 msgid "Failed to save file “%1”: %2"
 msgstr "Salvarea fișierului „%1” a eșuat: %2"
 
-#: ../src/filetree.cc:924
+#: ../src/filetree.cc:946
 #, qt-format
 msgid "“%1” seems to be a binary file."
 msgstr "„%1” pare a fi un fișier binar."
 
-#: ../src/main.cc:78 ../ui/gear-menu.xml.h:2
-msgid "Save _all"
-msgstr "S_alvează tot"
-
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "Find files matching PATTERN"
 msgstr "Caută fișiere ce se potrivesc cu MODEL"
 
-#: ../src/main.cc:135
+#: ../src/main.cc:101
 msgid "PATTERN"
 msgstr "MODEL"
 
-#: ../src/main.cc:137
+#: ../src/main.cc:103
 msgid "Do not recurse into subdirectories"
 msgstr "Nu intra recursiv prin subdosare"
 
-#: ../src/main.cc:139 ../ui/mainwindow.ui.h:7
+#: ../src/main.cc:105 ../ui/mainwindow.ui.h:7
 msgid "Also find hidden files"
 msgstr "Caută și fișiere ascunse"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "Find text matching REGEX"
 msgstr "Caută text ce se potrivește cu REGEX"
 
-#: ../src/main.cc:141
+#: ../src/main.cc:107
 msgid "REGEX"
 msgstr "REGEX"
 
-#: ../src/main.cc:143
+#: ../src/main.cc:109
 msgid "Find only the first match in a line"
 msgstr "Caută doar prima potrivire într-o linie"
 
-#: ../src/main.cc:145 ../ui/mainwindow.ui.h:13
+#: ../src/main.cc:111 ../ui/mainwindow.ui.h:13
 msgid "Do case insensitive matching"
 msgstr "Fă potrivire cu majuscule nesemnificative"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "Replace matches with STRING"
 msgstr "Înlocuiește potrivirile cu ȘIR"
 
-#: ../src/main.cc:147
+#: ../src/main.cc:113
 msgid "STRING"
 msgstr "ȘIR"
 
-#: ../src/main.cc:149
+#: ../src/main.cc:115
 msgid "Print match location to standard output"
-msgstr "Tipărește locația potrivirii pe ieșirea standard "
+msgstr "Tipărește locația potrivirii la ieșirea standard"
 
-#: ../src/main.cc:151
+#: ../src/main.cc:117
 msgid "Do not automatically start search"
 msgstr "Nu porni căutarea automat"
 
-#: ../src/main.cc:153
+#: ../src/main.cc:119
 msgid "[FOLDER]"
 msgstr "[DOSAR]"
 
-#: ../src/mainwindow.cc:713
+#: ../src/mainwindow.cc:708
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Quit anyway?"
@@ -251,7 +247,15 @@ msgstr ""
 "Unele fișiere nu au fost încă salvate.\n"
 "Ieșiți oricum?"
 
-#: ../src/mainwindow.cc:727
+#: ../src/mainwindow.cc:711
+msgid "_Cancel"
+msgstr "_Anulează"
+
+#: ../src/mainwindow.cc:712 ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "_Ieșire"
+
+#: ../src/mainwindow.cc:722
 msgid ""
 "Some files haven’t been saved yet.\n"
 "Continue anyway?"
@@ -259,21 +263,23 @@ msgstr ""
 "Unele fișiere nu au fost încă salvate.\n"
 "Ieșiți oricum?"
 
-#: ../src/mainwindow.cc:757
+#: ../src/mainwindow.cc:752
 msgid "The file search pattern is invalid."
 msgstr "Modelul de căutare de fișier nu este valid."
 
-#: ../src/mainwindow.cc:763
+#: ../src/mainwindow.cc:758
 msgid "The following errors occurred during search:"
 msgstr "Următoarele erori au apărut în timpul căutării:"
 
-#: ../src/mainwindow.cc:1032
+#: ../src/mainwindow.cc:1027
 msgid "The following errors occurred during save:"
 msgstr "Următoarele erori au apărut în timpul salvării:"
 
-#: ../src/mainwindow.cc:1189
+#: ../src/mainwindow.cc:1184
 msgid "translator-credits"
-msgstr "Licker Nandor (licker.nandor@gmail.com)"
+msgstr ""
+"Licker Nandor (licker.nandor@gmail.com)\n"
+"Florentina Mușat <florentina [dot] musat [dot] 28 [at] gmail [dot] com>, 2020"
 
 #: ../src/prefdialog.cc:186
 #, qt-format
@@ -297,7 +303,6 @@ msgid "Cancels the running search"
 msgstr "Anulează căutarea curentă"
 
 #: ../ui/app-menu.xml.h:1
-#| msgid "Preferences"
 msgid "_Preferences"
 msgstr "_Preferințe"
 
@@ -305,14 +310,13 @@ msgstr "_Preferințe"
 msgid "_About"
 msgstr "_Despre"
 
-#: ../ui/app-menu.xml.h:3
-msgid "_Quit"
-msgstr "_Ieșire"
-
 #: ../ui/gear-menu.xml.h:1
-#| msgid "Save all"
 msgid "_Save"
 msgstr "_Salvează"
+
+#: ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "S_alvează tot"
 
 #: ../ui/gear-menu.xml.h:3
 msgid "_Undo"
@@ -335,12 +339,10 @@ msgid "_Delete"
 msgstr "Ș_terge"
 
 #: ../ui/gear-menu.xml.h:8
-#| msgid "_Previous file"
 msgid "Previous file"
 msgstr "Fișierul precedent"
 
 #: ../ui/gear-menu.xml.h:9
-#| msgid "Backward"
 msgid "Back"
 msgstr "Înapoi"
 
@@ -349,22 +351,18 @@ msgid "Forward"
 msgstr "Înainte"
 
 #: ../ui/gear-menu.xml.h:11
-#| msgid "_Next file"
 msgid "Next file"
 msgstr "Fișierul următor"
 
 #: ../ui/gear-menu.xml.h:12
-#| msgid "Replace _current"
 msgid "Replace current"
 msgstr "Înlocuiește actualul"
 
 #: ../ui/gear-menu.xml.h:13
-#| msgid "Replace in _this file"
 msgid "Replace in this file"
 msgstr "Înlocuiește în acest fișier"
 
 #: ../ui/gear-menu.xml.h:14
-#| msgid "Replace in _all files"
 msgid "Replace in all files"
 msgstr "Înlocuiește în toate fișierele"
 
@@ -524,7 +522,7 @@ msgstr "Culoarea potrivirii c_urente:"
 
 #: ../ui/prefdialog.ui.h:9
 msgid "_Look’n’feel"
-msgstr ""
+msgstr "_Aspect și simțire"
 
 #: ../ui/prefdialog.ui.h:10
 msgid ""
