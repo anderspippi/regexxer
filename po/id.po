@@ -1,0 +1,638 @@
+# Indonesian translation for regexxer.
+# Copyright (C) 2020 regexxer's COPYRIGHT HOLDER
+# This file is distributed under the same license as the regexxer package.
+# Andika Triwidada <atriwidada@gnome.org>, 2020.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: regexxer master\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/regexxer/issues\n"
+"POT-Creation-Date: 2020-07-13 12:05+0000\n"
+"PO-Revision-Date: 2020-10-18 13:14+0700\n"
+"Language-Team: Indonesian <gnome-l10n-id@googlegroups.com>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Andika Triwidada <andika@gmail.com>\n"
+"X-Generator: Poedit 2.4.1\n"
+
+#: ../ui/regexxer.desktop.in.h:1
+#, fuzzy
+msgid "regexxer Search Tool"
+msgstr "Alat Pencarian regexxer"
+
+#: ../ui/regexxer.desktop.in.h:2 ../src/mainwindow.cc:1178
+#, fuzzy
+msgid "Search and replace using regular expressions"
+msgstr "Mencari dan mengganti menggunakan ekspresi reguler"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:1
+#, fuzzy
+msgid "File Patterns"
+msgstr "Pola berkas"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:2
+#, fuzzy
+msgid "List of pre-defined patterns available in the 'Pattern' entry."
+msgstr ""
+"Daftar pola yang telah ditentukan sebelumnya yang tersedia dalam entri "
+"'Pola'."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:3
+#, fuzzy
+msgid "Regex Patterns"
+msgstr "Pola Regex"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:4
+#, fuzzy
+msgid "List of last patterns used in the 'Regex' entry."
+msgstr "Daftar pola terakhir yang digunakan dalam entri 'Regex'."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:5
+#, fuzzy
+msgid "List of last patterns used in the 'Substitution' entry."
+msgstr "Daftar pola terakhir yang digunakan dalam entri 'Substitusi'."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:6
+#, fuzzy
+msgid "Text view font"
+msgstr "Font tampilan teks"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:7
+#, fuzzy
+msgid "The font used in the file editor."
+msgstr "Fonta yang digunakan dalam editor file."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:8
+#, fuzzy
+msgid "Match color"
+msgstr "Cocokkan warna"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:9
+#, fuzzy
+msgid ""
+"The background color used to highlight matches of the search expression."
+msgstr ""
+"Warna latar belakang yang digunakan untuk menyoroti kecocokan ekspresi "
+"pencarian."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:10
+#, fuzzy
+msgid "Current-match color"
+msgstr "Warna kecocokan saat ini"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:11
+#, fuzzy
+msgid ""
+"The background color used to highlight the currently selected match of the "
+"search expression."
+msgstr ""
+"Warna latar belakang yang digunakan untuk menyoroti kecocokan ekspresi "
+"pencarian yang saat ini dipilih."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:12
+#, fuzzy
+msgid "Fallback encoding"
+msgstr "Pengkodean mundur"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:13
+#, fuzzy
+msgid ""
+"Name of the character encoding to use if a file is not readable in either "
+"UTF-8 or the codeset specified by the current locale. Try \"iconv --list\" "
+"for a complete list of possible values."
+msgstr ""
+"Nama pengkodean karakter yang akan digunakan jika file tidak dapat dibaca "
+"dalam UTF-8 atau codeset yang ditentukan oleh lokal saat ini. Coba \"iconv --"
+"list\" untuk daftar lengkap nilai yang mungkin."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:14
+msgid "window width"
+msgstr "lebar jendela"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:15
+#, fuzzy
+msgid "The width of the window."
+msgstr "lebar dari jendela pustaka"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:16
+msgid "window height"
+msgstr "tinggi jendela"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:17
+#, fuzzy
+msgid "The height of the window."
+msgstr "tinggi dari jendela pustaka"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:18
+#, fuzzy
+msgid "window x position"
+msgstr "Posisi jendela x baku"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:19
+#, fuzzy
+msgid "The X coordinate of the window."
+msgstr "Koordinat X dari jendela."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:20
+#, fuzzy
+msgid "window y position"
+msgstr "Posisi jendela y baku"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:21
+#, fuzzy
+msgid "The Y coordinate of the window."
+msgstr "Koordinat Y dari jendela."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:22
+#, fuzzy
+msgid "window maximization"
+msgstr "Keadaan jendela termaksimalkan."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:23
+#, fuzzy
+msgid "Whether the window is maximized."
+msgstr "Apakah jendela dimaksimalkan."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:24
+#, fuzzy
+msgid "Show line numbers"
+msgstr "Tampilkan nomor baris"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:25
+#, fuzzy
+msgid "Whether to show the line numbers of the text view."
+msgstr "Apakah menampilkan nomor baris tampilan teks."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:26
+#, fuzzy
+msgid "Highlight the current line"
+msgstr "Sorot baris saat ini"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:27
+#, fuzzy
+msgid "Whether to highlight the current line of the text view."
+msgstr "Apakah akan menyoroti baris tampilan teks saat ini."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:28
+#, fuzzy
+msgid "Auto indentation"
+msgstr "Indentasi otomatis"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:29
+#, fuzzy
+msgid "Whether to enable auto indentation in the text view."
+msgstr "Apakah mengaktifkan indentasi otomatis dalam tampilan teks."
+
+#: ../ui/org.regexxer.gschema.xml.in.h:30
+#, fuzzy
+msgid "Draw spaces"
+msgstr "Menggambar spasi yang berada di akhir baris"
+
+#: ../ui/org.regexxer.gschema.xml.in.h:31
+#, fuzzy
+msgid "Which type of space to draw in the text view."
+msgstr "Tipe ruang mana yang akan di gambar dalam tampilan teks."
+
+#: ../src/filebuffer.cc:198
+#, fuzzy
+msgid "Can’t read file:"
+msgstr "Tidak dapat membaca file:"
+
+#: ../src/filetree.cc:62
+msgid "File"
+msgstr "Berkas"
+
+#: ../src/filetree.cc:81
+msgid "#"
+msgstr "#"
+
+#: ../src/filetree.cc:519
+#, fuzzy, qt-format
+msgid "Failed to save file “%1”: %2"
+msgstr "Gagal menyimpan berkas \"%1\": %2"
+
+#: ../src/filetree.cc:946
+#, fuzzy, qt-format
+msgid "“%1” seems to be a binary file."
+msgstr "\"%1\" tampaknya merupakan berkas biner."
+
+#: ../src/main.cc:101
+#, fuzzy
+msgid "Find files matching PATTERN"
+msgstr "Temukan file yang cocok dengan POLA"
+
+#: ../src/main.cc:101
+msgid "PATTERN"
+msgstr "POLA"
+
+#: ../src/main.cc:103
+#, fuzzy
+msgid "Do not recurse into subdirectories"
+msgstr "Jangan kambuh menjadi subdirectories"
+
+#: ../src/main.cc:105 ../ui/mainwindow.ui.h:7
+#, fuzzy
+msgid "Also find hidden files"
+msgstr "Juga menemukan file tersembunyi"
+
+#: ../src/main.cc:107
+#, fuzzy
+msgid "Find text matching REGEX"
+msgstr "Menemukan teks yang cocok dengan REGEX"
+
+#: ../src/main.cc:107
+msgid "REGEX"
+msgstr "REGEX"
+
+#: ../src/main.cc:109
+#, fuzzy
+msgid "Find only the first match in a line"
+msgstr "Hanya menemukan kecocokan pertama dalam satu baris"
+
+#: ../src/main.cc:111 ../ui/mainwindow.ui.h:13
+#, fuzzy
+msgid "Do case insensitive matching"
+msgstr "Lakukan pencocokan tidak sensitif huruf besar/kecil"
+
+#: ../src/main.cc:113
+#, fuzzy
+msgid "Replace matches with STRING"
+msgstr "Ganti kecocokan dengan STRING"
+
+#: ../src/main.cc:113
+#, fuzzy
+msgid "STRING"
+msgstr "string"
+
+#: ../src/main.cc:115
+#, fuzzy
+msgid "Print match location to standard output"
+msgstr "Cetak lokasi pencocokan dengan keluaran standar"
+
+#: ../src/main.cc:117
+#, fuzzy
+msgid "Do not automatically start search"
+msgstr "Jangan mulai pencarian secara otomatis"
+
+#: ../src/main.cc:119
+msgid "[FOLDER]"
+msgstr "[FOLDER]"
+
+#: ../src/mainwindow.cc:708
+#, fuzzy
+msgid ""
+"Some files haven’t been saved yet.\n"
+"Quit anyway?"
+msgstr ""
+"Beberapa berkas belum disimpan.\n"
+"Berhenti sih?"
+
+#: ../src/mainwindow.cc:711
+msgid "_Cancel"
+msgstr "_Batal"
+
+#: ../src/mainwindow.cc:712 ../ui/app-menu.xml.h:3
+msgid "_Quit"
+msgstr "_Keluar"
+
+#: ../src/mainwindow.cc:722
+#, fuzzy
+msgid ""
+"Some files haven’t been saved yet.\n"
+"Continue anyway?"
+msgstr ""
+"Beberapa berkas belum disimpan.\n"
+"Tetap lanjutkan?"
+
+#: ../src/mainwindow.cc:752
+#, fuzzy
+msgid "The file search pattern is invalid."
+msgstr "Pola pencarian berkas tak-sahih."
+
+#: ../src/mainwindow.cc:758
+#, fuzzy
+msgid "The following errors occurred during search:"
+msgstr "Timbul galat berikut selama pencarian:"
+
+#: ../src/mainwindow.cc:1027
+#, fuzzy
+msgid "The following errors occurred during save:"
+msgstr "Timbul galat berikut selama penyimpanan:"
+
+#: ../src/mainwindow.cc:1184
+msgid "translator-credits"
+msgstr "Andika Triwidada <andika@gmail.com>, 2020."
+
+#: ../src/prefdialog.cc:186
+#, fuzzy, qt-format
+msgid "“%1” is not a valid encoding."
+msgstr "\"%1\" bukan pengkodean yang sahih."
+
+#: ../src/statusline.cc:245
+msgid "Stop"
+msgstr "Berhenti"
+
+#: ../src/statusline.cc:253
+msgid "File:"
+msgstr "Berkas:"
+
+#: ../src/statusline.cc:256
+#, fuzzy
+msgid "Match:"
+msgstr "_Cocokkan"
+
+#: ../src/statusline.cc:267
+#, fuzzy
+msgid "Cancels the running search"
+msgstr "Membatalkan pencarian yang sedang berjalan"
+
+#: ../ui/app-menu.xml.h:1
+msgid "_Preferences"
+msgstr "_Preferensi"
+
+#: ../ui/app-menu.xml.h:2
+msgid "_About"
+msgstr "Tent_ang"
+
+#: ../ui/gear-menu.xml.h:1
+msgid "_Save"
+msgstr "_Simpan"
+
+#: ../ui/gear-menu.xml.h:2
+msgid "Save _all"
+msgstr "Simpan semu_a"
+
+#: ../ui/gear-menu.xml.h:3
+#, fuzzy
+msgid "_Undo"
+msgstr "_Batalkan"
+
+#: ../ui/gear-menu.xml.h:4
+msgid "Cu_t"
+msgstr "Po_tong"
+
+#: ../ui/gear-menu.xml.h:5
+msgid "_Copy"
+msgstr "_Salin"
+
+#: ../ui/gear-menu.xml.h:6
+msgid "_Paste"
+msgstr "Tem_pel"
+
+#: ../ui/gear-menu.xml.h:7
+msgid "_Delete"
+msgstr "_Hapus"
+
+#: ../ui/gear-menu.xml.h:8
+msgid "Previous file"
+msgstr "Berkas sebelumnya"
+
+#: ../ui/gear-menu.xml.h:9
+msgid "Back"
+msgstr "Kembali"
+
+#: ../ui/gear-menu.xml.h:10 ../ui/mainwindow.ui.h:29
+msgid "Forward"
+msgstr "Maju"
+
+#: ../ui/gear-menu.xml.h:11
+msgid "Next file"
+msgstr "Berkas berikutnya"
+
+#: ../ui/gear-menu.xml.h:12
+#, fuzzy
+msgid "Replace current"
+msgstr "Ganti dokumen saat ini"
+
+#: ../ui/gear-menu.xml.h:13
+#, fuzzy
+msgid "Replace in this file"
+msgstr "Gantikan berkas terjemahan yang ada"
+
+#: ../ui/gear-menu.xml.h:14
+#, fuzzy
+msgid "Replace in all files"
+msgstr "Ganti di semua berkas"
+
+#: ../ui/mainwindow.ui.h:1
+msgid "Save all"
+msgstr "Simpan semua"
+
+#: ../ui/mainwindow.ui.h:2
+msgid "Fol_der:"
+msgstr "Fol_der:"
+
+#: ../ui/mainwindow.ui.h:3
+msgid "Pattern:"
+msgstr "Pola:"
+
+#: ../ui/mainwindow.ui.h:4
+#, fuzzy
+msgid "recursive"
+msgstr "Rekursif"
+
+#: ../ui/mainwindow.ui.h:5
+#, fuzzy
+msgid "Recurse into subdirectories"
+msgstr "Kambuh menjadi subdirectories"
+
+#: ../ui/mainwindow.ui.h:6
+msgid "hidden"
+msgstr "tersembunyi"
+
+#: ../ui/mainwindow.ui.h:8
+#, fuzzy
+msgid "Find all files that match the filename pattern"
+msgstr "Temukan semua berkas yang cocok dengan pola nama berkas"
+
+#: ../ui/mainwindow.ui.h:9
+#, fuzzy
+msgid "Find fi_les"
+msgstr "Temukan fi_les"
+
+#: ../ui/mainwindow.ui.h:10
+msgid "Search:"
+msgstr "Cari:"
+
+#: ../ui/mainwindow.ui.h:11
+#, fuzzy
+msgid "Replace:"
+msgstr "Mengganti:"
+
+#: ../ui/mainwindow.ui.h:12
+#, fuzzy
+msgid "Find all possible matches in a line"
+msgstr "Menemukan semua kemungkinan kecocokan dalam satu baris"
+
+#: ../ui/mainwindow.ui.h:14
+#, fuzzy
+msgid "Find all matches of the regular expression"
+msgstr "Menemukan semua kecocokan ekspresi reguler"
+
+#: ../ui/mainwindow.ui.h:15
+#, fuzzy
+msgid "A regular expression in Perl syntax"
+msgstr "Ekspresi reguler dalam sintaks Perl"
+
+#: ../ui/mainwindow.ui.h:16
+#, fuzzy
+msgid ""
+"The new string to substitute. As in Perl, you can refer to parts of the "
+"match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
+"\\u, \\L, \\U and \\E are supported as well."
+msgstr ""
+"String baru untuk menggantikan. Seperti dalam Perl, Anda dapat merujuk ke "
+"bagian-bagian pertandingan menggunakan $ 1, $ 2, dll atau bahkan $+, $&amp;, "
+"$' dan $'. Operator \\l, \\u, \\L, \\you and \\E juga didukung."
+
+#: ../ui/mainwindow.ui.h:17
+#, fuzzy
+msgid "Preview of the substitution"
+msgstr "Pratinjau substitusi"
+
+#: ../ui/mainwindow.ui.h:18
+#, fuzzy
+msgid "Preview"
+msgstr "Pratampil"
+
+#: ../ui/mainwindow.ui.h:19
+msgid "_Replace"
+msgstr "_Ganti"
+
+#: ../ui/mainwindow.ui.h:20
+#, fuzzy
+msgid "Replace current match"
+msgstr "Ganti kecocokan saat ini"
+
+#: ../ui/mainwindow.ui.h:21
+#, fuzzy
+msgid "_This file"
+msgstr "Bukan berkas"
+
+#: ../ui/mainwindow.ui.h:22
+#, fuzzy
+msgid "Replace all matches in the current file"
+msgstr "Ganti semua kecocokan dalam berkas saat ini"
+
+#: ../ui/mainwindow.ui.h:23
+msgid "_All files"
+msgstr "Semu_a berkas"
+
+#: ../ui/mainwindow.ui.h:24
+#, fuzzy
+msgid "Replace all matches in all files"
+msgstr "Ganti semua kecocokan di semua berkas"
+
+#: ../ui/mainwindow.ui.h:25
+#, fuzzy
+msgid "File backward"
+msgstr "File mundur"
+
+#: ../ui/mainwindow.ui.h:26
+#, fuzzy
+msgid "Go to the previous matching file"
+msgstr "Masuk ke file yang cocok sebelumnya"
+
+#: ../ui/mainwindow.ui.h:27
+msgid "Backward"
+msgstr "Mundur"
+
+#: ../ui/mainwindow.ui.h:28
+#, fuzzy
+msgid "Go to previous match"
+msgstr "Masuk ke ke pertandingan sebelumnya"
+
+#: ../ui/mainwindow.ui.h:30
+#, fuzzy
+msgid "Go to next match"
+msgstr "Masuk ke pertandingan berikutnya"
+
+#: ../ui/mainwindow.ui.h:31
+#, fuzzy
+msgid "File forward"
+msgstr "Penerusan berkas"
+
+#: ../ui/mainwindow.ui.h:32
+#, fuzzy
+msgid "Go to the next matching file"
+msgstr "Masuk ke file yang cocok berikutnya"
+
+#: ../ui/prefdialog.ui.h:1
+msgid "Icons only"
+msgstr "Hanya ikon"
+
+#: ../ui/prefdialog.ui.h:2
+msgid "Text only"
+msgstr "Hanya teks"
+
+#: ../ui/prefdialog.ui.h:3
+msgid "Icons and text"
+msgstr "Ikon dan teks"
+
+#: ../ui/prefdialog.ui.h:4
+#, fuzzy
+msgid "Both horizontal"
+msgstr "Keduanya horisontal"
+
+#: ../ui/prefdialog.ui.h:5
+msgid "Preferences"
+msgstr "Preferensi"
+
+#: ../ui/prefdialog.ui.h:6
+#, fuzzy
+msgid "_Text view font:"
+msgstr "_Text menampilkan fonta:"
+
+#: ../ui/prefdialog.ui.h:7
+#, fuzzy
+msgid "_Match color:"
+msgstr "_Match warna:"
+
+#: ../ui/prefdialog.ui.h:8
+#, fuzzy
+msgid "C_urrent match color:"
+msgstr "C_urrent cocok:"
+
+#: ../ui/prefdialog.ui.h:9
+#, fuzzy
+msgid "_Look’n’feel"
+msgstr "_Look'n'feel"
+
+#: ../ui/prefdialog.ui.h:10
+#, fuzzy
+msgid ""
+"regexxer attempts to read a file in the following encodings before giving up:"
+msgstr "regexxer mencoba membaca file di pengkodean berikut sebelum menyerah:"
+
+#: ../ui/prefdialog.ui.h:11
+msgid "3."
+msgstr "3."
+
+#: ../ui/prefdialog.ui.h:12
+msgid "2."
+msgstr "2."
+
+#: ../ui/prefdialog.ui.h:13
+msgid "1."
+msgstr "1."
+
+#: ../ui/prefdialog.ui.h:14
+msgid "UTF-8"
+msgstr "UTF-8"
+
+#: ../ui/prefdialog.ui.h:15
+#, fuzzy
+msgid "Fallback _encoding:"
+msgstr "Mundur _encoding:"
+
+#: ../ui/prefdialog.ui.h:16
+#, fuzzy
+msgid "The encoding specified by the current locale"
+msgstr "Pengkodean yang ditentukan oleh lokal saat ini"
+
+#: ../ui/prefdialog.ui.h:17
+#, fuzzy
+msgid "_File access"
+msgstr "Akses berkas:"
