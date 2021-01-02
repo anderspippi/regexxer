@@ -75,8 +75,8 @@ msgid ""
 "The background color used to highlight the currently selected match of the "
 "search expression."
 msgstr ""
-"El color de fons utilitzat per ressaltar l'actual coincidència seleccionada "
-"de la cerca de l'expressió."
+"El color de fons utilitzat per a ressaltar l'actual coincidència "
+"seleccionada de la cerca de l'expressió."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:12
 msgid "Fallback encoding"
@@ -486,7 +486,7 @@ msgstr "Fitxer endarrere"
 
 #: ../ui/mainwindow.ui.h:26
 msgid "Go to the previous matching file"
-msgstr "Vés a l'anterior fitxer coincident"
+msgstr "Ves a l'anterior fitxer coincident"
 
 #: ../ui/mainwindow.ui.h:27
 msgid "Backward"
@@ -494,11 +494,11 @@ msgstr "Endarrere"
 
 #: ../ui/mainwindow.ui.h:28
 msgid "Go to previous match"
-msgstr "Vés a la coincidència prèvia"
+msgstr "Ves a la coincidència prèvia"
 
 #: ../ui/mainwindow.ui.h:30
 msgid "Go to next match"
-msgstr "Vés a la següent coincidència"
+msgstr "Ves a la següent coincidència"
 
 #: ../ui/mainwindow.ui.h:31
 msgid "File forward"
@@ -506,7 +506,7 @@ msgstr "Fitxer endavant"
 
 #: ../ui/mainwindow.ui.h:32
 msgid "Go to the next matching file"
-msgstr "Vés al pròxim fitxer coincident"
+msgstr "Ves al pròxim fitxer coincident"
 
 #: ../ui/prefdialog.ui.h:1
 msgid "Icons only"
@@ -540,7 +540,7 @@ msgstr "_Coincideix color:"
 
 #: ../ui/prefdialog.ui.h:8
 msgid "C_urrent match color:"
-msgstr "Actual coincidència de color"
+msgstr "_Coincidència actual de color:"
 
 #: ../ui/prefdialog.ui.h:9
 msgid "_Look’n’feel"
@@ -580,108 +580,3 @@ msgstr "La codificació especificada en la localització actual"
 #: ../ui/prefdialog.ui.h:17
 msgid "_File access"
 msgstr "Accés al _fitxer"
-
-#~ msgid ""
-#~ "The style of the application’s toolbar. Possible values are “icons”, "
-#~ "“text”, “both”, and “both-horiz”."
-#~ msgstr ""
-#~ "L'estil de la barra d'eines. Els possibles valors són “icons”, “text”, "
-#~ "“both”, i “both-horiz”."
-
-#~ msgid "Toolbar style"
-#~ msgstr "Estil de la barra d'eines"
-
-#~ msgid ""
-#~ "Using the \\C escape sequence to match a single byte is not supported."
-#~ msgstr ""
-#~ "No està suportat fer servir la seqüència d'escapada \\C per fer coincidir "
-#~ "un únic byte."
-
-#~ msgid ""
-#~ "Error in regular expression at “%1” (index %2):\n"
-#~ "%3"
-#~ msgstr ""
-#~ "Hi ha un error en l'expressió regular a “%1” (índex %2):\n"
-#~ "%3"
-
-#~ msgid ""
-#~ "Error in regular expression:\n"
-#~ "%1"
-#~ msgstr ""
-#~ "Hi ha un error en l'expressió regular:\n"
-#~ "%1"
-
-#~ msgid ""
-#~ "Reached the recursion and backtracking limit of the regular expression "
-#~ "engine."
-#~ msgstr ""
-#~ "S'ha arribat al límit de recursivitat i retrocés del motor de l'expressió "
-#~ "regular."
-
-#~ msgid ""
-#~ "A filename pattern as used by the shell. Character classes [ab] and csh "
-#~ "style brace expressions {a,b} are supported."
-#~ msgstr ""
-#~ "Un patró de nom de fitxer, com els emprats per l'intèrpret de comandes. "
-#~ "Se suporten les classes de caràcters [ab] i les expressions a l'estil de "
-#~ "csh {a,b}."
-
-#~ msgid "_Edit"
-#~ msgstr "_Edita"
-
-#~ msgid "_File"
-#~ msgstr "_Fitxer"
-
-#~ msgid "_Help"
-#~ msgstr "_Ajuda"
-
-#~ msgid "_Match"
-#~ msgstr "_Coincidència"
-
-#~ msgid ""
-#~ "Icons only\n"
-#~ "Text only\n"
-#~ "Icons and text\n"
-#~ "Both horizontal"
-#~ msgstr ""
-#~ "Només icones\n"
-#~ "Només text\n"
-#~ "Icones i text\n"
-#~ "Els dos horitzontalment"
-
-#~ msgid "Tool_bar style:"
-#~ msgstr "Estil de la _barra d'eines:"
-
-#~ msgid "[OPTION]... [FOLDER]"
-#~ msgstr "[OPCIÓ]... [CARPETA]"
-
-#~ msgid "Try “regexxer --help” for more information."
-#~ msgstr "Proveu “regexxer --help” per a més informació."
-
-#~ msgid ""
-#~ "The folder name “%1” contains characters not representable in the "
-#~ "encoding of the local file system."
-#~ msgstr ""
-#~ "El nom de la carpeta “%1” conté caràcters no representables en la "
-#~ "codificaciódel sistema de fitxers local."
-
-#~ msgid "Select a folder"
-#~ msgstr "Selecciona una carpeta"
-
-#~ msgid "About regexxer"
-#~ msgstr "Quant a regexxer"
-
-#~ msgid "The application icon of regexxer"
-#~ msgstr "La icona de l'aplicació regexxer"
-
-#~ msgid "regexxer icon"
-#~ msgstr "icona de regexxer"
-
-#~ msgid "translated by"
-#~ msgstr "traduït per"
-
-#~ msgid "written by"
-#~ msgstr "escrit per"
-
-#~ msgid "The directory to be searched"
-#~ msgstr "El directori per cercar"
