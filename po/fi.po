@@ -9,9 +9,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: regexxer\n"
-"Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=64876\n"
-"POT-Creation-Date: 2016-03-01 11:16+0000\n"
-"PO-Revision-Date: 2016-09-04 16:45+0300\n"
+"Report-Msgid-Bugs-To: https://gitlab.gnome.org/GNOME/regexxer/issues\n"
+"POT-Creation-Date: 2020-07-13 12:05+0000\n"
+"PO-Revision-Date: 2021-09-04 15:17+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos+l10n@iki.fi>\n"
 "Language-Team: suomi <lokalisointi-lista@googlegroups.com>\n"
 "Language: fi\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Gtranslator 2.91.7\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../ui/regexxer.desktop.in.h:1
 msgid "regexxer Search Tool"
@@ -102,7 +102,7 @@ msgstr ""
 
 #: ../ui/org.regexxer.gschema.xml.in.h:14
 msgid "window width"
-msgstr ""
+msgstr "ikkunan leveys"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:15
 msgid "The width of the window."
@@ -110,7 +110,7 @@ msgstr "Ikkunan leveys."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:16
 msgid "window height"
-msgstr ""
+msgstr "ikkunan korkeus"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:17
 msgid "The height of the window."
@@ -118,27 +118,27 @@ msgstr "Ikkunan korkeus."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:18
 msgid "window x position"
-msgstr ""
+msgstr "ikkunan x-sijainti"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:19
 msgid "The X coordinate of the window."
-msgstr ""
+msgstr "Ikkunan X-koordinaatti."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:20
 msgid "window y position"
-msgstr ""
+msgstr "ikkunan y-sijainti"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:21
 msgid "The Y coordinate of the window."
-msgstr ""
+msgstr "Ikkunan Y-koordinaatti."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:22
 msgid "window maximization"
-msgstr ""
+msgstr "ikkunan suurennus"
 
 #: ../ui/org.regexxer.gschema.xml.in.h:23
 msgid "Whether the window is maximized."
-msgstr ""
+msgstr "Onko ikkuna suurennettu."
 
 #: ../ui/org.regexxer.gschema.xml.in.h:24
 msgid "Show line numbers"
@@ -272,7 +272,7 @@ msgstr ""
 
 #: ../src/mainwindow.cc:752
 msgid "The file search pattern is invalid."
-msgstr "Tiedostojen hakumalli on virheellinen"
+msgstr "Tiedostojen hakumalli on virheellinen."
 
 #: ../src/mainwindow.cc:758
 msgid "The following errors occurred during search:"
@@ -285,7 +285,7 @@ msgstr "Seuraavat virheet tapahtuivat tallennettaessa:"
 #: ../src/mainwindow.cc:1184
 msgid "translator-credits"
 msgstr ""
-"Jiri Grönroos, 2015-2016\n"
+"Jiri Grönroos, 2015-2021\n"
 "Ilkka Tuohela, 2004\n"
 "\n"
 "https://l10n.gnome.org/teams/fi/"
@@ -428,19 +428,14 @@ msgid "A regular expression in Perl syntax"
 msgstr "Säännöllinen lauseke perl-syntaksissa"
 
 #: ../ui/mainwindow.ui.h:16
-#, fuzzy
-#| msgid ""
-#| "The new string to substitute. As in Perl, you can refer to parts of the "
-#| "match using $1, $2, etc. or even $+, $&, $` and $'. The operators \\l, "
-#| "\\u, \\L, \\U and \\E are supported as well."
 msgid ""
 "The new string to substitute. As in Perl, you can refer to parts of the "
 "match using $1, $2, etc. or even $+, $&amp;, $` and $'. The operators \\l, "
 "\\u, \\L, \\U and \\E are supported as well."
 msgstr ""
 "Uusi korvaava merkkijono. Kuten perlissä, voit viitata osuman osiin "
-"käyttämällä muuttujia $1, $2 jne. tai $+, $& $` ja $'. Operaattorit \\l, "
-"\\u, \\L, \\U ja \\E ovat myös tuettuja."
+"käyttämällä muuttujia $1, $2 jne. tai $+, $&amp;, $` ja $'. Operaattorit "
+"\\l, \\u, \\L, \\U ja \\E ovat myös tuettuja."
 
 #: ../ui/mainwindow.ui.h:17
 msgid "Preview of the substitution"
@@ -516,7 +511,7 @@ msgstr "Kuvakkeet ja teksti"
 
 #: ../ui/prefdialog.ui.h:4
 msgid "Both horizontal"
-msgstr ""
+msgstr "Molemmat vaakatasossa"
 
 #: ../ui/prefdialog.ui.h:5
 msgid "Preferences"
